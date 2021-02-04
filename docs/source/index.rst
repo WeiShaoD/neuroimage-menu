@@ -13,6 +13,8 @@ Here is a book introduce some neuroimage skills for the beginner
 
 Since I was child, I always curious about the the human thoughts and behaviors, as I grow up, I found that neuroimage can help me!
 
+
+
 Overview
 
 .. toctree::
@@ -20,7 +22,7 @@ Overview
 
    Linux system
 
-   Suptercomputer.rst
+   Suptercomputer
 
    For_loop
 
@@ -38,7 +40,7 @@ Overview
 
    help  
 
-  :caption: Contents:
+   :caption: Contents:
 
 
 Indices and tables
@@ -47,6 +49,7 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+
 
 
 “Is what each begins and perfects on himself”
