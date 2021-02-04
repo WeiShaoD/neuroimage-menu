@@ -15,7 +15,7 @@ recon-all
 ^^^^^^^^^
 The most powerful function of FreesSufer is the recon-all command, it will performs all the cortical reconstruction process::
 
-recon-all -all -i input.file -s output.file
+  recon-all -all -i input.file -s output.file
 
 Here are the things that recon-all will do: 
 
