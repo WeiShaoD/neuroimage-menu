@@ -3,22 +3,50 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Wei's brain book's documentation!
-============================================
+Welcome to Wei's brain book!
+============================
 
+.. image:: 2097577891.png
 
+Here is a book introduce some neuroimage skills for the beginner
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Here is the book introduce some basic neuroimage packages::
-
-
-
-We are going to have fun::
-
-  print 'Hello'
-  >> hello   
+Since I was child, I always curious about the the human thoughts and behaviors, as I grow up, I found that neuroimage can help me!
 
 Overview
- 
+
+.. toctree::
+   :maxdepth: 2
+
+   Linux system
+
+   Suptercomputer.rst
+
+   For_loop
+
+   FreeSurfer
+
+   FSL
+
+   AFNI
+
+   SPM
+
+   question
+
+   License
+
+   help  
+
+  :caption: Contents:
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
 
 
 .. toctree::
@@ -38,11 +66,6 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
-
-
-
-
-
 
 
 
