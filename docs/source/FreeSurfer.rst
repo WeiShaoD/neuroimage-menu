@@ -12,6 +12,9 @@ FreeSurfer includes tools for the reconstruction of topologically correct and ge
 
 .. image:: FreeSurfer1.png 
 
+You can download and install FreeSufer from * ` here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ (Freesufer install)
+
+
 recon-all
 ^^^^^^^^^
 The most powerful function of FreesSufer is the recon-all command, it will performs all the cortical reconstruction process::
