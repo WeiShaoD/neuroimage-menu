@@ -14,6 +14,7 @@ FreeSurfer includes tools for the reconstruction of topologically correct and ge
 
 You can download and install FreeSufer from * `SPM <https://www.fil.ion.ucl.ac.uk/spm/>`__  *  (Freesufer install)
 
+* `SPM <https://www.fil.ion.ucl.ac.uk/spm/>`__ (Statistical Parametric Mapping, created by University College London)
 
 recon-all
 ^^^^^^^^^
