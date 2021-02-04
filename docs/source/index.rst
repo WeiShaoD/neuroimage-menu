@@ -6,7 +6,7 @@
 Welcome to Wei's brain book!
 ============================
 
-.. image:: 2097577891.png
+.. image:: brainbook1.png
 
 Here is a book introduce some neuroimage skills for the beginner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
