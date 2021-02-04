@@ -25,3 +25,8 @@ the command to tell recon-all run multiple cores is -openmp X, X means how many 
 
 parallel computing for recon-all
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+
+A physical core is an actual physical processor core in your CPU. Each physical core has its own circuitry and its own L1 (and usually L2) cache can read and execute instructions separately (for the most part) $
+Due to Freesufer emalble the OpenMP code,recon-all can be processed by multiple-cores,ths means that you can either recon-all one subjects with multiple cores or run recon-all multiple subjecets with many cores$
+the command to tell recon-all run multiple cores is -openmp X, X means how many cores you want to run
+
