@@ -49,27 +49,6 @@ Indices and tables
 * :ref:`search`
 
 
-.. toctree::
-   :maxdepth: 2
-
-   License
-
-   help
-
-   question   
-   :caption: Contents:
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
-
-
-
 “Is what each begins and perfects on himself”
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^         
                                              --Thomas carlyle  
