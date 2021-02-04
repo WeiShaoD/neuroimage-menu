@@ -22,10 +22,6 @@ Overview
 
    Linux system
 
-   Suptercomputer
-
-   For_loop
-
    FreeSurfer
 
    FSL
@@ -34,9 +30,9 @@ Overview
 
    SPM
 
-   question
+   for_loop
 
-   License
+   question
 
    help  
 
