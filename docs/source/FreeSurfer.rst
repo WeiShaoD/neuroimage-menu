@@ -1,10 +1,10 @@
-Freesufer
+Freesurfer
 =========
 
-Welcome to the Freesufer unit
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Welcome to the Freesurfer
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
-What is FreeSufer?
+What is FreeSurfer?
 
 FreeSurfer is a brain imaging software package. It focuses on analyzing magnetic resonance imaging (MRI) scans of brain tissue, functional brain mapping and contains tools to conduct both volume-based and surface-based analysis.
 
