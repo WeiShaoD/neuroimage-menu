@@ -14,7 +14,15 @@ FreeSurfer includes tools for the reconstruction of topologically correct and ge
 
 You can download and install FreeSufer from  `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__    
 
- `SPM <https://www.fil.ion.ucl.ac.uk/spm/>`__ (Statistical Parametric Mapping, created by University College London)
+After the installation, type::
+
+  source $FREESURFER_HOME/SetUpFreeSurfer.sh
+
+then, you are supposed to see this, 
+
+.. image:: FreeSurfer_ready.png 
+
+From here, We can check the Freesufer taht has been installed, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer program process.
 
 
 recon-all
