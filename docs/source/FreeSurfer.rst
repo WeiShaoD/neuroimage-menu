@@ -12,13 +12,13 @@ FreeSurfer includes tools for the reconstruction of topologically correct and ge
 
 .. image:: FreeSurfer1.png 
 
-You can download and install FreeSufer from  `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__    
+You can download and install FreeSufer from  `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__  or follow the `Video <https://www.youtube.com/watch?v=BSQUVktXTzo&list=PLIQIswOrUH6_DWy5mJlSfj6AWY0y9iUce&index=2/>`__ to set up FreeSufer 
 
 After the installation, type::
 
   source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
-then, you are supposed to see this, 
+then, you are supposed to see this 
 
 .. image:: FreeSurfer_ready.png 
 
