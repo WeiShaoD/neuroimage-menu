@@ -12,7 +12,7 @@ FreeSurfer includes tools for the reconstruction of topologically correct and ge
 
 .. image:: FreeSurfer1.png 
 
-You can download and install FreeSufer from * ` here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ (Freesufer install)
+You can download and install FreeSufer from * `SPM <https://www.fil.ion.ucl.ac.uk/spm/>`__  *  (Freesufer install)
 
 
 recon-all
