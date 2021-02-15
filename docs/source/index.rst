@@ -18,9 +18,11 @@ Since I was child, I always curious about the the human thoughts and behaviors, 
 Overview
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    Linux system
+
+   OpenNeuro
 
    FreeSurfer
 
@@ -37,10 +39,6 @@ Overview
    help  
 
    :caption: Contents:
-
-.. toctree::
-   :maxdepth: 1
-   OpenNeuro
 
 
 Indices and tables
