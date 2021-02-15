@@ -8,3 +8,5 @@ OpenNeuro(OpenfMRI) is an open-science neuroinformatics online database storing 
 .. image:: OpenNeuro_1.PNG
 
 `OpenNeuro <https://openneuro.org/>`__
+
+.. image:: OpenNeuro_2.PNG
