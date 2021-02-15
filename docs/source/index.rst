@@ -21,8 +21,6 @@ Overview
    :maxdepth: 2
 
    Linux system
-   
-   Compute_Canada
 
    OpenNeuro
 
