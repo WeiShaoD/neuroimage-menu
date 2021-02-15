@@ -1,17 +1,17 @@
-.. Wei's brain book documentation master file, created by
+.. Wei's Brain book documentation master file, created by
    sphinx-quickstart on Tue Feb  2 11:54:14 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Wei's brain book!
-============================
+Welcome to Wei's cookbook of Neuroimage methods!
+================================================
 
 .. image:: brainbook1.png
 
-Here is a book introduce some neuroimage skills for the beginner
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Here is documentation to give some instructions about how to run the analysis with MRIs data with different software 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Since I was child, I always curious about the the human thoughts and behaviors, as I grow up, I found that neuroimage can help me! 
+Every good chef need a cookbook for reference, I hope this one can help you as the beginning of MRI analysis  
 
 
 
@@ -38,7 +38,7 @@ Overview
 
    help  
 
-   :caption: Contents:
+   :caption: Overview:
 
 
 Indices and tables
