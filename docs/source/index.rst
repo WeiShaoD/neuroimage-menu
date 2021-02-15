@@ -11,7 +11,7 @@ Welcome to Wei's brain book!
 Here is a book introduce some neuroimage skills for the beginner
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Since I was child, I always curious about the the human thoughts and behaviors, as I grow up, I found that neuroimage can help me!
+Since I was child, I always curious about the the human thoughts and behaviors, as I grow up, I found that neuroimage can help me! 
 
 
 
@@ -21,6 +21,10 @@ Overview
    :maxdepth: 2
 
    Linux system
+   
+   Compute_Canada
+
+   OpenNeuro
 
    FreeSurfer
 
@@ -29,8 +33,6 @@ Overview
    AFNI
 
    SPM
-
-   Openneuro
 
    for_loop
 

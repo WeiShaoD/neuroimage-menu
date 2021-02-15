@@ -12,3 +12,10 @@ it is recommended to use Linux system, either Windox user via VirtualBox or Mac,
 A Linux distribution is an operating system made from a software collection that is based upon the Linux kernel(based on the Linux system), as well as package management system. Linux users usually obtain their operating system by downloading one of the Linux distributions, which are available for a wide variety of systems ranging from embedded devices and personal computers to powerful supercomputers.There are many popular Linux distributions include Ubuntu or Centos
 
 As user, you just need to choose one of the Linux distribution
+
+For Server user, you can use 
+
+for windows users, MobaXterm is a good toolbox for remote computing.   
+
+
+I use compute Canada and other servers to do the job
