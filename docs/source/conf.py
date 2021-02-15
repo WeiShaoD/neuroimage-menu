@@ -17,7 +17,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "wei's brain book"
+project = "Wei's cookbook for neuroimage"
 copyright = '2021, wei'
 author = 'wei'
 

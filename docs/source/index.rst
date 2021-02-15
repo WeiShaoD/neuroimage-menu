@@ -1,10 +1,10 @@
-.. Wei's Brain book documentation master file, created by
+.. Wei's Cookbook documentation master file, created by
    sphinx-quickstart on Tue Feb  2 11:54:14 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Wei's cookbook of Neuroimage methods!
-================================================
+Welcome to Wei's cookbook for Neuroimage methods!
+=================================================
 
 .. image:: brainbook1.png
 
