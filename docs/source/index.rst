@@ -22,8 +22,6 @@ Overview
 
    Linux system
 
-   OpenNeuro
-
    FreeSurfer
 
    FSL
@@ -39,6 +37,10 @@ Overview
    help  
 
    :caption: Contents:
+
+.. toctree::
+   :maxdepth: 1
+   OpenNeuro
 
 
 Indices and tables
