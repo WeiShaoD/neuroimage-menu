@@ -23,8 +23,7 @@ After that, you can download `Ubuntu <https://ubuntu.com/download>`__ and instal
 
 Once you have done, go to the search bar and type the name. 
 
-
-for windows users, MobaXterm is a good toolbox for remote computing.   
+   
  
 
 Shell and Most useful commands
@@ -37,10 +36,42 @@ There are many shells such as bash, Tcsh, Ksh,Zshm. Bash would be the defult she
 
 .. image:: Shell_1.PNG
 
-if you see this, you are good to go, or you can change the shell to bash by typing:: and put the password
+if you see this, you are good to go, or you can change the shell to bash by typing::
 
   chsh -s /bin/bash
 
 .. image:: Shell_2.PNG
 
-Just like some spices are good all the time, in the  
+
+Just like some spices are good all the time, some basic commands are necessary and useful when you use linux::
+
+  ls 
+
+  cd 
+
+  rm
+
+  mv 
+
+  makdir 
+
+Now, open a terminal either by Centos or Ubuntu, you can see this 
+
+.. image:: Centos_open.PNG
+
+put ls, you will see all the files and sub-directories in the current directory
+
+.. image:: ls.PNG
+
+you also can find the files in sub-directories directly::
+
+  ls happy_birthday 
+
+.. image:: ls_subD.PNG
+
+cd (“change directory”) is used to change the current working directory in Linux::
+ 
+  cd happy_birthday  go to happy_birthday directory from current working directory
+  cd ..              go back to parent directory 
+  cd                 go to the home directory 
+   
