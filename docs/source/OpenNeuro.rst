@@ -13,9 +13,21 @@ Go to `OpenNeuro <https://openneuro.org/>`__, click Browse All Public Datasets o
 
 .. image:: OpenNeuro_2.PNG
 
+You can see a brief description about the dataset and take a look.
+
 .. image:: OpenNeuro_3.PNG
 
-You can see a brief description about the dataset and take a look.
+Then, you can download the data 
+
+.. image:: OpenNeuro_6.PNG
+
+or go to Dataset File Tree and view the image
+
+.. image:: OpenNeuro_4.PNG
+
+.. image:: OpenNeuro_5.PNG
+
+ 
 
 
  
