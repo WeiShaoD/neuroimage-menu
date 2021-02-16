@@ -1,10 +1,12 @@
 Linux system
 ============
 
-Linux system set up
-^^^^^^^^^^^^^^^^^^^
 .. image:: linux-logo.png
 
+Linux system set up
+^^^^^^^^^^^^^^^^^^^
+Every chef needs a good cooking table, Linux system would be ours
+ 
 Linux is a open-source operating systems created by Linus Torval, it is free and function for programming user interface as well as Graphical user interface (Windos) both.Unlike commerical system like Windows,There are many free software and libraries developed for Linux, especially the neuroimage packages.
 
 Compared with the Windows syste, the files system of Linux is quite different
