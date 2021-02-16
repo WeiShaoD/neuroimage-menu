@@ -27,6 +27,6 @@ Then, if you see a similar terminal like this, it means you are in
 
 .. image:: MobaXterm_1.PNG   
 
-In some cases, you can use ssh -Y (user id)@(server IP)as the command to connect the remote server.
+In some cases, you can use ssh -Y (user id)@(server IP) as the command to connect the remote server.
 
 
