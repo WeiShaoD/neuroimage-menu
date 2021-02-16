@@ -25,9 +25,9 @@ Once you have done, go to the search bar and type the name.
 
    
  
+Shell 
+^^^^^
 
-Shell and Most useful commands
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The Shell is an interactive interface that allows users to execute other commands and utilities in Linux and other UNIX-based operating systems. When you login to the operating system, the standard shell is displayed.
 
 There are many shells such as bash, Tcsh, Ksh,Zshm. Bash would be the defult shell for many linux systems. You can check the current shell by typing::
@@ -43,25 +43,29 @@ if you see this, you are good to go, or you can change the shell to bash by typi
 .. image:: Shell_2.PNG
 
 
+
+Basic commands 
+^^^^^^^^^^^^^^
+
 Just like some spices are good all the time, some basic commands are necessary and useful when you use linux::
 
-  ls 
+  ls  #ls command lists files and directories within the file system, and shows detailed information about them
 
-  cd 
+  cd  #cd (“change directory”) is used to change the current working directory in Linux 
 
-  rm
+  rm  #rm is a basic command to remove objects such as files, directories and symbolic links
+ 
+  mv  #mv is a command that moves one or more files or directories from one place to another
 
-  mv 
+  mkdir #mkdir (make directory) command allows you to create or make new directories
 
-  mkdir 
-
-  cp
+  cp  #cp is for copying files and directories
 
 Now, open a terminal either by Centos or Ubuntu, you can see this 
 
 .. image:: Centos_open.PNG
 
-put ls, you will see all the files and sub-directories in the current directory
+use ``ls``, you will see all the files and sub-directories in the current directory
 
 .. image:: ls.PNG
 
@@ -71,36 +75,40 @@ you also can find the files in sub-directories directly::
 
 .. image:: ls_subD.PNG
 
-cd (“change directory”) is used to change the current working directory in Linux::
+cd to happy_birthday
+
+.. image:: cd_birthday.PNG 
  
   cd happy_birthday  #go to happy_birthday directory from current working directory
   cd ..              #go back to parent directory 
   cd                 #go to the home directory 
    
-rm, rm is a basic command to remove objects such as files, directories and symbolic links::
+make cakes and party directory 
 
- rm file_name #remove the file 
- rm -r directory_name #remove the whole directory
+.. image:: make_cakes_party.PNG
 
-::mv is a command that moves one or more files or directories from one place to another. If both filenames are on the same filesystem, this results in a simple file rename; otherwise the file content is copied to the new location and the old file is removed::
+next, mv cakes to the party
 
- mv files directory #directory that you want to move in
+.. image:: mv_cakes.PNG
 
-mkdir(make directory) command allows you to create or make new directories::
+of course, cakes are always not enough for the party, so copy the pudding.
+
+.. image:: cp_pudding.PNG
+
+Now, let's how many desserts we have 
+
+.. image:: dessrts.PNG 
+
+wait a miniuits, where is the biscuit come from, I don't want that in the party. just remove it
+
+.. image:: rm_biscuit.PNG
+
+Now, we have all the desserts for a birthday party
+
+these are the 6 basic commands you will use in the future whether you use you own laptop or server for the analysis
  
- mkdir directory_name #make a new directory named by you
-
-cp is for copying files and directories::
-
-cp file/directory directory #directory that you want the copy to 
-
-these are the 6 basic command you will use in the future whether you use you own laptop or server for the analysis 
-
-.. image:: command_example.PNG 
-
 you also can use:: 
 
-man command 
+man ls/cd/mv/rm/cp/mkdir for more details 
 
-in the terminal to find more details
 
