@@ -9,7 +9,7 @@ Nowadays, every university or neuroimage research institution might have the rig
 
 first of all, you need a key to the door of central kitchen, and MobaXterm can do this job
 
-Go to `MobaXterm <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ and find the right edition to set up. 
+Go to `MobaXterm <https://mobaxterm.mobatek.net/>`__ and find the right edition to set up. 
 
 .. image:: MobaXterm.PNG
 
@@ -17,7 +17,7 @@ if you have the access to any server/supercomputer, you can take the Cedar clute
 
   ssh -Y (user id)@cedar.computecanada.ca
 
-Secure Shell(ssh)ssh is a widely-used standard to connect to remote servers in a secure way. SSH connection is encrypted. You can use ssh to execute commands, submit jobs, follow the progress of these jobs and in some cases, transfer files, etc..
+Secure Shell (ssh) is a widely-used standard to connect to remote servers in a secure way. SSH connection is encrypted. You can use ssh to execute commands, submit jobs, follow the progress of these jobs and in some cases, transfer files,etc.
 
 The option -Y forwards X11 traffic which allows you to use graphical applications on the remote server. You also need to have an X11 server installed on your workstation.For windows, MobaXterm normally comes with an X11 server.
 
