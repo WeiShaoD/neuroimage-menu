@@ -1,18 +1,23 @@
 OpenNeuro
-====================
+=========
 
 Welcome to OpenNeuro
 
-OpenNeuro(OpenfMRI) is an open-science neuroinformatics online database storing datasets from human brain imaging research studies.It accept Neuroimaging researchers upload their date to this site so third-party researchers could download the data and analyze it.
+As we know that a good chef always need to know where is the best ingredientsl, so do we. 
+
+OpenNeuro (OpenfMRI) is an open-science neuroinformatics online database storing datasets from human brain imaging research studies.Neuroimaging researchers around the world can upload their data to this site so third-party researchers can download the data and analyze it.
 
 .. image:: OpenNeuro_1.PNG
 
-`OpenNeuro <https://openneuro.org/>`__
+Go to `OpenNeuro <https://openneuro.org/>`__, click Browse All Public Datasets or search the dataset by name, pick  one you are most interested in.   
 
 .. image:: OpenNeuro_2.PNG
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Start to Finish Analysis with AFNI
-
 .. image:: OpenNeuro_3.PNG
+
+You can see a brief description about the dataset and take a look.
+
+
+ 
+
+ 
