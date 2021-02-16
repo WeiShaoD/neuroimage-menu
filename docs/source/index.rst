@@ -24,6 +24,8 @@ Index
 
    OpenNeuro
 
+   SuperComputer
+
    FreeSurfer
 
    FSL
