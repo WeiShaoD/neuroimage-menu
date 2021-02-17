@@ -36,9 +36,7 @@ Index
 
    for_loop
 
-   question
-
-   help  
+   question  
 
    :caption: Overview:
 
