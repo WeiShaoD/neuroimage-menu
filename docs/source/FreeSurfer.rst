@@ -25,7 +25,7 @@ then, you are supposed to see this
 From here, We can check the Freesufer taht has been installed, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer program process.
 
 
-recon-all
+Recon-all
 ^^^^^^^^^
 The most powerful function of FreesSufer is the recon-all command, it will performs all the cortical reconstruction process::
 
@@ -101,12 +101,12 @@ Cortical Parcellation mapping to Aseg
 Noramllly, these processes will cost 8-24 hours for one subjects, however, if you have powerful laptop or Suptercomputer/Server, there is a way that can reduce the time dramatically.
 
 
-parallel computing for recon-all
+Parallel computing for recon-all
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
 
 A physical core is an actual physical processor core in your CPU. Each physical core has its own circuitry and its own L1 (and usually L2) cache can read and execute instructions separately (for the most part) $
 
-Due to Freesufer emalble the OpenMP code,recon-all can be processed by multiple-cores,ths means that you can either recon-all one subjects with multiple cores or run recon-all multiple subjecets with many cores$
+Freesufer support the OpenMP code,recon-all can be processed by multiple-cores,ths means that you can either recon-all one subjects with multiple cores or run recon-all multiple subjecets with many cores$
 
 the command to tell recon-all run multiple cores is -openmp X, X means how many cores you want to run
 
