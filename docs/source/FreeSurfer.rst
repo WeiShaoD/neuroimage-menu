@@ -1,8 +1,8 @@
 Freesurfer
-=========
+==========
 
-Welcome to the Freesurfer
-^^^^^^^^^^^^^^^^^^^^^^^^^
+Welcome to FreeSurfer menu
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 What is FreeSurfer?
 
@@ -110,3 +110,10 @@ Freesufer support the OpenMP code,recon-all can be processed by multiple-cores,t
 
 the command to tell recon-all run multiple cores is -openmp X, X means how many cores you want to run
 
+
+Segmentation of hippocampal subfields
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+FastSurfer
+^^^^^^^^^^

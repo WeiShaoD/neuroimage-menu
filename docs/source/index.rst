@@ -11,7 +11,7 @@ Welcome to Wei's cookbook for Neuroimage methods!
 Here is documentation to give some instructions about how to run the analysis with MRIs data with different software 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Every good chef need a cookbook for reference, I hope this one can help you as the beginning of MRI analysis  
+As every good chef need a cookbook for reference, I hope this e-book can help you in the beginning of MRIs analysis  
 
 
 
@@ -34,9 +34,11 @@ Index
 
    SPM
 
-   for_loop
+   For_loop
 
-   question  
+   Github
+
+   Question?  
 
    :caption: Overview:
 
