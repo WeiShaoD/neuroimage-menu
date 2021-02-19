@@ -13,18 +13,31 @@ Compared with the Windows syste, the files system of Linux is quite different
 
 .. image:: File-Systems-Linux-vs-Windows-Edureka-768x500.png
 
-If you use Macintosh developed by Apple such as macOC, no change needed. However, if you like me, can't let windows go, you might need some extra works in order to set up for brain image analysis. This documention I will focus on the Linux system (under the Windows) only.  
+If you use Macintosh developed by Apple such as macOS, no change needed. However, if you like me, a Windows user, you might need some extra works in order to set up for brain image analysis. This documention I will focus on the Linux system (under the Windows) only.  
 
 A Linux distribution is an operating system made from a software collection that is based upon the Linux kernel, as well as package management system. Linux users usually obtain their operating system by downloading one of the Linux distributions, which are available for a wide variety of systems ranging from embedded devices and personal computers to powerful supercomputers.There are many popular Linux distributions include Ubuntu or Centos
  
-As a windows user, Before you install the Linux distribution, make sure that you enable the Windows subsystem(WSL) for `linux feature <https://www.how2shout.com/how-to/enable-windows-subsystem-linux-feature.html>`__ 
+As a windows user, Before you install the Linux distribution, make sure that you enable the Windows subsystem for `linux feature <https://www.how2shout.com/how-to/enable-windows-subsystem-linux-feature.html>`__ 
 
 After that, you can download `Ubuntu <https://ubuntu.com/download>`__ and install it on Windows 10 with WSL. Or you can get CentOS from `here <https://github.com/wsldl-pg/CentWSL/releases/tag/8.1.1911.1>`_ and install it with WSL
 
 Once you have done, go to the search bar and type the name. 
 
-   
- 
+WSL and Xming   
+^^^^^^^^^^^^^
+
+For these MacOS, you can ship this chapter. For Windows user,The Windows Subsystem for Linux (WSL) ensure you can run a Linux distribution with "virtualized" environment under Windows OS. Some common linux distributions like CentOS and Ubuntu, are currently available from the Windows App store for download and use in WSL.
+
+To setup WSL, the PowerShell must first be used to enable WSL. Then a linux distribution needs to be installed in the WSL environment. Subsequently additional software may need to be installed to run on the Windows side and/or in the Linux distribution running under WSL depending upon what you want to run under Linux.
+
+In order to run X-windows based graphics programs in WSL, an X server needs to be installed on the Windows side (since the Windows OS is driving the graphics hardware and there is no native X server in Windows). Accordingly, the WSL linux environment needs to be set/tested to run X based graphics in WSL with the X server running under Windows (instead of under Linux).
+
+set up Windows PowerShell, open it. run the "enable optional feature" command::
+
+ Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+Download and set up `Xming <http://www.straightrunning.com/XmingNotes/>`__ 
+
 Shell 
 ^^^^^
 
