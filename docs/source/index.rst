@@ -43,13 +43,12 @@ Menu
    :caption: Overview:
 
 
-Indices and tables
-==================
+#Indices and tables
+#==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
-
+#* :ref:`genindex`
+#* :ref:`modindex`
+#* :ref:`search`
 
 
 “Is what each begins and perfects on himself”
