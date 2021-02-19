@@ -33,12 +33,12 @@ Menu
    AFNI
 
    SPM
-
+   
    For_loop
 
    Github
 
-   Web scraping
+   Tricks
 
    Question?  
 

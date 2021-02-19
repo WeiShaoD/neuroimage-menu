@@ -114,6 +114,18 @@ the command to tell recon-all run multiple cores is -openmp X, X means how many 
 Segmentation of hippocampal subfields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Subfields segmentation in Hippocampus
+
+
+
+Extract the volume matrix from FreeSurfer
+Open the CSV file with Excel 2016.
+Look for "Data" tab and "Text in column" button.
+In the step 1, select "Delimited".
+In the step 2, select first "space", and then choose "string classifier" as ". Then Excel will recognise the string quoted in " " and separate in columns the data with space.
+Change format in step 3. "Finish".
 
 FastSurfer
 ^^^^^^^^^^
+
+
