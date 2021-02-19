@@ -15,7 +15,7 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
 
 
-Index
+Menu
 
 .. toctree::
    :maxdepth: 3
