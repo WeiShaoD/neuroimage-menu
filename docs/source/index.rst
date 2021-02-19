@@ -24,8 +24,6 @@ Menu
 
    OpenNeuro
 
-   SuperComputer
-
    FreeSurfer
 
    FSL
@@ -34,9 +32,11 @@ Menu
 
    SPM
    
+   SuperComputer
+
    For_loop
 
-   Github
+   GitHub
 
    Tricks
 

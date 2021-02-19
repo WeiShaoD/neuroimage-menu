@@ -1,7 +1,7 @@
 GitHub
 ^^^^^^
 
-Welcome to GitHub menu
-^^^^^^^^^^^^^^^^^^^^^^
+Welcome to GitHub
+^^^^^^^^^^^^^^^^^
 
 This page is still in the cooking process
