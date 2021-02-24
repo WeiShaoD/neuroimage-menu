@@ -85,9 +85,48 @@ Segmentation of hippocampal subfields
 
 Subfields segmentation in Hippocampus
 
+Go to `HippocampalSubfieldsAndNucleiOfAmygdala module https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala>` __ to see all the instructions
 
+After ``recon-all`` has been completed, you can use T1 scan from ``recon-all`` and the pipline::
 
+  segmentHA_T1.sh subject_name [SUBJECTS_DIR]
+
+[SUBJECTS_DIR] is optional, the output files will be appear in the mri directory of SUBJECT_DIR ($SUBJECTS_DIR/subjects_name/mri/)
+
+You can check the outfiles with freeview::
+
+  freeview -v nu.mgz -v lh.hippoAmygLabels-T1.v21.mgz:colormap=lut -v rh.hippoAmygLabels-T1.v21.mgz:colormap=lut
+  freeview -v nu.mgz -v lh.hippoAmygLabels-T1.v21.HBT.mgz:colormap=lut -v rh.hippoAmygLabels-T1.v21.HBT.mgz:colormap=lut
+  freeview -v nu.mgz -v lh.hippoAmygLabels-T1.v21.FS60.mgz:colormap=lut -v rh.hippoAmygLabels-T1.v21.FS60.mgz:colormap=lut
+  freeview -v nu.mgz -v lh.hippoAmygLabels-T1.v21.CA.mgz:colormap=lut -v rh.hippoAmygLabels-T1.v21.CA.mgz:colormap=lut
+
+[lr]h.hippoSfVolumes-T1.v21.txt: these text files store the estimated volumes of the hippocampal substructures and of the whole hippocampus..
+
+[lr]h.amygNucVolumes-T1.v21.txt: these text files store the estimated volumes of the nuclei of the amygdala and of the whole amygdala.
+
+[lr]h.hippoAmygLabels-T1.v21.mgz: they store the discrete segmentation volumes at subvoxel resolution (0.333 mm).
+
+[lr]h.hippoAmygLabels-T1.v21.FSvoxelSpace.mgz: they store the discrete segmentation volume in the FreeSurfer voxel space (normally 1mm isotropic, unless higher resolution data was used in recon-all with the flag -cm). 
+
+[lr]h.hippoAmygLabels-T1.v21.[hierarchy].mgz: they store the segmentations with the different hierarchy levels.
+
+[lr]h.hippoAmygLabels-T1.v21.[hierarchy].FSvoxelSpace.mgz: same as above, but in FreeSurfer voxel space.
+
+In addtion T1 scan, you can also use T2 scan as an addtional scan::
+
+  segmentHA_T2.sh  subjects_name  FILE_ADDITIONAL_SCAN   ANALYSIS_ID  USE_T1  [SUBJECTS_DIR]
+
+FILE_ADDITIONAL_SCAN is the additional scan to use in the segmentation
+
+ANALAYSIS_ID is a user defined identifier that makes it possible to run different analysis with different types of additional scans
+
+USE_T1 is a flag that indicates whether the intensities of the main T1 scan should be used (multispectral segmentation). The words USE_T1 must be replaced with a 0 or 1 on the command line
+
+SUBJECTS_DIR is optional, and overrides the FreeSurfer subject directory when provided
+                                                                                                                                                                                                                 [lr]h.hippoAmygLabels-T1.v21.[hierarchy].FSvoxelSpace.mgz: same as above, but in FreeSurfer voxel space.
 Extract the volume matrix from FreeSurfer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Open the CSV file with Excel 2016.
 Look for "Data" tab and "Text in column" button.
 In the step 1, select "Delimited".
@@ -125,8 +164,10 @@ fastsurferdir=/home/user/fastsurfer_analysis_directory
                     --sid subject1 --sd $fastsurferdir \
                     --parallel --threads 4
 
-``--sd``  Output directory $SUBJECTS_DIR .
+``--sd``  Output directory $SUBJECTS_DIR 
+
 ``--sid`` Subject ID for directory inside $SUBJECTS_DIR to be created 
+
 ``--t1``  T1 full head input. The network was trained with conformed images (UCHAR, 256x256x256, 1 mm voxels and standard slice orientation). These specifications are checked in the eval.py script and the image is automatically conformed if it does not comply.
 
 Before you run the script, just ensure you check all the required packages 
