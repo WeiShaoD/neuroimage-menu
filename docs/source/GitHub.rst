@@ -1,4 +1,8 @@
 GitHub
 ^^^^^^
 
-This page is still in the cooking process
+introduction to GitHub 
+^^^^^^^^^^^^^^^^^^^^^^
+
+What is GitHub?
+

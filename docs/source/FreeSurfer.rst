@@ -124,6 +124,7 @@ USE_T1 is a flag that indicates whether the intensities of the main T1 scan shou
 
 SUBJECTS_DIR is optional, and overrides the FreeSurfer subject directory when provided
                                                                                                                
+For MacOC user, please follow this `video <https://www.youtube.com/watch?v=0R6SJI9MvYM&t=429s>` __
 
 Extract the volume matrix from FreeSurfer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
