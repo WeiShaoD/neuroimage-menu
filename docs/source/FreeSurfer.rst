@@ -97,7 +97,7 @@ Change format in step 3. "Finish".
 FastSurfer
 ^^^^^^^^^^
 
-`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform outputs like FreeSurfer did, enables big-data analysis and time-critical clinical applications. 
+`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform outputs like FreeSurfer did, enables big-data analysis and time-critical clinical applications. A `video <https://www.youtube.com/watch?v=V78jKcqVg7k&feature=emb_logo>`__ might help you understand better. 
 
 .. image:: FasteSurfer.png
 
