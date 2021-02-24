@@ -97,10 +97,17 @@ Change format in step 3. "Finish".
 FastSurfer
 ^^^^^^^^^^
 
-`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform outputs like FreeSurfer did, enables big-data analysis and time-critical clinical applications.
+`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform outputs like FreeSurfer did, enables big-data analysis and time-critical clinical applications. 
+
+.. image:: FasteSurfer.png
 
 FastSurfer consists of two main parts:
 
-``FastSurferCNN`` is an advanced deep learning pipline for whole brain segmentation into 95 classes in under 1 minute, mimicking FreeSurfer’s anatomical segmentation and cortical parcellation. 
+``FastSurferCNN`` Volumetric Segmentation 
 
-``recon-surf`` is a full FreeSurfer alternative for cortical surface reconstruction, mapping of cortical labels and traditional point-wise and ROI thickness analysis in approximately 60 minutes.
+FastSurferCNN is an  advanced deep learning pipline for whole brain segmentation into 95 classes in under 1 minute, mimicking FreeSurfer’s anatomical segmentation and cortical parcellation. 
+
+``recon-surf`` Surface reconstruction
+
+recon-suirf is a full FreeSurfer alternative for cortical surface reconstruction, mapping of cortical labels and traditional point-wise and ROI thickness analysis in approximately 60 minutes.
+
