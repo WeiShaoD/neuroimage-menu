@@ -123,7 +123,8 @@ ANALAYSIS_ID is a user defined identifier that makes it possible to run differen
 USE_T1 is a flag that indicates whether the intensities of the main T1 scan should be used (multispectral segmentation). The words USE_T1 must be replaced with a 0 or 1 on the command line
 
 SUBJECTS_DIR is optional, and overrides the FreeSurfer subject directory when provided
-                                                                                                                                                                                                                 [lr]h.hippoAmygLabels-T1.v21.[hierarchy].FSvoxelSpace.mgz: same as above, but in FreeSurfer voxel space.
+                                                                                                               
+
 Extract the volume matrix from FreeSurfer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
