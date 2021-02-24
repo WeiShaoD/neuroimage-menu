@@ -111,3 +111,25 @@ FastSurferCNN is an  advanced deep learning pipline for whole brain segmentation
 
 recon-suirf is a full FreeSurfer alternative for cortical surface reconstruction, mapping of cortical labels and traditional point-wise and ROI thickness analysis in approximately 60 minutes.
 
+go to `Here <https://github.com/deep-mi/FastSurfer>`__ either use ``git clone`` from you home directory to ge the file or download the file and put it in your home directory 
+
+# set up 
+Set the path ``export FREESURFER_HOME=/usr(usrname)/local/freesurfer/7.1.1-1``
+Use ``source $FREESURFER_HOME/SetUpFreeSurfer.sh`` to activate the Freesurfer
+
+datadir=/home/user/mri_data_directory
+fastsurferdir=/home/user/fastsurfer_analysis_directory 
+
+# Run FastSurfer
+./run_fastsurfer.sh --t1 $datadir/subject1/orig.mgz \
+                    --sid subject1 --sd $fastsurferdir \
+                    --parallel --threads 4
+
+``--sd``  Output directory $SUBJECTS_DIR .
+``--sid`` Subject ID for directory inside $SUBJECTS_DIR to be created 
+``--t1``  T1 full head input. The network was trained with conformed images (UCHAR, 256x256x256, 1 mm voxels and standard slice orientation). These specifications are checked in the eval.py script and the image is automatically conformed if it does not comply.
+
+Before you run the script, just ensure you check all the required packages 
+``sed -i "s/==/>=/g" requirements.txt`` and ``pip install --no-index -r requirements.txt`` might help
+
+
