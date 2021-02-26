@@ -34,7 +34,7 @@ The most powerful function of FreesSufer is the recon-all command, it will perfo
 input.file could be either DICOM(T1) or NIFTI file where you can find from the anat folder
 
 
-Here are the things that recon-all will do: 
+Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all>`__ will do:   
 
 Motion Correction and Conform.
 NU (Non-Uniform intensity normalization).
@@ -175,4 +175,4 @@ fastsurferdir=/home/user/fastsurfer_analysis_directory
 Before you run the script, just ensure you check all the required packages 
 ``sed -i "s/==/>=/g" requirements.txt`` and ``pip install --no-index -r requirements.txt`` might help
 
-
+This is a fast alternative way to do the Freesurfer job

@@ -1,5 +1,5 @@
 GitHub
-^^^^^^
+======
 
 introduction to GitHub 
 ^^^^^^^^^^^^^^^^^^^^^^
