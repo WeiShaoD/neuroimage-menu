@@ -22,20 +22,40 @@ then, you are supposed to see this
 
 .. image:: FreeSurfer_ready.png 
 
-From here, We can check the Freesufer taht has been installed, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer program process.
+From here, We can check the Freesufer that has been installed, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer program process.
 
 
 Recon-all
 ^^^^^^^^^
-The most powerful function of FreesSufer is the recon-all command, it will performs all the cortical reconstruction process::
+The most useful function of FreesSufer is the recon-all command, after you set up the FreeSurfer subject directory and active FreeSrufer, you can use it by typing::
 
-  recon-all -all -i input.file -s output.file
+  recon-all -all -i subjname_T1w.nii.gz -s subjname
 
-input.file could be either DICOM(T1) or NIFTI file where you can find from the anat folder
+input could be either DICOM(T1) or NIFTI T1 files where you can find from the anat folder normally. Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ will do. Recon usually will cost 6-8 hours, depends on the computing power you you have.
 
+Freeview
+^^^^^^^^
+Once the recon-all finished, you are able to see there is new directory has been created with the name you gave before, go the mri directory 
 
-Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ will do:   
+..image:: mri_files.PNG
 
+Now, you can the view the volumes such as brainmask.mgz and wm.mgz; the surfaces, rh.white and lh.white; and the subcortical segmentation, aseg.mgz::
+
+  freeivew -v T1.mgz -v wm.mgz -v brainmask.mgz aseg.mgz:colormap=lut:opacity=0.2
+
+The flag -v is used to open some of the most commonly used volumes including
+brainmask.mgz : skull-stripped volume primarily used for troubleshooting
+wm.mgz : white matter mask also used for troubleshooting
+aseg.mgz : subcortical segmentation loaded with its corresponding color table and at a low opacity
+
+or go to the surf directory::
+ 
+  freeview -f lh.pial:edgecolor=red rh.white:edgecolor=blue rh.pial:edgecolor=red
+
+The flag -f is used to load surfaces
+white & pial surfaces are loaded for each hemisphere & with color indicated by 'edgecolor'
+
+for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>` __
 
 Parallel computing for recon-all
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
@@ -51,8 +71,6 @@ Segmentation of hippocampal subfields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Subfields segmentation in Hippocampus
-
-Go to `HippocampalSubfieldsAndNucleiOfAmygdala module https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala>` __ to see all the instructions
 
 After ``recon-all`` has been completed, you can use T1 scan from ``recon-all`` and the pipline::
 
@@ -91,7 +109,9 @@ USE_T1 is a flag that indicates whether the intensities of the main T1 scan shou
 
 SUBJECTS_DIR is optional, and overrides the FreeSurfer subject directory when provided
                                                                                                                
-For MacOC user, please follow this `video <https://www.youtube.com/watch?v=0R6SJI9MvYM&t=429s>` __
+For MacOC user, please follow this `video <https://www.youtube.com/watch?v=0R6SJI9MvYM&t=429s/>`__
+
+Go `HippocampalSubfieldsAndNucleiOfAmygdala  <https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala/>`__ to see all the instructions
 
 Extract the volume matrix from FreeSurfer
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
