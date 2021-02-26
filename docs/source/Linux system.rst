@@ -124,4 +124,13 @@ you also can use::
 
 man ls/cd/mv/rm/cp/mkdir for more details 
 
+for_loop
+^^^^^^^^
 
+For loop probably is the one of the most useful commands you apply for preocess data with neuroimage
+
+Here is a example::
+for i in 1 2 3; do echo $i; 
+done
+
+The for-loop has three sections, separated by semicolons. The first section is the Declaration: it begins by assigning the first item after “in” to the variable “i”; in this case, it would assign the value “1” to “i”. The numbers after “in” are called the “List”. The next section is the Body, which runs the commands written after “do,” replacing the
