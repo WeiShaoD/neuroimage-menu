@@ -55,7 +55,7 @@ or go to the surf directory::
 The flag -f is used to load surfaces
 white & pial surfaces are loaded for each hemisphere & with color indicated by 'edgecolor'
 
-for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>` __
+for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
 
 Parallel computing for recon-all
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
