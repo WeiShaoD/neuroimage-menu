@@ -8,7 +8,7 @@ What is GitHub?
 
 GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
 
-first thing first,
+First thing first
 
 go to `GitHub <https://github.com/>__ create a account and sign in 
 
