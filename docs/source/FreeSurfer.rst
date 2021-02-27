@@ -37,7 +37,7 @@ Freeview
 ^^^^^^^^
 Once the recon-all finished, you are able to see there is new directory has been created with the name you gave before, go the mri directory 
 
-..image:: mri_files.PNG
+..  image:: mri_files.PNG
 
 Now, you can the view the volumes such as brainmask.mgz and wm.mgz; the surfaces, rh.white and lh.white; and the subcortical segmentation, aseg.mgz::
 
