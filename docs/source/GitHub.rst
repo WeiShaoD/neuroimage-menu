@@ -47,12 +47,16 @@ A new branch called ``feature``
 
 a journey that ``feature`` takes before it’s merged into ``main``
 
-..image:: branching.png
+  ..image:: branching.png
 
 Creat a new branch
+
 Go to your new repository hello-world
+
 click branch: main
+
 type a branch name, readme-edits, into the new branch text box
+
 Select the Create branch text box
 
 Now you have two branches, ``main`` and ``readme-edits``
@@ -67,7 +71,7 @@ Click the  pencil icon in the upper right corner of the file view to edit
 Write a commit message that describes your changes
 Click Commit changes button.
 
-..image:: Github_code.PNG
+  ..image:: Github_code.PNG
 
 These changes will be made to just the README file on your readme-edits branch, so now this branch contains content that’s different from main.
 
