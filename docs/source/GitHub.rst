@@ -20,6 +20,7 @@ Here I just want to introduce 4 major commands for GitHub::
   Pull Requests
 
 Step 1 Creat a repository 
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs
 
@@ -36,6 +37,7 @@ click Create repository
 .. image:: GitHub_new_repository.PNG 
 
 Step 2 Creat a Branch
+^^^^^^^^^^^^^^^^^^^^^
 
 Branching is the way to work on different versions of a repository at one time, By default your repository has one branch named ``main`` which is considered to be the definitive branch. We use branches to experiment and make edits before committing them to ``main``
 
@@ -62,6 +64,7 @@ Select the Create branch text box
 Now you have two branches, ``main`` and ``readme-edits``
 
 Step 3 Make and commit changes
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now, you’re on the code view for your readme-edits branch, which is a copy of main. Let’s make some edits.
 
@@ -71,11 +74,12 @@ Click the  pencil icon in the upper right corner of the file view to edit
 Write a commit message that describes your changes
 Click Commit changes button.
 
-  ..image:: Github_code.PNG
+..  image:: Github_code.PNG
 
 These changes will be made to just the README file on your readme-edits branch, so now this branch contains content that’s different from main.
 
 Step 4 Open a Pull Request
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Now that you have changes in a branch off of main, you can open a pull request
 
@@ -91,9 +95,12 @@ Look over your changes in the diffs on the Compare page, make sure they’re wha
 
 Give your pull request a title and write a brief description of your changes
 
+
+
 Celebrate!
 
 Step 5 Merge your Pull Request
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In this final step, it’s time to bring your changes together – merging your ``readme-edits`` branch into the ``main`` branch
 
