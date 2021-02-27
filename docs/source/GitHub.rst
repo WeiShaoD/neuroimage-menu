@@ -10,7 +10,7 @@ GitHub is a code hosting platform for version control and collaboration. It lets
 
 First thing first
 
-go to `GitHub <https://github.com/>__ create a account and sign in 
+go to `GitHub <https://github.com/>`__ create a account and sign in 
 
 Here I just want to introduce 4 major commands for GitHub::
 
@@ -33,7 +33,7 @@ Select Initialize this repository with a README.
 
 click Create repository
 
-..image::GitHub_new_repository.PNG 
+.. image:: GitHub_new_repository.PNG 
 
 Step 2 Creat a Branch
 
