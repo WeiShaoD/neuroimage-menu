@@ -49,7 +49,7 @@ A new branch called ``feature``
 
 a journey that ``feature`` takes before it’s merged into ``main``
 
-  ..image:: branching.png
+..  image:: branching.png
 
 Creat a new branch
 
@@ -62,6 +62,8 @@ type a branch name, readme-edits, into the new branch text box
 Select the Create branch text box
 
 Now you have two branches, ``main`` and ``readme-edits``
+
+
 
 Step 3 Make and commit changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -89,12 +91,15 @@ Open a Pull Request for changes to the README
 
 Click the Pull Request tab, then from the Pull Request page, click the green New pull reqqest
 
+..  image:: GitHub_pull_request.PNG
+
 select the branch you made, readme-edits, to compare with main (the original)
+
+..  image:: GitHub_compare.PNG
 
 Look over your changes in the diffs on the Compare page, make sure they’re what you want to submit
 
 Give your pull request a title and write a brief description of your changes
-
 
 
 Celebrate!
@@ -105,6 +110,8 @@ Step 5 Merge your Pull Request
 In this final step, it’s time to bring your changes together – merging your ``readme-edits`` branch into the ``main`` branch
 
 Click the green Merge pull request button to merge the changes into ``main``
+
+..  image:: GitHub_Merge.PNG
 
 Click Confirm merge
 
