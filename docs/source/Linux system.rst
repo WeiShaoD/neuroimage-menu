@@ -153,5 +153,12 @@ to add the subjects and prolong the "list". More importantly,task would be quite
 
   ls . | grep ^sub- > subjList.tx 
 
-``ls`` means we want to know something ``.`` indicate that what looking at the current directory, ``|`` means that whatever we did, keep continue, grep help us to search for a string of characters in a specified file. When it finds a match, it prints the line with the result. By typing ``^sub``, we are looking for all the files with sub- as Prefix, ``> subjlist.txt`` to create a txt file which contains all the information we searched.
+``ls`` means we want to know something ``.`` indicate that what looking at the current directory, ``|`` means that whatever we did, keep continue, grep help us to search for a string of characters in a specified file. When it finds a match, it prints the line with the result. By typing ``^sub``, we are looking for all the files with sub- as Prefix, ``> subjlist.txt`` to create a txt file which contains all the information we searched. 
+
+You also can use::
+
+  ls . | grep sub* > subjList.tx  
   
+to create a list which contains sub
+
+you can use ``find . -name "file_name"``to find the file_name information in the subdirectory
