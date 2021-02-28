@@ -134,15 +134,21 @@ Here is a example::
   done
 
 The for-loop has three sections, separated by semicolons. 
+
 1 The first section is the Declaration: it begins by assigning the first item after “in” to the variable “i”; in this case, it would assign the value “1” to “i” 
+
 2 The numbers after “in” are called the “List” 
+
 3 The next section is the Body, which runs the commands written after “do,” replacing the  replacing the variable with whichever value is currently assigned to the variable - for the first loop, this will be the number “1”. Since items remain in the list, the loop goes back to the declaration and assigns the next number in the list to the variable i; in this case, the number “2”. Then the body is run, and the process repeats until the end of the list is reached
+
 4 The last section, called the End, contains only the word “done”, meaning to exit the loop after all of the items in the list have been run through the Body of the loop
 
 You can add more commands to the Body section, if they are separated with a semicolon. For example, we could change the loop to::
+
   for i in 1 2 3; do echo $i; echo “You just printed the number $i”; done
 
 The foor loops would be really useful when we run multiple subjects for the analysis, for example, you can use::
+
   for subj in sub-01 sub-02 .... sub-99; do echo $subj; done
 
 More importantly,you can use 
