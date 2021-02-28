@@ -130,25 +130,28 @@ for_loops
 For loop probably is the one of the most useful commands you apply for preocess data with neuroimage
 
 Here is a example::
-  for i in 1 2 3; do echo $i; 
-  done
+
+  for i in 1 2 3; do echo $i; done
 
 The for-loop has three sections, separated by semicolons. 
 
-1 The first section is the Declaration: it begins by assigning the first item after “in” to the variable “i”; in this case, it would assign the value “1” to “i” 
+1 The first section is the Declaration: it begins by assigning the first item after “in” to the variable “i”; in this case, it would assign the value “1” to “i” .The numbers after “in” are called the “List” 
 
-2 The numbers after “in” are called the “List” 
+2 The next section is the Body, which runs the commands written after “do,” replacing the  replacing the variable with whichever value is currently assigned to the variable, for the first loop, this will be the number “1”. Since items remain in the list, the loop goes back to the declaration and assigns the next number in the list to the variable i; in this case, the number “2”. Then the body is run, and the process repeats until the end of the list is reached
 
-3 The next section is the Body, which runs the commands written after “do,” replacing the  replacing the variable with whichever value is currently assigned to the variable - for the first loop, this will be the number “1”. Since items remain in the list, the loop goes back to the declaration and assigns the next number in the list to the variable i; in this case, the number “2”. Then the body is run, and the process repeats until the end of the list is reached
-
-4 The last section, called the End, contains only the word “done”, meaning to exit the loop after all of the items in the list have been run through the Body of the loop
+3 The last section, called the End, contains only the word “done”, meaning to exit the loop after all of the items in the list have been run through the Body of the loop
 
 You can add more commands to the Body section, if they are separated with a semicolon. For example, we could change the loop to::
 
   for i in 1 2 3; do echo $i; echo “You just printed the number $i”; done
 
-The foor loops would be really useful when we run multiple subjects for the analysis, for example, you can use::
+The for loops would be really useful when we run multiple subjects for the analysis, for example, you can use::
 
   for subj in sub-01 sub-02 .... sub-99; do echo $subj; done
 
-More importantly,you can use 
+to add the subjects and prolong the "list". More importantly,task would be quite simple if you can combine with other you can use for loop to help. for examplp::  
+
+  ls . | grep ^sub- > subjList.tx 
+
+``ls`` means we want to know something ``.`` indicate that what looking at the current directory, ``|`` means that whatever we did, keep continue, grep help us to search for a string of characters in a specified file. When it finds a match, it prints the line with the result. By typing ``^sub``, we are looking for all the files with sub- as Prefix, ``> subjlist.txt`` to create a txt file which contains all the information we searched.
+  
