@@ -37,10 +37,10 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
 .. toctree::
    :maxdepth: 1
-   :caption:  GitHub
 
    GitHub/GitHub_menu
 
+   :caption:  GitHub
 
 .. toctree::
    :maxdepth: 1
@@ -68,7 +68,6 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
    SPM/SPM_menu
 
-Menu
 
 .. toctree::
    :maxdepth: 3                                                                                                                
@@ -77,7 +76,6 @@ Menu
 
    Question?
 
-   :caption: Menu:
 
 .. toctree::
     :maxdepth: 1
