@@ -44,9 +44,9 @@ Menu
 
 .. toctree::
     :maxdepth: 1
-    :caption: Linux system 
+    :caption: Linux_system 
 
-    Linux_system 
+    Linux_system/Linux_menu 
 
 .. toctree::
     :maxdepth: 1
