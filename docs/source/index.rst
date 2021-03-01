@@ -20,8 +20,6 @@ Menu
 .. toctree::
    :maxdepth: 3
 
-   Linux system
-
    OpenNeuro
 
    FreeSurfer
@@ -44,6 +42,11 @@ Menu
 
    :caption: Menu:
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Linux system 
+
+    Linux_system 
 
 .. toctree::
     :maxdepth: 1
