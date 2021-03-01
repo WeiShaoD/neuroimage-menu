@@ -66,14 +66,7 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
    :caption: SPM
 
    SPM/SPM_menu
-
-
-.. toctree::
-   :maxdepth: 1 
-
-   Question?
-
-
+ 
 .. toctree::
     :maxdepth: 1
     :caption: Slicer
@@ -83,7 +76,9 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 .. toctree::
    :maxdepth: 1
    :caption: Question?
+   
    Question?                                                                                                                                                                                              
+
 
 “Is what each begins and perfects on himself”
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^         
