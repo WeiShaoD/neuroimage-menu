@@ -13,6 +13,8 @@ Here is documentation to give some instructions about how to run the analysis wi
 
 As every good chef need a cookbook for reference, I hope this e-book can help you in the beginning of MRIs analysis  
 
+Meau_Overview
+^^^^^^^^^^^^^
  
 .. toctree::
     :maxdepth: 1
@@ -55,11 +57,13 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
    FSL/FSL_menu
 
+
 .. toctree::
    :maxdepth: 1
    :caption: AFNI
 
    AFNI/AFNI_menu  
+
 
 .. toctree::
    :maxdepth: 1
@@ -67,11 +71,13 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
    SPM/SPM_menu
  
+
 .. toctree::
     :maxdepth: 1
     :caption: Slicer
     
     Slicer/Slicer_Overview
+
 
 .. toctree::
    :maxdepth: 1
