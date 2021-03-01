@@ -13,42 +13,48 @@ Here is documentation to give some instructions about how to run the analysis wi
 
 As every good chef need a cookbook for reference, I hope this e-book can help you in the beginning of MRIs analysis  
 
-
-
-Menu
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Menu:
-
-   OpenNeuro/OpenNeuro_menu
  
-
 .. toctree::
     :maxdepth: 1
     :caption: Linux_system 
 
     Linux_system/Linux_menu
 
+.. toctree::
+   :maxdepth: 1
+   :caption:  OpenNeuro
+
+   OpenNeuro/OpenNeuro_menu
+
+.. toctree::
+   :maxdepth: 1
+   :caption:  FreeSurfer
+
+   FreeSurfer/FreeSurfer_menu
+
+.. toctree::
+   :maxdepth: 1
+   :caption:  GitHub
+
+   GitHub/GitHub_menu
+
+.. toctree::
+   :maxdepth: 1
+   :caption:  SuperComputer
+
+   SuperComputer/SuperComputer_menu
+
+
 Menu
 
 .. toctree::
    :maxdepth: 3
 
-   OpenNeuro
-
-   FreeSurfer
-
    FSL
 
    AFNI                                                                                                                 
+
    SPM
-
-   SuperComputer
-
-   For_loop
-
-   GitHub
 
    Tricks
 
