@@ -45,6 +45,11 @@ Menu
    :caption: Menu:
 
 
+.. toctree::
+    :maxdepth: 1
+    :caption: Slicer
+    
+    Slicer/Slicer_Overview
 
                                                                                                                                                                                               
 
