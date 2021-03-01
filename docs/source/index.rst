@@ -44,35 +44,32 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
 .. toctree::
    :maxdepth: 1
-   :caption:  SuperComputer
+   :caption: SuperComputer
 
    SuperComputer/SuperComputer_menu
 
 
 .. toctree::
    :maxdepth: 1
-   :caption:  FSL
+   :caption: FSL
 
    FSL/FSL_menu
 
 .. toctree::
    :maxdepth: 1
-   :caption:  AFNI
+   :caption: AFNI
 
    AFNI/AFNI_menu  
 
-
 .. toctree::
    :maxdepth: 1
-   :caption:  SPM
+   :caption: SPM
 
    SPM/SPM_menu
 
 
 .. toctree::
-   :maxdepth: 2                                                                                                                
-
-   Tricks
+   :maxdepth: 1 
 
    Question?
 
@@ -83,7 +80,10 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
     
     Slicer/Slicer_Overview
 
-                                                                                                                                                                                              
+.. toctree::
+   :maxdepth: 1
+   :caption: Question?
+   Question?                                                                                                                                                                                              
 
 “Is what each begins and perfects on himself”
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^         

@@ -63,7 +63,6 @@ Select the Create branch text box
 Now you have two branches, ``main`` and ``readme-edits``
 
 
-
 Step 3 Make and commit changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -99,9 +98,6 @@ select the branch you made, readme-edits, to compare with main (the original)
 Look over your changes in the diffs on the Compare page, make sure they’re what you want to submit
 
 Give your pull request a title and write a brief description of your changes
-
-
-Celebrate!
 
 Step 5 Merge your Pull Request
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
