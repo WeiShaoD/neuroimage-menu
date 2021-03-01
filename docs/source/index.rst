@@ -20,11 +20,13 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
     Linux_system/Linux_menu
 
+
 .. toctree::
    :maxdepth: 1
    :caption:  OpenNeuro
 
    OpenNeuro/OpenNeuro_menu
+
 
 .. toctree::
    :maxdepth: 1
@@ -32,11 +34,13 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
    FreeSurfer/FreeSurfer_menu
 
+
 .. toctree::
    :maxdepth: 1
    :caption:  GitHub
 
    GitHub/GitHub_menu
+
 
 .. toctree::
    :maxdepth: 1
@@ -45,16 +49,29 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
    SuperComputer/SuperComputer_menu
 
 
+.. toctree::
+   :maxdepth: 1
+   :caption:  FSL
+
+   FSL/FSL_menu
+
+.. toctree::
+   :maxdepth: 1
+   :caption:  AFNI
+
+   AFNI/AFNI_menu  
+
+
+.. toctree::
+   :maxdepth: 1
+   :caption:  SPM
+
+   SPM/SPM_menu
+
 Menu
 
 .. toctree::
-   :maxdepth: 3
-
-   FSL
-
-   AFNI                                                                                                                 
-
-   SPM
+   :maxdepth: 3                                                                                                                
 
    Tricks
 
