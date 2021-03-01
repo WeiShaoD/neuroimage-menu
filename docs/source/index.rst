@@ -23,24 +23,24 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
 .. toctree::
    :maxdepth: 1
-   :caption:  OpenNeuro
+   :caption: OpenNeuro
 
    OpenNeuro/OpenNeuro_menu
 
 
 .. toctree::
    :maxdepth: 1
-   :caption:  FreeSurfer
+   :caption: FreeSurfer
 
    FreeSurfer/FreeSurfer_menu
 
 
 .. toctree::
    :maxdepth: 1
+   :caption: GitHub
 
    GitHub/GitHub_menu
 
-   :caption:  GitHub
 
 .. toctree::
    :maxdepth: 1
@@ -70,7 +70,7 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 
 
 .. toctree::
-   :maxdepth: 3                                                                                                                
+   :maxdepth: 2                                                                                                                
 
    Tricks
 
