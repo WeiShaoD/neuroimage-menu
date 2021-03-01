@@ -112,5 +112,5 @@ Click Confirm merge
 
 Go ahead and delete the branch, since its changes have been incorporated, with the Delete branch button in the purple box.
 
-You might also want can try ``git add``, ``git commit`` and ``git push`` form your `terminal <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line/>__ 
+You might also want to know and try ``git add``, ``git commit`` and ``git push`` form  `here <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line/>`___ 
  
