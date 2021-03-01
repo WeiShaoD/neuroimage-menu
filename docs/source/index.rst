@@ -18,6 +18,21 @@ As every good chef need a cookbook for reference, I hope this e-book can help yo
 Menu
 
 .. toctree::
+   :maxdepth: 1
+   :caption: Menu:
+
+   OpenNeuro/OpenNeuro_menu
+ 
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Linux_system 
+
+    Linux_system/Linux_menu
+
+Menu
+
+.. toctree::
    :maxdepth: 3
 
    OpenNeuro
@@ -26,10 +41,9 @@ Menu
 
    FSL
 
-   AFNI
-
+   AFNI                                                                                                                 
    SPM
-   
+
    SuperComputer
 
    For_loop
@@ -38,15 +52,9 @@ Menu
 
    Tricks
 
-   Question?  
+   Question?
 
    :caption: Menu:
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Linux_system 
-
-    Linux_system
 
 .. toctree::
     :maxdepth: 1
