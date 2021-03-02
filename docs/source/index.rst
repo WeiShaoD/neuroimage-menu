@@ -1,4 +1,4 @@
-.. Wei's Cookbook documentation master file, created by
+.. Wei's menu documentation master file, created by
    sphinx-quickstart on Tue Feb  2 11:54:14 2021.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
@@ -14,7 +14,7 @@ We have 3 appetizers Linux system, OpenNeuro and GitHub
 
 3 main courses, FreeSurfer, AFNI, and SPM  
 
-1 desserts, running analysis on SuperComputer 
+1 dessert, running analysis on SuperComputer 
 
 Meau
 ^^^^
