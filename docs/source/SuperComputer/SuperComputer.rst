@@ -1,7 +1,7 @@
 SuperComputer
 =============
 
-A good chef not only can handle his/her own kitchen but also others
+How to run analysis on a SuperComputer?
 
 a supercomputer like central kitchen, everyone can get access to it and do some amazing jobs without actual buy all the expensive tools 
 

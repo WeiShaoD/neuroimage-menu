@@ -1,8 +1,8 @@
 Freesurfer
 ==========
 
-Welcome to FreeSurfer menu
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Welcome to the first main course FreeSurfer 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 What is FreeSurfer?
 
@@ -18,20 +18,23 @@ After the installation, type::
 
   source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
-then, you are supposed to see this 
+Then, you are supposed to see this 
 
 .. image:: FreeSurfer_ready.png 
 
-From here, We can check the Freesufer that has been installed, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer program process.
+We can check the Freesufer that has been installed, there are two important directory for FreeSurfer, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer output
 
 
 Recon-all
 ^^^^^^^^^
+
 The most useful function of FreesSufer is the recon-all command, after you set up the FreeSurfer subject directory and active FreeSrufer, you can use it by typing::
 
   recon-all -all -i subjname_T1w.nii.gz -s subjname
 
 input could be either DICOM(T1) or NIFTI T1 files where you can find from the anat folder normally. Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ will do. Recon usually will cost 6-8 hours, depends on the computing power you you have.
+
+
 
 Freeview
 ^^^^^^^^
@@ -54,6 +57,13 @@ or go to the surf directory::
 
 The flag -f is used to load surfaces
 white & pial surfaces are loaded for each hemisphere & with color indicated by 'edgecolor'
+
+Now, you can use freeview to check the output of recon-all
+
+Go to the mri directory, typing::
+
+  freeview -v T1.mgz wm.mgz brainmask.mgz aseg.mgz
+   
 
 for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
 
