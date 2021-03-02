@@ -8,11 +8,11 @@ Welcome to Wei's menu for Neuroimage methods!
 
 .. image:: brainbook1.png
 
-This is documentation to give some instructions about how to run the analysis with MRIs data with different software. As every restaurant will provide a menu for reference, I hope this e-book can help you in the beginning of MRIs analysis  
+This is documentation to give some instructions about how to run the volumeic, surface and fMRI analysis with different software. As every restaurant will provide a menu for reference, I hope this e-book can help you in the beginning of MRIs analysis  
 
 We have 3 appetizers Linux system, OpenNeuro and GitHub 
 
-3 main courses, FreeSurfer, AFNI, and SPM  
+4 main courses, FreeSurfer, FSL, AFNI, and SPM  
 
 1 dessert, running analysis on SuperComputer 
 
