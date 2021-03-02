@@ -8,6 +8,6 @@ FSL (The FMRIB Software) is a comprehensive library of analysis tools for fMRI, 
 
 Now go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find the right version of FSL to dowload and install  
 
-  ..image:: FSL_install.PNG
+.. image:: FSL_install.PNG
 
-  ..image:: FSL_install2.PNG
+.. image:: FSL_install2.PNG
