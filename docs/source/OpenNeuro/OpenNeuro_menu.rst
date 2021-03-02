@@ -1,8 +1,6 @@
 OpenNeuro
 =========
 
-Welcome to OpenNeuro
-^^^^^^^^^^^^^^^^^^^^
 
 As we know that a good chef always need to know where is the best ingredientsl, so do we. 
 
@@ -28,11 +26,6 @@ or go to Dataset File Tree and view the image
 
 .. image:: OpenNeuro_5.PNG
 
-
-Neuroimage data
-^^^^^^^^^^^^^^^
-
-These data are in a format called BIDS - Brain Imaging Data Structure. A standardized directory tree such as this makes scripting much easier, as we will see in a later tutorial.
  
 
 

@@ -8,13 +8,13 @@ Welcome to Wei's menu for Neuroimage methods!
 
 .. image:: brainbook1.png
 
-This is documentation to give some instructions about how to run the volumeic, surface and fMRI analysis with different software. As every restaurant will provide a menu for reference, I hope this e-book can help you in the beginning of MRIs analysis  
+This is documentation to give some basic instructions about how to run the volumetric, surface and fMRI analysis with different software packages. As every restaurant will provide a menu for reference, I hope this e-book can help you in the beginning of running image analysis  
 
-We have 3 appetizers Linux system, OpenNeuro and GitHub 
+We have 3 appetizers; Linux system, OpenNeuro and GitHub 
 
-4 main courses, FreeSurfer, FSL, AFNI, and SPM  
+4 main courses; FreeSurfer, FSL, AFNI, and SPM  
 
-1 dessert, running analysis on SuperComputer 
+1 dessert; running analysis on SuperComputer 
 
 Meau
 ^^^^
@@ -32,14 +32,13 @@ Meau
    :caption: OpenNeuro
 
    OpenNeuro/OpenNeuro_menu
-
-
+   OpenNeuro/Neuroimage_data.rst
+ 
 .. toctree::
    :maxdepth: 1
    :caption: GitHub
 
    GitHub/GitHub_menu
-
 
 .. toctree::
    :maxdepth: 1
@@ -47,6 +46,11 @@ Meau
 
    FreeSurfer/FreeSurfer_menu                                                                                           
 
+.. toctree::
+   :maxdepth: 1
+   :caption: Preprocessing
+
+   Preprocessing/Preprocessing_menu.rst
 
 .. toctree::
    :maxdepth: 1
