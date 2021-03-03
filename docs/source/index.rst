@@ -24,7 +24,9 @@ Meau
     :caption: Linux_system 
 
     Linux_system/Linux_menu
+   
     Linux_system/useful_command.rst
+   
     Linux_system/for_loop.rst
 
 .. toctree::
