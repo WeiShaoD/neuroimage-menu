@@ -3,47 +3,45 @@ Linux system
 
 .. image:: linux-logo.png
 
-Linux set up
-^^^^^^^^^^^^
-Every chef needs a good cooking table, Linux system would be ours
+Set up
+^^^^^^
+the first appappetizer would be the Linux system.
  
-Linux is a open-source operating systems created by Linus Torval, it is free and function for programming user interface as well as Graphical user interface (Windos) both.Unlike commerical system like Windows,There are many free software and libraries developed for Linux, especially the neuroimage packages.
+Linux is an open-source operating system created by Linus Torval, it is free and functions for programming user interface as well as Graphical user interface.Unlike commercial systems like Windows,There are many free software and libraries developed for Linux, like the neuroimage packages.
 
-Compared with the Windows syste, the files system of Linux is quite different
+Compared with the Windows syste, the files system of Linux is quite different.
 
 .. image:: File-Systems-Linux-vs-Windows-Edureka-768x500.png
 
-If you use Macintosh developed by Apple such as macOS, no change needed. However, if you like me, a Windows user, you might need some extra works in order to set up for brain image analysis. This documention I will focus on the Linux system (under the Windows) only.  
+If you use Macintosh developed by Apple such as macOS, no change needed. However, if you like me, a Windows user, you might need to some extra works in order to set up for brain image analysis. This documentation I will focus on the Linux system (under the Windows) only.  
 
-A Linux distribution is an operating system made from a software collection that is based upon the Linux kernel, as well as package management system. Linux users usually obtain their operating system by downloading one of the Linux distributions, which are available for a wide variety of systems ranging from embedded devices and personal computers to powerful supercomputers.There are many popular Linux distributions include Ubuntu or Centos
+Linux distribution
+
+A Linux distribution is an operating system made from a software collection. Linux users usually obtain their operating system by downloading one of the Linux distributions, which are available for a wide variety of systems ranging from embedded devices and personal computers to powerful supercomputers.There are many popular Linux distributions include Ubuntu or Centos.
  
-As a windows user, Before you install the Linux distribution, make sure that you enable the Windows subsystem for `linux feature <https://www.how2shout.com/how-to/enable-windows-subsystem-linux-feature.html>`__ 
+As a windows user, before you install the Linux distribution, make sure that you enable the Windows subsystem for `Linux feature <https://www.how2shout.com/how-to/enable-windows-subsystem-linux-feature.html>`__ for WSL (below). For Windows users,The Windows Subsystem for Linux (WSL) is necessary to ensure that you can run a Linux distribution under Windows OS.
 
-After that, you can download `Ubuntu <https://ubuntu.com/download>`__ and install it on Windows 10 with WSL. Or you can get CentOS from `here <https://github.com/wsldl-pg/CentWSL/releases/tag/8.1.1911.1>`_ and install it with WSL
+After that, you can download `Ubuntu <https://ubuntu.com/download>`__ and install it on Windows 10 with WSL. Or you can get latest CentOS from `here <https://github.com/wsldl-pg/CentWSL/releases/tag/8.1.1911.1>`_ and install it with WSL. These two linux distributions are available from the Windows App store and you can install them with WSL as well.
 
-Once you have done, go to the search bar and type the name. 
+For Windows users,The Windows Subsystem for Linux (WSL) is necessary to ensure that you can run a Linux distribution under Windows OS.
 
-WSL and Xming   
-^^^^^^^^^^^^^
+To set up WSL, you need to use PowerShell to enable WSL. Then a Linux distribution needs to be installed in the WSL environment. Subsequently, additional software may need to be installed to run on the Windows side and/or in the Linux distribution running under WSL depending upon what you want to run under Linux.
 
-For these MacOS, you can ship this chapter. For Windows user,The Windows Subsystem for Linux (WSL) ensure you can run a Linux distribution with "virtualized" environment under Windows OS. Some common linux distributions like CentOS and Ubuntu, are currently available from the Windows App store for download and use in WSL.
 
-To setup WSL, the PowerShell must first be used to enable WSL. Then a linux distribution needs to be installed in the WSL environment. Subsequently additional software may need to be installed to run on the Windows side and/or in the Linux distribution running under WSL depending upon what you want to run under Linux.
+Xming   
+^^^^^
 
-In order to run X-windows based graphics programs in WSL, an X server needs to be installed on the Windows side (since the Windows OS is driving the graphics hardware and there is no native X server in Windows). Accordingly, the WSL linux environment needs to be set/tested to run X based graphics in WSL with the X server running under Windows (instead of under Linux).
+In order to run X-windows based graphics programs in WSL, which can enable to open graphics tools like freeview or FSL GUI. An X server needs to be installed on the Windows side (since the Windows OS is driving the graphics hardware). Accordingly, 
 
-set up Windows PowerShell, open it. run the "enable optional feature" command::
+you can download `Xming <http://www.straightrunning.com/XmingNotes/>`__ and follow the instruction to `set up <https://surfer.nmr.mgh.harvard.edu/fswiki/FS7_wsl/>`__
 
- Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
-
-Download and set up `Xming <http://www.straightrunning.com/XmingNotes/>`__ 
 
 Shell 
 ^^^^^
 
-The Shell is an interactive interface that allows users to execute other commands and utilities in Linux and other UNIX-based operating systems. When you login to the operating system, the standard shell is displayed.
+The Shell is an interactive interface that allows users to execute commands and utilities in Linux. When you log in to the operating system, the standard shell would be displayed.
 
-There are many shells such as bash, Tcsh, Ksh,Zshm. Bash would be the defult shell for many linux systems. You can check the current shell by typing::
+There are many shells such as bash, Tcsh, Ksh,Zshm. But ``bash`` is the defult shell for many linux systems. You can check the current shell by typing::
 
   echo $SHELL 
 
@@ -56,11 +54,10 @@ if you see this, you are good to go, or you can change the shell to bash by typi
 .. image:: Shell_2.PNG
 
 
-
 Basic commands 
 ^^^^^^^^^^^^^^
 
-Just like some spices are good all the time, some basic commands are necessary and useful when you use linux::
+Just like some spices are good all the time, some basic commands are necessary and useful for every time when you use Linux::
 
   ls  #ls command lists files and directories within the file system, and shows detailed information about them
 
@@ -96,15 +93,15 @@ cd to happy_birthday
   cd ..              #go back to parent directory 
   cd                 #go to the home directory 
    
-make cakes and party directory 
+Make cakes and party directory 
 
 .. image:: make_cakes_party.PNG
 
-next, mv cakes to the party
+Next, mv cakes to the party
 
 .. image:: mv_cakes.PNG
 
-of course, cakes are always not enough for the party, so copy the pudding.
+Of course, cakes are always not enough for the party, so copy the pudding.
 
 .. image:: cp_pudding.PNG
 
@@ -112,18 +109,19 @@ Now, let's how many desserts we have
 
 .. image:: dessrts.PNG 
 
-wait a miniuits, where is the biscuit come from, I don't want that in the party. just remove it
+Wait a miniuit, where is the biscuit come from, I don't want that in the party. just remove it
 
 .. image:: rm_biscuit.PNG
 
 Now, we have all the desserts for a birthday party
 
-these are the 6 basic commands you will use in the future whether you use you own laptop or server for the analysis
+These are the 6 basic commands you will use in the future whether you use you own laptop or server for the analysis
  
-you also can use:: 
+you also can type:: 
 
 man ls/cd/mv/rm/cp/mkdir for more details 
 
+Useful commands
+^^^^^^^^^^^^^^^
 
-
-you can use ``find . -name "file_name"``to find the file_name information in the subdirectory
+``find . -name "file_name"``to find the file_name related information from the subdirectory.

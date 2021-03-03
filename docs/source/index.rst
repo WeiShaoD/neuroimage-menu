@@ -14,7 +14,7 @@ We have 3 appetizers; Linux system, OpenNeuro and GitHub
 
 4 main courses; FreeSurfer, FSL, AFNI, and SPM  
 
-1 dessert; running analysis on SuperComputer 
+1 dessert, running analysis on SuperComputer 
 
 Meau
 ^^^^
