@@ -121,7 +121,4 @@ you also can type::
 
 man ls/cd/mv/rm/cp/mkdir for more details 
 
-Useful commands
-^^^^^^^^^^^^^^^
 
-``find . -name "file_name"``to find the file_name related information from the subdirectory.
