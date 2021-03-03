@@ -1,5 +1,4 @@
-Welcome to Neuroimage data
-==========================
+Neuroimage data
 
 Neuroimage dataset
 ^^^^^^^^^^^^^^^^^^
