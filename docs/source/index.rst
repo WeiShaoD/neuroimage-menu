@@ -58,7 +58,6 @@ Meau
 
    FSL/FSL_menu
 
-
 .. toctree::
    :maxdepth: 1
    :caption: AFNI
@@ -72,20 +71,11 @@ Meau
 
    SPM/SPM_menu
 
-
 .. toctree::
    :maxdepth: 1
    :caption: SuperComputer
 
    SuperComputer/SuperComputer_menu
-
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Question?
-   
-   Question?                                                                                                                                                                                              
-
 
 “Is what each begins and perfects on himself”
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^         
