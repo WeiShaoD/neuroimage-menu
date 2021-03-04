@@ -1,9 +1,6 @@
 Freesurfer
 ==========
 
-Welcome to the first main course FreeSurfer 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 What is FreeSurfer?
 
 FreeSurfer is a brain imaging software package. It focuses on analyzing magnetic resonance imaging (MRI) scans of brain tissue, functional brain mapping and contains tools to conduct both volume-based and surface-based analysis.
@@ -33,7 +30,6 @@ The most useful function of FreesSufer is the recon-all command, after you set u
   recon-all -all -i subjname_T1w.nii.gz -s subjname
 
 input could be either DICOM(T1) or NIFTI T1 files where you can find from the anat folder normally. Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ will do. Recon usually will cost 6-8 hours, depends on the computing power you you have.
-
 
 
 Freeview
@@ -66,6 +62,7 @@ Go to the mri directory, typing::
    
 
 for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
+
 
 Parallel computing for recon-all
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
@@ -143,7 +140,7 @@ FastSurfer consists of two main parts:
 
 ``FastSurferCNN`` Volumetric Segmentation 
 
-FastSurferCNN is an  advanced deep learning pipline for whole brain segmentation into 95 classes in under 1 minute, mimicking FreeSurfer’s anatomical segmentation and cortical parcellation. 
+FastSurferCNN is an advanced deep learning pipline for whole brain segmentation into 95 classes in under 1 minute, mimicking FreeSurfer’s anatomical segmentation and cortical parcellation. 
 
 ``recon-surf`` Surface reconstruction
 

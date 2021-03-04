@@ -16,4 +16,4 @@ bash_profile is a script that is executed each time you start a new shell.
 Freesurfer will be activated every time when I open the terminal and I use 9 to replace the command ``cd /home/shao/neuroimage-book`` 
 
 
-``find . -name "file_name"``to find the file_name related information from the subdirectory
+``find . -name "file_name".``to find the file_name related information from the subdirectory

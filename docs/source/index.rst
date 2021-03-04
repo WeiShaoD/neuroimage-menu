@@ -20,7 +20,7 @@ Meau
 ^^^^
  
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
     :caption: Linux_system 
 
     Linux_system/Linux_menu
@@ -32,7 +32,7 @@ Meau
    :caption: OpenNeuro
 
    OpenNeuro/OpenNeuro_menu
-   OpenNeuro/Neuroimage_data.rst
+   OpenNeuro/Neuroimage_data
  
 .. toctree::
    :maxdepth: 1
