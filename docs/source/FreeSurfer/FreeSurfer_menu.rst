@@ -132,7 +132,7 @@ After a few seconds, you will see the output files in the current directory, ope
 
 .. image:: volume_matrix.PNG
 
-What a mess! fortunately, there is a solution.
+What a mess! Fortunately, there is a solution.
  
 1 Open the file with Excel 2016.
 
@@ -152,44 +152,3 @@ and have fun by play it around like PCA analysis.
 
 .. image:: hipp_vol.png
 
-FastSurfer
-^^^^^^^^^^
-
-`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform outputs like FreeSurfer did, enables big-data analysis and time-critical clinical applications. A `video <https://www.youtube.com/watch?v=V78jKcqVg7k&feature=emb_logo>`__ might help you understand better. 
-
-.. image:: FasteSurfer.png
-
-FastSurfer consists of two main parts:
-
-``FastSurferCNN`` Volumetric Segmentation 
-
-FastSurferCNN is an advanced deep learning pipline for whole brain segmentation into 95 classes in under 1 minute, mimicking FreeSurfer’s anatomical segmentation and cortical parcellation. 
-
-``recon-surf`` Surface reconstruction
-
-recon-suirf is a full FreeSurfer alternative for cortical surface reconstruction, mapping of cortical labels and traditional point-wise and ROI thickness analysis in approximately 60 minutes.
-
-go to `Here <https://github.com/deep-mi/FastSurfer>`__ either use ``git clone`` from you home directory to ge the file or download the file and put it in your home directory 
-
-# set up 
-Set the path ``export FREESURFER_HOME=/usr(usrname)/local/freesurfer/7.1.1-1``
-Use ``source $FREESURFER_HOME/SetUpFreeSurfer.sh`` to activate the Freesurfer
-
-datadir=/home/user/mri_data_directory
-fastsurferdir=/home/user/fastsurfer_analysis_directory 
-
-# Run FastSurfer
-./run_fastsurfer.sh --t1 $datadir/subject1/orig.mgz \
-                    --sid subject1 --sd $fastsurferdir \
-                    --parallel --threads 4
-
-``--sd``  Output directory $SUBJECTS_DIR 
-
-``--sid`` Subject ID for directory inside $SUBJECTS_DIR to be created 
-
-``--t1``  T1 full head input. The network was trained with conformed images (UCHAR, 256x256x256, 1 mm voxels and standard slice orientation). These specifications are checked in the eval.py script and the image is automatically conformed if it does not comply.
-
-Before you run the script, just ensure you check all the required packages 
-``sed -i "s/==/>=/g" requirements.txt`` and ``pip install --no-index -r requirements.txt`` might help
-
-This is a fast alternative way to do the Freesurfer job

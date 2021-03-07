@@ -45,12 +45,12 @@ Meau
    :caption: FreeSurfer
 
    FreeSurfer/FreeSurfer_menu                                                                                           
-
+   FreeSurfer/FastSurfer
 .. toctree::
    :maxdepth: 1
    :caption: Preprocessing
 
-   Preprocessing/Preprocessing_menu.rst
+   Preprocessing/Preprocessing_menu
 
 .. toctree::
    :maxdepth: 1
