@@ -130,7 +130,7 @@ The first argument ``quantifyHAsubregions.sh`` specifies that we want to collect
 
 After a few seconds, you will see the output files in the current directory, open it with ``less`` 
 
-.. image:: volume_matrix.PNG this.
+.. image:: volume_matrix.PNG
 
 What a mess! fortunately, there is a solution.
  
