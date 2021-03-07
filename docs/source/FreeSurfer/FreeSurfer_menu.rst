@@ -120,15 +120,35 @@ For MacOC user, please follow this `video <https://www.youtube.com/watch?v=0R6SJ
 
 Go `HippocampalSubfieldsAndNucleiOfAmygdala  <https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala/>`__ to see all the instructions
 
-Extract the volume matrix from FreeSurfer
+Extract the volume matrix from FreeSurfer  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Once we use the freesurfer automated segmentation, we can also collect the volumes of the subregions of the hippocampus / amygdala of all subjects and write them to a single file, ectracting the volume matrix::
 
-One one the method is to ectract the volume matrix from the Hippo segmantation 
-Open the CSV file with Excel 2016.
-Look for "Data" tab and "Text in column" button.
-In the step 1, select "Delimited".
-In the step 2, select first "space", and then choose "string classifier" as ". Then Excel will recognise the string quoted in " " and separate in columns the data with space.
-Change format in step 3. "Finish".
+  quantifyHAsubregions.sh hippoSf <T1> <output_file> 
+ 
+The first argument ``quantifyHAsubregions.sh`` specifies that we want to collect the volumes of the hippocampus (hippoSf). The second argument is the name of the analysis: for the first mode of operation (only main T1 scans), it is simply type T1, and don't forget to name the output_file.
+
+After a few seconds, you will see the output files in the current directory, open it with ``less`` 
+
+.. image:: volume_matrix.PNG this.
+
+What a mess! fortunately, there is a solution.
+ 
+1 Open the file with Excel 2016.
+
+2 Look for "Data" tab and "Text in/to column" button.
+
+3 In the step 1, select "Delimited".
+
+4 In the step 2, select first "space", and then choose "string classifier" as "." 
+
+Change format in step 3. "Finish". And save as csv file
+
+Then, You will get a file like this 
+
+.. image:: volume_martix_Excel.PNG
+
+and have fun by play it around like PCA analysis.
 
 .. image:: hipp_vol.png
 
