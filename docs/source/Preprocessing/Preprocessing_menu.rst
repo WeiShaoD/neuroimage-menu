@@ -6,7 +6,7 @@ A good cuisine requires dedicated processes to make the ingredient to be prepare
 1 Slice correction
 ^^^^^^^^^^^^^^^^^^
 
-An fMRI volume is acquired in slices. Each of these slices takes tens to hundreds of milliseconds.
+Unlike image we take from the cellphone, an fMRI volume is acquired in slices. Each of these slices takes tens to hundreds of milliseconds.
 
 The two most commonly used methods for creating volumes are sequential and interleaved slice acquisition. 
 
@@ -14,14 +14,12 @@ Sequential slice acquisition acquires each adjacent slice consecutively, either 
 
 .. image:: SliceTimingCorrection_Demo.gif
 
-To make this assumption valid, the time-series for each slice needs to be shifted back in time by the duration it took to acquire that slice.
+In order to make statistics model work, the time-series for each slice needs to be shifted back in time by the duration it took to acquire that slice.
 
 2 Motion correction
 ^^^^^^^^^^^^^^^^^^^
 
-If the subject is moving, the images will look blurry; if the subject is still, the images will look more defined. But that’s not all: If the subject moves a lot, we also risk measuring signal from a voxel that moves. We are then in danger of measuring signal from the voxel for part of the experiment and, after the subject moves, from a different region or tissue type.
-
-Lastly, motion can introduce confounds into the imaging data because motion generates signal. If the subject moves every time in response to a stimulus - for example, if he jerks his head every time he feels an electrical shock - then it can become impossible to determine whether the signal we are measuring is in response to the stimulus, or because of the movement.
+If the subject in the scaner is moving, the images will look blurry.If the subject moves a lot, we also risk measuring signal from a voxel that moves. We are then in danger of measuring signal from the voxel from a different region or tissue type. It is the false positive.In addtion, motion can introduce confounds into the imaging data because motion generates signal. If the subject moves every time in response to a stimulus - for example, if he jerks his head every time he feels an electrical shock - then it can become impossible to determine whether the signal we are measuring is in response to the stimulus, or because of the movement.
 
 One way to “undo” these motions is through rigid-body transformations. To illustrate this, pick up a nearby object: a phone or a coffee cup, for example. Place it in front of you and mentally mark where it is. This is the reference point. Then move the object an inch to the left. This is called a translation, which means any movement to the left or right, forward or back, up or down. If you want the object to come back to where it started, you would simply move it an inch to the right.
 
@@ -38,10 +36,6 @@ We do the same procedure with our volumes. Instead of the reference point we use
 
 Although most people’s brains are similar - everyone has a cingulate gyrus and a corpus callosum, for instance - there are also differences in brain size and shape. As a consequence, if we want to do a group analysis we need to ensure that each voxel for each subject corresponds to the same part of the brain. If we are measuring a voxel in the visual cortex, for example, we would want to make sure that every subject’s visual cortex is in alignment with each other.
 
-Affine Transformations
-
-To warp the images to a template, we will use an affine transformation. This is similar to the rigid-body transformation described above in Motion Correction, but it adds two more transformations: zooms and shears. Whereas translations and rotations are easy enough to do with an everyday object such as a pen, zooms and shears are more unusual - zooms either shrink or enlarge the image, while shears take the diagonally opposite corners of the image and stretch them away from each other. The animation below summarizes these four types of linear transformations.
-
 Registration 
 
 This alignment between the functional and anatomical images is called Registration. Most registration algorithms use the following steps:
@@ -55,7 +49,14 @@ This alignment between the functional and anatomical images is called Registrati
 5 Normalization
 ^^^^^^^^^^^^^^^
 
+Just as you would fold clothes to fit them inside of a suitcase, each brain needs to be transformed to have the same size, shape, and dimensions. We do this by normalizing (or warping) to a template. A template is a brain that has standard dimensions and coordinates - standard, because most researchers have agreed to use them when reporting their results.The dimensions and coordinates of the template brain are also referred to as standardized space.
+
+In order to analyze in group level, all of the subjects’ images have been normalized to a template. Although each subjects’ functional images will be transformed to match the general shape and large anatomical features of the template, there will be variations in how smaller anatomical regions align among the normalized functional images. 
+
+.. image:: Registration_Normalization_Demo.gif
+
 6 Smoothing
+^^^^^^^^^^^
 
 It is common to smooth the functional data, or replace the signal at each voxel with a weighted average of that voxel’s neighbors. This may seem strange at first - why would we want to make the images blurrier than they already are?
 
