@@ -67,12 +67,6 @@ Meau
 
 .. toctree::
    :maxdepth: 1
-   :caption: SPM
-
-   SPM/SPM_menu
-
-.. toctree::
-   :maxdepth: 1
    :caption: SuperComputer
 
    SuperComputer/SuperComputer_menu

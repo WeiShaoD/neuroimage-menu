@@ -26,7 +26,8 @@ or go to Dataset File Tree and view the image
 
 .. image:: OpenNeuro_5.PNG
 
- 
+You can also download the file by ``git clone``, which we will discuss later.
+  
 
 
  
