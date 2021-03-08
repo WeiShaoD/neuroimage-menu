@@ -66,5 +66,5 @@ There is another benefit to smoothing. As you will see in the next chapter, our 
 
 smoothing tends to cancel out noise and enhance signal. This applies to group analyses as well, in which all of the subjects’ images have been normalized to a template. Although each subjects’ functional images will be transformed to match the general shape and large anatomical features of the template, there will be variations in how smaller anatomical regions align among the normalized functional images. If the images are smoothed, there will be more overlap between clusters of signal, and therefore greater likelihood of detecting a significant effect.
 
-
+..  image:: Smoothing_Demo.gif
 
