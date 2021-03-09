@@ -31,8 +31,11 @@ We do the same procedure with our volumes. Instead of the reference point we use
 
 3 Distortion correction
 
-4 Coregistration
-^^^^^^^^^^^^^^^^
+Common fMRI/BOLD sequences acquire gradient echoes and hence are sensitive to magnetic inhomogeneity (T2*) effects. These cause spatial distortions and signal dropout especially near the skull base, typically affecting the anterior frontal and temporal lobes.
+
+
+4 Registration
+^^^^^^^^^^^^^^
 
 Although most people’s brains are similar - everyone has a cingulate gyrus and a corpus callosum, for instance - there are also differences in brain size and shape. As a consequence, if we want to do a group analysis we need to ensure that each voxel for each subject corresponds to the same part of the brain. If we are measuring a voxel in the visual cortex, for example, we would want to make sure that every subject’s visual cortex is in alignment with each other.
 

@@ -29,4 +29,6 @@ Then, if you see a similar terminal like this, it means you are in
 
 In some cases, you can use ssh -Y (user id)@(server IP) as the command to connect the remote server.
 
+Use ``diskusage_report`` to find the disk space on the server
+
 
