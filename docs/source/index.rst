@@ -39,6 +39,7 @@ Meau
    :caption: GitHub
 
    GitHub/GitHub_menu
+   GitHub/Gitcommand_menu
 
 .. toctree::
    :maxdepth: 1
