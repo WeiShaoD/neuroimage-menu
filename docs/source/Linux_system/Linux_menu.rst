@@ -13,6 +13,8 @@ Compared with the Windows syste, the files system of Linux is quite different.
 
 .. image:: File-Systems-Linux-vs-Windows-Edureka-768x500.png
 
+.. image:: Lin_filesmap.PNG
+
 If you use Macintosh developed by Apple such as macOS, no change needed. However, if you like me, a Windows user, you might need to some extra works in order to set up for brain image analysis. This documentation I will focus on the Linux system (under the Windows) only.  
 
 Linux distribution
