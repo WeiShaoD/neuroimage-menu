@@ -1,4 +1,4 @@
-Git_command
+Git command
 ^^^^^^^^^^^
 
 After the basic ideas, let's have more fun, you can upload an existing file to a GitHub repository using the command lines::
@@ -24,11 +24,11 @@ Then, use git clone to get the remote directory from your GitHub repository
 
 use ``git clone git@github.com:WeiShaoD/dinner_menu.git``
    
- ..  image:: git_clone.PNG
+..  image:: git_clone.PNG
 
 cd to the dinner_menu, add a new menu.txt file by typing ``nano menu.txt``, use ``git add`` and ``git commit -m ""``    
 
-..  image:: Git_add_commit.PNG
+..  image:: Git_add_commit.PNG 
 
 use ``git push -u origin main`` to synchronize your local and GitHub
   
