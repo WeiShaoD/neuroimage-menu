@@ -1,5 +1,5 @@
 Git command
-^^^^^^^^^^^
+===========
 
 After the basic ideas, let's have more fun, you can upload an existing file to a GitHub repository using the command lines::
 

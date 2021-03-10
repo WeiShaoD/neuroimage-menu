@@ -47,6 +47,8 @@ Meau
 
    FreeSurfer/FreeSurfer_menu                                                                                           
    FreeSurfer/FastSurfer
+   FreeSurfer/Parallel_computing
+
 .. toctree::
    :maxdepth: 1
    :caption: Preprocessing

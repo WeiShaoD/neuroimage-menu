@@ -22,12 +22,34 @@ Then, you are supposed to see this
 We can check the Freesufer that has been installed, there are two important directory for FreeSurfer, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer output
 
 
+Test your FreeSurfer
+^^^^^^^^^^^^^^^^^^^^
+
+After the installation, you can test the freesurfer
+
+Go to freesurfer home and it subject directory::
+
+  cd $FREESURFER_HOME/subjects/
+
+use ``mri_convert sample-001.mgz sample-001.nii.gz``
+
+..  image:: Freesurfer_test.PNG 
+
+test the freeview go to the subject directory of freesurfer, ``cd $SUBJECTS_DIR``, and::
+
+  freeview -v \
+    bert/mri/T1.mgz \
+    bert/mri/brainmask.mgz \
+    bert/mri/aseg.mgz:colormap=lut:opacity=0.2 
+
+
 Recon-all
 ^^^^^^^^^
 
 The most useful function of FreesSufer is the recon-all command, after you set up the FreeSurfer subject directory and active FreeSrufer, you can use it by typing::
 
   recon-all -all -i subjname_T1w.nii.gz -s subjname
+
 
 input could be either DICOM(T1) or NIFTI T1 files where you can find from the anat folder normally. Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ will do. Recon usually will cost 6-8 hours, depends on the computing power you you have.
 
@@ -62,16 +84,6 @@ Go to the mri directory, typing::
    
 
 for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
-
-
-Parallel computing for recon-all
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
-
-A physical core is an actual physical processor core in your CPU. Each physical core has its own circuitry and its own L1 (and usually L2) cache can read and execute instructions separately (for the most part) $
-
-Freesufer support the OpenMP code,recon-all can be processed by multiple-cores,ths means that you can either recon-all one subjects with multiple cores or run recon-all multiple subjecets with many cores$
-
-the command to tell recon-all run multiple cores is -openmp X, X means how many cores you want to run
 
 
 Segmentation of hippocampal subfields
