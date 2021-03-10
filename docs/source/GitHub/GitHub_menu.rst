@@ -112,5 +112,55 @@ Click Confirm merge
 
 Go ahead and delete the branch, since its changes have been incorporated, with the Delete branch button in the purple box.
 
+After the basic ideas, let's have more fun, you can upload an existing file to a GitHub repository using the command line as well::
+
+ git add
+ git commit
+ git push
+
+First, go to your GitHub account and create a new repository named dinner_menu
+
+..  image:: GitHub_dinner.PNG 
+
+Now, Open a linux terminal and cd to the local directory you want to work on
+
+GitHub configuration::
+
+  git config --global user.name "Wei Shao"
+
+  git config --global user.email "GitHub_Emailaddress@.ca"
+
+Then, use git clone to get the remote directory from your GitHub repository 
+
+..  image:: git_ssh.PNG
+
+Do::
+
+  git clone git@github.com:WeiShaoD/dinner_menu.git 
+
+..  image:: git_clone.PNG 
+
+cd to the dinner_menu, add a new menu.txt file by typing ``nano menu.txt``, use ``git add`` and ``git commit -m ""`` 
+
+..  image:: git_add_commit.PNG
+
+use ``git push -u origin main`` to synchronize your local and GitHub
+
+..  image:: git_push.PNG
+
+Now you can see the new menu
+
+..  image:: git_new_menu.PNG
+
+last but not the least, you can add the content for the menu by repeate the steps above
+
+..  image:: Git_add_course.PNG  
+
+
+
+
+
+
+
 You might also want to know and try ``git add``, ``git commit`` and ``git push`` form  `here <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line/>`__ 
  
