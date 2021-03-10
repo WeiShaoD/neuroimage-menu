@@ -145,7 +145,7 @@ Do::
 
 cd to the dinner_menu, add a new menu.txt file by typing ``nano menu.txt``, use ``git add`` and ``git commit -m ""`` 
 
-..  image:: git_add_commit.PNG
+..  image:: Git_add_commit.PNG
 
 use ``git push -u origin main`` to synchronize your local and GitHub
 
