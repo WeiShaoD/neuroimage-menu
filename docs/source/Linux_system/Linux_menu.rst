@@ -124,3 +124,4 @@ you also can type::
 man ls/cd/mv/rm/cp/mkdir for more details 
 
 
+For more `information <http://swcarpentry.github.io/shell-novice/reference.html>`__

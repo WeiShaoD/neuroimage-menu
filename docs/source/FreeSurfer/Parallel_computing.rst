@@ -7,10 +7,9 @@ Freesufer support the OpenMP code,which means that ``recon-all`` can be processe
 
 the command to tell recon-all run multiple cores is ``-openmp X``, X indicates how many cores you want to run with freesufer. 
 
-First, check the cpu infmation, you can check it by "lscpu" in linux system environment or press Ctrl + Shift + Esc to open Task Manager and select the Performance tab to see how many cores and logical processors your PC has.
+First, check the CPU information, you can check it by "lscpu" in linux system environment or press Ctrl + Shift + Esc to open Task Manager and select the Performance tab to see how many cores and logical processors under the Windows system.
 
 ..  image:: CPU_info.PNG
-
 
 Then you can add X no more than the actual cpus you have::
 
