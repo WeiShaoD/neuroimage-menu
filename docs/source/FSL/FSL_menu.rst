@@ -1,18 +1,17 @@
 FSL
 ===
 
-Welcome to the FSL
-^^^^^^^^^^^^^^^^^^
+What is FSL?
 
 FSL (The FMRIB Software) is a comprehensive library of analysis tools for fMRI, MRI and DTI brain imaging data. It runs on Apple and PCs (both Linux, and Windows via a Virtual Machine),  Most of the tools can be run both from the command line and as GUIs ("point-and-click" graphical user interfaces)
 
-Now go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find the right version of FSL to dowload and install  
+You go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find the right version of FSL to dowload and install  
 
 .. image:: FSL_install.PNG
 
 .. image:: FSL_install2.PNG
 
-After you success install FSL and set up, we are going to use it to run some data. you can find date from `OpenNuro  <https://neuroimage-book02.readthedocs.io/en/latest/OpenNeuro/OpenNeuro_menu.html/>`__
+After successful install FSL and set it up, let's analyze the data to gain some first-hand experience. You can find date from `OpenNuro  <https://neuroimage-book02.readthedocs.io/en/latest/OpenNeuro/OpenNeuro_menu.html/>`__ 
 
 
 
