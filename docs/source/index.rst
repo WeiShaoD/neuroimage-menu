@@ -60,6 +60,7 @@ Meau
    :caption: FSL
 
    FSL/FSL_menu
+   FSL/FSL_preprocessing
 
 .. toctree::
    :maxdepth: 1
