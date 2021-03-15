@@ -12,6 +12,32 @@ Now go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find 
 
 .. image:: FSL_install2.PNG
 
+After you success install FSL and set up, we are going to use it to run some data. you can find date from `OpenNuro  <https://neuroimage-book02.readthedocs.io/en/latest/OpenNeuro/OpenNeuro_menu.html/>`__
+
+
+
+
+
+
+
+Create a timing files that FSL can understand
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 One of the useful function from FSL is fslswapdim, it can change the orientation of image. Therefore, you can have the same orentation to process
 
@@ -30,4 +56,5 @@ fslswapdim T2.nii.gz x -z y T2.reorientated.nii.gz
 Now, you get the new orientated T2.
 
 .. image:: FSL_orientation_after.PNG 
+
 

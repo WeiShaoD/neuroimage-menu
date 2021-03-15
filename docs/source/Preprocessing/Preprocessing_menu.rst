@@ -29,6 +29,7 @@ We do the same procedure with our volumes. Instead of the reference point we use
 
 .. image:: MotionCorrectionExample.gif
 
+
 3 Distortion correction
 
 Common fMRI/BOLD sequences acquire gradient echoes and hence are sensitive to magnetic inhomogeneity (T2*) effects. These cause spatial distortions and signal dropout especially near the skull base, typically affecting the anterior frontal and temporal lobes.
@@ -57,6 +58,7 @@ Just as you would fold clothes to fit them inside of a suitcase, each brain need
 In order to analyze in group level, all of the subjects’ images have been normalized to a template. Although each subjects’ functional images will be transformed to match the general shape and large anatomical features of the template, there will be variations in how smaller anatomical regions align among the normalized functional images. 
 
 .. image:: Registration_Normalization_Demo.gif
+
 
 6 Smoothing
 ^^^^^^^^^^^
