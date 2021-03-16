@@ -1,5 +1,5 @@
 Neuroimage data
-^^^^^^^^^^^^^^^
+===============
 
 Basic terminology
 ^^^^^^^^^^^^^^^^^
@@ -46,7 +46,8 @@ Talairach space is a three-dimensional cartesian coordinate system aligned over 
   Negative Z values towards the bottom of the brain (relative to the anterior commisure), positive toward the top.
 
 .. image:: OenNeuro_stereotaxic_coordinates.png
- Schematic of stereotaxic brain coordinates on axial (left), coronal (middle), and sagittal (right) slices. The origin (X=0, Y=0, Z=0) is centered on the anterior commisure.
+
+Schematic of stereotaxic brain coordinates on axial (left), coronal (middle), and sagittal (right) slices. The origin (X=0, Y=0, Z=0) is centered on the anterior commisure.
 
 Anatomical descriptions
 ***********************
