@@ -1,4 +1,5 @@
 FSL tricks
+==========
 
 One of the useful function from FSL is fslswapdim, it can change the orientation of the image. Therefore, you can have the same orentation between T1 and T2 to run the further process.
 
