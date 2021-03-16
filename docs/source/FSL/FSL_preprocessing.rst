@@ -18,9 +18,23 @@ We will operate these one by one, Are you ready?
 looking at the data
 ^^^^^^^^^^^^^^^^^^^
 
-Before we are actually running the analysis, it is safe for us to check the data. Although 
+Before we are actually running the analysis, it is safe for us to check the data for any problems such as scanner spikes, incorrect orientation, or poor contrast and so on.Although it might be unnecessary for the open neuroimaging data, it is really important for your to check the image before when it comes to your own data.
 
-Open you terminal and cd to the BRAT directory, type ``fsl`` to open the fsl_gui
+Inspecting the anatomical image
+*******************************
+
+Open you terminal and cd to the BART directory by typing ``cd BART``.
+
+.. image:: FSL_cd_BART.png
+
+type ``fsl`` to open the ``FSL GUI tool``
+
+.. image:: FSL_GUI.png
+
+click ``FSLView`` and ``File`` to find the anat T1 image, sub-01_T1w.nii.gz and func image sub-01_task-balloonanalogrisktask_run-01_bold.nii.gz
+
+.. image:: FSL_FSLView_anat.png 
+.. image:: FSL_FSLView_func.png
 
 Skull stripping
 

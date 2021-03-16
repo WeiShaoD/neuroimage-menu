@@ -25,4 +25,4 @@ As you can see, we have 16 subjects. ``participants.tsv`` will tell you the demo
 
 .. figure:: FSL_func.PNG
 
-    ``func`` has all the functional images, ...bold.nii.gz as well as task information file like ...events.tsv.
+``func`` has all the functional images, ...bold.nii.gz as well as task information file like ...events.tsv.
