@@ -15,13 +15,10 @@ Like a good dish needs some preprocessed step, Preprocessing is necessary for fM
 
 We will operate these one by one, Are you ready? 
 
-looking at the data
-^^^^^^^^^^^^^^^^^^^
-
-Before we are actually running the analysis, it is safe for us to check the data for any problems such as scanner spikes, incorrect orientation, or poor contrast and so on.Although it might be unnecessary for the open neuroimaging data, it is really important for your to check the image before when it comes to your own data.
-
 Inspecting the image
 ********************
+
+Before we are actually running the analysis, it is safe for us to check the data for any problems such as scanner spikes, incorrect orientation, or poor contrast and so on.Although it might be unnecessary for the open neuroimaging data, it is really important for your to check the image before when it comes to your own data.
 
 Open you terminal and cd to the BART directory by typing ``cd BART``.
 
@@ -39,7 +36,7 @@ click ``FSLView`` and ``File`` to find the anat T1 image, sub-01_T1w.nii.gz and 
 For more information, please go to `here <http://www.mrishark.com/brain1.html>`__ 
 
 Skull stripping
-^^^^^^^^^^^^^^^
+***************
 
 Brain tissue is the focus of fMRI studies, our first step is to seperate the skull and non-brain areas from the image. FSL provides a function that can help you achieve the goal.
 
