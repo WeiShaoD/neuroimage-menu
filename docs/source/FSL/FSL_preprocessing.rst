@@ -1,15 +1,14 @@
-preprocessing
+Preprocessing
 =============
 
 
 Preprocessing is the first step to do a fMRI analysis
 
-Skull stripping
-^^^^^^^^^^^^^^^
 
 looking at the data
-*******************
+^^^^^^^^^^^^^^^^^^^
 
+Skull stripping
 
 FSL provided a function that can help you skullstripping 
 

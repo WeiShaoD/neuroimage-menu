@@ -14,7 +14,9 @@ You go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find 
 
 .. image:: FSL_install2.PNG
 
-After successful install FSL and set it up, let's analyze the data to gain some first-hand experience. You can find date from `OpenNeuro <https://openneuro.org/>`__ as we learned before.
+After successful install FSL and set it up, let's analyze the data to gain some first-hand experience. You can find date from `OpenNeuro <https://openneuro.org/>`__ as we learned before. This course will show you how to run fMRI analysis with FSL.
+
+We will start 
 
 
 
@@ -27,11 +29,11 @@ One of the useful function from FSL is fslswapdim, it can change the orientation
 
 For example, let's say you have a T2 image looks like this: 
 
-.. image:: FSL_orientation_before.PNG
+.. image:: FSL_orientation_before.PNG 
 
 but the T1 image is this
 
-.. image:: FSL_T1_orientation.PNG
+.. image:: FSL_T1_orientation.PNG For example, 
 
 So, you can want to change the orientation so that the T1 and T2 can match, type::
 

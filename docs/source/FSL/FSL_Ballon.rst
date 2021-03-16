@@ -1,5 +1,5 @@
-Ballon data
-===========
+Balloon Analogue Risk Task
+==========================
 
 One of the interesting topics from psychology is risky behavior. In order to gain a bettering understanding about how the brain reacts when people make a decision, Researchers created many interesting paradigms, Ballon analog risk task is one of them.
 

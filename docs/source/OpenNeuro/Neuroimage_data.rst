@@ -68,7 +68,8 @@ Slice orientations
 
 Different structural MRI
 ************************
-Different types of MRI sequences provide sensitivity to various aspects of neuroanatomy. The two basic types of MRI images are T1-weighted and T2-weighted images, often referred to as T1 and T2 images. ``T1`` images are probably the most common.T1 sequences will have grey matter being darker than white matter. ``T2``, in contrast, will have white matter being darker than grey matter.
+
+Different types of MRI sequences provide sensitivity to various aspects of neuroanatomy. The two basic types of MRI images are T1-weighted and T2-weighted images, often referred to as T1 and T2 images. T1 images are probably the most common.T1 will have grey matter being darker than white matter. T2, in contrast, will have white matter being darker than grey matter.
 
 .. image:: OpenNeurp_T1vsT2.png
 
