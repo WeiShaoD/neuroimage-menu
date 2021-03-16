@@ -31,9 +31,9 @@ Meau
    :maxdepth: 1
    :caption: OpenNeuro
 
-   OpenNeuro/OpenNeuro_menu
    OpenNeuro/Neuroimage_data
- 
+   OpenNeuro/OpenNeuro_menu
+
 .. toctree::
    :maxdepth: 1
    :caption: GitHub
