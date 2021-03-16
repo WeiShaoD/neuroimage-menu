@@ -15,4 +15,14 @@ Now, go to `there <https://openneuro.org/datasets/ds000001/versions/1.0.0>`__ , 
 
 .. image:: FSL_BRAT.PNG
        
-As you can see, we have 16 subjects. ``participants.tsv`` will tell you the demographic information of subjects, ``ask-balloonanalogrisktask_bold.json``contains TR information. You can preview all of these information in the OpenNeuro data webpage.  
+As you can see, we have 16 subjects. ``participants.tsv`` will tell you the demographic information of subjects, ``ask-balloonanalogrisktask_bold.json``contains TR information. You can preview all of these information in the OpenNeuro data webpage.
+ 
+.. image:: FSL_anatfunc.PNG
+
+.. image:: FSL_anat.PNG  
+
+``anat``includes all the anatomical images such as T1 and T2 (if possible).
+
+.. figure:: FSL_func.PNG
+
+    ``func`` has all the functional images, ...bold.nii.gz as well as task information file like ...events.tsv.

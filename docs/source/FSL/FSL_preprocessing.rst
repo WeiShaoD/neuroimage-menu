@@ -1,7 +1,6 @@
 Preprocessing
 =============
 
-
 Like a good dish needs some preprocessed step, Preprocessing is necessary for fMRI analysis as well. there are serveal steps in FSL::
 
   Skull stripping
@@ -19,6 +18,9 @@ We will operate these one by one, Are you ready?
 looking at the data
 ^^^^^^^^^^^^^^^^^^^
 
+Before we are actually running the analysis, it is safe for us to check the data. Although 
+
+Open you terminal and cd to the BRAT directory, type ``fsl`` to open the fsl_gui
 
 Skull stripping
 
