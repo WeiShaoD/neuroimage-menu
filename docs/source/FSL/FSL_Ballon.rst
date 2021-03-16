@@ -13,6 +13,6 @@ You can go to `here <https://www.frontiersin.org/articles/10.3389/fnins.2012.000
 
 Now, go to `there <https://openneuro.org/datasets/ds000001/versions/1.0.0>`__ , download the data and save it as BART in your home directory. 
 
-.. imageLL FSL_BRAT.png
- in which
+.. image:: FSL_BRAT.PNG
+        in which
 As you can see, we have 16 subjects. `participants.tsv` will tell you the demographic information of subjects, `ask-balloonanalogrisktask_bold.json`contains TR information. You can preview all of these information in the OpenNeuro data webpage.  
