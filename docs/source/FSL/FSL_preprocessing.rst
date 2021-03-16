@@ -2,11 +2,23 @@ Preprocessing
 =============
 
 
-Preprocessing is the first step to do a fMRI analysis
+Like a good dish needs some preprocessed step, Preprocessing is necessary for fMRI analysis as well. there are serveal steps in FSL::
 
+  Skull stripping
+ 
+  Motion correction
+  
+  Slice-Timing Correction
+
+  Smoothing
+
+  Registration and Normalization 
+
+We will operate these one by one, Are you ready? 
 
 looking at the data
 ^^^^^^^^^^^^^^^^^^^
+
 
 Skull stripping
 

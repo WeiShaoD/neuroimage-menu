@@ -14,33 +14,7 @@ You go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find 
 
 .. image:: FSL_install2.PNG
 
-After successful install FSL and set it up, let's analyze the data to gain some first-hand experience. You can find date from `OpenNeuro <https://openneuro.org/>`__ as we learned before. This course will show you how to run fMRI analysis with FSL.
+After successful install FSL and set it up, let's analyze the data to gain some first-hand experience. You can find date from `OpenNeuro <https://openneuro.org/>`__ as I introduced before. This goal of this chapter is to show you how to run fMRI analysis with FSL step by step.
 
-We will start 
-
-
-
-
-
-
-
-
-One of the useful function from FSL is fslswapdim, it can change the orientation of image. Therefore, you can have the same orentation to process
-
-For example, let's say you have a T2 image looks like this: 
-
-.. image:: FSL_orientation_before.PNG 
-
-but the T1 image is this
-
-.. image:: FSL_T1_orientation.PNG For example, 
-
-So, you can want to change the orientation so that the T1 and T2 can match, type::
-
-fslswapdim T2.nii.gz x -z y T2.reorientated.nii.gz
-
-Now, you get the new orientated T2.
-
-.. image:: FSL_orientation_after.PNG 
-
-
+We will start with the downloading of the data and inspecting the anatomical and functional images.Then, do preprocessing with the data, Once the preprocessing has been done, we will do further 1st and 2nd level analysis with the statistics model.
+   
