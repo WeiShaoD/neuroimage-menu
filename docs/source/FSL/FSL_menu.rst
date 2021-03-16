@@ -11,8 +11,13 @@ You go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find 
 
 .. image:: FSL_install2.PNG
 
-After successful install FSL and set it up, let's analyze the data to gain some first-hand experience. You can find date from `OpenNuro  <https://neuroimage-book02.readthedocs.io/en/latest/OpenNeuro/OpenNeuro_menu.html/>`__ 
+After successful install FSL and set it up, let's analyze the data to gain some first-hand experience. You can find date from `OpenNeuro <https://openneuro.org/>`__ as we learned before.
 
+Ballon Analogue Risk Task(BART)
+
+The Balloon Analogue Risk Task (BART) is a computerized measure of risk taking behavior. The BART models real-world risk behavior through the conceptual frame of balancing the potential for reward versus loss. In the task, the participant is presented with a balloon and offered the chance to earn money by pumping the balloon up by clicking a button. Each click causes the balloon to incrementally inflate and money to be added to a counter up until some threshold, at which point the balloon is over inflated and explodes. Thus, each pump confers greater risk, but also greater potential reward. If the participant chooses to cash-out prior to the balloon exploding then they collect the money earned for that trail, but if balloon explodes earnings for that trial are lost. Participants are not informed about the balloons breakpoints; the absence of this information allows for testing both participants' initial responses to the task and changes in responding as they gain experience with the task contingencies. Risk taking is a related, but phenomenologically distinct process from impulsivity._ 
+
+<https://www.frontiersin.org/articles/10.3389/fnins.2012.00080/full/>`__
 
 
 

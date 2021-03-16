@@ -60,6 +60,7 @@ Meau
    :caption: FSL
 
    FSL/FSL_menu
+   FSL/FSl_Ballon
    FSL/FSL_preprocessing
 
 .. toctree::
