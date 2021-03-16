@@ -47,7 +47,7 @@ Talairach space is a three-dimensional cartesian coordinate system aligned over 
 
 .. image:: OenNeuro_stereotaxic_coordinates.png
 
-Schematic of stereotaxic brain coordinates on axial (left), coronal (middle), and sagittal (right) slices. The origin (X=0, Y=0, Z=0) is centered on the anterior commisure.
+         Schematic of stereotaxic brain coordinates on axial (left), coronal (middle), and sagittal (right) slices. The origin (X=0, Y=0, Z=0) is centered on the anterior commisure.
 
 Anatomical descriptions
 ***********************
@@ -65,3 +65,10 @@ Slice orientations
 ``Saggital`` slices are parallel to the interhemispheric commisure (dividing the brain in two).
 
 ``Coronal`` slices are parallel to the face, perpendicular to the floor.
+
+Different structural MRI
+************************
+Different types of MRI sequences provide sensitivity to various aspects of neuroanatomy. The two basic types of MRI images are T1-weighted and T2-weighted images, often referred to as T1 and T2 images. ``T1`` images are probably the most common.T1 sequences will have grey matter being darker than white matter. ``T2``, in contrast, will have white matter being darker than grey matter.
+
+.. image:: OpenNeurp_T1vsT2.png
+
