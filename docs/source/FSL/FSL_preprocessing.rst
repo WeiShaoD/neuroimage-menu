@@ -99,6 +99,12 @@ The default of smoothing in FSL is 5 mm
 Registration and Normalization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+As human being, Most of us have have very brains - everyone has a 4 lobes, hippocampus or cerebellum. However, there are also differences in terms of brain size and shape. Therefore, if we want to do a group analysis, it is reasonable to ensure that each voxel for each brain in the subjects corresponds to the same part of the brain. If we are measuring a voxel in the hippocampus, we need to make sure that every subject’s hippocampus is in alignment with each other.
+
+In order to do that, we need ``Registration`` and ``Normalization``. Just as you would fit the material into the baking molds, each brain has to be transformed to have the same size, shape, and dimensions. We do this by normalizing them to a template. A template is a standardized brain that has standard dimensions and coordinates, and most researchers have agreed to use them to reporting their results. So, if someone has a breakthrough finding, other people can check the result accordingly. 
+
+.. image:: FSL_registration_normalization.png
+
 In the Search window, there are three options: 1) No search; 2) Normal search; and 3) Full search. This signifies to FSL how much to search for a good initial alignment between the functional and anatomical image
 
 Check the Preprocessed Data
