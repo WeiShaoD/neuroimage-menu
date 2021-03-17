@@ -136,7 +136,14 @@ If you already loaded the data, checked the ``Motion correction``, ``Slice-Timin
 Check the Preprocessed Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Now, Let's review what we have done:
 
+  1 We have downloaded the BART data and finished the set up
+  2 We have inspect the anat and func data
+  3 we have preprocessed the data
+
+
+Along the way our learning journey, one of the most difficult parts is that you have to do the trade-off. For example, if you stripping too many brain tissues, it will affect the later process like the registration and normalization as well as if you keep the brain skull. it is a judgemental call and you have to decide what is the best for your research. The more you think about and practice with FSL, the easier it will become make the decision quicker and more accurately.    
 
 
 
