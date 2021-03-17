@@ -29,7 +29,7 @@ Meau
 
 .. toctree::
    :maxdepth: 1
-   :caption:Appetizer 2 Neuroimage data
+   :caption: Appetizer 2 OpenNeuro
 
    OpenNeuro/Neuroimage_data
    OpenNeuro/OpenNeuro_menu
