@@ -62,6 +62,7 @@ Meau
    FSL/FSL_menu
    FSL/FSL_Ballon
    FSL/FSL_preprocessing
+   FSL/FSL_statistics_modeling
    FSL/FSL_Tricks
 
 .. toctree::

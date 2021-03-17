@@ -139,7 +139,9 @@ Check the Preprocessed Data
 Now, Let's review what we have done:
 
   1 We have downloaded the BART data and finished the set up
+  
   2 We have inspect the anat and func data
+  
   3 we have preprocessed the data
 
 
