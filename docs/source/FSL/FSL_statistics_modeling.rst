@@ -4,9 +4,10 @@ Statistics and modeling
 After we finish all the preprocessing steps, we can go to the next - fit a model to the data. For a bettwe understanding of model fitting, we need to review some 3 fundamental components; 
 
   1 General Linear Model 
-  2 The BOLD response 
-  3 Time-series 
 
+  2 The BOLD response 
+
+  3 Time-series 
 
 Overview picture
 ^^^^^^^^^^^^^^
@@ -30,9 +31,13 @@ This GLM can be expanded to include many regressors, but however many there are,
 BOLD response
 ^^^^^^^^^^^^
 
+In 1990, a researcher at Bell Laboratories named Seiji Ogawa discovered that more deoxygenated blood leads to a decrease in the signal measured from a brain region. An increase in oxygenated blood, on the other hand, increases the signal - and this increase in oxygenated blood was later shown to be correlated with increased neural firing. This change in signal is known as blood oxygen level dependent signal (or BOLD signal).
+
+
 Time series
 ^^^^^^^^^^^
 
+To understanding how model fitting works, first we need to review the composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this concatenated string of volumes a run of data. The signal that is measured at each voxel across the entire run is called a time-series.
 
 
 
