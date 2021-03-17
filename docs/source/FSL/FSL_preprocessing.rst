@@ -61,11 +61,40 @@ Motion can introduce confounds into the imaging data because motion generates si
 
 .. image:: FSL_motion.jpg
 
+In the FEAT GUI, motion correction is specified in the Pre-stats tab. FEAT’s default is to use FSL’s MCFLIRT tool, which you can see in the dropdown menu. You have the option to turn off motion correction, but unless you have a really good reason to do that, otherwise, leave it as it is.
+
+.. image:: FSL_motion_correction.png
+
 Slice-Timing Correction
-***********************
+^^^^^^^^^^^^^^^^^^^^^^^
+An fMRI volume is acquired in slices. Each of these slices takes time to acquire - from tens to hundreds of milliseconds.
+
+The two most commonly methods for creating volumes are sequential and interleaved slice acquisition. Sequential slice acquisition acquires each adjacent slice consecutively, interleaved slice acquisition acquires every other slice, and then fills in the gaps on the second pass. 
+
+.. image:: FSL_SliceTimingCorrection_Demo.gif
+
+Later, when we use statistics model, we will assume that all of the slices were acquired simultaneously. To make this assumption valid, the time-series for each slice needs to be shifted back in time by the duration when it took to acquire that slice.
+
+FSL’s default is to not do slice-timing correction, and to include a temporal derivative instead. 
+
+..image :: FSL_slice_timing.png
 
 Smoothing
 ^^^^^^^^^
+
+Although it sounds weired at the first time, people want to smooth the functional data, or replace the signal at each voxel with a weighted average of that voxel’s neighbors. Why would we want to make the images blurrier than they already are?
+
+It is true that smoothing does decrease the spatial resolution. but there are two benefits that might outweight the disadvantages at leatst:
+
+First, as fMRI data contains a lot of noise, and that the noise is frequently greater than the signal. By averaging over nearby voxels we can cancel out the noise and enhance the signal.
+
+Secondly, smoothing data also can be useful when it comes to Normalization, which the goal is to normalize every subject’s brain for a standardized template brain. 
+
+.. image:: FSL_Smoothing_Demo.gif
+
+The default of smoothing in FSL is 5 mm
+
+.. image:: FSL_smoothing.png
 
 Registration and Normalization
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
