@@ -30,8 +30,18 @@ type ``fsl`` to open the ``FSL GUI tool``
 
 click ``FSLView`` and ``File`` to find the anat T1 image, sub-01_T1w.nii.gz and func image sub-01_task-balloonanalogrisktask_run-01_bold.nii.gz
 
-.. image:: FSL_FSLView_anat.png 
-.. image:: FSL_FSLView_func.png
+
+.. figure:: FSL_FSLView_anat.png
+
+   T1 anatomical image 
+
+
+.. figure:: FSL_FSLView_func.png
+
+   Functional image
+
+
+You might notice there is a black block on the subject's face area, that because all the data from the open-source dataset need to be defaced for the purpose of privacy
 
 For more information, please go to `here <http://www.mrishark.com/brain1.html>`__ 
 
