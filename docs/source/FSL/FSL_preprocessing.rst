@@ -79,7 +79,7 @@ Later, when we use statistics model, we will assume that all of the slices were 
 
 FSL’s default is to not do slice-timing correction, and to include a temporal derivative instead. 
 
-..image:: FSL_slice_timing.png
+.. image:: FSL_slice_timing.png
 
 Smoothing
 ^^^^^^^^^

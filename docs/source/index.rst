@@ -29,21 +29,21 @@ Meau
 
 .. toctree::
    :maxdepth: 1
-   :caption: OpenNeuro
+   :caption:Appetizer 2 Neuroimage data
 
    OpenNeuro/Neuroimage_data
    OpenNeuro/OpenNeuro_menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: GitHub
+   :caption: Appetizer 3 GitHub
 
    GitHub/GitHub_menu
    GitHub/Gitcommand_menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: FreeSurfer
+   :caption: Main course 1 FreeSurfer
 
    FreeSurfer/FreeSurfer_menu                                                                                           
    FreeSurfer/FastSurfer
@@ -51,13 +51,13 @@ Meau
 
 .. toctree::
    :maxdepth: 1
-   :caption: Preprocessing
+   :caption: Drinks Preprocessing
 
    Preprocessing/Preprocessing_menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: FSL
+   :caption: Main course 2 FSL
 
    FSL/FSL_menu
    FSL/FSL_Ballon
@@ -66,19 +66,19 @@ Meau
 
 .. toctree::
    :maxdepth: 1
-   :caption: AFNI
+   :caption: Main course 3 AFNI
 
    AFNI/AFNI_menu  
 
 .. toctree::
     :maxdepth: 1
-    :caption: SPM
+    :caption: Main course 4 SPM
     
     SPM/SPM_menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: SuperComputer
+   :caption: dessert SuperComputer
 
    SuperComputer/SuperComputer_menu
 
