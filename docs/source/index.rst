@@ -63,6 +63,8 @@ Meau
    FSL/FSL_Ballon
    FSL/FSL_preprocessing
    FSL/FSL_statistics_modeling
+   FSL/FSL_1st_analysis
+   FSL/FSL_2nd_analysis
    FSL/FSL_Tricks
 
 .. toctree::

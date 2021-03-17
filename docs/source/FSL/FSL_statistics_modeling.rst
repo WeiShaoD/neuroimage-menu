@@ -19,13 +19,10 @@ In General Linear Model, or GLM. we can use one or more regressors - independent
 
 
 BOLD response
-^^^^^^^^^^^^^
+^^^^^^^^^^^^
 
 Time series
 ^^^^^^^^^^^
-
-
-
 
 
 
