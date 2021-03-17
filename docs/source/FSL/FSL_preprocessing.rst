@@ -61,7 +61,6 @@ Adjust the stripping range
 
 You might notice that there is column called Fractional intensity threshold, as the description, you can adjust the number for the skull stripping range. If you think that too much brain has been removed, you should set this to a smaller number, and vice versa if you think too little skull has been removed.The defult is 0.5.
 
-
 Motion Correcation
 ^^^^^^^^^^^^^^^^^^
 
@@ -158,4 +157,8 @@ Now, Let's review what we have done:
 Along the way our learning journey, one of the most difficult parts is that you have to do the trade-off. For example, if you stripping too many brain tissues, it will affect the later process like the registration and normalization as well as if you keep the brain skull. it is a judgemental call and you have to decide what is the best for your research. The more you think about and practice with FSL, the easier it will become make the decision quicker and more accurately.    
 
 
+Homework
+^^^^^^^^
+
+Since you have done the preprocessing for one subject ``sub-01``, please repeat all the procedures through ``sub-02`` and ``sub-03``
 

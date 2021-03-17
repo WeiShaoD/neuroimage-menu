@@ -5,7 +5,7 @@ What is most to a chef, collboration, collboration and collboration
 
 So, What is GitHub?
 
-GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere. More importantly, it is GitHub that makes this menu documentation available. 
 
 First thing first
 
