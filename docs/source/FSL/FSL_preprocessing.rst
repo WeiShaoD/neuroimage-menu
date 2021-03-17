@@ -130,7 +130,7 @@ In the search window below, there are three options: 1) No search; 2) Normal sea
 
 In the Degrees of Freedom window, which is the right tab after the search window, you can use 3, 6, or 12 degrees of freedom to transform the images. Registration has an additional option, BBR, which stands for Brain-Boundary Registration. This is a more advanced registration technique that uses the tissue boundaries to fine-tune the alignment between the functional and anatomical images. Similar to the Full search option above, it takes longer, but often gives a better alignment.
 
-If you already loaded the data, checked the ``Motion correction``, ``Slice-Timing``, and ``Smoothing``. you can click ``Go``and good to go.
+If you already loaded the data, checked the ``Motion correction``, ``Slice-Timing``, and ``Smoothing``. you can click ``Go`` and good to go.
  
 
 Check the Preprocessed Data
