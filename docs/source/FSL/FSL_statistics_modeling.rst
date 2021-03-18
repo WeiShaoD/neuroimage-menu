@@ -86,9 +86,11 @@ are presented close together.
 
 .. image:: FSL_HRF_Demo.gif
 
-Time series ^^^^^^^^^^^
+Time series 
+^^^^^^^^^^^
 
 To understanding how model fitting works, first we need to review the composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this 
 concatenated string of volumes a run of data. The signal that is measured at each voxel across the entire run is called a time-series.The time-series represents the signal that is measured at each voxel.
 
+To have a better view, you can go to 
 
