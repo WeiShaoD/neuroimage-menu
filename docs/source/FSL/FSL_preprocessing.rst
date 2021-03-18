@@ -166,6 +166,14 @@ If you already loaded the data, checked the ``Motion correction``, ``Slice-Timin
 Check the Preprocessed Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Registration and Normalization check
+************************************
+
+
+motion check
+************
+
+
 Now, Let's review what we have done:
 
   1 We have downloaded the BART data and finished the set up

@@ -65,6 +65,7 @@ Meau
    FSL/FSL_statistics_modeling
    FSL/FSL_1st_analysis
    FSL/FSL_2nd_analysis
+   FSL/FSL_3rd_analysis
    FSL/FSL_Tricks
 
 .. toctree::
