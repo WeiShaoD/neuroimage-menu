@@ -21,9 +21,13 @@ The events.tsv files contains all the information we need, we just need to trans
 that FSL can understand, we will create a timing file for each condition, and then split that file according 
 to which run the condition was in:
 
-Timings for the pump trials that occurred during the first run (which we will call incongruent_run1.txt);
-Timings for the Incongruent trials that occurred during the second run (incongruent_run2.txt);
+Timings files for the pump trials that occurred during the first run, second run and third run (which will be 
+pump_run1.txt,);
+
+Timings files  for the Incongruent trials that occurred during the second run (incongruent_run2.txt);
+
 Timings for the Congruent trials that occurred during the first run (congruent_run1.txt);
+
 Timings for the Congruent trials that occurred during the second run (congruent_run2.txt). 
 
 The script

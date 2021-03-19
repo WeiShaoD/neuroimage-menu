@@ -9,8 +9,8 @@ Welcome to Wei's menu for Neuroimage methods!
 .. image:: brainbook1.png
 
 
-This is documentation to give some basic instructions about how to run the volumetric, surface and fMRI analysis with different software packages. I hope this e-book can help you in the beginning of 
-running image analysis
+**This is documentation to give some basic instructions about how to run the volumetric, surface and fMRI analysis with different software packages. I hope this e-book can help you in the beginning of 
+running image analysis**
 
 We have::
 
