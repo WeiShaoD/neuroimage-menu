@@ -82,7 +82,7 @@ Meau
 
 .. toctree::
    :maxdepth: 1
-   :caption: dessert SuperComputer
+   :caption: Dessert SuperComputer
 
    SuperComputer/SuperComputer_menu
 
