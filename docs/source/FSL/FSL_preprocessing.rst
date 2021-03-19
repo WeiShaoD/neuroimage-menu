@@ -160,14 +160,29 @@ In the Degrees of Freedom window, which is the right tab after the search window
 stands for Brain-Boundary Registration. This is a more advanced registration technique that uses the tissue boundaries to fine-tune the alignment between the functional and anatomical images. Similar to 
 the Full search option above, it takes longer, but often gives a better alignment.
 
-If you already loaded the data, checked the ``Motion correction``, ``Slice-Timing``, and ``Smoothing``. you can click ``Go`` and good to go.
+If you already loaded the data, checked the ``Motion correction``, ``Slice-Timing``, and ``Smoothing``. you can click ``Go`` and good to go. This could require a few minutes to process and a webpage will 
+jump up to show the resuts
  
-
+ 
 Check the Preprocessed Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+When FSL preprocessing the data, you are able to check the preprocessed data manually. We are going to check the ``registration and normalization`` and ``motion correction``.
+
+
 Registration and Normalization check
 ************************************
+
+Click the ``Registration`` tab on the webpage, and scroll down. You will see a lot of "brains".
+
+Each brain includes the red outlines on the top of a greyscale brain from background. The first column, ``Summary Registration``, shows a representative functional image in the fMRI time-series as the 
+underlay, and the template brain as the red lines. if there were any problems in any of the previous registration or normalization steps, there would be obvious errors 
+in this image, such as the image being skewed or largely outside of the red outline.
+
+
+Whether the red outlines approximately trace the outline of the greyscale image. Also check the alignments for internal structures such as the ventricles. In addtion, check the same alignments for ``Registration of example_func to highres``, register functional image to anatomical image, ``Registration of highres to standard``, normalize the anatomical image to the standard template.
+
+.. image:: FSL_preprocess_check.PNG
 
 
 motion check
