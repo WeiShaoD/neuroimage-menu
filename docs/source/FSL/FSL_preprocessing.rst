@@ -188,6 +188,16 @@ Whether the red outlines approximately trace the outline of the greyscale image.
 motion check
 ************
 
+After you check the registration, now, go to click the Pre-stats link foe the motion correction. Scroll down and you will see 3 plots indicated the the motion across the time-series for that run, with 
+volumes indexed on the x-axis, and the amount of motion (in millimeters) shown on the y-axis.
+
+.. image:: FSL_Motion_check.PNG
+
+
+looking for any spikes in the motion plots that are greater than half of your voxel resolution (1 mm x 1mm x 1mm for structural MRI, 3 mm x 3 mm x 3 mm for fMRI), as wel as drifts that are greater than 
+the entire voxel size. If there is relative motion of more than half a voxel or absolute motion of more than a voxel, you would be warned by FSL with relative motion of more than 1.5mm from volume to 
+volume, or absolute motion of more than 3mm across the entire run. 
+
 
 Now, Let's review what we have done:
 
