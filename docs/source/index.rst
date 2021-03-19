@@ -16,7 +16,7 @@ We have 3 appetizers; Linux system, OpenNeuro and GitHub
 
 1 dessert, running analysis on SuperComputer 
 
-Meau
+Menu
 ^^^^
  
 .. toctree::
