@@ -22,13 +22,18 @@ that FSL can understand, we will create a timing file for each condition, and th
 to which run the condition was in:
 
 Timings files for the pump trials that occurred during the first run, second run and third run (which will be 
-pump_run1.txt,);
+pump_run1.txt,pump_run2.txt and pump_run3.txt
 
-Timings files  for the Incongruent trials that occurred during the second run (incongruent_run2.txt);
+Timings files for the control trials that occurred during the first run, second run and third run (which will be
+control_run1.txt,control_run2.txt and control_run3.txt 
 
-Timings for the Congruent trials that occurred during the first run (congruent_run1.txt);
+Each of these timing files will have same format consisting of three columns, in the following order:
 
-Timings for the Congruent trials that occurred during the second run (congruent_run2.txt). 
+  1 Onset time, in seconds, relative to the start of the scan;
+
+  2 Duration of the trial, in seconds;
+
+  3 Parametric modulation.
 
 The script
 **********
