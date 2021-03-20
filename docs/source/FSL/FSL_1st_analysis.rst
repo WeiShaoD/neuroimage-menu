@@ -44,7 +44,6 @@ Each of these timing files will have same format consisting of three columns, in
 
   3 Parametric modulation
 
-
 The script
 **********
 
@@ -90,7 +89,7 @@ directory.
 
 Eventually, you will see
 
-.. image:: FSL_explode.txt.PNG
+.. image:: FSL_explode.PNG
 
 .. image:: FSL_cash_out.PNG
 
