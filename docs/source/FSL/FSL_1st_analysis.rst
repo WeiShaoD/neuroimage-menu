@@ -51,13 +51,13 @@ Here is the script::
 
   #!/bin/bash
 
-#Check whether the file subjList.txt exists; if not, create it
-if [ ! -f subjList.txt ]; then
+  #Check whether the file subjList.txt exists; if not, create it
+  if [ ! -f subjList.txt ]; then
         ls -d sub-?? > subjList.txt
-fi
+  fi
 
-#Loop over all subjects and format timing files into FSL format
-for subj in `cat subjList.txt` ; do
+  #Loop over all subjects and format timing files into FSL format
+  for subj in `cat subjList.txt` ; do
         cd $subj/func #Navigate to the subject's func directory, which contains the timing files
 
         #Extract the onset times for the incongruent and congruent trials for each run. NOTE: This script only extracts the trials in which the subject made a correct response. Accuracy is near$
@@ -79,7 +79,7 @@ for subj in `cat subjList.txt` ; do
 
 
         cd ../..
-done
+  done
 
 
 Run the first level analysis
