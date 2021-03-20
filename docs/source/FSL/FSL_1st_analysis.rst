@@ -153,3 +153,5 @@ Post-stats
 
 The last tab in the FEAT GUI is called Post-stats. Again, there are many options here, and the only ones you are likely to change are ones labeled “Z threshold” and “Cluster P threshold”, which are the 
 thresholds that determine which voxels are statistically significant for each contrast. This is for the group-level analysis.
+
+After you fill the material into ready -all the processes, Click ``GO`` and go to make a coffee since you might need to wait for 7-10 minutes. 
