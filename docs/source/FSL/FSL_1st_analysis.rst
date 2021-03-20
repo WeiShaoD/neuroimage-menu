@@ -38,15 +38,15 @@ Each of these timing files will have same format consisting of three columns, in
 The script
 **********
 
-There are 4 different conditions for the BART experiment: 
+There are 4 different conditions for the BART experiment::
 
-pump
+  pump
 
-control_pump
+  control_pump
 
-explode
+  explode
 
-cash out
+  cash out
 
 We only analyze the explode and cast out condition, However, in order to fully seperate each conditions across all the runs, We will use a script to achieve that goal and use the explode and cash out 
 conditions only.
