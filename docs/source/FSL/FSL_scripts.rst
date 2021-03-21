@@ -28,7 +28,7 @@ After you finish all the steps, instead of clicking ``Go``, click the ``Save`` b
 
 .. image:: FSL_design_file.PNG 
  
-Add the scirpt 
+Adding the scirpt 
 **************
 
 Once you create the template design file, what we need to do next is to copy this file into all 16 subjects directory, adjust the setting accordingly, and excute the command with FSL.
@@ -38,8 +38,6 @@ Here is the script you need to copy and save it as **prepro_model.sh** in your B
   #!/bin/bash
 
   # Generate the subject list to make modifying this script
-  # to run just a subset of subjects easier.
-
   for id in `seq -w 1 16` ; do
       subj="sub-$id"
       echo "===> Starting processing of $subj"
@@ -49,19 +47,16 @@ Here is the script you need to copy and save it as **prepro_model.sh** in your B
         # If the brain mask doesn’t exist, create it
         if [ ! -f anat/${subj}_T1w_brain.nii.gz ]; then
             echo "Skull-stripped brain not found, using bet with a fractional intensity threshold of 0.35"
-            # Note: This fractional intensity appears to work well for most of the subjects in the
-            # Flanker dataset. You may want to change it if you modify this script for your own study.
             bet2 anat/${subj}_T1w.nii.gz \
                 anat/${subj}_T1w_brain_f02.nii.gz -f 0.35
         fi
 
-        # Copy the design files into the subject directory, and then
-        # change “sub-08” to the current subject number
+        # Copy the design files into the all the subject directory, and change “sub-01” content of original design files to different subject accordingly
         cp ../design_run1.fsf .
         cp ../design_run2.fsf .
         cp ../design_run3.fsf .  
 
-        # Note that we are using the | character to delimit the patterns
+        # Change “sub-01” content of original design files to match different subjects accordingly 
         sed -i "s|sub-01|${subj}|g" design_run1.fsf
         sed -i "s|sub-01|${subj}|g" design_run2.fsf
         sed -i "s|sub-01|${subj}|g" design_run3.fsf
@@ -81,3 +76,8 @@ Here is the script you need to copy and save it as **prepro_model.sh** in your B
 
 echo "job is done"
 
+After everyhing is seted, type ``bash prepro_model.sh`` to run the script and take a break, Have fun!
+ 
+
+The script will loop over all of the 16 subjects in the BART dataset and do the preprocessing and statistical modelling for each run. The time should take around 1-2 hours. Be sure to do quality checks 
+for each subject just as you did before..
