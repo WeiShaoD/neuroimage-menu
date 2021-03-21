@@ -33,18 +33,18 @@ Add the scirpt
 
 Once you create the template design file, what we need to do next is to copy this file into all 16 subjects directory, adjust the setting accordingly, and excute the command with FSL.
 
-Here is the script you need to copy and save it as **prepro_model.sh** in your BART directory.
+Here is the script you need to copy and save it as **prepro_model.sh** in your BART directory::
 
-#!/bin/bash
+  #!/bin/bash
 
-# Generate the subject list to make modifying this script
-# to run just a subset of subjects easier.
+  # Generate the subject list to make modifying this script
+  # to run just a subset of subjects easier.
 
-for id in `seq -w 1 16` ; do
-    subj="sub-$id"
-    echo "===> Starting processing of $subj"
-    echo
-    cd $subj
+  for id in `seq -w 1 16` ; do
+      subj="sub-$id"
+      echo "===> Starting processing of $subj"
+      echo
+      cd $subj
         
         # If the brain mask doesn’t exist, create it
         if [ ! -f anat/${subj}_T1w_brain.nii.gz ]; then
@@ -77,7 +77,7 @@ for id in `seq -w 1 16` ; do
 
     # Go back to the directory containing all of the subjects, and repeat the loop
     cd ..
-done
+  done
 
 echo "job is done"
 
