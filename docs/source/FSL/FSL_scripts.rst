@@ -74,10 +74,11 @@ Here is the script you need to copy and save it as **prepro_model.sh** in your B
     cd ..
   done
 
-echo "job is done"
+  echo "job is done"
 
 After everyhing is seted, type ``bash prepro_model.sh`` to run the script and take a break, Have fun!
- 
+
+.. image:: FSL_bash_script.png 
 
 The script will loop over all of the 16 subjects in the BART dataset and do the preprocessing and statistical modelling for each run. The time should take around 1-2 hours. Be sure to do quality checks 
 for each subject just as you did before..
