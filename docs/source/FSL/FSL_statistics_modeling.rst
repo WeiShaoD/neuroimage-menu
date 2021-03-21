@@ -9,10 +9,6 @@ After we finish all the preprocessing steps, we can go to the next - fit a model
 
   3 Time-series 
 
-Overview picture
-^^^^^^^^^^^^^^
-
-
 General linear model
 ^^^^^^^^^^^^^^^^^^^^
 
