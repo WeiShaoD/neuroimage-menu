@@ -66,5 +66,8 @@ contrast estimate for each subject that is the average of that subject’s param
 When you complete the GLM and contrasts setting, click ``Done``, a design matrix will show up. make sure it is ok, and click ``Go``.
 
 
+.. image:: FSL_2nd_result2.PNG
+
+.. image:: FSL_2nd_result3.PNG
 
 
