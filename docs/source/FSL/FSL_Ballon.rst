@@ -49,4 +49,6 @@ Let's take a close look
 
 .. figure:: FSL_func.PNG
 
-**func** has all the functional images, end with **bold.nii.gz** as well as trial related files end with **events.tsv**.
+**func** has all the functional images, end with **bold.nii.gz** as well as trial-related files end with **events.tsv**.
+
+Whenver you're are ready, let's go to next
