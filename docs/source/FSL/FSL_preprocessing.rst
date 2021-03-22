@@ -3,15 +3,17 @@ Preprocessing
 
 Like every good dish needs some preprocessing processes, Preprocessing is necessary for fMRI analysis as well. there are several steps in FSL are necessary for your neuroimage data:
 
-1 Skull stripping
+1 Inspecting the data
+
+2 Skull stripping
  
-2 Motion correction
+3 Motion correction
   
-3 Slice-Timing Correction
+4 Slice-Timing Correction
 
-4 Smoothing
+5 Smoothing
 
-5 coregistration and Normalization 
+6 coregistration and Normalization 
 
 We will operate them one by one. 
 
@@ -62,6 +64,12 @@ Adjust the stripping range
 You might notice that there is a tab called **Fractional intensity threshold...**, as the description, you can adjust the number for the skull stripping range by changing the digit number. If too many 
 brain tissues have been removed, you should set this to a smaller number, and vice versa if you think only a little skull has been removed.The default of FSL is 0.5.
 
+Data
+****
+
+Open FEAT GUI 
+
+
 Motion Correcation
 ^^^^^^^^^^^^^^^^^^
 
@@ -72,7 +80,7 @@ his head every time he feels an electrical shock - then it can become impossible
 
 .. image:: FSL_motion.jpg
 
-In the FEAT GUI, motion correction is specified in the Pre-stats tab. FEAT’s default is to use FSL’s MCFLIRT tool, which you can see in the dropdown menu. You have the option to turn off motion 
+Open the FEAT GUI, motion correction is specified in the Pre-stats tab. FEAT’s default is to use FSL’s MCFLIRT tool, which you can see in the dropdown menu. You have the option to turn off motion 
 correction, but unless you have a really good reason to do that, otherwise, leave it as it is.
 
 .. image:: FSL_motion_correction.png

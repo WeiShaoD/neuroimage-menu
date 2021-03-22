@@ -62,8 +62,9 @@ hour means we would expect to get θ = 1 / 0.5 = 2 fish every hour on average. U
 
 .. image:: FSL_Gamma_formula.PNG
 
-When applied to fMRI data, the Gamma Distribution is called a basis function because it is the fundamental element of the model we will create and fit to the time series of the data. Furthermore, if we know what the shape of the distribution looks like in response to a 
-very brief stimulus, we can predict what it should look like in response to stimuli of varying durations, as well as any combination of stimuli presented over time.
+When applied to fMRI data, the Gamma Distribution is called a basis function because it is the fundamental element of the model we will create and fit to the time series of the data. Furthermore, if we 
+know what the shape of the distribution looks like in response to a very brief stimulus, we can predict what it should look like in response to stimuli of varying durations, as well as any combination of 
+stimuli presented over time.
 
 The HRF for a Single impulse Stimulus
 *************************************
@@ -107,8 +108,10 @@ are presented close together.
 Time series 
 ^^^^^^^^^^^
 
-To understanding how model fitting works, first we need to review the composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this 
+We have mentioned this concept several times before， As the basic composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this 
 concatenated string of volumes a run of data. The signal that is measured at each voxel across the entire run is called a time-series.The time-series represents the signal that is measured at each voxel.
 
-To have a better view, you can go to 
+looking at the time series
+**************************
+ 
 
