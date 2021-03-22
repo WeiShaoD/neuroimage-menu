@@ -22,6 +22,20 @@ The goal of this chapter is to show you how to run fMRI analysis with FSL step b
 
 We will start with the dataset downloading, preprocessing, 1st level, 2dn level, and 3rd level analysis as follow:
 
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Main course 2 FSL
+
+   FSL/FSL_Ballon
+   FSL/FSL_preprocessing
+   FSL/FSL_statistics_modeling
+   FSL/FSL_1st_analysis
+   FSL/FSL_scripts.rst
+   FSL/FSL_2nd_analysis
+   FSL/FSL_3rd_analysis
+   FSL/FSL_Tricks
+
 1 Ballon Analogue Risk Task and data downloading
 
 2 preprocessing
