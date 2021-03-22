@@ -16,27 +16,25 @@ You go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation/>`_ find 
 .. image:: FSL_install2.PNG
 
 
-After successfully install FSL and set up. let’s analyze a dataset to gain some first-hand experiences. You can find data from `OpenNeuro <https://neuroimage-book02.readthedocs.io/en/latest/OpenNeuro/OpenNeuro_menu.html/>`_
+After successfully install FSL and set up. let’s analyze a dataset to gain some first-hand experiences. You can find data from `OpenNeuro <OpenNeuro_menu>`
 
 The goal of this chapter is to show you how to run fMRI analysis with FSL step by step.
 
 We will start with the dataset downloading, preprocessing, 1st level, 2dn level, and 3rd level analysis as follow:
 
-1 downloading the data
+1 Ballon Analogue Risk Task and data downloading
 
-2 Ballon Analogue Risk Task
+2 preprocessing
 
-3 preprocessing
+3 statistics and modeling
 
-4 statistics and modeling
+4 1st level analysis
 
-5 1st level analysis
+5 script
 
-6 script
+6 2nd level analysis
 
-7 2nd level analysis
-
-8 3rd level analysis
+7 3rd level analysis
 
 
 
