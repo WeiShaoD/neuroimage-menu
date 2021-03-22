@@ -73,6 +73,7 @@ If the duration of a stimulus is very short, such as a snap of the fingers, we c
 shape of the BOLD signal looks like a typical Gamma Distribution, with a peak close to the beginning of the time axis (i.e., the x-axis) and a long tail to the right.
 
 .. image:: FSL_HRF_SingleStim.png
+   :scale: 70%
 
 The HRF for a Single Boxcar Stimulus
 ************************************
@@ -93,6 +94,7 @@ We have seen what the BOLD signal looks like after a stimulus is presented and h
 the previous stimulus has returned to baseline?
 
 .. figure:: FSL_HRF_Sum.png
+   :scale: 70%
   
   Convolution of the HRFs for individual stimuli. The overall BOLD response (blue) is a moving average of the individual HRFs outlined in black, red, and 
   green. The vertical black lines on the x-axis represent impulse stimuli. Figure created by Bob Cox of AFNI.
