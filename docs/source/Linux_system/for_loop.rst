@@ -1,8 +1,10 @@
+For loop and sed 
+================
+
 For loop
-========
+^^^^^^^^
 
-
-For loop probably is the one of the most useful commands you apply for preocess data with neuroimage
+For loop probably is the one of the most useful commands to automated the processes with neuroimage data
 
 First, you can use a for loop in your terminal by typing::
 
@@ -40,7 +42,8 @@ In order to analyze multiple subjects, take recon-all as an example::
 
 This will create a txt file which contains all the subject information and run the recon-all command for each subject one by one.
 
- 
+sed command
+^^^^^^^^^^^ 
 
 
 

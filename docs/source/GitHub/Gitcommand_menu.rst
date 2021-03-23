@@ -1,11 +1,16 @@
 Git command
 ===========
 
-After the basic ideas, let's have more fun, you can upload an existing file to a GitHub repository using the command lines::
+After the basic ideas, let's have more fun, you can upload an existing file to a GitHub repository using the command lines:
 
   git add
+
   git commit
+
   git push
+
+configuration
+*************
              
 First, go to your GitHub account and create a new repository named dinner_menu
 
@@ -25,6 +30,9 @@ Then, use git clone to get the remote directory from your GitHub repository
 use ``git clone git@github.com:WeiShaoD/dinner_menu.git``
    
 ..  image:: git_clone.PNG
+
+git add/commit/push
+*******************
 
 cd to the dinner_menu, add a new menu.txt file by typing ``nano menu.txt``, use ``git add`` and ``git commit -m ""``    
 
