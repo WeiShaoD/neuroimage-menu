@@ -12,9 +12,11 @@ First, you can use a for loop in your terminal by typing::
 
 The for-loop has three sections, separated by semicolons.
 
-1 The first section is the Declaration: it begins by assigning the first item after “in” to the variable “i”; in this case, it would assign the value “1” to “i” .The numbers after “in” are called the “List”
+1 The first section is the Declaration: it begins by assigning the first item after “in” to the variable “i”; in this case, it would assign the value “1” to “i” .The numbers after “in” are called the 
+“List”
 
-2 The next section is the Body, which runs the commands written after “do,” replacing the  replacing the variable with whichever value is currently assigned to the variable, for the first loop, this will be the$
+2 The next section is the Body, which runs the commands written after “do,” replacing the replacing the variable with whichever value is currently assigned to the variable, for the first loop, this will 
+be the$
 
 3 The last section, called the End, contains only the word “done”, meaning to exit the loop after all of the items in the list have been run through the Body of the loop
 
@@ -53,8 +55,6 @@ a stream of input text and replace one string with another. Sed’s advantage ov
 file and leaving the rest of the text intact.
 
 
-
-
 Sed introduction
 ****************
 
@@ -67,7 +67,7 @@ To see how sed works, create a text file called diner.sh that contains the follo
 
 ``#!/bin/bah``  tells your laptop that this is a bash script.
 
-This is simply a text file that runs one line of code. If you wanted to swap the name Nasaka Chicken with Tender beef, you need to type the following::
+This is simply a text file that runs one line of code. If you wanted to swap the name Masala Chicken with Tender beef, you need to type the following::
 
   sed "s|Masala Chicken|Tender beef|g" diner.sh
 
@@ -79,14 +79,14 @@ There are 3 basic sections:
 
 3 The file to be read into sed (in this case, diner.sh)
 
-The first part of this section is an “s”, which means to “swap” the following pair of strings. The first of the pair(Masala Chicken) is what is being searched for in the text file, and the second of the 
-pair(Tender beef) is what it will be replaced with. The “g” stands for “global”, which means to replace every instance of the first word with the second word.
+The first part of this section is an “s”, which means to “swap” the following pair of strings. The first of the pair (Masala Chicken) is what is being searched for in the text file, and the second of the 
+pair (Tender beef) is what it will be replaced with. The “g” stands for “global”, which means to replace every instance of the first word with the second word.
 
 If you run this command by ``bash diner.sh``, you should see the following output::
 
   #!/bin/bash
 
-  echo "Hello, we are are going to cook Masala Chicken, Again, we will eat Masala Chicken as dinner."
+  echo "Hello, we are are going to cook Tender beef, Again, we will eat Tender beef as dinner."
 
 If you wanted to redirect this output into a new text file, you would use this code::
 
@@ -97,7 +97,7 @@ Of course, you can call the output file whatever you like.
 Editing Files In Place
 **********************
 
-If you want to edit the file and overwrite it instead of redirecting the output into a new file, you can use the -i and -e options::
+If you want to edit the file and overwrite it instead of redirecting the output into a new file, you can use the -i options::
 
   sed -i "s|Masala Chicken|Tender beef|g" diner.sh
 
@@ -107,16 +107,21 @@ Using sed with for-loops
 ************************
 
 Actually, sed can be combined with for-loops and conditional statements to write more sophisticated code that can make your life easier. For example, let’s say that we want to create several copies of a 
-template file, and only change one word of it over a list of names. Let’s start by creating a file called Names.sh which contains the following::
+template file, and only change one word of it over a list of names. Let’s start by creating a file called food.sh which contains the following::
 
   #!/bin/bash
 
-  echo "Hi, the launch is FOOD."
+  echo "what we eat is FOOD."
 
 In here, FOOD is a placeholder. Now we can use a for-loop to create several copies of this file, replacing FOOD with whichever you like in the loop::
 
-  for food in Masala Chicken Tender beef Pancake; do
-    sed -i "s|FOOD|${food}|g" launch.sh > ${name}_launch.sh
+  for fo in Masala_Chicken Tender_beef Pancake; do
+    sed -i "s|FOOD|${fo}|g" food.sh > ${name}_food.sh
   done
+
+You can write a bash script to run this command as well.
+
+
+Although it seems irrelevant to learn for loop and sed command, you will find these two have become really useful when you want to automate the process of neuroimage, which we will discuss later.
 
 
