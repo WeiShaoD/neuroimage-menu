@@ -137,3 +137,10 @@ you also can type::
 to look further details 
 
 For more information in `Linux commands <http://swcarpentry.github.io/shell-novice/reference.html>`__
+
+Text editor
+^^^^^^^^^^^
+
+A text editor is a type of computer program that edits plain text such as nano, vi, vim or gedit. the default of Centos is nano and vim, you can choose any one of them. For example, open a terminal and 
+put ``nano`` to open nano text editor.
+
