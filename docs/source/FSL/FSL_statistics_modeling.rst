@@ -116,4 +116,8 @@ concatenated string of volumes a run of data. The signal that is measured at eac
 looking at the time series
 **************************
  
+In order to have a closer look at time series, you can open FSLview from the ``sub-01`` directory, and choose File to open 1 of 3 bold files from **func** directory. type ``Ctrl+T`` and take a look at 
+the volume tab at the buttom. The right plot here indicates the voxel you point out at the different time series positions.
 
+
+.. image:: FSL_timeseries.PNG
