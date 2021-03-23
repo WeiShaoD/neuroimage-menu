@@ -7,7 +7,8 @@ let's take bash_profile as an example, you can edit this profile by type::
   
   nano ~/.bash_profile  
 
-bash_profile is a script that is executed each time you start a new terminal.
+bash_profile is a configuration file for bash shell, whenever you invoke bash with a login, it will search for and load ~/bash_profile and all of the code contained within. In other words, bash_profile 
+is a script that is executed each time you start a terminal.
 
 .. image:: tricks_profile.PNG
 
@@ -16,10 +17,9 @@ For example, In here, I have set Freesurfer by two commands:
 export FREESURFER_HOME=/usr/local/freesurfer/7.1.1-1
 source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
-
 By using ``export`` I have pointed out the freesurfer home directory where I install the freesurfer. ``source`` to activate freesurfer whenever I log in terminal.
  
-``alisa 9``helps me set a hot key that I press 9 to run the command ``cd /home/shao/neuroimage-book`` 
+``alisa 9`` helps me set a hot key that I press 9 to run the command ``cd /home/shao/neuroimage-book`` 
 
 It is not hard to find files in the current directory by ``ls``, However, if I want to want to find/delete files located at subdirectory, I have use different command such as ``ls -d $PWD/sub-??/run*`` 
 as well as ``rm -r $PWD/sub-??/run*`` .
