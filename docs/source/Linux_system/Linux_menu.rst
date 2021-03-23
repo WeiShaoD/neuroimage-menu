@@ -132,6 +132,8 @@ These are the 6 basic commands you will use in the future whether you use you ow
  
 you also can type:: 
 
-man ls/cd/mv/rm/cp/mkdir for more details 
+  man ls/cd/mv/rm/cp/mkdir 
 
-For more `information <http://swcarpentry.github.io/shell-novice/reference.html>`__
+to look further details 
+
+For more information in `Linux commands <http://swcarpentry.github.io/shell-novice/reference.html>`__
