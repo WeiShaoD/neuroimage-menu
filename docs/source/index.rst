@@ -33,7 +33,7 @@ Menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: Appetizer 2 OpenNeuro
+   :caption: Appetizer 2 Neuroimage data
 
    OpenNeuro/Neuroimage_data
    OpenNeuro/OpenNeuro_menu
