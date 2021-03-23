@@ -3,6 +3,8 @@ Git command
 
 After the basic ideas, let's have more fun, you can upload an existing file to a GitHub repository using the command lines:
 
+  git clone
+
   git add
 
   git commit
@@ -26,6 +28,12 @@ GitHub configuration::
 Then, use git clone to get the remote directory from your GitHub repository                                             
 
 ..  image:: git_ssh.PNG
+
+git clone
+*********
+
+git clone is a Git command line that target an existing repository and create a clone in your directory. it is primarily used to point to an existing repo and make a clone or copy of that repo at 
+in a new directory.
 
 use ``git clone git@github.com:WeiShaoD/dinner_menu.git``
    
