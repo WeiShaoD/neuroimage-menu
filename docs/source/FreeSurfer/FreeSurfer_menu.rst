@@ -1,7 +1,7 @@
 Freesurfer
 ==========
 
-Now, it is tiem for our first main course, FreeSurfer.
+Now, it is time for our first main course, FreeSurfer.
 
 What is FreeSurfer?
 
@@ -42,7 +42,6 @@ put ``mri_convert sample-001.mgz sample-001.nii.gz`` to test Freesurfer. Due to 
 
 ..  image:: Freesurfer_test.PNG 
 
-
 Recon-all
 ^^^^^^^^^
 
@@ -57,16 +56,16 @@ The most useful function of FreesSufer is the recon-all command, it will tell Fr
 -s subjet id
 
 Normally, the input file would be T1 file, you also can improve the quality of surfaces by feed the T2 such as ``recon-all -subject subjectname -i /path/to/input_volume -T2 /path/to/T2_volume -T2pial 
--all`` FreeSurfer provided a tutorial `dataset <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Data>__ for you to play around it. You can follow this `link 
+-all`` FreeSurfer provided a tutorial `dataset <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Data>`__ for you to play around it. You can follow this `link 
 <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Practice>`__ to play with recon-all command.
 
-tutorial data practice
+Tutorial data practice
 **********************
 
 Once you have download the tutorial dataset, ``cd`` to ``tutorial_data_20190918_1558/practice_with_data`` and put ``export SUBJECTS_DIR=$PWD`` to specify the subject output directory to the current 
-directory , then, go to ``dicoms`` and input ``recon-all -all -i I50 -s Subj001`` to take the I50 and create the Subj001 output. Of course, before you do this, make sure you have activated the Freesurfer 
-by ``srouce $FREESURFER_HOME/SetUpFreeSurfer.sh`` Here is a detailed instruction and a function list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ . ``recon-all`` usually will 
-cost 6-8 hours, depends on the computing power you have. Fortunately, there is a way to speed up this process.
+directory , then, go to ``dicoms`` and input ``recon-all -all -i I50 -s Subj001`` to take the I50 and create the Subj001 output. Of course, make sure you have activated the Freesurfer by ``srouce 
+$FREESURFER_HOME/SetUpFreeSurfer.sh`` before you run the command. Here is a detailed instruction and a function list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ . 
+``recon-all`` usually will cost 6-8 hours, depends on the computing power you have. Fortunately, there is a way to speed up this process.
  
 .. image:: Freesurfer_reconall.PNG
 
@@ -89,38 +88,16 @@ Freeview is a visualization tool comes with Freesufer, you could test the freevi
 
 freeview will invoke the freeview 
 
-The flag -v is used to indicated that we are open volumes  
+The flag -v is used to indicated that we are open volumes, T1.mgz: T1 anatomical image, brainmask.mgz: skull-stripped volume primarily used for troubleshooting, aseg.mgz : subcortical segmentation loaded 
+with its corresponding color table and at a opacity=0.2 
 
-T1.mgz: T1 anatomical image
-
-brainmask.mgz: skull-stripped volume primarily used for troubleshooting
-
-aseg.mgz : subcortical segmentation loaded with its corresponding color table and at a opacity=0.2
-T1
+.. image:: Freesufer_freeviewbert.PNG
 
 Freeview window will appear and load the data, it is important to ensure that you have install the Xming if you use WSL. You are able to see there is new directory has been created with the name you gave 
 before, go the mri directory.
 
 .. image:: Freesuefer_mri.PNG 
 
-Now, you can the view the volumes such as brainmask.mgz and wm.mgz; the surfaces, rh.white and lh.white; and the subcortical segmentation, aseg.mgz::
-
-  freeivew -v T1.mgz -v wm.mgz -v brainmask.mgz aseg.mgz:colormap=lut:opacity=0.2
-
-or go to the surf directory::
- 
-  freeview -f lh.pial:edgecolor=red rh.white:edgecolor=blue rh.pial:edgecolor=red
-
-The flag -f is used to load surfaces
-
-white & pial surfaces are loaded for each hemisphere & with color indicated by 'edgecolor'
-
-Now, you can use freeview to check the output of recon-all
-
-Go to the mri directory, typing::
-
-  freeview -v T1.mgz wm.mgz brainmask.mgz aseg.mgz
-   
 More details from `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
 
 

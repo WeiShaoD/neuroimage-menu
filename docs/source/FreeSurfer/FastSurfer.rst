@@ -1,7 +1,10 @@
 FastSurfer 
 ==========
 
-`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform outputs$ 
+After you run the recon-all with a tutorial data, I bet you might wonder how come I can skip this process time. The first solution would be FastSurfer.
+
+`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform 
+outputs$
 
 .. image:: FasteSurfer.png
 
@@ -44,5 +47,7 @@ Before you run the script, just ensure you check all the required packages
 
 ``sed -i "s/==/>=/g" requirements.txt`` and ``pip install --no-index -r requirements.txt`` might help
 
+.. image:: Freesurfer_FastSurfer.PNG
 
+It is worth to notice that FastSufer needs the support from FreeSurfer and it is works for FreeSurfer6.0.0 now
 

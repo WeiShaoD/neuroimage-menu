@@ -1,6 +1,8 @@
 Parallel computing for recon-all
 ================================
 
+The second solution to speed up recon-all is parallel computing!
+
 A physical core is an actual physical processor core in your CPU. Each physical core has its own circuitry to read and execute instructions separately. 
 
 Freesufer support the OpenMP code,which means that ``recon-all`` can be processed by multiple-cores/threads,you can either recon-all one subjects with multiple cores.
