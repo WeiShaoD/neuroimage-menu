@@ -73,7 +73,7 @@ If the duration of a stimulus is very short, such as a snap of the fingers, we c
 shape of the BOLD signal looks like a typical Gamma Distribution, with a peak close to the beginning of the time axis (i.e., the x-axis) and a long tail to the right.
 
 .. figure:: FSL_HRF_SingleStim.png
-  :scale: 70%
+  :scale: 30%
 
 The HRF for a Single Boxcar Stimulus
 ************************************
