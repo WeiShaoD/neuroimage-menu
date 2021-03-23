@@ -45,6 +45,11 @@ This will create a txt file which contains all the subject information and run t
 sed command
 ^^^^^^^^^^^ 
 
+The commands you have learned so far will allow you to create flexible scripts that can be adapted to many different scenarios. There is one more command you will learn to round out your toolkit of Unix 
+commands: The ``sed`` command.
 
+Sed is an abbreviation for “stream editor”, in that the input to sed is a stream of text - the same concept as the input and output streams that were discussed in a previous chapter. Our goal is to take 
+a stream of input text and replace one string with another. Sed’s advantage over doing a similar procedure with for-loops is that sed can edit a file and only change certain words while overwriting the 
+file and leaving the rest of the text intact.
 
 
