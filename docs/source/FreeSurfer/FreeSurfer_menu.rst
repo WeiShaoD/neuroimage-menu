@@ -1,17 +1,24 @@
 Freesurfer
 ==========
 
+Now, it is tiem for our first main course, FreeSurfer.
+
 What is FreeSurfer?
 
-FreeSurfer is a brain imaging software package. It focuses on analyzing magnetic resonance imaging (MRI) scans of brain tissue, functional brain mapping and contains tools to conduct both volume-based and surface-based analysis.
-
-FreeSurfer includes tools for the reconstruction of topologically correct and geometrically accurate models of both the gray/white and pial surfaces, for measuring cortical thickness, surface area and folding, and for computing inter-subject registration based on the pattern of cortical folds
+FreeSurfer is a brain imaging software package that focuses on analyzing magnetic resonance imaging (MRI) and functional scans of brain tissue from cross-sectional or longitudinal research, it can help 
+researchers to conduct both volume-based and surface-based analyses. It is developed by the Laboratory for Computational Neuroimaging at the Athinoula A. Martinos Center for Biomedical Imaging. 
+FreeSurfer includes tools for the reconstruction of topologically correct and geometrically accurate models of both the gray/white and pial surfaces, for measuring cortical thickness, surface area and 
+folding, and for computing inter-subject registration based on the pattern of cortical folds
 
 .. image:: FreeSurfer1.png 
 
-You can download and install FreeSufer from  `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__  or follow the `Video <https://www.youtube.com/watch?v=BSQUVktXTzo&list=PLIQIswOrUH6_DWy5mJlSfj6AWY0y9iUce&index=2/>`__ to set up FreeSufer 
+Installation
+^^^^^^^^^^^^
 
-After the installation, type::
+You can download and install FreeSufer from `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ and follow the `Video 
+<https://www.youtube.com/watch?v=BSQUVktXTzo&list=PLIQIswOrUH6_DWy5mJlSfj6AWY0y9iUce&index=2/>`__ to set up FreeSurfer
+
+There are different versions of Freesurfer, it is recommended to use the latest one but Freesufer6.0.0 and above would be appropriate. After the installation, type::
 
   source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
@@ -19,44 +26,63 @@ Then, you are supposed to see this
 
 .. image:: FreeSurfer_ready.png 
 
-We can check the Freesufer that has been installed, there are two important directory for FreeSurfer, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer output
-
+We can check whether Freesufer has been installed, there are two important messages for FreeSurfer, 1 FREESURFER_HOME is the home directory where your FreeSufer has been installed, 2 SUBJECTS_DIR is the 
+subject directory where you point for the FreesSufer output results.
 
 Test your FreeSurfer
 ^^^^^^^^^^^^^^^^^^^^
 
-After the installation, you can test the freesurfer
+You also want to test the freesurfer performance before it run the actual data.
 
-Go to freesurfer home and it subject directory::
+Go to freesurfer subject directory::
 
   cd $FREESURFER_HOME/subjects/
 
-use ``mri_convert sample-001.mgz sample-001.nii.gz``
+put ``mri_convert sample-001.mgz sample-001.nii.gz`` to test Freesurfer. Due to different requirements of different versions of Freesurfer, you might meet a license problem. 
 
 ..  image:: Freesurfer_test.PNG 
-
-test the freeview go to the subject directory of freesurfer, ``cd $SUBJECTS_DIR``, and::
-
-  freeview -v \
-    bert/mri/T1.mgz \
-    bert/mri/brainmask.mgz \
-    bert/mri/aseg.mgz:colormap=lut:opacity=0.2 
 
 
 Recon-all
 ^^^^^^^^^
 
-The most useful function of FreesSufer is the recon-all command, after you set up the FreeSurfer subject directory and active FreeSrufer, you can use it by typing::
+The most useful function of FreesSufer is the recon-all command, it will tell Freesufer to performs all, or any part of if you specifiy, the FreeSurfer cortical reconstruction process. the basic format::
 
   recon-all -all -i subjname_T1w.nii.gz -s subjname
 
+-all tells Freesurfer to do everything, including subcortical segmentation
+ 
+-i stands for input
 
-input could be either DICOM(T1) or NIFTI T1 files where you can find from the anat folder normally. Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ will do. Recon usually will cost 6-8 hours, depends on the computing power you you have.
+-s subjet id
 
+Normally, the input file would be T1 file, you also can improve the quality of surfaces by feed the T2 such as ``recon-all -subject subjectname -i /path/to/input_volume -T2 /path/to/T2_volume -T2pial -all``
+you can follow this ``link <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Practice>`__ to play with freesurfer tutorial data with recon-all. It is worth to notice that input file could be either 
+DICOM(T1) or NIFTI T1 files where you can find from the anat directory (OpenNeuro). Here is a detailed instruction and a function list for `recon-all 
+<https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ . ``recon-all`` usually will cost 6-8 hours, depends on the computing power you have. Fortunately, there is a way to speed up this process.
+
+After you download the tutorial data and follow the instruction 
+
+.. image:: Freesurfer_reconall.PNG
 
 Freeview
 ^^^^^^^^
-Once the recon-all finished, you are able to see there is new directory has been created with the name you gave before, go the mri directory 
+                                                                                                                                                                                                           
+Freeview is a visualization tool comes with Freesufer, you could test the freeview as well, go to the subject directory again . ``cd $SUBJECTS_DIR``, and type::                           
+  freeview -v \
+    bert/mri/T1.mgz \
+    bert/mri/brainmask.mgz \
+    bert/mri/aseg.mgz:colormap=lut:opacity=0.2
+                                                                                                                                                                                                                   This will invoke the freeview:
+The flag -v is used to open some of the most commonly used volumes                                                                                                                                                                                                                                                                                                                                                                    T1.mgz: T1 anatomical image
+
+brainmask.mgz: skull-stripped volume primarily used for troubleshooting
+
+aseg.mgz : subcortical segmentation loaded with its corresponding color table and at a opacity=0.2
+T1
+
+Freeview window will appear and load the data, it is important to ensure that you have install the Xming if you use WSL. You are able to see there is new directory has been created with the name you gave 
+before, go the mri directory
 
 .. image:: Freesuefer_mri.PNG 
 
@@ -64,16 +90,13 @@ Now, you can the view the volumes such as brainmask.mgz and wm.mgz; the surfaces
 
   freeivew -v T1.mgz -v wm.mgz -v brainmask.mgz aseg.mgz:colormap=lut:opacity=0.2
 
-The flag -v is used to open some of the most commonly used volumes including
-brainmask.mgz : skull-stripped volume primarily used for troubleshooting
-wm.mgz : white matter mask also used for troubleshooting
-aseg.mgz : subcortical segmentation loaded with its corresponding color table and at a low opacity
 
 or go to the surf directory::
  
   freeview -f lh.pial:edgecolor=red rh.white:edgecolor=blue rh.pial:edgecolor=red
 
 The flag -f is used to load surfaces
+
 white & pial surfaces are loaded for each hemisphere & with color indicated by 'edgecolor'
 
 Now, you can use freeview to check the output of recon-all
@@ -89,7 +112,7 @@ for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTut
 Segmentation of hippocampal subfields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Subfields segmentation in Hippocampus
+One of important function of FreeSurfer is the subfield segmentation of Hippocampus and amygdala
 
 After ``recon-all`` has been completed, you can use T1 scan from ``recon-all`` and the pipline::
 
