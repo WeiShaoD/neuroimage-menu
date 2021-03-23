@@ -30,7 +30,7 @@ We can check whether Freesufer has been installed, there are two important messa
 subject directory where you point for the FreesSufer output results.
 
 Test your FreeSurfer
-^^^^^^^^^^^^^^^^^^^^
+********************
 
 You also want to test the freesurfer performance before it run the actual data.
 
@@ -56,25 +56,42 @@ The most useful function of FreesSufer is the recon-all command, it will tell Fr
 
 -s subjet id
 
-Normally, the input file would be T1 file, you also can improve the quality of surfaces by feed the T2 such as ``recon-all -subject subjectname -i /path/to/input_volume -T2 /path/to/T2_volume -T2pial -all``
-you can follow this ``link <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Practice>`__ to play with freesurfer tutorial data with recon-all. It is worth to notice that input file could be either 
-DICOM(T1) or NIFTI T1 files where you can find from the anat directory (OpenNeuro). Here is a detailed instruction and a function list for `recon-all 
-<https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ . ``recon-all`` usually will cost 6-8 hours, depends on the computing power you have. Fortunately, there is a way to speed up this process.
+Normally, the input file would be T1 file, you also can improve the quality of surfaces by feed the T2 such as ``recon-all -subject subjectname -i /path/to/input_volume -T2 /path/to/T2_volume -T2pial 
+-all`` FreeSurfer provided a tutorial `dataset <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Data>__ for you to play around it. You can follow this `link 
+<http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Practice>`__ to play with recon-all command.
 
-After you download the tutorial data and follow the instruction 
+tutorial data practice
+**********************
 
+Once you have download the tutorial dataset, ``cd`` to ``tutorial_data_20190918_1558/practice_with_data`` and put ``export SUBJECTS_DIR=$PWD`` to specify the subject output directory to the current 
+directory , then, go to ``dicoms`` and input ``recon-all -all -i I50 -s Subj001`` to take the I50 and create the Subj001 output. Of course, before you do this, make sure you have activated the Freesurfer 
+by ``srouce $FREESURFER_HOME/SetUpFreeSurfer.sh`` Here is a detailed instruction and a function list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ . ``recon-all`` usually will 
+cost 6-8 hours, depends on the computing power you have. Fortunately, there is a way to speed up this process.
+ 
 .. image:: Freesurfer_reconall.PNG
+
+This will cost a few hours but we will come up with a solution to save our time in the next chapter. you will see a new directory has been created in the freesufer subject directory
+
+.. image:: Freesurfer_reconoutput.PNG
+
+There are 3 directories you need to pay attention to, **mri** has all the volume file, **surf** contains all the surface outcome and scripts keep all the log information.
 
 Freeview
 ^^^^^^^^
                                                                                                                                                                                                            
-Freeview is a visualization tool comes with Freesufer, you could test the freeview as well, go to the subject directory again . ``cd $SUBJECTS_DIR``, and type::                           
+Freeview is a visualization tool comes with Freesufer, you could test the freeview as well. ``cd $SUBJECTS_DIR``, and type::
+  
   freeview -v \
     bert/mri/T1.mgz \
     bert/mri/brainmask.mgz \
     bert/mri/aseg.mgz:colormap=lut:opacity=0.2
-                                                                                                                                                                                                                   This will invoke the freeview:
-The flag -v is used to open some of the most commonly used volumes                                                                                                                                                                                                                                                                                                                                                                    T1.mgz: T1 anatomical image
+                                                                      
+
+freeview will invoke the freeview 
+
+The flag -v is used to indicated that we are open volumes  
+
+T1.mgz: T1 anatomical image
 
 brainmask.mgz: skull-stripped volume primarily used for troubleshooting
 
@@ -82,14 +99,13 @@ aseg.mgz : subcortical segmentation loaded with its corresponding color table an
 T1
 
 Freeview window will appear and load the data, it is important to ensure that you have install the Xming if you use WSL. You are able to see there is new directory has been created with the name you gave 
-before, go the mri directory
+before, go the mri directory.
 
 .. image:: Freesuefer_mri.PNG 
 
 Now, you can the view the volumes such as brainmask.mgz and wm.mgz; the surfaces, rh.white and lh.white; and the subcortical segmentation, aseg.mgz::
 
   freeivew -v T1.mgz -v wm.mgz -v brainmask.mgz aseg.mgz:colormap=lut:opacity=0.2
-
 
 or go to the surf directory::
  
@@ -105,8 +121,7 @@ Go to the mri directory, typing::
 
   freeview -v T1.mgz wm.mgz brainmask.mgz aseg.mgz
    
-
-for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
+More details from `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
 
 
 Segmentation of hippocampal subfields
@@ -114,7 +129,7 @@ Segmentation of hippocampal subfields
 
 One of important function of FreeSurfer is the subfield segmentation of Hippocampus and amygdala
 
-After ``recon-all`` has been completed, you can use T1 scan from ``recon-all`` and the pipline::
+After ``recon-all`` has been completed, you can take the output from ``recon-all`` and the pipline::
 
   segmentHA_T1.sh subject_name [SUBJECTS_DIR]
 
@@ -133,7 +148,8 @@ You can check the outfiles with freeview::
 
 [lr]h.hippoAmygLabels-T1.v21.mgz: they store the discrete segmentation volumes at subvoxel resolution (0.333 mm).
 
-[lr]h.hippoAmygLabels-T1.v21.FSvoxelSpace.mgz: they store the discrete segmentation volume in the FreeSurfer voxel space (normally 1mm isotropic, unless higher resolution data was used in recon-all with the flag -cm). 
+[lr]h.hippoAmygLabels-T1.v21.FSvoxelSpace.mgz: they store the discrete segmentation volume in the FreeSurfer voxel space (normally 1mm isotropic, unless higher resolution data was used in recon-all with 
+the flag -cm).
 
 [lr]h.hippoAmygLabels-T1.v21.[hierarchy].mgz: they store the segmentations with the different hierarchy levels.
 
@@ -155,13 +171,17 @@ For MacOC user, please follow this `video <https://www.youtube.com/watch?v=0R6SJ
 
 Go `HippocampalSubfieldsAndNucleiOfAmygdala  <https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala/>`__ to see all the instructions
 
+
 Extract the volume matrix from FreeSurfer  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Once we use the freesurfer automated segmentation, we can also collect the volumes of the subregions of the hippocampus / amygdala of all subjects and write them to a single file, ectracting the volume matrix::
+
+Once we use the freesurfer automated segmentation, we can also collect the volumes of the subregions of the hippocampus / amygdala of all subjects and write them to a single file, ectracting the volume 
+matrix::
 
   quantifyHAsubregions.sh hippoSf <T1> <output_file> 
  
-The first argument ``quantifyHAsubregions.sh`` specifies that we want to collect the volumes of the hippocampus (hippoSf). The second argument is the name of the analysis: for the first mode of operation (only main T1 scans), it is simply type T1, and don't forget to name the output_file.
+The first argument ``quantifyHAsubregions.sh`` specifies that we want to collect the volumes of the hippocampus (hippoSf). The second argument is the name of the analysis: for the first mode of operation 
+(only main T1 scans), it is simply type T1, and don't forget to name the output_file.
 
 After a few seconds, you will see the output files in the current directory, open it with ``less`` 
 

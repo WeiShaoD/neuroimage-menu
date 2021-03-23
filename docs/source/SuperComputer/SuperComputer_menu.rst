@@ -31,4 +31,8 @@ In some cases, you can use ssh -Y (user id)@(server IP) as the command to connec
 
 Use ``diskusage_report`` to find the disk space on the server
 
+transfer the data among different server 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+use scp -r to transfer the data 
+ 
 
