@@ -1,7 +1,7 @@
 Preprocessing
 =============
 
-Like every good dish needs some preprocessing processes, Preprocessing is necessary for fMRI analysis as well. there are several steps in FSL are necessary for your neuroimage data:
+Remember our drink menu? there is a difference for what we should do in FSL , Anyway, let's have a couple of drinks before the meal:
 
 1 Inspecting the data
 
