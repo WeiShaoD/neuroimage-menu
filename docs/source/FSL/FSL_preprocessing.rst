@@ -106,7 +106,6 @@ the images blurrier than they already are? It is true that smoothing does decrea
 
 .. image:: FSL_Smoothing_Demo.gif
 
-
 .. image:: FSL_smoothing.png
 
 The default of Smoothing in FSL is 5mm, again, unless you have a good reason, otherwise, you can skip this.
@@ -138,7 +137,11 @@ functional images, matching the bright voxels on one image with the dark voxels 
 
 3 Once the best match has been found, then the same transformations that were used to warp the anatomical image to the template are applied to the functional images.
 
-.. image:: FSL_Registration_Normalization_Demo.gif
+.. figure:: FSL_Registration_Normalization_Demo.gif
+ 
+  figure created by Andrew Jahn
+
+In general:
 
 anatomical image → template
 
