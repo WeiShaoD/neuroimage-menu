@@ -10,11 +10,8 @@ major steps are required for the most software packages
 Individual slices in an fMRI acquisition commonly suffer from random variations in average signal intensity, noise spikes, ghosts, and data glitches. These may result from physiological sources 
 (participant motion, respiration, cardiac pulsations, anxiety, drowsiness, drugs) or from the scanner itself (field inhomogeneities, eddy currents, gradient heating, electronics). If unrecognized and 
 included in the data analysis, these may spoil the entire experiment. A quick visual review of all source images together in montage mode is highly recommended to search for and exclude ("scrub") 
-aberrant slices that appear too bright, too dark, or contain artifacts. More sophisticated graphical and semi-automated methods to identify outlier data are also available. Each of these slices takes 
-tens to hundreds of milliseconds.The two most commonly used methods for creating volumes are sequential and interleaved slice acquisition.Sequential slice acquisition acquires each adjacent slice 
-consecutively, either bottom-to-top or top-to-bottom. Interleaved slice acquisition acquires every other slice, and then fills in the gaps on the second pass. Both of these methods are illustrated in the 
-video below.
-
+aberrant slices that appear too bright, too dark, or contain artifacts. More sophisticated graphical and semi-automated methods to identify outlier data are also available. 
+ 
 .. image:: Preprocessing_check.PNG
 
 
