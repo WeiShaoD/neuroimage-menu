@@ -15,7 +15,6 @@ Remember our drink menu? there is a difference for what we should do in FSL , An
 
 6 coregistration and Normalization 
 
-We will operate them one by one. 
 
 Inspecting the image
 ^^^^^^^^^^^^^^^^^^^^
@@ -64,11 +63,6 @@ Adjust the stripping range
 You might notice that there is a tab called **Fractional intensity threshold...**, as the description, you can adjust the number for the skull stripping range by changing the digit number. If too many 
 brain tissues have been removed, you should set this to a smaller number, and vice versa if you think only a little skull has been removed.The default of FSL is 0.5.
 
-Data
-****
-
-Open FEAT GUI 
-
 
 Motion Correcation
 ^^^^^^^^^^^^^^^^^^
@@ -91,7 +85,9 @@ Slice-Timing Correction
 An fMRI volume is acquired in slices. Each of these slices takes time to acquire - from tens to hundreds of milliseconds.The two most common methods for creating volumes are sequential and interleaved 
 slice acquisition. Sequential slice acquisition acquires each adjacent slice consecutively, interleaved slice acquisition acquires every other slice, and then fills in the gaps on the second pass.
 
-.. image:: FSL_SliceTimingCorrection_Demo.gif
+.. figure:: FSL_SliceTimingCorrection_Demo.gif
+  
+  figure created by Andrew Jahn
 
 Later, when we use statistics models, we will assume that all of the slices were acquired simultaneously. To make this assumption valid, the time-series for each slice needs to be shifted back in time by 
 the duration when it took to acquire that slice. FSL’s default is to not do slice-timing correction, and to include a temporal derivative instead. 
@@ -110,7 +106,6 @@ the images blurrier than they already are? It is true that smoothing does decrea
 
 .. image:: FSL_Smoothing_Demo.gif
 
-The default of smoothing in FSL is 5 mm
 
 .. image:: FSL_smoothing.png
 
