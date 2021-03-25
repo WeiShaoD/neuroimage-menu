@@ -57,14 +57,15 @@ significant across a group (and thus likely to generalize across a population).
 Files format
 ************
 
-The Brain Imaging Data Structure (BIDS) is a standard for organizing, annotating, and describing data collected during neuroimaging experiments.The Neuroimaging Informatics Technology Initiative (NIfTI) 
-is an open file format commonly used to store brain images.
+The Brain Imaging Data Structure (BIDS) is a standard for organizing, annotating, and describing data collected during neuroimaging experiments. Neuroimaging Informatics Technology Initiative (NIfTI) is 
+file format of brain images. It is transferred from DICOM format that comes from Siemens scanners.Nearly all modern software packages use the Nifti file format. Nifti files can be a single file (with an 
+``.nii`` or ``.nii.gz`` extension), or image/header pairs (file1.img, file1.hdr). In both cases, there are two sets of information about each image:
 
-Nearly all modern software packages use the Nifti file format. Nifti files can be a single file (with an ``.nii`` or ``.nii.gz`` extension), or image/header pairs (file1.img, file1.hdr). In both cases, 
-there are two sets of information about each image::
+The header information, which contains information necessary to interpret the image. This includes things like how the data are encoded, and how the voxel space of the image translates into the physical 
+space of the world (voxel-to-world mapping).
 
-  The header information, which contains information necessary to interpret the image. This includes things like how the data are encoded, and how the voxel space of the image translates into the physical space of the world (voxel-to-world mapping).
-  The image data themselves; for each voxel, a single value.
+The image data themselves; for each voxel, a single value.
+
 
 “Talairach” space
 *****************
@@ -106,9 +107,4 @@ T1 images are probably the most common.T1 will have grey matter being darker tha
 
 .. image:: OpenNeurp_T1vsT2.png
 
-NIFTI
-*****
 
-NIfTI (Neuroimaging Informatics Technology Initiative) is a brain imaging data format. In general, **.nii** **.nii.gz** are the most two common names of NIFTI, they are transferred from DICOM format 
-that comes from the Siemens scanner.The primary goal of NIfTI is to provide coordinated and targeted service, training, and research to speed the development and enhance the utility of informatics tools 
-related to neuroimaging.
