@@ -188,6 +188,6 @@ FreeSurfer support
 ^^^^^^^^^^^^^^^^^^
 
 At the end of the day, you will realize that many problems and issues could be very tricky when you use FreeSurfer constantly, Luckily, there are many FreeSurfer experts who are ready to help you.Follow 
-the `link <https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSupport/>`__, all of your questions will be answered in there.
+this `link <https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSupport/>`__, all of your questions will be answered in there.
 
 
