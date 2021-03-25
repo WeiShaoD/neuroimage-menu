@@ -1,7 +1,7 @@
 Preprocessing
 =============
 
-Remember our drink menu? there is a difference for what we should do in FSL , Anyway, let's have a couple of drinks before the meal:
+Remember our drink menu? It is a little difference for what we should do in FSL but overall there are very similar. Anyway, let's have a couple of drinks before the meal:
 
 1 Inspecting the data
 
@@ -19,7 +19,7 @@ Inspecting the image
 ^^^^^^^^^^^^^^^^^^^^
 
 Before we are actually running the analysis, it is safe for us to check the data for any problems such as scanner spikes, incorrect orientation, or poor contrast, and so on. Although it might be 
-unnecessary for the open neuroimaging data, it is really important for your to check the image before when it comes to your own data.
+unnecessary for the open neuroimaging data, it is really important for you to check the image before when it comes to your own data.
 
 Open your Linux terminal and ``cd`` to the BART directory.
 

@@ -18,17 +18,17 @@ In order to install FSL, you need go to `FSL <https://fsl.fmrib.ox.ac.uk/fsl/fsl
 The goal of this chapter is to show you how to run fMRI analysis with FSL step by step. After successfully install FSL and set up, we are going to analyze a dataset with FSL so that we can gain some 
 first-hand experiences. The data is Ballon Analogue Risk Task. I hope after this chapter, you will be able to apply the knowledge of FSL in the future and practice with other datasets you have.
 
-We will start with the dataset downloading, preprocessing, 1st level, 2nd level, and 3rd level analysis as follow:
+We will start with the dataset downloading, preprocessing and end with 3rd level analysis as follow:
 
 1 Ballon Analogue Risk Task and data downloading
 
-2 preprocessing
+2 Preprocessing
 
-3 statistics and modeling
+3 Statistics and modeling
 
 4 1st level analysis
 
-5 automated the data
+5 Automated the data process
 
 6 2nd level analysis
 

@@ -30,7 +30,7 @@ for more information, please go `here <https://www.frontiersin.org/articles/10.3
 Dowloading the data
 *******************
 
-Now, go to `there <https://openneuro.org/datasets/ds000001/versions/1.0.0>`__ , download the data and save it as ``BART`` in our home directory. 
+Now, go to `there <https://openneuro.org/datasets/ds000001/versions/1.0.0>`__ , download the data and save it as ``BART_afni`` in our home directory. 
 
 .. image:: AFNI_BRAT.PNG
        
