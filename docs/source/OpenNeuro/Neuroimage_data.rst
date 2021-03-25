@@ -106,3 +106,9 @@ T1 images are probably the most common.T1 will have grey matter being darker tha
 
 .. image:: OpenNeurp_T1vsT2.png
 
+NIFTI
+*****
+
+NIfTI (Neuroimaging Informatics Technology Initiative) is a brain imaging data format. In general, **.nii** **.nii.gz** are the most two common names of NIFTI, they are transferred from DICOM format 
+that comes from the Siemens scanner.The primary goal of NIfTI is to provide coordinated and targeted service, training, and research to speed the development and enhance the utility of informatics tools 
+related to neuroimaging.
