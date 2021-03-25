@@ -15,7 +15,6 @@ Remember our drink menu? there is a difference for what we should do in FSL , An
 
 6 coregistration and Normalization 
 
-
 Inspecting the image
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -63,9 +62,8 @@ Adjust the stripping range
 You might notice that there is a tab called **Fractional intensity threshold...**, as the description, you can adjust the number for the skull stripping range by changing the digit number. If too many 
 brain tissues have been removed, you should set this to a smaller number, and vice versa if you think only a little skull has been removed.The default of FSL is 0.5.
 
-
-Motion Correcation
-^^^^^^^^^^^^^^^^^^
+Motion Correction
+^^^^^^^^^^^^^^^^^
 
 The concept is that when we take three-dimensional pictures of the brain, if the subject is moving, the images will look blurry; if the subject is still, the images will look more defined. In addition, 
 if the subject moves a lot, we also risk measuring signals from a moving voxel. We are then in danger of measuring signal from the voxel for different parts of regions we have targeted beofre when the 
@@ -90,9 +88,16 @@ slice acquisition. Sequential slice acquisition acquires each adjacent slice con
   figure created by Andrew Jahn
 
 Later, when we use statistics models, we will assume that all of the slices were acquired simultaneously. To make this assumption valid, the time-series for each slice needs to be shifted back in time by 
-the duration when it took to acquire that slice. FSL’s default is to not do slice-timing correction, and to include a temporal derivative instead. 
+the duration when it took to acquire that slice. FSL’s default is to not do slice-timing correction, and to include a temporal derivative instead because the 3 considerations:
+
+1 It is best to not interpolate the data unless you have a good reason to do it. 
+
+2 Slice-timing correction doesn’t appear to lead to any significant gains in statistical power for short TRs - around 1 second or less.
+
+3 There is an alternative solution for slice-timing correction problem, temporal derivative.
 
 .. image:: FSL_slice_timing.png
+
 
 Smoothing
 ^^^^^^^^^
