@@ -78,6 +78,8 @@ Menu
    :caption: Main course 3 AFNI
 
    AFNI/AFNI_menu  
+   AFNI/AFNI_Ballon.rst
+   AFNI/AFNI_preprocessing.rst
 
 .. toctree::
     :maxdepth: 1
