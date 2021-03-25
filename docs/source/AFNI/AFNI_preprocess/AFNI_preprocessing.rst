@@ -16,13 +16,40 @@ Let's start from **sub-02**, ``cd`` to ``BART_afni/sub-02/anat`` directory and t
 That because AFNI will look for any images in the current directory by default - and load all of them into the program. If you want to load only the anatomical T1 image into the AFNI viewer, you would 
 either go to sub-02/anat and type type: ``afni sub-02_T1w.nii.gz`` or type ``afni anat/sub-02_T1w.nii.gz`` from ``sub-02`` directory
 
-uber_subject
-************
+.. figure:: AFNI_inspect_anat.PNG
 
-.. image:: AFNI_preprocess.png
+  T1 anat image of sub-02
+
+When you are done with the anatomical image, click on the ``Read`` button from the menu at the top of your screen. In the “Directories” sidebar, double-click on the filepath that ends in two dots such as 
+.., which indicates one directory above the current directory. Then double-click on the func directory in the “Sessions” sidebar. This loads all of the images in the func directory, which you can look at 
+the AFNI viewer.
+
+.. figure:: AFNI_inspect_func.PNG
+  
+   functional image of sub-02
+
+If you want to go back to look at the anat image again, click on **Switch** and select the another session. Inspect the image by clicking around in one of the viewing windows. Notice how the other 
+viewing windows and crosshairs change as a result - this is because MRI data is collected as a three-dimensional image, and moving along one of the dimensions will change the other windows as well.
+
+Be careful for two things:
+ 
+1 Lines that look like ripples in a pond. These are called Gibbs Ringing Artifacts, and they may indicate an error in the reconstruction of the MR signal from the scanner. These ripples may also be caused 
+by the subject moving too much during the scan. In either case, if the ripples are large enough, they may cause preprocessing steps like brain extraction or normalization to fail.
+
+2 Abnormal intensity differences within the grey or the white matter. These may indicate pathologies such as aneurysms or cavernomas, and they should be reported to your radiologist right away; make sure 
+you are familiar with your laboratory’s protocols for reporting artifacts. For a gallery of pathologies you may see in an MRI image.
+
+You might notice there is a black block/missing information on the face areas, it is because all the data from the open-source dataset need to be defaced for the purpose of privacy.
+
+
 
 Skull stripping
 ^^^^^^^^^^^^^^^
+
+uber_subject 
+************
+
+.. image:: AFNI_preprocess.png
 
 Motion correction
 ^^^^^^^^^^^^^^^^^
