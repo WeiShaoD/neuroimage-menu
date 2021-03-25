@@ -11,5 +11,6 @@ AFNI (Analysis of Functional NeuroImages) is a software suite developed by C, Py
 functional MRI (FMRI) and diffusion weighted (DW) data. It is freely available for research purposes. The software is made to run on virtually any Unix system with X11 and Motif displays. Binary packages 
 are provided for MacOS and Linux systems such as Fedora, CentOS/Red Hat and Ubuntu (which includes the Windows Subsystem for Linux).
 
+Please follow this `link <https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/index.html>`__ to find the suitable AFNI for your computer and install  
 
 
