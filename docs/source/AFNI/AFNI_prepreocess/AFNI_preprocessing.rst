@@ -4,6 +4,6 @@ Preprocessing
 uber_subject
 ^^^^^^^^^^^^
 
-.. image:: AFNI_prepreocess/AFNI_Ballon_1.PNG
+.. image:: AFNI_preprocess.png
 
 epi = echo planar image
