@@ -43,10 +43,42 @@ you are familiar with your laboratory’s protocols for reporting artifacts. You
 
 You might notice there is a black block/missing information on the face areas, it is because all the data from the open-source dataset need to be defaced for the purpose of privacy.
 
-
-
 Skull stripping
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
+
+When it comes to skull stripping, AFNI has 2 options for you. 
+
+Option 1 
+********
+
+The first one would be ``3dSkullStrip``, which is the command for brain extraction. Now, cd to ``BART_afni/sub-02/anat`` and type ``3dSkullStrip``, you will see this doesn't work and the program give you 
+error messages, it is because we need to specify more details such as the ``-input`` flag, which stands for the input command as well as the file ``sub-02_T1w.nii.gz``. Therefore, the actual command 
+would be ``3dSkullStrip -input sub-02_T1w.nii.gz``. type it and wait for a few minutes, you will see two new files **skull_strip_out+orig.BRIK** and **skull_strip_out+orig.HEAD** . use ``afni`` look at 
+either one of the two files, 4 new windows will appear, and you can see the resutls.
+ 
+.. image:: AFNI_skull_option1.PNG
+
+You might not satisfied the quality of skull stripping and the output file name also could be confusing. Don't worry, you also can add more, ``3dSkullStrip -push_to_edge -input sub-02_T1w.nii.gz -prefix 
+sub-02_brain`` would be a good choice. ``-push_to_edge`` can help you avoid removing any cortex parts since we rather have more dura than the lack of cortex. ``-prefix`` will label the output file name 
+rather than the default setting. Therefore, the actual command for a good skull stripping would be::
+
+  3dSkullStrip -push_to_edge -input sub-02_T1w.nii.gz -prefix sub-02_brain
+ 
+You can take the new skull stripping file as overlay with the origal T1 anat file as underlay by type ``afni sub-02_brain+orig.BRIK sub-02_T1w.nii.gz`` , and go to the central area, apply the underlay 
+and overlay.
+
+.. image:: AFNI_underlay.PNG
+
+.. image:: AFNI_overlay.PNG
+
+.. image:: AFNI_skull_quality.PNG
+ 
+Type ``3dSkullStrip -help`` from you terminal to look more information of this command.
+
+Option 2
+******** 
+
+The second option would be more user friendly because it would be graphical interface. go back to the 
 
 uber_subject 
 ************
