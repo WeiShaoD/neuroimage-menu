@@ -92,7 +92,7 @@ the field after “processing blocks” are **tshift**, **align**, **tlrc**, **v
 preprocessing step they correspond to, and why we do them.
 
 
-Setting up the uber_subject
+Setting up the uber_subject 
 ***************************
 
 After the basic introduction of uber_subject, we will continue the setting. type sub_02 and BART in the sub ID and group ID accordingly. Go to processing tab from "Analysis Initialization" and remove the 
@@ -103,3 +103,19 @@ func directory, and hold down shift to select the files "sub-02_task-balloonanal
 
 .. image:: AFNI_preprocess.png
 
+As we are not yet doing regression, we will skip over the “stimulus timing files” and “symbolic GLTs” sections, and take a look at the default of “expected options” field. No TRs will be removed as 0 in 
+"first TRS to remove", the volume with the least amount of variability image will be used as the reference for alignment since the default is "MIN_OUTLIER" in volume registration base, a smoothing kernel 
+of 4mm will be applied from "blur size". Any volumes that contain movement of 0.3mm from TR to TR will be flagged.
+
+Again, we are not doing regression model yet, just skip over the “extra regress options”, and go to “extra align options” and “extra tlrc options”. Choose "lpc+ZZ" in cost function and check the align 
+box by using giant_move. This is prepare for functional and anatomical images are far away from each other by any case, it will be used with the align_epi_anat.py command in order to bring them into a 
+closer initial alignment. Lastly, choose the MNI 152 T1 standard space (template) "MNI_avg152T1+tlrc" from the “extra tlrc options” sectio. the second half of the AFNI GUI looks like this:
+
+
+Run the uber_subject
+********************
+
+When you are done setting up the analysis, you can execute it by clicking, from left to right, the three icons at the top of the GUI window. The first one looks like a sheet of paper with lines on it; 
+this will generate the afni_proc.py command that includes everything that you specified in the GUI. Click on the icon, and it will return two windows: One listing each of the options that were changed 
+from the defaults and listing each of the inputs, and another showing the code of the afni_proc.py command. Take a look at it to see how the commands and options listed in the afni_proc.py command 
+correspond to the options you entered into the uber_subject.py GUI:
