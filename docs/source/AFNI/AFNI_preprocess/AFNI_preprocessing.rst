@@ -31,13 +31,15 @@ the AFNI viewer.
 If you want to go back to look at the anat image again, click on **Switch** and select the another session. Inspect the image by clicking around in one of the viewing windows. Notice how the other 
 viewing windows and crosshairs change as a result - this is because MRI data is collected as a three-dimensional image, and moving along one of the dimensions will change the other windows as well.
 
-Be careful for two things:
+Be careful with two things:
  
-1 Lines that look like ripples in a pond. These are called Gibbs Ringing Artifacts, and they may indicate an error in the reconstruction of the MR signal from the scanner. These ripples may also be caused 
-by the subject moving too much during the scan. In either case, if the ripples are large enough, they may cause preprocessing steps like brain extraction or normalization to fail.
+1 Lines that look like ripples in a pond. These are called **Gibbs Ringing Artifacts**, and they may indicate an error in the reconstruction of the MR signal from the scanner. These ripples may also be 
+caused by the subject moving too much during the scan. In either case, if the ripples are large enough, they may cause preprocessing steps like brain extraction or normalization to fail.
+
+.. image:: AFNI_Gibbt.gif
 
 2 Abnormal intensity differences within the grey or the white matter. These may indicate pathologies such as aneurysms or cavernomas, and they should be reported to your radiologist right away; make sure 
-you are familiar with your laboratory’s protocols for reporting artifacts. For a gallery of pathologies you may see in an MRI image.
+you are familiar with your laboratory’s protocols for reporting artifacts. You can take a `gallery of pathologies <http://www.mrishark.com/brain1.html/>`__ as a reference. 
 
 You might notice there is a black block/missing information on the face areas, it is because all the data from the open-source dataset need to be defaced for the purpose of privacy.
 
