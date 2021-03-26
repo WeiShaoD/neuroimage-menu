@@ -73,12 +73,24 @@ and overlay.
  
 Type ``3dSkullStrip -help`` from you terminal to look more information of this command
 
-The second option would be easier to use and more intuitive becuase it associated with a new graphical interface developed by AFNI in recent years, **uber_subject.py**  
+The second option would be easier to use and more intuitive because it associated with a new graphical interface developed by AFNI in recent years, **uber_subject.py**  
 
 uber_subject 
 ^^^^^^^^^^^^
 
-.. image:: AFNI_preprocess.png
+Go to sub directory and type ``uber_subject.py``, and you can see a window appears. 
+
+uber_subject.py is a graphical interface that can integrate all the input specified by the user and directs it into another program called afni_proc.py. The latter command will generate a large script 
+that contains every AFNI command needed to run preprocessing.
+
+.. image:: AFNI_ubersubjecy.PNG
+
+Now, take a deep breath, let's go through this interface roughly. **subject ID** and **group ID** stand for the name you are going to label for the subject and group. For now, we can use sub_02 and BART 
+accordingly. Next “Analysis Initialization”. By default, the data analysis type will be “task” , which makes sense given most fMRI analyses have a task for the participants during the scanning, unless you 
+are going to do Resting-state fMRI (we will takl about it in the future). The domain is “volume” because we are analyzing the volumetric data rather than surface analysis (a program of AFNI, SUMA, could 
+do this kind of job). Regarding the words in the field after “processing blocks” are **tshift**, **align**, **tlrc**, **volreg**, **blur**, **mask**, **scale**, and **regress**, we will learn them in 
+more details in the next, as well as what preprocessing step they correspond to, and why we do them.
+
 
 Motion correction
 ^^^^^^^^^^^^^^^^^
@@ -95,8 +107,6 @@ Registration and Normalization
 Check the Preprocessed Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-uber_subject
-
-
+.. image:: AFNI_preprocess.png
 
 epi = echo planar image
