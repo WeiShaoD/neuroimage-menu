@@ -1,5 +1,5 @@
-Preprocessing part II
-====================
+Preprocessing II
+================
 
 Motion correction
 ^^^^^^^^^^^^^^^^^
