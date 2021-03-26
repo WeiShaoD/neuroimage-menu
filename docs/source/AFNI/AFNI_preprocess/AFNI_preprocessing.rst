@@ -46,15 +46,10 @@ You might notice there is a black block/missing information on the face areas, i
 Skull stripping
 ^^^^^^^^^^^^^^
 
-When it comes to skull stripping, AFNI has 2 options for you. 
-
-Option 1 
-********
-
-The first one would be ``3dSkullStrip``, which is the command for brain extraction. Now, cd to ``BART_afni/sub-02/anat`` and type ``3dSkullStrip``, you will see this doesn't work and the program give you 
-error messages, it is because we need to specify more details such as the ``-input`` flag, which stands for the input command as well as the file ``sub-02_T1w.nii.gz``. Therefore, the actual command 
-would be ``3dSkullStrip -input sub-02_T1w.nii.gz``. type it and wait for a few minutes, you will see two new files **skull_strip_out+orig.BRIK** and **skull_strip_out+orig.HEAD** . use ``afni`` look at 
-either one of the two files, 4 new windows will appear, and you can see the resutls.
+When it comes to skull stripping, AFNI has 2 options for you.The first one would be ``3dSkullStrip``, which is the command for brain extraction. Now, cd to ``BART_afni/sub-02/anat`` and type 
+``3dSkullStrip``, you will see this doesn't work and the program give you error messages, it is because we need to specify more details such as the ``-input`` flag, which stands for the input command as 
+well as the file ``sub-02_T1w.nii.gz``. Therefore, the actual command would be ``3dSkullStrip -input sub-02_T1w.nii.gz``. type it and wait for a few minutes, you will see two new files 
+**skull_strip_out+orig.BRIK** and **skull_strip_out+orig.HEAD** . use ``afni`` look at either one of the two files, 4 new windows will appear, and you can see the resutls.
  
 .. image:: AFNI_skull_option1.PNG
 
@@ -64,6 +59,9 @@ rather than the default setting. Therefore, the actual command for a good skull 
 
   3dSkullStrip -push_to_edge -input sub-02_T1w.nii.gz -prefix sub-02_brain
  
+Check the quality 
+*****************
+
 You can take the new skull stripping file as overlay with the origal T1 anat file as underlay by type ``afni sub-02_brain+orig.BRIK sub-02_T1w.nii.gz`` , and go to the central area, apply the underlay 
 and overlay.
 
@@ -73,15 +71,12 @@ and overlay.
 
 .. image:: AFNI_skull_quality.PNG
  
-Type ``3dSkullStrip -help`` from you terminal to look more information of this command.
+Type ``3dSkullStrip -help`` from you terminal to look more information of this command
 
-Option 2
-******** 
-
-The second option would be more user friendly because it would be graphical interface. go back to the 
+The second option would be easier to use and more intuitive becuase it associated with a new graphical interface developed by AFNI in recent years, **uber_subject.py**  
 
 uber_subject 
-************
+^^^^^^^^^^^^
 
 .. image:: AFNI_preprocess.png
 
