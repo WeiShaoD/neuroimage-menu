@@ -1,5 +1,5 @@
 Preprocessing I
-=============
+===============
 
 Remember our drink menu? It is a little different for what we should do in AFNI but overall there are very similar, Anyway, let’s have a couple of drinks before the meal:
 
@@ -85,27 +85,21 @@ that contains every AFNI command needed to run preprocessing.
 
 .. image:: AFNI_ubersubjecy.PNG
 
-Now, take a deep breath, let's go through this interface roughly. **subject ID** and **group ID** stand for the name you are going to label for the subject and group. For now, we can use sub_02 and BART 
-accordingly. Next “Analysis Initialization”. By default, the data analysis type will be “task” , which makes sense given most fMRI analyses have a task for the participants during the scanning, unless you 
-are going to do Resting-state fMRI (we will takl about it in the future). The domain is “volume” because we are analyzing the volumetric data rather than surface analysis (a program of AFNI, SUMA, could 
-do this kind of job). Regarding the words in the field after “processing blocks” are **tshift**, **align**, **tlrc**, **volreg**, **blur**, **mask**, **scale**, and **regress**, we will learn them in 
-more details in the next, as well as what preprocessing step they correspond to, and why we do them.
+Now, take a deep breath, let's go through this interface roughly. **subject ID** and **group ID** stand for the name you are going to label for the subject and group. “Analysis Initialization”. By 
+default, the data analysis type will be “task” , which makes sense given most fMRI analyses have a task for the participants during the scanning, unless you are going to do Resting-state fMRI (we will 
+takl about it in the future). The domain is “volume” because we are analyzing the volumetric data rather than surface analysis (a program of AFNI, SUMA, could do this kind of job). Regarding the words in 
+the field after “processing blocks” are **tshift**, **align**, **tlrc**, **volreg**, **blur**, **mask**, **scale**, and **regress**, we will learn them in more details in the next, as well as what 
+preprocessing step they correspond to, and why we do them.
 
 
-Motion correction
-^^^^^^^^^^^^^^^^^
+Setting up the uber_subject
+****************************
 
-Slice-Timing Correction
-^^^^^^^^^^^^^^^^^^^^^^^
+After the basic introduction of uber_subject, we will continue the setting. type sub_02 and BART in the sub ID and group ID accordingly. Go to processing tab from "Analysis Initialization" and remove the 
+regress block. (it is a general linear model for each subject, we don't need it now). Then click on the browse anat button in the “anatomical dataset” section, navigate to the anat directory, 
+and select the file sub-08_T1w.nii.gz. Select the functional datasets by clicking the browse EPI button in the “EPI datasets” section, navigate to the func directory, and hold down shift and click to 
+select the files sub-08_task-flanker_run-1_bold.nii.gz and sub-08_task-flanker_run-2_bold.nii.gz. The first half of the GUI should look as follows:
 
-Smoothing
-^^^^^^^^^
-
-Registration and Normalization
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Check the Preprocessed Data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. image:: AFNI_preprocess.png
 
