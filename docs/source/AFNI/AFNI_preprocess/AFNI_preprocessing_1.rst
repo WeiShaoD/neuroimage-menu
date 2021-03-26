@@ -78,7 +78,7 @@ The second option would be easier to use and more intuitive because it associate
 uber_subject 
 ^^^^^^^^^^^^
 
-Go to sub directory and type ``uber_subject.py``, and you can see a window appears. 
+Go to sub-02 directory and type ``uber_subject.py``, and you can see a window appears. 
 
 uber_subject.py is a graphical interface that can integrate all the input specified by the user and directs it into another program called afni_proc.py. The latter command will generate a large script 
 that contains every AFNI command needed to run preprocessing.
