@@ -93,14 +93,13 @@ preprocessing step they correspond to, and why we do them.
 
 
 Setting up the uber_subject
-****************************
+***************************
 
 After the basic introduction of uber_subject, we will continue the setting. type sub_02 and BART in the sub ID and group ID accordingly. Go to processing tab from "Analysis Initialization" and remove the 
-regress block. (it is a general linear model for each subject, we don't need it now). Then click on the browse anat button in the “anatomical dataset” section, navigate to the anat directory, 
-and select the file sub-08_T1w.nii.gz. Select the functional datasets by clicking the browse EPI button in the “EPI datasets” section, navigate to the func directory, and hold down shift and click to 
-select the files sub-08_task-flanker_run-1_bold.nii.gz and sub-08_task-flanker_run-2_bold.nii.gz. The first half of the GUI should look as follows:
-
+regress block. (it is a general linear model for each subject, we don't need it now). Then navigate to "anatomical dataset" and click on the browse anat button, find the anat directory, select the 
+"sub-02_T1w.nii.gz", and ckeck the "anat has skull" botton. Next, select the functional images by clicking the "browse EPI" button from “EPI datasets” section, EPI = echo planar image. We will go to the 
+func directory, and hold down shift to select the files "sub-02_task-balloonanalogrisktask_run-01_bold.nii.gz" "sub-02_task-balloonanalogrisktask_run-02_bold.nii.gz" 
+"sub-02_task-balloonanalogrisktask_run-03_bold.nii.gz". The first half of the AFNI GUI should look as follows:
 
 .. image:: AFNI_preprocess.png
 
-epi = echo planar image
