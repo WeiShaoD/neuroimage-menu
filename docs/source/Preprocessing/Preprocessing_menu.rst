@@ -22,14 +22,13 @@ aberrant slices that appear too bright, too dark, or contain artifacts.
 2 Slice correction
 ^^^^^^^^^^^^^^^^^^
 
-Since the high variance exists in the wine, we have to look at each bottle. 
+There are no two identical wine in the world. we have to look at each bottle. 
 
-Most fMRI studies acquire one slice at a time, meaning that the signal recorded from one slice may be offset in time by up to several seconds when compared to another. Each of these slices takes tens to 
-hundreds of milliseconds.The two most commonly used methods for creating volumes are sequential and interleaved slice acquisition. sequential acquisition slices have been acquired in sequential 
-(1,2,3,4,5,6...), Interleaved slice acquisition (1,3,5,..2,4,6...) acquires every other slice and then fills in the gaps on the second pass o.  Although slice timing differences may not be important for 
-simple block design experiments, they can impart considerable errors in rapid, event-related fMRI studies if not accounted for. Although slice timing differences may not be important for simple block 
-design experiments, they can impart considerable errors in rapid, event-related fMRI studies if not accounted for. In addtion, In order to make statistics model work, the time-series for each slice needs 
-to be shifted back in time by the duration it took to acquire that slice.
+Most fMRI studies acquire one slice at a time, meaning that the signal recorded from one slice may be offset in time by up to several seconds when compared to another. Each of these slices takes tens to
+hundreds of milliseconds.The two most commonly used methods for creating volumes are sequential and interleaved slice acquisition. sequential acquisition slices have been acquired in sequential
+(1,2,3,4,5,6…), Interleaved slice acquisition (1,3,5,..2,4,6…) acquires every other slice and then fills in the gaps on the second pass o. Although slice timing differences may not be important for
+simple block design experiments, they can impact considerable errors in rapid, event-related fMRI studies if not accounted for.In addtion, the statistics model requires the time-series for each
+slice needs to be shifted back in time by the duration it took to acquire that slice.
 
 .. figure:: SliceTimingCorrection_Demo.gif
 

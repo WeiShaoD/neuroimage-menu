@@ -144,5 +144,6 @@ You have saw these two files when you click the first and second execute button
 
 The last two are more important since they have all the information for you to debug when you do your own data with AFNI.
 
-
 .. image:: AFNI_proc_3.PNG
+
+The preprocessing will take a few minutes,  While it is running, let's review the preprocessing steps.
