@@ -166,7 +166,7 @@ Normalization with AFNI’s @auto_tlrc
 ************************************
 
 Once we have aligned the anatomical and functional images, the next step for us is to normalize the anatomical image to a template as well as functional image. We will use the @auto_tlrc command to do 
-this.To normalize the anatomical image,; this and a following command, ``cat_matvec``, are found in your ``proc`` script::
+this.To normalize the anatomical image,; this and a following command, ``cat_matvec``, are found in your **proc** script::
 
   # ================================== tlrc ==================================
   # warp anatomy to standard space
@@ -175,10 +175,9 @@ this.To normalize the anatomical image,; this and a following command, ``cat_mat
   # store forward transformation matrix in a text file
   cat_matvec sub-02_T1w_ns+tlrc::WARP_DATA -I > warp.anat.Xat.1D
 
-The first command indicates to use the image MNI_avg152T1 as a template, and the skull-stripped anatomical image as a source image, or the image to be moved around to best match the base, or reference, 
-image. The -no_ss option indicates that the anatomical image has already been skull-stripped. In order to align the template and the anatomical image, the anatomical image needs to be moved and 
-transformed. This creates a series of numbers organized in an affine transformation matrix which is stored in the header of the anatomical image. The second command, ``cat_matvec``, extracts this matrix 
-and copies it into a file called ``warp.anat.Xat.1D``.
+The first block of commands indicates that we take the image MNI_avg152T1 as a template, and the skull-stripped anatomical image as a source image. The ``-no_ss`` option indicates that the anatomical 
+image has already been skull-stripped. The anatomical image needs to be moved and transformed so that it can align the template and the anatomical image. The second command, ``cat_matvec``, extracts this 
+matrix and copies it into a file called ``warp.anat.Xat.1D``.
 
 Smoothing
 ^^^^^^^^^
@@ -209,8 +208,8 @@ therefore greater likelihood of detecting a significant effect.
 The **-1blur_fwhm** specifies the amount to smooth the image in 4mm. **-doall** applies this smoothing kernel to each volume in the image, and the **-prefix** option, we you might know, specifies the 
 name of the output dataset.
 
-Masking and Scaling
-^^^^^^^^^^^^^^^^^^^
+Masking 
+^^^^^^^
 
 The last preprocessing steps will take these smoothed images and then scale them to have a mean signal intensity of 100 - so that deviations from the mean can be measured in percent signal change. Any 
 non-brain voxels will then be removed by a mask, and these images will be ready for statistical analysis. 
@@ -272,7 +271,7 @@ One problem with fMRI data is that we collect data with units that are arbitrary
 subject. The only way to create a useful comparison within or between subjects is to take the contrast of the signal intensity between conditions, as represented by a beta weight (which will be discussed 
 later in the chapter on statistics).
 
-In order to make the comparison of signal intensity meaningful between studies as well, AFNI scales the timeseries in each voxel individually to a mean of 100:
+In order to make the comparison of signal intensity meaningful between studies as well, AFNI scales the timeseries in each voxel individually to a mean of 100::
 
   # scale each voxel time series to have a mean of 100
   # (be sure no negatives creep in)
