@@ -148,11 +148,12 @@ We will introduce these different options in more details:
 5 ``-epi_base`` : the epi base used in alignment, The “epi” options signalize that the functional volume with the least variability will be used as a reference image, and non-brain tissue is stripped by 
 ``3dAutomask`` , an alternative to ``3dSkullStrip``.
 
-6 lpc (Localized Pearson Correlation) function. The 'lpc' cost function is computed by the 3dAllineate program.
+7 lpc (Localized Pearson Correlation) function. The 'lpc' cost function is computed by the 3dAllineate program.
 
-6 ``-giant_move`` attempts to find a good initial starting alignment between the anatomical and functional images, and the last two options indicate that we do not want to include alignment and 
-slice-timing correction in the current command. ``giant_move`` option will usually work well too,but it adds significant time to the processing and allows for the possibility of a very bad alignment. 
+8 ``-giant_move`` attempts to find a good initial starting alignment between the anatomical and functional images, ``giant_move`` option will usually work well too,but it adds significant time to the 
+processing and allows for the possibility of a very bad alignment. 
 
+9 The last two options ``-volreg off``, ``-tshift off`` indicate that we do not want to include alignment and slice-timing correction in the current command.
 
 Normalization
 ^^^^^^^^^^^^^
@@ -161,25 +162,23 @@ Each brain needs to be transformed to have the same size, shape, and dimensions 
 and coordinates, Each subjects’ functional images will be transformed to match the general shape and large anatomical features of the template. Most researchers have agreed to use them when reporting 
 their results.The dimensions and coordinates of the template brain are also referred to as standardized space.
 
-
 Normalization with AFNI’s @auto_tlrc
 ************************************
 
-Once we have aligned the anatomical and functional images, we will first normalize the anatomical image to a template. These warps, as you will see in the next chapter, will be applied to the functional 
-images as well. To normalize the anatomical image, we will use the @auto_tlrc command; this and a following command, cat_matvec, are found in lines 118-122 of your proc script::
+Once we have aligned the anatomical and functional images, the next step for us is to normalize the anatomical image to a template as well as functional image. We will use the @auto_tlrc command to do 
+this.To normalize the anatomical image,; this and a following command, ``cat_matvec``, are found in your ``proc`` script::
 
+  # ================================== tlrc ==================================
   # warp anatomy to standard space
-  @auto_tlrc -base MNI_avg152T1+tlrc -input sub-08_T1w_ns+orig -no_ss
+  @auto_tlrc -base MNI_avg152T1+tlrc -input sub-02_T1w_ns+orig -no_ss
 
   # store forward transformation matrix in a text file
-  cat_matvec sub-08_T1w_ns+tlrc::WARP_DATA -I > warp.anat.Xat.1D
+  cat_matvec sub-02_T1w_ns+tlrc::WARP_DATA -I > warp.anat.Xat.1D
 
 The first command indicates to use the image MNI_avg152T1 as a template, and the skull-stripped anatomical image as a source image, or the image to be moved around to best match the base, or reference, 
-image. The -no_ss option indicates that the anatomical image has already been skull-stripped.
-
-In order to align the template and the anatomical image, the anatomical image needs to be moved and transformed using the transformations described above. This creates a series of numbers organized in an 
-affine transformation matrix which is stored in the header of the anatomical image. The second command, cat_matvec, extracts this matrix and copies it into a file called warp.anat.Xat.1D. How this matrix 
-is used to bring the functional images to the same normalized space will be seen in the next chapter.
+image. The -no_ss option indicates that the anatomical image has already been skull-stripped. In order to align the template and the anatomical image, the anatomical image needs to be moved and 
+transformed. This creates a series of numbers organized in an affine transformation matrix which is stored in the header of the anatomical image. The second command, ``cat_matvec``, extracts this matrix 
+and copies it into a file called ``warp.anat.Xat.1D``.
 
 Smoothing
 ^^^^^^^^^
@@ -198,24 +197,107 @@ can outweigh the drawbacks:
 2 Smoothing can be good for group analyses in which all of the subjects’ images have been normalized to a template. If the images are smoothed, there will be more overlap between clusters of signal, and 
 therefore greater likelihood of detecting a significant effect.
 
-Smoothing is done with AFNI’s ``3dmerge`` command, which you will find under the “blur” header of the proc_Flanker script (lines 216-221). Of all the preprocessing steps, this one uses the fewest lines of 
-code::
+ ``3dmerge``in AFNI will do smoothing for us, you will find further details in **proc** script.
 
+  # ================================== blur ==================================
   # blur each volume of each run
   foreach run ( $runs )
-    3dmerge -1blur_fwhm 4.0 -doall -prefix pb03.$subj.r$run.blur \
-            pb02.$subj.r$run.volreg+tlrc
+      3dmerge -1blur_fwhm 4.0 -doall -prefix pb03.$subj.r$run.blur \
+              pb02.$subj.r$run.volreg+tlrc
   end
 
-The -1blur_fwhm option specifies the amount to smooth the image, in millimeters - in this case, 4mm. -doall applies this smoothing kernel to each volume in the image, and the -prefix option, as always, 
-specifies the name of the output dataset.
-
-The last preprocessing steps will take these smoothed images and then scale them to have a mean signal intensity of 100 - so that deviations from the mean can be measured in percent signal change. Any 
-non-brain voxels will then be removed by a mask, and these images will be ready for statistical analysis. To see how these last two preprocessing steps are done in AFNI, click the Next button.
+The **-1blur_fwhm** specifies the amount to smooth the image in 4mm. **-doall** applies this smoothing kernel to each volume in the image, and the **-prefix** option, we you might know, specifies the 
+name of the output dataset.
 
 Masking and Scaling
 ^^^^^^^^^^^^^^^^^^^
 
+The last preprocessing steps will take these smoothed images and then scale them to have a mean signal intensity of 100 - so that deviations from the mean can be measured in percent signal change. Any 
+non-brain voxels will then be removed by a mask, and these images will be ready for statistical analysis. 
 
-Check the Preprocessed Data
+As you saw in previous tutorials, a volume of fMRI data includes both the brain and the surrounding skull and neck - regions that we are not interested in analyzing with AFNI, even though they do contain 
+voxels with time-series data just as the brain voxels do. And, although it may not be obvious at first glance, we have large numbers of voxels that comprise the air outside the head.
+
+To reduce the size of our datasets and consequently speed up our analyses, we can apply a mask to our data. A mask simply indicates which voxels are to be analyzed - any voxels within the mask retain 
+their original values (or can be assigne a value of 1), whereas any voxels outside mask are assigned a value of zero. It is analogous to tracing an outline of a drawing with tracing paper, and then 
+cutting along the lines and keeping whatever falls inside the lines, discarding the rest. Applied to fMRI data, anything outside the mask we assume to be noise or something of no interest.
+
+Masks are created with AFNI’s 3dAutomask command, which only requires arguments for input and output datasets::
+
+  foreach run ( $runs )
+    3dAutomask -prefix rm.mask_r$run pb03.$subj.r$run.blur+tlrc
+  end
+
+The rest of the code within the “mask” block creates a union of masks that represents the extent of all of the individual fMRI datasets in the experiment. It then computes a mask for the anatomical 
+dataset, and then takes the intersection of the fMRI and anatomical masks::
+
+  3dmask_tool -inputs rm.mask_r*+tlrc.HEAD -union -prefix full_mask.$subj
+
+  # ---- create subject anatomy mask, mask_anat.$subj+tlrc ----
+  #      (resampled from tlrc anat)
+  3dresample -master full_mask.$subj+tlrc -input {$subj}_T1w_ns+tlrc     \
+             -prefix rm.resam.anat
+
+  # convert to binary anat mask; fill gaps and holes
+  3dmask_tool -dilate_input 5 -5 -fill_holes -input rm.resam.anat+tlrc  \
+              -prefix mask_anat.$subj
+
+  # compute tighter EPI mask by intersecting with anat mask
+  3dmask_tool -input full_mask.$subj+tlrc mask_anat.$subj+tlrc          \
+              -inter -prefix mask_epi_anat.$subj
+
+  # compute overlaps between anat and EPI masks
+  3dABoverlap -no_automask full_mask.$subj+tlrc mask_anat.$subj+tlrc    \
+              |& tee out.mask_ae_overlap.txt
+
+  # note Dice coefficient of masks, as well
+  3ddot -dodice full_mask.$subj+tlrc mask_anat.$subj+tlrc               \
+        |& tee out.mask_ae_dice.txt
+
+  # ---- create group anatomy mask, mask_group+tlrc ----
+  #      (resampled from tlrc base anat, MNI_avg152T1+tlrc)
+  3dresample -master full_mask.$subj+tlrc -prefix ./rm.resam.group      \
+             -input /Users/ajahn/abin/MNI_avg152T1+tlrc
+
+  # convert to binary group mask; fill gaps and holes
+  3dmask_tool -dilate_input 5 -5 -fill_holes -input rm.resam.group+tlrc \
+              -prefix mask_group
+
+The output of this code, which you will examine in greater detail in the next chapter, is the creation of a mask which traces the outline of the signal detected by the image:
+
+Scaling
+*******
+
+One problem with fMRI data is that we collect data with units that are arbitrary, and of themselves meaningless. The intensity of the signal that we collect can vary from run to run, and from subject to 
+subject. The only way to create a useful comparison within or between subjects is to take the contrast of the signal intensity between conditions, as represented by a beta weight (which will be discussed 
+later in the chapter on statistics).
+
+In order to make the comparison of signal intensity meaningful between studies as well, AFNI scales the timeseries in each voxel individually to a mean of 100:
+
+  # scale each voxel time series to have a mean of 100
+  # (be sure no negatives creep in)
+  # (subject to a range of [0,200])
+  foreach run ( $runs )
+      3dTstat -prefix rm.mean_r$run pb03.$subj.r$run.blur+tlrc
+      3dcalc -a pb03.$subj.r$run.blur+tlrc -b rm.mean_r$run+tlrc \
+             -c mask_epi_extents+tlrc                            \
+             -expr 'c * min(200, a/b*100)*step(a)*step(b)'       \
+             -prefix pb04.$subj.r$run.scale
+  end# scale each voxel time series to have a mean of 100
+  # (be sure no negatives creep in)
+  # (subject to a range of [0,200])
+  foreach run ( $runs )
+      3dTstat -prefix rm.mean_r$run pb03.$subj.r$run.blur+tlrc
+      3dcalc -a pb03.$subj.r$run.blur+tlrc -b rm.mean_r$run+tlrc \
+             -c mask_epi_extents+tlrc                            \
+             -expr 'c * min(200, a/b*100)*step(a)*step(b)'       \
+             -prefix pb04.$subj.r$run.scale
+  end
+
+These changes will be reflected in the time-series; the first image below represents the time-series before scaling, and the next image shows the time-series after scaling. Note that the values in the 
+first image are relatively high - in the 800s - and that they are arbitrary; they could just as easily be around 500 or 900 in another subject. By scaling each subject’s data to the same mean, as in the 
+second image, we can place each run of each subject’s data on the same scale.
+
+
+Check the Preprocessed Data 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
