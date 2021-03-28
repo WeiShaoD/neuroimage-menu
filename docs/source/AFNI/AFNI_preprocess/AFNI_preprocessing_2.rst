@@ -214,28 +214,29 @@ Masking
 The last preprocessing steps will take these smoothed images and then scale them to have a mean signal intensity of 100 - so that deviations from the mean can be measured in percent signal change. Any 
 non-brain voxels will then be removed by a mask, and these images will be ready for statistical analysis. 
 
-As you saw in previous tutorials, a volume of fMRI data includes both the brain and the surrounding skull and neck - regions that we are not interested in analyzing with AFNI, even though they do contain 
-voxels with time-series data just as the brain voxels do. And, although it may not be obvious at first glance, we have large numbers of voxels that comprise the air outside the head.
+As you might see before, a volume of fMRI data includes both the areas that we are interested in and the irrevelant regions such as the brain and the surrounding skull, neck and ear. And we have large 
+numbers of voxels that comprise the air outside the head.we can create a mask for our data to reduce the irrelevant regions of our datasets and speed up our analyses, A mask simply tells the programer 
+which voxels are worth to be analyzed - any voxels within the mask have their original values, or can be assigned a value of 1, whereas any voxels outside mask are assigned a value of zero. Anything 
+outside the mask will be assumed as noise.
 
-To reduce the size of our datasets and consequently speed up our analyses, we can apply a mask to our data. A mask simply indicates which voxels are to be analyzed - any voxels within the mask retain 
-their original values (or can be assigne a value of 1), whereas any voxels outside mask are assigned a value of zero. It is analogous to tracing an outline of a drawing with tracing paper, and then 
-cutting along the lines and keeping whatever falls inside the lines, discarding the rest. Applied to fMRI data, anything outside the mask we assume to be noise or something of no interest.
 
-Masks are created with AFNI’s 3dAutomask command, which only requires arguments for input and output datasets::
+Masks are created with ``3dAutomask`` command, which requires arguments for input and output datasets::
 
+  # ================================== mask ==================================
+  # create 'full_mask' dataset (union mask)
   foreach run ( $runs )
-    3dAutomask -prefix rm.mask_r$run pb03.$subj.r$run.blur+tlrc
+      3dAutomask -dilate 1 -prefix rm.mask_r$run pb03.$subj.r$run.blur+tlrc
   end
 
-The rest of the code within the “mask” block creates a union of masks that represents the extent of all of the individual fMRI datasets in the experiment. It then computes a mask for the anatomical 
-dataset, and then takes the intersection of the fMRI and anatomical masks::
+``-dilate`` 1 means AFNI will dilate the mask outwards '1' times::
 
+  # create union of inputs, output type is byte
   3dmask_tool -inputs rm.mask_r*+tlrc.HEAD -union -prefix full_mask.$subj
 
   # ---- create subject anatomy mask, mask_anat.$subj+tlrc ----
   #      (resampled from tlrc anat)
-  3dresample -master full_mask.$subj+tlrc -input {$subj}_T1w_ns+tlrc     \
-             -prefix rm.resam.anat
+  3dresample -master full_mask.$subj+tlrc -input sub-02_T1w_ns+tlrc     \
+           -prefix rm.resam.anat
 
   # convert to binary anat mask; fill gaps and holes
   3dmask_tool -dilate_input 5 -5 -fill_holes -input rm.resam.anat+tlrc  \
@@ -256,13 +257,14 @@ dataset, and then takes the intersection of the fMRI and anatomical masks::
   # ---- create group anatomy mask, mask_group+tlrc ----
   #      (resampled from tlrc base anat, MNI_avg152T1+tlrc)
   3dresample -master full_mask.$subj+tlrc -prefix ./rm.resam.group      \
-             -input /Users/ajahn/abin/MNI_avg152T1+tlrc
+             -input /opt/afni/MNI_avg152T1+tlrc
 
   # convert to binary group mask; fill gaps and holes
   3dmask_tool -dilate_input 5 -5 -fill_holes -input rm.resam.group+tlrc \
               -prefix mask_group
 
-The output of this code, which you will examine in greater detail in the next chapter, is the creation of a mask which traces the outline of the signal detected by the image:
+The rest of the code within the “mask” block creates a union of masks that represents the extent of all of the individual fMRI datasets in the experiment. It then computes a mask for the anatomical 
+dataset, and then takes the intersection of the fMRI and anatomical masks
 
 Scaling
 *******
@@ -273,16 +275,8 @@ later in the chapter on statistics).
 
 In order to make the comparison of signal intensity meaningful between studies as well, AFNI scales the timeseries in each voxel individually to a mean of 100::
 
+  # ================================= scale ==================================
   # scale each voxel time series to have a mean of 100
-  # (be sure no negatives creep in)
-  # (subject to a range of [0,200])
-  foreach run ( $runs )
-      3dTstat -prefix rm.mean_r$run pb03.$subj.r$run.blur+tlrc
-      3dcalc -a pb03.$subj.r$run.blur+tlrc -b rm.mean_r$run+tlrc \
-             -c mask_epi_extents+tlrc                            \
-             -expr 'c * min(200, a/b*100)*step(a)*step(b)'       \
-             -prefix pb04.$subj.r$run.scale
-  end# scale each voxel time series to have a mean of 100
   # (be sure no negatives creep in)
   # (subject to a range of [0,200])
   foreach run ( $runs )
@@ -293,10 +287,8 @@ In order to make the comparison of signal intensity meaningful between studies a
              -prefix pb04.$subj.r$run.scale
   end
 
-These changes will be reflected in the time-series; the first image below represents the time-series before scaling, and the next image shows the time-series after scaling. Note that the values in the 
-first image are relatively high - in the 800s - and that they are arbitrary; they could just as easily be around 500 or 900 in another subject. By scaling each subject’s data to the same mean, as in the 
-second image, we can place each run of each subject’s data on the same scale.
 
+You can see these changes in the time-series graph below. Note that the values in the first image are relatively high - in the 600s - and that they are arbitrary; they could just as easily be around 500 
+or 900 in another subject. By scaling each subject’s data to the same mean, as in the right image, we can place each run of each subject’s data on the same scale to compare.
 
-Check the Preprocessed Data 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. image:: AFNI_scale_be_after.PNG

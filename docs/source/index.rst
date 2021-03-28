@@ -81,6 +81,7 @@ Menu
    AFNI/AFNI_Ballon
    AFNI/AFNI_preprocess/AFNI_preprocessing_1.rst
    AFNI/AFNI_preprocess/AFNI_preprocessing_2.rst
+   AFNI/AFNI_preprocess/Preprocessed_check.rst
 
 .. toctree::
     :maxdepth: 1
