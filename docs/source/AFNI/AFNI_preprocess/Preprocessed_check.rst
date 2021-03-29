@@ -14,8 +14,15 @@ In which subjects name and group name are specified in the subject ID and group 
 Navigating to the Preprocessed Data Directory
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-you can see all the different images and files from each step of preprocessing. For example, the files that contain the string pb01 (i.e., Processing Block 01), and the string tshift, means that these 
+You can see all the different images and files from each step of preprocessing. Start from **mask...* 
+
+Example output from uber_subject.py. The files containing the “pb” string are the preprocessed 
+ functional images at each preprocessing step, and the files with the “T1w” string are the preprocessed anatomical images. Auxiliary functional images are created to assist with specific preprocessing 
+ steps, and auxiliary text files contain information about transformation matrices and movement parameters. the files that contain the string pb01 (i.e., Processing Block 01), and the string tshift, 
+ means that these
 images have been slice-time corrected using the "3dTshift" command.
+
+.. image:: AFNI_subje_resut.png
 
 
 Viewing the Processed Functional Images
