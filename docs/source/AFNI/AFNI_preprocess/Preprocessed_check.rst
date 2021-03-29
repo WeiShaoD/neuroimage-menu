@@ -1,2 +1,2 @@
-check the preprocessed data
+Check the preprocessed data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
