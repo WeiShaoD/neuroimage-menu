@@ -11,34 +11,59 @@ In which subjects name and group name are specified in the subject ID and group 
   
   Later on
 
-Navigating to the Preprocessed Data Directory
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Look at the Preprocessed files
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You can see all the different images and files from each step of preprocessing. Start from **mask...* 
+You can see all the different images and files from each step of preprocessing. Especially, these files starting from "pb" (Processing Block) are preprocessed functional images and the files with "T1w" 
+are the preprocessed anatomical images. 
 
-Example output from uber_subject.py. The files containing the “pb” string are the preprocessed 
- functional images at each preprocessing step, and the files with the “T1w” string are the preprocessed anatomical images. Auxiliary functional images are created to assist with specific preprocessing 
- steps, and auxiliary text files contain information about transformation matrices and movement parameters. the files that contain the string pb01 (i.e., Processing Block 01), and the string tshift, 
- means that these
-images have been slice-time corrected using the "3dTshift" command.
+.. figure:: AFNI_subje_resut.png
 
-.. image:: AFNI_subje_resut.png
+  The files containing the “pb” are the preprocessed functional images, the files with the “T1w” string are the preprocessed anatomical images. the name ""3dTshift"" means that these images have been 
+  slice-time corrected by the "3dTshift" command.
+
+Processed Functional Image
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After check with different files in the preprocessed data directory, let's tale a close look, type ``afni`` to open the AFNI GUI. Click the "Underlay", and choose "pb00.sub_02.r01.tcat", click on the 
+""Graph"" next to any of the Axial, Sagittal, or Coronal views to view the time-series. You also can see the same image when you open "pb00.sub_02.r02.tcat" and "pb00.sub_02.r03.tcat"; it is because the 
+initial volumes of dataset had had been in OpenNeuro. 
+
+The **Underlay** menu has two columns: The left column is the file name, and the right contains header information about the file. “epan” indicates that it is an echo-planar image (functional image as we 
+introduced from last chapter), whereas “abuc” stands for a anatomical image. “3D+t:300” indicates that it is a 3-dimensional with 300 volumes (time points) image
 
 
-Viewing the Processed Functional Images
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. image:: AFNI_underlay_view.png
 
-Viewing the Slice-Time Corrected Data
-*************************************
+.. image:: AFNI_timeseries.png
 
-Viewing the Aligned and Co-Registered Data
-******************************************
+Aligned and Co-Registered image
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Viewing the Smoothed Data
-*************************
+The next file to look at is the "pb02.sub_02.r01.volreg+tlrc.BRIK", which has 3 meanings:
 
-Viewing the Scaled Data
-***********************
+1 Motion-corrected, each volume in the time-series for this run has been aligned to a reference volume. 
+
+2 Co-registered to the anatomical image, the functional image has registered into anatomical image.
+
+3 the images also have been normalized to a standardized space, which is MNI152 template.
+
+If you click on the pb02... images, you will notice that there is a section of the AFNI GUI that has “Original View”, “AC-PC Aligned”, and “Talairach View”. In this images, the “Talairach View” is 
+highlighted, which indicated that these images have been normalized. you can click the different locations of the images to see the differences.
+
+.. image:: AFNI_coregister.png
+
+Smoothed image
+^^^^^^^^^^^^^^
+
+The following preprocessing step is smoothing, which averages the signal of nearby voxels together in order to boost any signal that is there, and to cancel out noise. These images will look more blurry 
+as a function of the size of the smoothing kernel that you apply to the data; in this case, a smoothing kernel of 4mm will blur the data slightly, but not by much. Look at the images to make sure that 
+the blurring looks reasonable, as in the figure below.
+
+.. image:: AFNI_smooth.png
+
+Scaled image
+^^^^^^^^^^^^
 
 Viewing the Masks
 *****************
