@@ -194,9 +194,7 @@ can outweigh the drawbacks:
 1 We know that fMRI data contain a lot of noise, and that the noise is frequently greater than the signal. By averaging over nearby voxels we can cancel out the noise and enhance the signal.
 
 2 Smoothing can be good for group analyses in which all of the subjects’ images have been normalized to a template. If the images are smoothed, there will be more overlap between clusters of signal, and 
-therefore greater likelihood of detecting a significant effect.
-
- ``3dmerge``in AFNI will do smoothing for us, you will find further details in **proc** script.
+therefore greater likelihood of detecting a significant effect. ``3dmerge``in AFNI will do smoothing for us, you will find further details in **proc** script::
 
   # ================================== blur ==================================
   # blur each volume of each run
