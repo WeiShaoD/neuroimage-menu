@@ -107,4 +107,7 @@ T1 images are probably the most common.T1 will have grey matter being darker tha
 
 .. image:: OpenNeurp_T1vsT2.png
 
+FLARI images
+************
 
+FLAIR (fluid-attenuated inversion recovery) images are MR images obtained with an inversion recovery sequence having a long inversion time (TI) and a long echo time (TE). 

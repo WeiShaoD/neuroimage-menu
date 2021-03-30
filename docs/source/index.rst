@@ -74,7 +74,7 @@ Menu
    FSL/FSL_Tricks
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Main course 3 AFNI
 
    AFNI/AFNI_menu  
@@ -88,6 +88,12 @@ Menu
     :caption: Main course 4 SPM
     
     SPM/SPM_menu
+
+.. toctree::
+    :maxdepth: 1   
+    :caption: Main course 5 fMRIPrep 
+    
+    fMRIPrep/fMRIPrep
 
 .. toctree::
    :maxdepth: 1
