@@ -110,4 +110,5 @@ T1 images are probably the most common.T1 will have grey matter being darker tha
 FLARI images
 ************
 
-FLAIR (fluid-attenuated inversion recovery) images are MR images obtained with an inversion recovery sequence having a long inversion time (TI) and a long echo time (TE). 
+Fluid-attenuated inversion recovery (FLAIR) is an MRI sequence with an inversion recovery set to null fluids. It can be used in brain imaging to suppress cerebrospinal fluid (CSF) effects on the image, 
+so as to bring out the periventricular hyperintense lesions, such as multiple sclerosis (MS) plaques. FLAIR can be used with both three-dimensional imaging (3D FLAIR) or two dimensional imaging.

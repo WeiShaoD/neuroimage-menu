@@ -7,10 +7,6 @@ cd sub-02/subject_results/group.BART/subj.sub_02/sub_02.results
 
 In which subjects name and group name are specified in the subject ID and group ID tab from the uber_subject.py GUI we did. 
 
-.. note::
-  
-  Later on
-
 Look at the Preprocessed files
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
