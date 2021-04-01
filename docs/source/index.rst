@@ -74,7 +74,7 @@ Menu
    FSL/FSL_Tricks
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: Main course 3 AFNI
 
    AFNI/AFNI_menu  
