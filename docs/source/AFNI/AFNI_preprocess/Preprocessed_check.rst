@@ -82,31 +82,3 @@ There are two masks that you can choose between
 Anatomical Images
 ^^^^^^^^^^^^^^^^^
 
-The full_mask image is a union of all of the individual functional image masks, which have been determined to belong to the brain based on their signal intensity. Voxels with very low signal intensity 
-are not considered brain voxels. As you can see with the full_mask image, this also excludes voxels in the orbitofrontal area, which is notorious for being susceptible to signal dropout: When viewing the 
-results of the anatomical preprocessing, we will want to make sure that both the skull-stripping looks reasonable and that the images were normalized properly.
-
-First, open the image anat_w_skull_warped. If you have copied the MNI152 image into the aglobal directory, load it as an overlay image. (You can also copy it into the current directory by typing from the 
-Terminal: cp ~/abin/MNI_avg152T1+tlrc* ..) You may notice that while the sagittal view looks fine, the axial and coronal views look worse. In particular, it looks as though the image is slightly shifted 
-to the right. Although it is common to have some variability in normalization, and that the anatomical and the template will never match perfectly, this is beyond the margin of error we are willing to 
-extend to normalization.
-
-The anat_w_skull_warped image, it should be noted, is the result of a warp being applied to the raw anatomical image. The warp itself was computed by normalizing the skull-stripped anatomical to a 
-template. If that normalization was off somehow, it would have propagated to the other images. To check this, load as an underlay the image anat_final:
-
-We have found the source of the error: Part of the brain on the left has been removed during normalization. But how do we fix this?
-
-When you detect an error in the preprocessed images, you should examine the output of your preprocessing script. If you started the script from the uber_subject.py GUI, the output will be printed to the 
-“Processing Command” window; a copy of the text will also be stored in a file called output.proc.<subjID, which is located one directory above the preprocessed data.
-
-This text will contain both Warnings and Errors. Errors indicate that either a file is missing, or a command was not able to run successfully. Usually the script will exit after an error is encountered. 
-Warnings, on the other hand, point out something that may be a problem. An example of a warning is the “dataset already aligned in time” notification that we received during slice-timing correction.
-
-Another Warning, related to our current problem, occurred during the normalization step. This can be found slightly after halfway down the output, after the command @auto_tlrc:
-
-Apparently the centers of the anatomical and template images are very far apart. The output says that “if parts of the orignal anatomy gets cropped [sic]” (which is our current problem), “try adding 
-option -init_xform AUTO_CENTER to your @auto_tlrc command.” We can do so by navigating to one directory above the preprocessing directory (cd ..), removing the preprocessing directory (rm -r 
-sub_08.results), and editing the file proc.sub_08 to include the string -init_xform AUTO_CENTER after the @auto_tlrc command, which should be line 119 in your proc file:
-
-Save the file, and rerun it by typing tcsh proc.sub_08. Wait a few minutes for it to finish, and then navigate into the preprocessing directory and load the same set of images as before. You should now 
-see that the problem is fixed:
