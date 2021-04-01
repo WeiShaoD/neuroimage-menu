@@ -61,29 +61,30 @@ the blurring looks reasonable, as in the figure below.
 Scaled image
 ^^^^^^^^^^^^
 
-The last preprocessing step generates scaled images, in which each voxel has a mean signal intensity of 100. This allows us to specify any changes relative to the mean as percent signal change; i.e., a 
-value of 101 could be interpreted as a signal change of 1%.
+The next step for preprocessing is scaled images, each voxel has a mean signal intensity of 100. This allows us to notice any relative changes to the mean as percent signal change such as a value of 101 
+could be interpreted as a signal change of 1%. these scaled images will be very blurred because the signal voxels within the brain are uniformed compared to the variability of voxel outside of the brain.  
+However it is still visible to see the outline of the brain, and the time-series values within the brain should be close to 100 as we saw previously.
 
-Due to the greyscale of the images being more uniform in the brain voxels as compared to greater variability in the signal outside of the brain, these images will have less anatomical definition than the 
-previous images. Nevertheless, you should still be able to see the outline of the brain, and the time-series values of the brain voxels should all be close to 100:
+..image:: scale.PNG
 
 the Masks
 ^^^^^^^^^
 
-Because we are interested only in the voxels covering the brain, we created a mask that we can use to exclude any non-brain voxels. The mask will be binary: 1’s in the voxels that are determined to be 
-within the skull, and 0’s outside of the skull. (More rigorous masks can be created which will also exclude cerebrospinal fluid and even white matter, but we are not considering those here.)
+As it looks like, the mask is for the purpose in which we need to exclude all the signals outside of our interested areas. The mask is binary: 1 represents the voxels in the brain, and 0 indicates the 
+outside of the brain (you can have more liberal or consertive masks to cover whatever you interested in)
 
-There are two masks that you can choose between: full_mask and mask_group. The full_mask image is a union of all of the individual functional image masks, which have been determined to belong to the 
-brain based on their signal intensity. Voxels with very low signal intensity are not considered brain voxels. As you can see with the full_mask image, this also excludes voxels in the orbitofrontal area, 
-which is notorious for being susceptible to signal dropout: 
+There are two masks that you can choose between
 
-The other mask, mask_group, is a more liberal mask that has been dilated to more closely match the template that you have warped to - in this case, the MNI152 brain:
+1 full_mask is a union of all signal intensity of the individual functional image, Voxels with very low signal intensity are not considered brain voxels.
 
+2 mask_group is a more liberal mask that match the template that you have choosen 
 
 Anatomical Images
 ^^^^^^^^^^^^^^^^^
 
-When viewing the results of the anatomical preprocessing, we will want to make sure that both the skull-stripping looks reasonable and that the images were normalized properly.
+The full_mask image is a union of all of the individual functional image masks, which have been determined to belong to the brain based on their signal intensity. Voxels with very low signal intensity 
+are not considered brain voxels. As you can see with the full_mask image, this also excludes voxels in the orbitofrontal area, which is notorious for being susceptible to signal dropout: When viewing the 
+results of the anatomical preprocessing, we will want to make sure that both the skull-stripping looks reasonable and that the images were normalized properly.
 
 First, open the image anat_w_skull_warped. If you have copied the MNI152 image into the aglobal directory, load it as an overlay image. (You can also copy it into the current directory by typing from the 
 Terminal: cp ~/abin/MNI_avg152T1+tlrc* ..) You may notice that while the sagittal view looks fine, the axial and coronal views look worse. In particular, it looks as though the image is slightly shifted 
