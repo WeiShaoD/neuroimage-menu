@@ -17,7 +17,7 @@ The General Linear Model (GLM) is a useful framework for comparing how several v
 In GLM, we can use one or more regressors(X) - independent variables, to fit a model for some outcome measure(Y) - or dependent variable. To do this we need to compute numbers called beta weights(β), 
 which are the relative weights assigned to each regressor in oder to get the best fitting for the data. Any discrepancies between the model and the data are called residuals(ε).
 
-.. figure:: FSL_GLM_Equation.png
+.. figure:: AFNI_GLM_Equation.png
   
    The symbols representing each of these terms are shown in the equation.
 
@@ -60,7 +60,7 @@ Gamma distribution is a distribution that arises naturally in processes for whic
 For example, suppose you are fishing and you expect to get a fish once every 1/2 hour. Compute the probability that you will have to wait between 2 to 4 hours before you catch 4 fish.One fish every 1/2 
 hour means we would expect to get θ = 1 / 0.5 = 2 fish every hour on average. Using θ = 2 and k = 4, we can compute this as follows:
 
-.. image:: FSL_Gamma_formula.PNG
+.. image:: AFNI_Gamma_formula.PNG
 
 When applied to fMRI data, the Gamma Distribution is called a basis function because it is the fundamental element of the model we will create and fit to the time series of the data. Furthermore, if we 
 know what the shape of the distribution looks like in response to a very brief stimulus, we can predict what it should look like in response to stimuli of varying durations, as well as any combination of 
@@ -72,7 +72,7 @@ The HRF for a Single impulse Stimulus
 If the duration of a stimulus is very short, such as a snap of the fingers, we can say that it is an impulse stimulus - in other words, it has no duration. As you can see in the following figure, the 
 shape of the BOLD signal looks like a typical Gamma Distribution, with a peak close to the beginning of the time axis (i.e., the x-axis) and a long tail to the right.
 
-.. figure:: FSL_HRF_SingleStim.png
+.. figure:: AFNI_HRF_SingleStim.png
   :scale: 30%
 
 The HRF for a Single Boxcar Stimulus
@@ -85,7 +85,7 @@ This stimulus is called a boxcar stimulus, because it looks like a boxcar on a t
 In this case the Gamma Distribution is convolved with the boxcar stimulus. Convolution is the averaging of two functions over time; as a result, the Gamma Distribution broadens as it is averaged with the 
 boxcar stimulus, and returns to baseline when the stimulus is removed.
 
-.. image:: FSL_HRF_DurationStim.png
+.. image:: AFNI_HRF_DurationStim.png
 
 Multiple HRFs overlaping
 ************************
@@ -93,7 +93,7 @@ Multiple HRFs overlaping
 We have seen what the BOLD signal looks like after a stimulus is presented and how the HRF models the shape of that signal. But what happens if another stimulus is presented before the BOLD response for 
 the previous stimulus has returned to baseline?
 
-.. figure:: FSL_HRF_Sum.png
+.. figure:: AFNI_HRF_Sum.png
   :scale: 30%
   
   Convolution of the HRFs for individual stimuli. The overall BOLD response (blue) is a moving average of the individual HRFs outlined in black, red, and 
@@ -103,7 +103,7 @@ the previous stimulus has returned to baseline?
 In that case, the individual HRFs are summed together. This creates a BOLD response that is a moving average of the individual HRFs, and the shape of the BOLD signal becomes more complex as more stimuli 
 are presented close together.
 
-.. figure:: FSL_HRF_Demo.gif
+.. figure:: AFNI_HRF_Demo.gif
 
   Animations originally created by Bob Cox of AFNI
 
@@ -119,5 +119,3 @@ looking at the time series
 In order to have a closer look at time series, you can open FSLview from the ``sub-01`` directory, and choose File to open 1 of 3 bold files from **func** directory. type ``Ctrl+T`` and take a look at 
 the volume tab at the buttom. The right plot here indicates the voxel you point out at the different time series positions.
 
-
-.. image:: FSL_timeseries.PNG
