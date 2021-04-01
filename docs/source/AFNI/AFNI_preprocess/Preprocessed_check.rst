@@ -65,7 +65,7 @@ The next step for preprocessing is scaled images, each voxel has a mean signal i
 could be interpreted as a signal change of 1%. these scaled images will be very blurred because the signal voxels within the brain are uniformed compared to the variability of voxel outside of the brain.  
 However it is still visible to see the outline of the brain, and the time-series values within the brain should be close to 100 as we saw previously.
 
-..image:: scale.PNG
+.. image:: AFNI_scale.PNG 
 
 the Masks
 ^^^^^^^^^

@@ -6,7 +6,6 @@ Basic terminology
 
 Before we start our journey, let's review some basic terms, this could cost you extra time, but it worth it. 
 
-
 Voxels 
 ****** 
 

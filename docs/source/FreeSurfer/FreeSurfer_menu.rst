@@ -184,10 +184,11 @@ and have fun by play it around like PCA analysis.
 
 .. image:: hipp_vol.png
 
-FreeSurfer support 
-^^^^^^^^^^^^^^^^^^
+FreeSurfer commands 
+^^^^^^^^^^^^^^^^^^^
 
-At the end of the day, you will realize that many problems and issues could be very tricky when you use FreeSurfer constantly, Luckily, there are many FreeSurfer experts who are ready to help you.Follow 
-this `link <https://surfer.nmr.mgh.harvard.edu/fswiki/FreeSurferSupport/>`__, all of your questions will be answered in there.
+There are commands that could be quite useful.
+
+1 ``mri_info`` this command can help you find the basic information from the NIFTI files 
 
 
