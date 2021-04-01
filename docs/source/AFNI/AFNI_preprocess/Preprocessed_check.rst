@@ -77,8 +77,26 @@ There are two masks that you can choose between
 
 1 full_mask is a union of all signal intensity of the individual functional image, Voxels with very low signal intensity are not considered brain voxels.
 
+.. image:: AFNI_full_mask.PNG
+
+
 2 mask_group is a more liberal mask that match the template that you have choosen 
+
+.. image:: AFNI_group_mask.PNG
+
 
 Anatomical Images
 ^^^^^^^^^^^^^^^^^
+
+The next look would be the anatomical images.
+
+.. image:: AFNI_anat.PNG
+
+We can use ``anat_w_skull_warped`` as the underlay and ``anat_final.sub_02`` as the overlay.
+
+All the output log from preprocessing steps would be store in the ``output.proc.sub_02``, which is above the current directory. AFNI will keep move on even if it encouters errors but you can ckeck it 
+with a text editor.
+
+.. image:: AFNI_output.PNG
+ 
 
