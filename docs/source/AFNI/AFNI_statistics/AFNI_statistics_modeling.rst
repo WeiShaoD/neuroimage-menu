@@ -9,7 +9,6 @@ After we finish all the preprocessing steps, we can go to the next - fit a model
 
   3 Time-series 
 
-
 General linear model
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -110,12 +109,92 @@ are presented close together.
 Time series 
 ^^^^^^^^^^^
 
-We have mentioned this concept several times before， As the basic composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this 
-concatenated string of volumes a run of data. The signal that is measured at each voxel across the entire run is called a time-series.The time-series represents the signal that is measured at each voxel.
+We have mentioned this concept several times before. As the basic composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this 
+concatenated string of volumes a run of data. The signal that is measured at each voxel across the entire run is called a time-series. and this time-series represents the signal that is measured at each 
+voxel during the whole scan..
 
-looking at the time series
-**************************
+Creating the time series
+************************
+
+Since one of our goals is to create the ideal time-series so that we can use it to estimate the beta weights for our GLM, we need to create the ideal time-series first.
+
+What do we need? Let’s take a look at the BART dataset. you could find some "event.tsv" files in the subject's func directory. These files contain three pieces of information for the timing files. There are:
+
+1 the experimental condition name
+
+2 the onset time of trial for each condtion, relative to the onset of the scan
+
+3 The duration of each trial
+
+This information needs to be extracted from the events.tsv files and be transformed into a format that the AFNI can read. our job is to create a timing file for explode and cash experimental condition, 
+and then split the file based on which run the condition was in. We will have 6 timing files:
+
+1   Timings for the explode trials that occurred during the first run (explode_run1.txt)
+
+1.2 Timings for the explode trials that occurred during the first run (explode_run2.txt)
+
+1.3 Timings for the explode trials that occurred during the first run (explode_run3.txt)
+
+2   Timings for the cash trials that occurred during the first run (cash_run1.txt)
+
+2.2  Timings for the cash trials that occurred during the second run (cash_run2.txt)
+
+2.3  Timings for the cash trials that occurred during the third run (cash_run3.txt)
+
+Each of these timing files will have three columns:
+
+1 Onset time, in seconds, relative to the start of the scan
+
+2 Duration of the trial, in seconds
+
+3 Parametric modulation(discuss later)
+
+
+Next, we will condense the timing files for each run into a single file for each condition, which will be called explode.1D and cash.1D. The "1D" is a specification to AFNI; it indicates that the file 
+contains the text information arranged in rows and columns.
+
+Admittedly, we will do this by our hands but not every details. There is a script that can help us to create these timing files, you can copy this can create a script in the BART directory by a text 
+editor and name it as ``timing.sh``, and type ``bash timing.sh``. If evertthong goes smoothly, This will create timing files for each run for each subject on the two conditions, and save them in each 
+subject's func directory. You will see "cash.1D", "control.1D" as well as  "cash_run1.txt" "control_run1.txt" from "sub-02/func/::
+
+  #!/bin/bash
+
+  #Check whether the file subjList.txt exists; if not, create it
+  if [ ! -f subjList.txt ]; then
+          ls -d sub-?? > subjList.txt
+  fi
+
+  #Loop over all subjects and format timing files into FSL format
+  for subj in `cat subjList.txt` ; do
+          cd $subj/func #Navigate to the subject's func directory, which contains the timing files
  
-In order to have a closer look at time series, you can open FSLview from the ``sub-01`` directory, and choose File to open 1 of 3 bold files from **func** directory. type ``Ctrl+T`` and take a look at 
-the volume tab at the buttom. The right plot here indicates the voxel you point out at the different time series positions.
+          #Extract the onset times for the explode and cash trials for each run.
+  
+          cat ${subj}_task-balloonanalogrisktask_run-01_events.tsv | awk '{if ($3=="explode_demean") {print $1, $2, "1"}}' > explode_run1.txt
+          cat ${subj}_task-balloonanalogrisktask_run-02_events.tsv | awk '{if ($3=="explode_demean") {print $1, $2, "1"}}' > explode_run2.txt
+          cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="explode_demean") {print $1, $2, "1"}}' > explode_run3.txt
 
+          cat ${subj}_task-balloonanalogrisktask_run-01_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run1.txt
+          cat ${subj}_task-balloonanalogrisktask_run-02_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run2.txt
+          cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run3.txt
+
+
+  #Now convert to AFNI format
+
+          timing_tool.py -fsl_timing_files explode*.txt -write_timing explode.1D
+
+          timing_tool.py -fsl_timing_files cash*.txt -write_timing cash.1D
+
+
+          cd ../..
+  done
+
+
+.. image:: AFNI_cash_explode.PNG 
+
+Once the timing files has been created, you are now ready to use them to fit a model to the fMRI data.
+
+Homework
+^^^^^^^^
+
+In order to understand the script bettwem, you can makde some modification to extract the information for pump, control trial and make the timing files. 
