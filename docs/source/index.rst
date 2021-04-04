@@ -105,10 +105,6 @@ Menu
 
 SuperComputer/SuperComputer_menu
 
-.. Glossary
-.. ==================
-
-.. * :ref:`terms`
 
 “Is what each begins and perfects on himself”
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^         
