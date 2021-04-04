@@ -80,7 +80,7 @@ Menu
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Main course 3 AFNI
 
    AFNI/AFNI_menu  
