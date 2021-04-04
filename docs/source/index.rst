@@ -29,29 +29,37 @@ Menu
     Linux_system/Linux_menu
     Linux_system/for_loop
     Linux_system/useful_command
+
 .. toctree::
    :maxdepth: 1
    :caption: Appetizer 2 Neuroimage data
    OpenNeuro/Neuroimage_data
    OpenNeuro/OpenNeuro_menu
+
 .. toctree::
    :maxdepth: 1
    :caption: Appetizer 3 GitHub
    GitHub/GitHub_menu
    GitHub/Gitcommand_menu
+
 .. toctree::
    :maxdepth: 1
    :caption: Main course 1 FreeSurfer
+
    FreeSurfer/FreeSurfer_menu                                                                                           
    FreeSurfer/FastSurfer
    FreeSurfer/Parallel_computing
+
 .. toctree::
    :maxdepth: 1
    :caption: Drinks Preprocessing
+
    Preprocessing/Preprocessing_menu
+
 .. toctree::
    :maxdepth: 1
    :caption: Main course 2 FSL
+
    FSL/FSL_menu
    FSL/FSL_Ballon
    FSL/FSL_preprocessing
@@ -61,9 +69,11 @@ Menu
    FSL/FSL_2nd_analysis
    FSL/FSL_3rd_analysis
    FSL/FSL_Tricks
+
 .. toctree::
    :maxdepth: 1
    :caption: Main course 3 AFNI
+
    AFNI/AFNI_menu  
    AFNI/AFNI_Ballon
    AFNI/AFNI_preprocess/AFNI_preprocessing_1.rst
@@ -71,20 +81,25 @@ Menu
    AFNI/AFNI_preprocess/Preprocessed_check.rst
    AFNI/AFNI_statistics/AFNI_statistics_modeling.rst
    AFNI/AFNI_1st/AFNI_1st_level.rst
+
 .. toctree::
     :maxdepth: 1
     :caption: Main course 4 SPM
+
     SPM/SPM_menu
+
 .. toctree::
     :maxdepth: 1   
     :caption: Main course 5 fMRIPrep 
+
     fMRIPrep/fMRIPrep
+
 .. toctree::
    :maxdepth: 1
    :caption: Dessert SuperComputer
+
 SuperComputer/SuperComputer_menu
-.. Glossary
-.. ==================
+
 
 .. * :ref:`terms`
 
