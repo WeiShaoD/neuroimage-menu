@@ -31,17 +31,22 @@ Menu
     Linux_system/for_loop
     Linux_system/useful_command
 
+
 .. toctree::
    :maxdepth: 1
    :caption: Appetizer 2 Neuroimage data
+
    OpenNeuro/Neuroimage_data
    OpenNeuro/OpenNeuro_menu
+
 
 .. toctree::
    :maxdepth: 1
    :caption: Appetizer 3 GitHub
+
    GitHub/GitHub_menu
    GitHub/Gitcommand_menu
+
 
 .. toctree::
    :maxdepth: 1
@@ -51,11 +56,13 @@ Menu
    FreeSurfer/FastSurfer
    FreeSurfer/Parallel_computing
 
+
 .. toctree::
    :maxdepth: 1
    :caption: Drinks Preprocessing
 
    Preprocessing/Preprocessing_menu
+
 
 .. toctree::
    :maxdepth: 1
@@ -71,6 +78,7 @@ Menu
    FSL/FSL_3rd_analysis
    FSL/FSL_Tricks
 
+
 .. toctree::
    :maxdepth: 1
    :caption: Main course 3 AFNI
@@ -83,11 +91,13 @@ Menu
    AFNI/AFNI_statistics/AFNI_statistics_modeling.rst
    AFNI/AFNI_1st/AFNI_1st_level.rst
 
+
 .. toctree::
     :maxdepth: 1
     :caption: Main course 4 SPM
 
     SPM/SPM_menu
+
 
 .. toctree::
    :maxdepth: 1
@@ -95,6 +105,8 @@ Menu
 
 SuperComputer/SuperComputer_menu
 
+.. Glossary
+.. ==================
 
 .. * :ref:`terms`
 
