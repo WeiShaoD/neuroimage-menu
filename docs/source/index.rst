@@ -26,6 +26,7 @@ Menu
 .. toctree::
     :maxdepth: 1
     :caption: Appetizer 1 Linux_system 
+
     Linux_system/Linux_menu
     Linux_system/for_loop
     Linux_system/useful_command
@@ -87,12 +88,6 @@ Menu
     :caption: Main course 4 SPM
 
     SPM/SPM_menu
-
-.. toctree::
-    :maxdepth: 1   
-    :caption: Main course 5 fMRIPrep 
-
-    fMRIPrep/fMRIPrep
 
 .. toctree::
    :maxdepth: 1
