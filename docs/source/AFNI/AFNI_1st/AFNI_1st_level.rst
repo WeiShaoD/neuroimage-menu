@@ -1,4 +1,4 @@
-Running the 1st level analysis
+\Running the 1st level analysis
 ==============================
 
 Previously, we have used **uber_subject.py** to set up the preprocessing for a single subject. You may remember that we removed one of the blocks called “regress”. Now, we will add the regress back and 
@@ -14,11 +14,57 @@ Let's copy what we did in the preprocessing such as ``fill the name tab``, ``ana
 Stimulus Timing Files
 *********************
 
-As we have created the timing files in the last chapter, click the **browse stim** to select the "explode.1D" and "cash.1D" files from sub-02/func.
+As we have created the timing files in the last chapter, click the **browse stim** to select the "explode.1D" and "cash.1D" files from sub-02/func. After you click the OK, there are 3 more columns jump 
+up; “label”, “basis”, and “type”. “Label” is how the timing reference files in the command that does the model fitting (i.e., 3dDeconvolve), “basis” and “type” indicated that whaty kind of function we 
+will apply to the timing files.
+
+The default basis function is GAM, which specifies that the onset times should be convolved with the canonical HRF as we discussed before from the statistics and modeling chapter. This basis function 
+requires the height of the HRF as the parameter for estimation, which roughly corresponds to the amount of neural activity in response to that condition. The tab below, “init file types” specify the type 
+of convolution we are going to use. The default setting is times, which means to convolve all of the time-points specified in the timing file and generate a parameter estimate for the HRF that on average 
+fits all of the occurrences.
+
+.. image:: Stimulus_timing.PNG
+
 
 Symbolic GLTs
 *************
 
+The following section, ``Symbolic GLTs`` allows you to specify general linear tests after the AFNI estimated the beta weights from the different conditions from the above section. let's take the “init 
+with examples” as an example. After you click it, there are two contrasts: C-E, and mean. CE. The first contrast uses contrast weights to specify how the contrast between different conditions will be 
+calculated, and it prepares the contrast weights to the labels we have specified from “stimulus timing files” section. the default of no sign in a contrasting weight is +1, while a negative sign will 
+assign a contrasting weight of -1. Therefore, the line here shows that we assign weight to the parameter estimate for the Cash condition with +1, and assign weight to the parameter estimate for the 
+explode condition with -1. The second contrast, use different computation, takes the average of the two conditions by multiplying 0.5 for both.
+
+In general, the sum of contrast weights of different conditions should be 0, and the sum of the average of contrast weights across conditions should be 1.
+
+Let’s change this GLT syntax table and to set up the contrasts. In the first row, change the “label” column to "cash_explode", and in the later “symbolic GLT” column, do **cash -explode**. similarly, the 
+second row we need to specify a contrast of explode_cash as well as explode -cash. Then, click ``insert glt row`` and put the **0.5*cash +0.5*explode** the section will look like this:
+
+.. image:: GLTs.PNG
 
 Extra Regress Options
 *********************
+
+Lastly, let's check out the other options. The first one, “outlier censor limit”, will remove any TRs from this analysis that has been censored outlier fraction greater than the number we put on the 
+right side. (For example, by ``3dToutcount``, if we type 3 in there, which will signify any voxels in a TR that have signal intensity greater than 3 standard deviations from the other voxels in brain 
+mask.) If this is left at 0.0, then will be no TRs will be censored based on the output from ``3dToutcount``. We will use the default setting now.
+
+
+The next section, “jobs for regression (num CPUs)”, indicate how many processors we can use for the regression analysis. You can use the maximum number of CPUs that you can spare. We will set it to 8. 
+“GOFORIT level (override 3dD warnings)” will ignore any warnings about the design matrix detected by 3dDeconvolve. In general, you will want 3dDeconvolve to throw a warning and stop running when it finds 
+a high level of collinearity among two or more regressors.
+
+The “bandpass in regression” tab will be used for resting-state analyses to remove both low and high frequency fluctuations. And low-pass filtering (i.e., removing high frequency signal) risks will be 
+applied to removing actual signal related to the task. 
+
+There are four more options in addition. “Regress motion derivatives” will model higher-order derivatives of the motion regressors, which can capture more complex head movements. This is useful for 
+populations that tend to move a lot, such as children or clinical subjects; and as long as you have a long time-series of data (e.g., more than 200 TRs in a run), you probably won’t run out of degrees of 
+freedom for estimating these extra parameters. For this task I will leave it unchecked. The “run cluster simulation” box unchecked, as this computes whether a cluster is statistically significant in real 
+time as you change the thresholding slider. We will do inference later at a group level - I omit this option. I do, however, check the “execute REMLfit” option, as this will create a separate statistical 
+dataset that better accounts for temporal autocorrelation than the traditional ``3dDeconvolve`` approach. Later on, we can use the output from ``3dREMLfit`` to use information about the variability of the 
+subject’s parameter estimates in order to create more precise group-level inference maps.
+
+.. image:: extra_regress.PNG
+
+Examining the Output
+********************
