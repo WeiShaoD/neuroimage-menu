@@ -25,7 +25,6 @@ fits all of the occurrences.
 
 .. image:: Stimulus_timing.PNG
 
-
 Symbolic GLTs
 *************
 
@@ -81,7 +80,7 @@ or more of the beta weights are more likely to be statistically significant.
 Examining the Output
 ********************
 
-When the AFNI finishes, ``cd`` to the folder "sub-02/subject_results/group.BART/subj.sub_02/sub_02.results." You can see all the preprocessed files, what's more, you will also see statistical datasets: 
+When the AFNI finishes, ``cd`` to the folder "sub-02/subject_results/group.BART/subj.sub_02/sub_02.results." You can see all the preprocessed files. What's more, you will also see statistical datasets: 
 files with "stats.sub_02+tlrc" has been analyzed by ``3dDeconvolve`` approach, and file like "stats.sub_02_REML+tlrc" has accounted for temporal autocorrelation.
 
 .. image:: 1st_result.PNG
