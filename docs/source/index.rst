@@ -80,7 +80,7 @@ Menu
 
 
 .. toctree::
-   :maxdepth: 3
+   :maxdepth: 1
    :caption: Main course 3 AFNI
 
    AFNI/AFNI_menu  
@@ -90,7 +90,7 @@ Menu
    AFNI/AFNI_preprocess/Preprocessed_check.rst
    AFNI/AFNI_statistics/AFNI_statistics_modeling.rst
    AFNI/AFNI_1st/AFNI_1st_level.rst
-
+   AFNI/AFNI_automation/aumomation.rst
 
 .. toctree::
     :maxdepth: 1
