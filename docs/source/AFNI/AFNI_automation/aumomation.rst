@@ -21,7 +21,7 @@ in our script with the string whatever we want, and analyze that subject’s dat
 
 2 We will replace the paths to be more generalizable so that AFNI can find the corresponding input data.
 
-To begin with, open the proc_BART.sh with a text editor like nano. Scroll down, which contains the following code:
+To begin with, open the proc_BART.sh with a text editor like nano. Scroll down, which contains the following code::
 
   # the user may specify a single subject to run with
   if ( $#argv > 0 ) then
@@ -35,13 +35,11 @@ the script, you will see numerous lines that contain the variable “$subj”, w
 sub-02 hard-coded into them. In order to make the script more flexibile and have it analyze the subject that we specify, we will need to replace these with the “$subj” variable. typy “Ctrl+W” and 
 "Ctrl+R" to replace it as ``${subj}``.
 
-Next, we will need to replace any absolute paths with a relative path. As you can see in the script, there are several lines of code that contain paths starting with /Users/ajahn/Desktop/Flanker. We will 
-replace this with the $PWD variable, which is a shorthand for the path to the current working directory. This will ensure that the script will be adapted to the current computer’s directory structure, 
-and that no errors will be thrown due to the script being unable to locate where certain files are. 
+Next, we will need to replace any absolute paths with a relative path. As you can see in the script, there are several lines of code that contain paths starting with /home/wshao/BART_afni/. We will 
+replace this with the $PWD, which is the path indicates the current working directory. This will ensure that the script will be adapted to the current working directory structure and this script will 
+able to locate it.
 
-With Nano, find the string /home/wshao/BART_afni/sub-02 (or whatever the name of the path is which points to the directory containing your subjects), and Replace it with ${PWD}. Also replace on line 
-/Users/ajahn/aglobal (or whatever your username is) with ~/abin.
-
+With Nano, find the string /home/wshao/BART_afni/ (or whatever the name of the path that points to the subject directory), and Replace it with ${PWD}.
 
 Automating the Analysis
 ***********************
@@ -53,7 +51,9 @@ We will now use this updated preprocessing script in a for-loop to analyze all o
     mv ${i}.results $i;
   done
 
-This will run the script “proc_BART.sh” for each subject in the file “subjList.txt”, using each consecutive line in the subjList.txt file as an argument each time the script runs.
+This will run the script “proc_BART.sh” for each subject with the file “subjList.txt”, using each consecutive line in the subjList.txt file as an argument each time the script runs.
 
 This will run the preprocessing and regression for each subject, storing the output in a folder called <subjID>/<subjID>.results, in which “subjID” stands for the subject name. Each analysis will take 
 5-10 minutes, depending on the speed of your computer.
+
+$PWD/{$subj}
