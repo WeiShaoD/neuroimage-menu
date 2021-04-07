@@ -94,3 +94,13 @@ For a different view, looking at all of the regressors and stimulus in separate 
 .. image:: Xmad1D.PNG
 
 .. image:: stimulus.PNG
+
+The Statistics Files
+********************
+
+The final view is to look at the contrast maps of our data. Open up the GUI, you can select "anat_w_skull_warped" or "anat_final.sub_02" as the Underlay and you can choose select stats.sub_02 as Overlay. 
+Then, Go to the button of F-t column and click 1 and select the 7 for the box on the right side. move on, click Clusterzie tab and select the 30 for the voxel tab. You will see something like this:
+
+.. image:: Statistics_map.PNG
+
+.. image:: clustersize.PNG
