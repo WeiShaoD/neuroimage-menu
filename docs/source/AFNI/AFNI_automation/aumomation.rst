@@ -51,9 +51,3 @@ We will now use this updated preprocessing script in a for-loop to analyze all o
     mv ${i}.results $i;
   done
 
-This will run the script “proc_BART.sh” for each subject with the file “subjList.txt”, using each consecutive line in the subjList.txt file as an argument each time the script runs.
-
-This will run the preprocessing and regression for each subject, storing the output in a folder called <subjID>/<subjID>.results, in which “subjID” stands for the subject name. Each analysis will take 
-5-10 minutes, depending on the speed of your computer.
-
-$PWD/{$subj}
