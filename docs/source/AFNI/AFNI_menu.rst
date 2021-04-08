@@ -28,7 +28,8 @@ We will start with the dataset downloading, preprocessing, 1st level, and end wi
 
 5 group analysis
 
-
+AFNI installation and set up
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 

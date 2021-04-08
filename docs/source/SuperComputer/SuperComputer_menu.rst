@@ -35,4 +35,4 @@ transfer the data among different server
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 use scp -r to transfer the data 
  
-
+Or ``sftp`` to build the connection and ``put`` to upload the file or ``get`` to download the file  
