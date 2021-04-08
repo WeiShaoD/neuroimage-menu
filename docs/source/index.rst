@@ -91,6 +91,7 @@ Menu
    AFNI/AFNI_statistics/AFNI_statistics_modeling.rst
    AFNI/AFNI_1st/AFNI_1st_level.rst
    AFNI/AFNI_automation/aumomation.rst
+   AFNI/AFNI_group/group_analysis.rst
 
 .. toctree::
     :maxdepth: 1
