@@ -39,18 +39,21 @@ Next, we will need to replace the relative path. As you can see in the script, t
 $PWD or the whatever current working directory path you have, This will ensure that the script will be adapted to the your work environment. For example, you can change the **/home/wshao/BART_afni/** to 
 ``$PWD``
 
-you can download the 
+you can download the script from `here can make the some changes for you dataset if necessary.   
 
 Automating the Analysis
 ***********************
 
-We will now use this updated preprocessing script in a for-loop to analyze all of the subjects in our dataset. Use this code::
+When you done the set up for the **proc_BART.sh**, use this updated preprocessing script in a for-loop to loop over all of the subjects in our dataset. with this code::
 
-  for i in `cat subjList.txt`; do
-    bash proc_BART.sh $i;
-    mv ${i}.results $i;
-  done
+  for subj in `cat subjList.txt`; do
+    tcsh proc.BART.sh $subj;
+    mv ${subj}.results $subj;
+  done 
 
+you can write this code in a new script and ``bash`` it or run this code in your terminal directly. 
+
+.. image:: For_prof_BART.PNG
 
 
 .. image:: automation.PNG
