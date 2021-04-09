@@ -7,7 +7,7 @@ could make errors easily. As Joey from Friends said, there’s gotta be a better
 Here is the script that makes your life easier!
 
 Creat a design file
-*******************
+^^^^^^^^^^^^^^^^^^^
 
 We have analyzed the first subject, sub-02, and created a file called **proc.sub_02**. This file contained a list of AFNI commands, composed in a manner determined by ``uber_subject.py GUI`` which we 
 played before. Now it is time to ``cp`` this file to the BART directory that has all of your subjects, and rename it as **proc_BART.sh**. Let's go to the directory which has the "pro.sub_02" file and 
@@ -39,10 +39,10 @@ Next, we will need to replace the relative path. As you can see in the script, t
 $PWD or the whatever current working directory path you have, This will ensure that the script will be adapted to the your work environment. For example, you can change the **/home/wshao/BART_afni/** to 
 ``$PWD``
 
-you can download the script from `here can make the some changes for you dataset if necessary.   
+you can download the script from `here <https://github.com/WeiShaoD/neuroimage-book/blob/main/docs/source/AFNI/AFNI_automation/proc.BART.sh>`__ can make the some changes for you dataset if necessary.   
 
 Automating the Analysis
-***********************
+^^^^^^^^^^^^^^^^^^^^^^^
 
 When you done the set up for the **proc_BART.sh**, use this updated preprocessing script in a for-loop to loop over all of the subjects in our dataset. with this code::
 
@@ -54,6 +54,5 @@ When you done the set up for the **proc_BART.sh**, use this updated preprocessin
 you can write this code in a new script and ``bash`` it or run this code in your terminal directly. 
 
 .. image:: For_prof_BART.PNG
-
 
 .. image:: automation.PNG
