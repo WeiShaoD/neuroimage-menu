@@ -92,6 +92,7 @@ Menu
    AFNI/AFNI_1st/AFNI_1st_level.rst
    AFNI/AFNI_automation/Aumomation_menu.rst
    AFNI/AFNI_group/group_analysis.rst
+ 
 
 .. toctree::
     :maxdepth: 1
