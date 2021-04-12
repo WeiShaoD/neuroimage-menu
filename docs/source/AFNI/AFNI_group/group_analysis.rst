@@ -47,16 +47,32 @@ Viewing the Results
 
 When ``Go`` has been finished, You will see a new directory called "group_results" has been created if you go back to Terminal and type ``ls``, ``cd`` to test.001.3dttest++. Which contains the script we 
 just produced (“BART_cash-explode_ttest”), another folder called test.results, which contains the group-level output. Load this in the afni viewer, set an uncorrected p-value of 0.001 (by right-clicking 
-on the “p=” ) and clusterize the data to 40, which show clusters with an extent of 40 voxels or more.
+on the “p=” ) and clusterize the data to 40, which show clusters with an extent of 30 voxels or more.
 
 
 .. image:: p_value.PNG
 
 .. image:: clustersize.PNG
 
-
 .. image:: Grroup_statistics.PNG  
 
 
 3dMEMA
 ^^^^^^
+
+Close the AFNI viewer, and go back to the uber_ttest.py GUI, and make the following changes:
+
+1 Change the “program” from 3dttest++ to 3dMEMA.
+2 Change the “script name” and “dset prefix” to BART_Cash-ExplodeCash-Explode .
+3 Click on “get subj dsets”, and select a subject’s statistical dataset such as stats.sub-02_REML+tlrc. Use the wildcards as above to select all of the subjects’ REML datasets.
+4 In the field “t-stat index/label (MEMA)”, type 8. The sub-briks of the REML dataset, which should be in an order identical to the non-REML statistical dataset, indicate that sub-brik #8 is the 
+t-statistic associated with the contrast estimate of “incongruent-congruent.”
+
+As before, click on the script generator icon, and then click on the green “Go” button. This model estimation will take longer, and you will see a progress report for each slice that has been analyzed; 
+in total, it should take only a couple of minutes.
+
+.. image:: 3dMEMA.PNG 
+
+When it has finished, you will see a new directory in the group_results folder called test.002.3dMEMA, with a sub-directory called test.results. Navigate to that folder, and overlay the results as 
+before. Are the effects in the same location? Do these effects look stronger or weaker? Why?
+
