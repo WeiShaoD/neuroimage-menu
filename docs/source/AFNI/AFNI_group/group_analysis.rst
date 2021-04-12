@@ -73,6 +73,7 @@ in total, it should take only a couple of minutes.
 
 .. image:: 3dMEMA.PNG 
 
-When it has finished, you will see a new directory in the group_results folder called test.002.3dMEMA, with a sub-directory called test.results. Navigate to that folder, and overlay the results as 
-before. Are the effects in the same location? Do these effects look stronger or weaker? Why?
+When it has finished, you will find a new directory in the group_results folder called test.002.3dMEMA,. "cd" to the sub-directory, use AFNI viewer and overlay the results as before. you will see a 
+similar image like this:
 
+.. image:: Group_MEMA.PNG
