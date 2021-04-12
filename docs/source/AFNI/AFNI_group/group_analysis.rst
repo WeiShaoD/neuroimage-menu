@@ -27,9 +27,36 @@ same directory structure, there will be 16 entries in the field below.
 
 At the bottom of the “datasets A” section, you will see a few additional fields. In “set name (group of class), write cash-explode, and in “data index/label” type 7.
 
-Why 7, type 3dinfo -verb stats.sub-02+tlrc from the results directorie
+Why 7?, type 3dinfo -verb stats.sub-02+tlrc from any results directories such as **sub-02.results**. you will see this:
 
+.. image:: 3dinfo_verb.PNG  
+
+This will show all of the sub-briks and the labels accordingly. As we are looking for the contrast estimates for cash-explode. The output of 3dinfo shows that this is located in sub-brik 7(C-E). The
+sub-brik that contains the label “Coef” means that it is a parameter (or contrast) estimate.  “Tstat” indicates a t-statistic. "Fstat” means an F-statiastic.
+
+After you have done all the steps, we should see a form looks like this:
 
 .. image:: wildcard.PNG
 
-.. image:: subj_dsets.PNG
+As with the uber_subject.py script, there are buttons at the top of the GUI for both generating the script and then running the script. First click on the icon that looks like a sheet of paper with lines 
+on it, which will show you the command that has been generated. Review it to see how it has inserted all of your inputs into a command called ``3dttest++``, which will run the actual group-level 
+analysis. Then click on the green “Go” icon to run the test.
+
+Viewing the Results
+^^^^^^^^^^^^^^^^^^^
+
+When ``Go`` has been finished, You will see a new directory called "group_results" has been created if you go back to Terminal and type ``ls``, ``cd`` to test.001.3dttest++. Which contains the script we 
+just produced (“BART_cash-explode_ttest”), another folder called test.results, which contains the group-level output. Load this in the afni viewer, set an uncorrected p-value of 0.001 (by right-clicking 
+on the “p=” ) and clusterize the data to 40, which show clusters with an extent of 40 voxels or more.
+
+
+.. image:: p_value.PNG
+
+.. image:: clustersize.PNG
+
+
+.. image:: Grroup_statistics.PNG  
+
+
+3dMEMA
+^^^^^^
