@@ -100,6 +100,7 @@ Menu
 
     SPM/SPM_menu
     SPM/SPM_Ballon/SPM_Ballon.rst
+    SPM/SPM_preprocessing/preprocessing.rst
 
 .. toctree::
    :maxdepth: 1
