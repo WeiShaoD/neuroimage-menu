@@ -103,10 +103,10 @@ Menu
     SPM/SPM_preprocessing/preprocessing.rst
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Dessert SuperComputer
+    :maxdepth: 1
+    :caption: Dessert SuperComputer
 
-SuperComputer/SuperComputer_menu
+    SuperComputer/SuperComputer_menu
 
 
 “Is what each begins and perfects on himself”
