@@ -25,14 +25,19 @@ As a control task, participants intermittently inflated a gray “control” bal
 the control balloon until it disappeared from the screen, and the next trial began. Unlike with reward balloons, participants had no control over how many times they could inflate the control balloon 
 before the trial ended.
 
-for more information, please go `here <https://www.frontiersin.org/articles/10.3389/fnins.2012.00080/full/>`__ 
+For more information, please go `here <https://www.frontiersin.org/articles/10.3389/fnins.2012.00080/full/>`__ 
 
 Dowloading the data
-*******************
+^^^^^^^^^^^^^^^^^^^
 
-Now, go to `there <https://openneuro.org/datasets/ds000001/versions/1.0.0>`__ , download the data and save it as ``BART_afni`` in our home directory. 
+As an Open Source dataset, BART dataset has a standardized structure: Each subject folder contains an anatomical directory and a functional directory labeled anat and func, thess contain the anatomical 
+and functional images collected during the experiment. The func directory also contains onset times, or timestamps for when the subject underwent different trials. This format is known as Brain Imaging 
+Data Structure, `BIDS <https://neuroimage-book02.readthedocs.io/en/latest/OpenNeuro/Neuroimage_data.html>`__. As an example of the BIDS format. The func directory of BART contains functional data, three runs of functional data - and corresponding “events.tsv” files, which contain onsets, or 
+timestamps of which condition happened at what time. You can open these as a text file or as a spreadsheet.
 
-.. image:: BRAT.PNG
+Now, go to `there <https://openneuro.org/datasets/ds000001/versions/1.0.0>`__ , download the data and save it as ``BART_spm`` in our home directory. 
+
+.. image:: BART_spm.PNG
        
 As you can see, we have 16 subjects. **participants.tsv** will tell you the demographic information of subjects, **task-balloonanalogrisktask_bold.json** contains TR information. You can preview all of 
 these information from the OpenNeuro data web.
@@ -51,4 +56,4 @@ Let's take a close look
 
 **func** has all the functional images, end with **bold.nii.gz** as well as trial-related files end with **events.tsv**.
 
-Whenver you're are ready, let's go to next
+Whenver you're are ready, let's go!

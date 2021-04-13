@@ -1,7 +1,7 @@
 Preprocessing I
 ===============
 
-Remember our drink menu? It is a little different for what we should do in AFNI but overall there are very similar, Anyway, let’s have a couple of drinks before the meal:
+Remember our drink menu? It is a little different for what we should do in AFNI but overall there are very similar, Anyway, let’s have a couple of drinks before the meal
 
 Inspecting the image
 ^^^^^^^^^^^^^^^^^^^^
