@@ -1,5 +1,5 @@
-Welcome to the preprocessing
-============================
+Preprocessing
+=============
 
 In SPM
 
