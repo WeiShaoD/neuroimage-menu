@@ -13,5 +13,5 @@ Downloading and Installing SPM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Unlike AFNI or FSL, SPM is able to run on any operating system as long as it has Matlab installed. Matlab is proprietary software that is quite expensive, but if you are a student or university employee 
-you may be able to obtain a copy for free. Once you have installed Matlab, the `SPM website https://www.fil.ion.ucl.ac.uk/spm/software/spm12/>`__ has instructions on how to install the software package. 
+you may be able to obtain a copy for free. Once you have installed Matlab, the `SPM website <https://www.fil.ion.ucl.ac.uk/spm/software/spm12/>`__ has instructions on how to install the software package. 
 Click on the “download form” button to fill out some personal details such as your position and what you will be using the software for, which will enable you to download the software.
