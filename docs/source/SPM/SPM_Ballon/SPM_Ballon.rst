@@ -8,7 +8,7 @@ In Balloon analog risk task(BART), Participants can manipulate the Ballon to con
 Analog Risk Task. As the picture shows, escalating risk-taking occurs under uncertainty and might be experienced either as the accumulation of greater potential rewards, or as exposure to 
 increasing possible losses and decreasing expected value.
 
-.. figure:: AFNI_Ballon_1.PNG
+.. figure:: Ballon_1.PNG
 
      (A) An example of an explosion trial: participants press one of two buttons to inflate puffs of air into a balloon presented on a computer screen. Every successful pump adds $0.25 to their temporary 
      bank for that trial. If the balloon explodes before the participant cashes out then nothing is won on that trial. However, an explosion does not affect the cumulative total winnings earned on prior 
@@ -32,22 +32,22 @@ Dowloading the data
 
 Now, go to `there <https://openneuro.org/datasets/ds000001/versions/1.0.0>`__ , download the data and save it as ``BART_afni`` in our home directory. 
 
-.. image:: AFNI_BRAT.PNG
+.. image:: BRAT.PNG
        
 As you can see, we have 16 subjects. **participants.tsv** will tell you the demographic information of subjects, **task-balloonanalogrisktask_bold.json** contains TR information. You can preview all of 
 these information from the OpenNeuro data web.
 
 Let's take a close look 
 
-.. image:: AFNI_anatfunc.PNG
+.. image:: anatfunc.PNG
 
 ``cd`` to sub-01, you will find two directories, anat and func that correspond anatomical and functional. These are two important directories that we will visit most.
 
-.. image:: AFNI_anat.PNG  
+.. image:: anat.PNG  
 
 **anat** includes all the anatomical images such as T1 and T2 (if possible).
 
-.. figure:: AFNI_func.PNG
+.. figure:: func.PNG
 
 **func** has all the functional images, end with **bold.nii.gz** as well as trial-related files end with **events.tsv**.
 

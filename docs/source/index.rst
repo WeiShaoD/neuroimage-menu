@@ -99,7 +99,7 @@ Menu
     :caption: Main course 4 SPM
 
     SPM/SPM_menu
-
+    SPM/SPM_Ballon/SPM_Ballon.rst
 
 .. toctree::
    :maxdepth: 1
