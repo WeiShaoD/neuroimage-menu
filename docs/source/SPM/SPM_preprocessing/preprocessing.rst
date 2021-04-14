@@ -64,7 +64,7 @@ rest of the defaults alone, as well.
 .. image:: SPM_realignment_Data.PNG
 
 Loading the Images
-^^^^^^^^^^^^^^^^^^
+******************
 
 In this experiment, there were three runs of data in per subject ( each run of SPM refers as a session). Look at the Data tab, click on **New: Session** to add three sessions. An <-X appeared to the 
 right of each Session field. Click Specify at the button to open up the Image Selection window. Navigate to the func directory of sub-02 and select the file 
@@ -90,28 +90,49 @@ You need to repeat all the steps above and choose 300 frames from the choose **r
 
 .. image:: SPM_data_finish.PNG
 
+.. image:: SPM_realignment_image.PNG
+
 Slice-Timing Correction in SPM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Similar to what we did with Realignment, we will first click on the Slice Timing button in the SPM GUI. Click on the Data field and create two new Sessions. Double-click on the first Session, and in the 
-Filter column type ^rsub-08_task-flanker_run-1.*. In the Frames field, enter 1:146 and press enter; select all of the frames that are displayed, and click Done. Do the same procedure for the run-2 files 
-for the second session.
+Filter column type ^rsub-02_task-flanker_run-1.*. In the Frames field, enter 1:300 and press enter; select all of the frames that are displayed, and click Done. Do the same procedure for the run-02 and 
+run-03 files for the second session.
 
-For the Number of Slices field, we will need to find out how many slices there are in each of the volumes in our dataset. From the Matlab terminal navigate to the directory sub-08/func and type:
+For the ``Number of Slices field``, we will need to find out how many slices there are in each of the volumes in our dataset. From the Matlab terminal navigate to the directory sub-02/func and type::
 
-This will load the header of the image into a variable called V. If you now type V and press return, you will see that it contains the following fields:
+  V = spm_vol('sub-02_task-balloonanalogrisktask_run-01_bold.nii')
 
-fname is the name of the file, and dim contains the dimensions for each volume in the file. (We won’t be looking at the other fields right now; all you need to know is that they contain other header 
-information that SPM needs to read the file.) If you type
+This will load the header of the image into a variable called V. If you now type V and press return, you will see that it contains the following fields::
+
+  300x1 struct array with fields:
+
+    fname
+    dim
+    dt
+    pinfo
+    mat
+    n
+    descrip
+    private
+
+``fname`` is the name of the file, and ``dim`` contains the dimensions for each volume in the file. ( all you need to know is that they contain other header information that SPM needs to read the file.) 
 
 It will return the dimensions of the first volume in the time-series in the x-, y-, and z-directions. You should see something like this:
 
-This means that the first volume of the time-series has the dimensions of 64x64x40 voxels, with 40 being the number of slices in the z-dimensions. We will assume that the dimensions of each image and the 
+.. image:: SPM_V.PNG
+
+.. image:: V(1)_dim.PNG
+
+This means that the first volume of the time-series has the dimensions of 64x64x34 voxels, with 34 being the number of slices in the z-dimensions. We will assume that the dimensions of each image and the 
 number of slices will be the same for every volume in the subject’s functional data.
 
-Now go back to the Batch Editor window, double-click on Number of Slices, enter a value of 40, and click OK.
+Go back to the SPM_GUI window, double-click on Number of Slices, enter a value of 34, and click OK.
 
-For the TR, enter 2; for the TA, follow the formula provided in the help window and enter 2-(2/40). For Slice order enter [1:2:40 2:2:40], and for the Reference Slice enter a value of 1. Leave the 
-filename prefix as is, which will prepend an a to the files that are generated. Do this same procedure for run-2 as well. When you are finished, the preprocessing window should look like this:
+Enter 2 for TR, use the formula enter 2-(2/34) for the TA. Enter [1:2:34 2:2:34] for ``Slice order``, and for ``Reference Slice`` enter a value of 1. Leave the filename prefix as a. Do this same 
+procedure for run-02 and run-03 as well. When you are finished, the preprocessing window should look like this:
+
+.. image:: Slice_Timing.PNG
 
 When the images have been slice-time corrected, you are ready to coregister the functional data to the anatomical data; in other words, we will align the two sets of images as best we can.
+
