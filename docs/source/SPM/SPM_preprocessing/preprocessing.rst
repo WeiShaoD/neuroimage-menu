@@ -80,14 +80,38 @@ bound to an high number like 1:10000. The list of files will max out at the numb
 
 .. image:: SPM_mriinfo.PNG
 
-You might notice that all of the **frames** for run-01, run-02 and run-03 have been selected, even though we only want the frames for run-01. You could simply click and drag from frame 1 to frame 
-300 for run-01, but you risk accidentally including other frames by mistake. To restrict our file selection to only the frames we are interested in, on the other hand, we can use the Filter field. This 
-field uses   regular expressions, a type of coding shorthand to indicate which characters to include in a string. In this case, to the left of the .* characters that are already in the field, type run-01 
-and press return. This will refresh the screen to display only those frames which include the string run-01. Either click and drag to select all of the images, or right click in the selection window and 
-click Select All.
+You might notice that all of the **frames** for run-01, run-02 and run-03 have been selected, even though we only want run-01 frames in this session. To limit our file selection to only the frames we are 
+interested in, we can use the "Filter field". In this case, to the left of the .* characters that are already in the field, type run-01 and press return. This will refresh the screen to display only 
+those frames which include the string run-01. Either click "rec" or right click select all of the images.
 
 .. image:: SPM_data.PNG
 
 You need to repeat all the steps above and choose 300 frames from the choose **run-02** and **run-03** 
 
 .. image:: SPM_data_finish.PNG
+
+Slice-Timing Correction in SPM
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Similar to what we did with Realignment, we will first click on the Slice Timing button in the SPM GUI. Click on the Data field and create two new Sessions. Double-click on the first Session, and in the 
+Filter column type ^rsub-08_task-flanker_run-1.*. In the Frames field, enter 1:146 and press enter; select all of the frames that are displayed, and click Done. Do the same procedure for the run-2 files 
+for the second session.
+
+For the Number of Slices field, we will need to find out how many slices there are in each of the volumes in our dataset. From the Matlab terminal navigate to the directory sub-08/func and type:
+
+This will load the header of the image into a variable called V. If you now type V and press return, you will see that it contains the following fields:
+
+fname is the name of the file, and dim contains the dimensions for each volume in the file. (We won’t be looking at the other fields right now; all you need to know is that they contain other header 
+information that SPM needs to read the file.) If you type
+
+It will return the dimensions of the first volume in the time-series in the x-, y-, and z-directions. You should see something like this:
+
+This means that the first volume of the time-series has the dimensions of 64x64x40 voxels, with 40 being the number of slices in the z-dimensions. We will assume that the dimensions of each image and the 
+number of slices will be the same for every volume in the subject’s functional data.
+
+Now go back to the Batch Editor window, double-click on Number of Slices, enter a value of 40, and click OK.
+
+For the TR, enter 2; for the TA, follow the formula provided in the help window and enter 2-(2/40). For Slice order enter [1:2:40 2:2:40], and for the Reference Slice enter a value of 1. Leave the 
+filename prefix as is, which will prepend an a to the files that are generated. Do this same procedure for run-2 as well. When you are finished, the preprocessing window should look like this:
+
+When the images have been slice-time corrected, you are ready to coregister the functional data to the anatomical data; in other words, we will align the two sets of images as best we can.
