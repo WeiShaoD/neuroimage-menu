@@ -27,7 +27,7 @@ containing the images and then type ``gunzip *.gz``
 Viewing the Functional images
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When you are done looking at the anatomical image, click on the Display button again, navigate to the func directory, and select the run-1 functional image.
+When you are done looking at the anatomical image, click on the Display button again, navigate to the func directory, and select the **run-01** functional image.
 
 A new image will be displayed in the orthogonal viewing windows. This image also looks like a brain, but it is not as clearly defined as the anatomical image. This is because the resolution is lower. It 
 is typical for a study to collect a high-resolution T1-weighted (i.e., anatomical) image and lower-resolution functional images, which are lower resolution in part because they are collected at a very 
@@ -36,19 +36,58 @@ versa.
 
 .. image:: SPM_dsiplay_2.PNG
 
-Many of the quality checks for the functional image are the same as with the anatomical image: Watch out for extremely bright or extremely dark spots in the grey or white matter, as well as for image 
-distortions such as abnormal stretching or warping. One place where it is common to see a little bit of distortion is in the orbitofrontal part of the brain, just above the eyeballs. There are ways to 
-reduce this distortion, but for now we will ignore it.
 
-Another quality check is to make sure there isn’t excessive motion. Functional images are often collected as a time-series; that is, multiple volumes are concatenated together into a single dataset. To 
-view the time-series of volumes in rapid succession, click the Check Reg button and load the sub-01_task-flanker_run-1_bold.nii data. This will display a single volume in three planes: Coronal, Sagittal, 
-and Axial. Right click on any of the planes and click the Browse button. You will be prompted to select an image; click on the currently selected file to remove it, and then enter the string run-1 in the 
-Filter field, and 1:146 in the Frames field. Select all of the resulting images, and click Done.
+During the Realignment preprocessing step you will generate a movement parameter file showing how much motion there was between each volume.
 
-You will now see a horizontal scrolling bar at the bottom of the display window. Clicking on the right or left arrows will advance or go back one volume; you can also click and drag the scrolling bar to 
-view the volumes more rapidly. Clicking on the > button in the bottom right will start movie mode, which flips through the volumes at a rapid pace. Clicking on the button again will stop the movie. To 
-see a plot of the time-series activation at the voxel under the crosshairs, right-click again on any of the planes, select “Browse”, and then select “Display profile”. This opens up another figure that 
-you can view simultaneously as you flip through the volumes.
+Realignment and Slice-Timing Correction
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Also, during the Realignment preprocessing step you will generate a movement parameter file showing how much motion there was between each volume. To begin learning about the preprocessing steps, click 
-the Next button.
+Similarly, when we preprocess fMRI data we are cleaning up the three-dimensional images that we acquire every TR. An fMRI volume contains not only the signal that we are interested in - changes in 
+oxygenated blood - but also fluctuations that we are not interested in, such as head motion, random drifts, breathing, and heartbeats. We call these other fluctuations noise, since we want to separate 
+them from the signal that we are interested in. Some of these can be regressed out of the data by modeling them (which is discussed in the chapter on modeling fitting), and others can be reduced or 
+removed by preprocessing.
+
+To begin preprocessing sub-02 data, read through the following chapters. We will begin with Realignment and Slice-Timing Correction, which correct misalignments and timing errors in the functional 
+images, before moving on to Coregistration and Normalization, which align the functional and structural images and move them both to a standardized space. Finally, the images are Smoothed in order to 
+increase signal and cancel out noise. The typical sequence of preprocessing steps is numbered in the image below:
+
+.. image:: SPM_Realignment.PNG
+
+The first step of preprocessing is to realign the functional images. If you think of a time-series as a deck of cards, with each volume as a separate card, realignment will put all the cards in the same 
+orientation and make the sides line up - similar to what you do after you shuffle a deck of cards.
+
+If you click on the button Realign (Estimate & Reslice), a window opens up showing the options for realigning and reslicing the data. The Estimate part refers to estimating the amount that each volume is 
+out of alignment with a reference volume, and Reslice indicates that these estimates will be used to nudge each of the volumes into alignment with the reference volume. The reference volume is set in the 
+field “Num Passes”, which allows you to specify whether the volumes will be aligned to the mean of all of the volumes, or to the first volume. For this tutorial, leave it as the default, and leave the 
+rest of the defaults alone, as well.
+
+.. image:: SPM_realignment_Data.PNG
+
+Loading the Images
+^^^^^^^^^^^^^^^^^^
+
+In this experiment, there were three runs of data in per subject ( each run of SPM refers as a session). Look at the Data tab, click on **New: Session** to add three sessions. An <-X appeared to the 
+right of each Session field. Click Specify at the button to open up the Image Selection window. Navigate to the func directory of sub-02 and select the file 
+"sub-02_task-balloonanalogrisktask_run-01_bold.nii,1"", 1 in here indicates that only the first frame, or volume, is available. However, In order to select all of the volumes for this run, type 1:300 and 
+press enter in the "Frames field" (underneath the Filter field) to expand the 300 number of frames available for selection.
+
+.. note::
+ 
+  If you don’t know how many frames are in the current dataset, you can use ``3dinfo`` and ``mri_info`` command to check the frrams if you have installed AFNI or freesurfer. or you can set the upper 
+bound to an high number like 1:10000. The list of files will max out at the number of available frames, and so will ensure that you do not miss any.
+
+.. image:: SPM_frame_3dinfo.PNG
+
+.. image:: SPM_mriinfo.PNG
+
+You might notice that all of the **frames** for run-01, run-02 and run-03 have been selected, even though we only want the frames for run-01. You could simply click and drag from frame 1 to frame 
+300 for run-01, but you risk accidentally including other frames by mistake. To restrict our file selection to only the frames we are interested in, on the other hand, we can use the Filter field. This 
+field uses   regular expressions, a type of coding shorthand to indicate which characters to include in a string. In this case, to the left of the .* characters that are already in the field, type run-01 
+and press return. This will refresh the screen to display only those frames which include the string run-01. Either click and drag to select all of the images, or right click in the selection window and 
+click Select All.
+
+.. image:: SPM_data.PNG
+
+You need to repeat all the steps above and choose 300 frames from the choose **run-02** and **run-03** 
+
+.. image:: SPM_data_finish.PNG
