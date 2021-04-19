@@ -182,30 +182,28 @@ Once the segmentation has finished, we are now ready to use the information gene
 Normalization
 ^^^^^^^^^^^^^
 
-After the anatomical image has been segmented, we can use those segmentations to normalize the image. From the SPM GUI, click on Normalize (Write), click on the Data field in the Batch Editor, and create 
-a new Subject. Select the Deformation Field that you created in the anat directory during Segmentation (the file should be called “y_rsub-08_T1w.nii”), and for Images to Write select all of the realigned 
-and slice-time corrected images. (You can do this more efficiently by typing ^ar.* in the Filter field, and entering 1:146 in the Frames field.)
+After the anatomical image has been segmented, we can use those segmentations to normalize the image. From the SPM GUI, click on Normalize (Write), from ``Data field`` and create a new Subject. Select 
+the ``Deformation Field`` that you created in the func directory during ``Segmentation`` (the files should be called “y_rsub-02_T1w.nii”), next, ``Images to Write``, select all of the realigned and 
+slice-time corrected images for the run-1, which means you need select all 900 files from the 3 runs. Typing ^ar.* in the "Filter field", and entering 1:300 in the "Frames field".
 
-In the Writing Options section, you can change the voxel resolution of the images that are warped. The default of 2x2x2 will create higher-resolution images, but the files will take up more space on your 
-computer. If you want to create smaller files with lower resolution, change this to 3 3 3.
+In the ``Writing Options`` section, we can change the voxel resolution of the images that are warped. The default of 2x2x2 will create higher-resolution images, but the files will take up more space on 
+your computer. But you also can choose smaller files with lower resolution by changing this to 3 3 3.
 
 Checking the Output
 *******************
 
-Once the functional images have been normalized, check the output to make sure that there were no errors. From the SPM GUI, click on Check Reg, and select one of your functional volumes that has a w 
-prepended to it (indicating that it has been warped - that is, normalized). For the second image, go to the directory spm12/canonical and select any of the T1 images - either avg152T1.nii, avg305T1.nii, 
-or single_subj_T1.nii. As with Coregistration, check to make sure that both the outlines of the brains and the internal structures are well-aligned.
-
-The template single_subj_T1.nii will have the clearest spatial resolution - i.e., you will be able to see each of the individual gyri and sulci. However, visualizing your results on this template may be 
-slightly misleading, since each subject’s anatomy has been warped and blurred; activation that appears to be in a specific location on the single_subj_T1 template may not be as specific as it appears. 
-For this reason, it is recommended to visualize your activation on one of the averaged templates, or on an average image consisting of the mean of your subject’s normalized anatomical images. We will 
-discuss this in more detail when we cover statistical modeling in the next chapter.
+Once the functional images have been normalized, let's check out the output. From SPM GUI, click on Check Reg, and select one of our functional volumes that has a w prepended to it (indicating that it 
+has been warped - that is, normalized). For the second image, go to the directory spm12/canonical and select any of the T1 images - avg152T1.nii, avg305T1.nii, or single_subj_T1.nii. As with 
+Coregistration, check to make sure that both the outlines of the brains and the internal structures are well-aligned. Although the template "single_subj_T1.nii" will have the clearest spatial resolution, 
+you can see each individual gyri and sulci. However, visualizing your results on this template may be slightly misleading, since each subject’s anatomy has been warped and blurred; activation that 
+appears to be in a specific location on the single_subj_T1 template may not be as specific as it appears. For this reason, it is recommended to visualize your activation on one of the averaged templates, 
+or on an average image consisting of the mean of your subject’s normalized anatomical images.
 
 Smooth
 ^^^^^^
 
-In the SPM GUI, click on the Smooth button and double-click on Images to Smooth. Select the warped functional images, and expand them to include all 146 frames for each run. (See the previous chapters 
-for examples on how to use the Filter and Frames fields to select the images that you want.) Leave the other defaults as they are, and then click on the green Go button.
+Click on the Smooth button from SPM GUI and double-click on ``Images to Smooth``. Select all the 300 warped frame functional images of each run. (use the "Filter and Frames fields" to select the images) 
+Leave other settings as default, and then click on ``Go`` button.
 
 Smoothed Images
 ^^^^^^^^^^^^^^^

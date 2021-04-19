@@ -110,11 +110,11 @@ are presented close together.
 Time series 
 ^^^^^^^^^^^
 
-We have mentioned this concept several times before， As the basic composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this 
+We have mentioned this concept several times before. As the basic composition of fMRI data. Remember that fMRI datasets contain several volumes strung together like beads on a string - we call this 
 concatenated string of volumes a run of data. The signal that is measured at each voxel across the entire run is called a time-series.The time-series represents the signal that is measured at each voxel.
 
-looking at the time series
-**************************
+looking at the time series in FSL
+*********************************
  
 In order to have a closer look at time series, you can open FSLview from the ``sub-01`` directory, and choose File to open 1 of 3 bold files from **func** directory. type ``Ctrl+T`` and take a look at 
 the volume tab at the buttom. The right plot here indicates the voxel you point out at the different time series positions.
