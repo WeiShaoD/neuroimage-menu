@@ -101,6 +101,7 @@ Menu
     SPM/SPM_menu
     SPM/SPM_Ballon/SPM_Ballon.rst
     SPM/SPM_preprocessing/preprocessing.rst
+    SPM/SPM_Statistics_Modeling/statistics_Medeling.rst
 
 .. toctree::
     :maxdepth: 1
