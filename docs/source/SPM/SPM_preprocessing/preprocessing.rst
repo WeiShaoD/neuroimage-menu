@@ -211,4 +211,4 @@ Smoothed Images
 
 As before, use ``Check Reg`` to load a representative volume from the output file, and view it with a warped functional image that hasn’t been smoothed side by side. 
 
-.. image:: 
+.. image:: smooth_result.PNG 
