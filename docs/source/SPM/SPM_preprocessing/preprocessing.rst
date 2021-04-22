@@ -192,21 +192,23 @@ your computer. But you also can choose smaller files with lower resolution by ch
 Checking the Output
 *******************
 
-Once the functional images have been normalized, let's check out the output. From SPM GUI, click on Check Reg, and select one of our functional volumes that has a w prepended to it (indicating that it 
-has been warped - that is, normalized). For the second image, go to the directory spm12/canonical and select any of the T1 images - avg152T1.nii, avg305T1.nii, or single_subj_T1.nii. As with 
-Coregistration, check to make sure that both the outlines of the brains and the internal structures are well-aligned. Although the template "single_subj_T1.nii" will have the clearest spatial resolution, 
-you can see each individual gyri and sulci. However, visualizing your results on this template may be slightly misleading, since each subject’s anatomy has been warped and blurred; activation that 
-appears to be in a specific location on the single_subj_T1 template may not be as specific as it appears. For this reason, it is recommended to visualize your activation on one of the averaged templates, 
-or on an average image consisting of the mean of your subject’s normalized anatomical images.
+Once the functional images have been normalized, let's check out the output. From SPM GUI, click on ``Check Reg``, and select one of our functional volumes that has a w prepended (w = warped, that is, 
+normalized). We also need choose the second image, which is a template image. Go to the spm canonical directory such as ...spm12/canonical and select a averaged template like avg152T1.nii, please 
+carefully make sure that both the outlines of the brains and the internal structures are well-aligned between these two.
+
+.. image: normalization_output.PNG
 
 Smooth
 ^^^^^^
 
-Click on the Smooth button from SPM GUI and double-click on ``Images to Smooth``. Select all the 300 warped frame functional images of each run. (use the "Filter and Frames fields" to select the images) 
-Leave other settings as default, and then click on ``Go`` button.
+Click the ``Smooth`` from SPM GUI and select ``Images to Smooth``. choose all the 300 warped frame functional images of each run. ( you can use ^warsub in "Filter fields" and 1:900 in "Frames fields" to 
+select the images), then click ``Go`` button.
+
+..image:: smooth.PNG
 
 Smoothed Images
 ^^^^^^^^^^^^^^^
 
-As before, use the Check Reg button to load a representative volume from the output you just created, and view it side by side with a warped functional image that hasn’t been smoothed. Does it look like 
-the image has been smoothed the amount that you wanted?
+As before, use ``Check Reg`` to load a representative volume from the output file, and view it with a warped functional image that hasn’t been smoothed side by side. 
+
+.. image:: 
