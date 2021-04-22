@@ -162,7 +162,7 @@ The first argument ``quantifyHAsubregions.sh`` specifies that we want to collect
 
 After a few seconds, you will see the output files in the current directory, open it with ``less`` 
 
-.. image:: volume_matrix.PNG
+##.. image:: volume_matrix.PNG
 
 What a mess! Fortunately, there is a solution.
  
@@ -178,11 +178,11 @@ Change format in step 3. "Finish". And save as csv file
 
 Then, You will get a file like this 
 
-.. image:: volume_martix_Excel.PNG
+##.. image:: volume_martix_Excel.PNG
 
 and have fun by play it around like PCA analysis.
 
-.. image:: hipp_vol.png
+##.. image:: hipp_vol.png
 
 FreeSurfer commands 
 ^^^^^^^^^^^^^^^^^^^
