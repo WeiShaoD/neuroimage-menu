@@ -196,7 +196,7 @@ Once the functional images have been normalized, let's check out the output. Fro
 normalized). We also need choose the second image, which is a template image. Go to the spm canonical directory such as ...spm12/canonical and select a averaged template like avg152T1.nii, please 
 carefully make sure that both the outlines of the brains and the internal structures are well-aligned between these two.
 
-.. image: normalization_output.PNG
+.. image:: normalization_output.PNG
 
 Smooth
 ^^^^^^
@@ -204,7 +204,7 @@ Smooth
 Click the ``Smooth`` from SPM GUI and select ``Images to Smooth``. choose all the 300 warped frame functional images of each run. ( you can use ^warsub in "Filter fields" and 1:900 in "Frames fields" to 
 select the images), then click ``Go`` button.
 
-..image:: smooth.PNG
+.. image:: smooth.PNG
 
 Smoothed Images
 ^^^^^^^^^^^^^^^
