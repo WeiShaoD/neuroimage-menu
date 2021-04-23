@@ -124,6 +124,8 @@ are:
 2 the onset time of trial for each condtion, relative to the onset of the scan
 3 The duration of each trial
 
+..image:: event.PNG 
+
 This information needs to be extracted from the events.tsv files and be transformed into a format that the AFNI can read. our job is to create a timing file for explode and cash experimental condition, 
 and then split the file based on which run the condition was in. We will have 6 timing files:
 
@@ -134,20 +136,7 @@ and then split the file based on which run the condition was in. We will have 6 
 2.2 Timings for the cash trials that occurred during the second run (cash_run2.txt)
 2.3 Timings for the cash trials that occurred during the third run (cash_run3.txt)
 
-Each of these timing files will have three columns:
-
-1 Onset time, in seconds, relative to the start of the scan
-2 Duration of the trial, in seconds
-3 Parametric modulation(discuss later)
-
-Let’s take a look at the BART dataset. Within each subject’s func directory are files labeled events.tsv. These files contain three pieces of information that we need to create our timing files (also 
-known as onset files):
-
-1 The name of the condition;
-2 When each trial of the condition occurred, in seconds, relative to the start of the scan; and
-3 The duration of each trial.
-
-These need to be extracted from the events.tsv files and formatted in a way that the SPM software can read. In this case, we will create a timing file for each condition, and then split that file 
+These need to be extracted from the "events.tsv" files and formatted in a way that the SPM software can read. In this case, we will create a timing file for each condition, and then split that file 
 according to which run the condition was in. In total, then, we will create four timing files:
 
 Each of these timing files will have the same format consisting of two columns, in the following order:

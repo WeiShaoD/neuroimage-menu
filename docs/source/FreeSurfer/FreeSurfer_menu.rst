@@ -155,7 +155,7 @@ Extract the volume matrix from FreeSurfer
 Once we use the freesurfer automated segmentation, we can also collect the volumes of the subregions of the hippocampus / amygdala of all subjects and write them to a single file, ectracting the volume 
 matrix::
 
-  quantifyHAsubregions.sh hippoSf <T1> <output_file> 
+  quantifyHAsubregions.sh hippoSf <T1> <output_file> <Output_file_directory> 
  
 The first argument ``quantifyHAsubregions.sh`` specifies that we want to collect the volumes of the hippocampus (hippoSf). The second argument is the name of the analysis: for the first mode of operation 
 (only main T1 scans), it is simply type T1, and don't forget to name the output_file.
@@ -183,6 +183,9 @@ Then, You will get a file like this
 and have fun by play it around like PCA analysis.
 
 ##.. image:: hipp_vol.png
+
+Longitudinal segmentation of T1 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 FreeSurfer commands 
 ^^^^^^^^^^^^^^^^^^^
