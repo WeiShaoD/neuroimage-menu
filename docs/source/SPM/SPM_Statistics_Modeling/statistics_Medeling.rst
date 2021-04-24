@@ -136,7 +136,7 @@ and then split the file based on which run the condition was in. We will have 6 
 2.2 Timings for the cash trials that occurred during the second run (cash_run2.txt)
 2.3 Timings for the cash trials that occurred during the third run (cash_run3.txt)
 
-These need to be extracted from the "events.tsv" files and formatted in a way that the SPM software can read. In this case, we will create a timing file for each condition, and then split that file 
+These need to be extracted from the "events.tsv" files and formatted in a way that the SPM software can read(txt file). In this case, we will create a timing file for two conditions, and then split that file 
 according to which run the condition was in. In total, then, we will create four timing files:
 
 Each of these timing files will have the same format consisting of two columns, in the following order:
@@ -144,10 +144,44 @@ Each of these timing files will have the same format consisting of two columns, 
 1 Onset time, in seconds, relative to the start of the scan; and
 2 Duration of the trial, in seconds.
 
-To format the timing files, download this script. (You can download it by clicking on the Raw button, then right-clicking in the newly-opened window and selecting “Save As”.) We won’t go into detail 
-about how it works, but all you need to do is place it in the experimental folder containing the subjects, and from that directory type convertOnsetTimes. This will create timing files for each run for 
-each subject and store them in each subject’s corresponding func directory. To check the output of an individual file - for exmaple, the onset times for the incongruent trials for run 1 - type 
-importdata(sub-08/func/incongruent_run1.txt). You should see numbers similar to the ones in the figure above.
+The code::
 
-Once you have created the timing files, you are now ready to use them to fit a model to the fMRI data. To see how to do that, click the Next button.
+  #!/bin/bash
+
+#Check whether the file subjList.txt exists; if not, create it
+if [ ! -f subjList.txt ]; then
+      ls -d sub-?? > subjList.txt
+fi
+
+#Loop over all subjects and format timing files into a format that FSL can understand
+for subj in `cat subjList.txt` ; do
+      cd $subj/func #Navigate to the subject's func directory, which contains the event files
+
+      #Extract the onset and duration for the pump,control,explode, and cash out trials for each run.
+      cat ${subj}_task-balloonanalogrisktask_run-01_events.tsv | awk '{if ($3=="pumps_demean") {print $1, $2, "1"}}' > pump_run1.txt
+      cat ${subj}_task-balloonanalogrisktask_run-02_events.tsv | awk '{if ($3=="pumps_demean") {print $1, $2, "1"}}' > pump_run2.txt
+      cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="pumps_demean") {print $1, $2, "1"}}' > pump_run3.txt
+
+      cat ${subj}_task-balloonanalogrisktask_run-01_events.tsv | awk '{if ($3=="control_pumps_demean") {print $1, $2, "1"}}' > control_run1.txt
+      cat ${subj}_task-balloonanalogrisktask_run-02_events.tsv | awk '{if ($3=="control_pumps_demean") {print $1, $2, "1"}}' > control_run2.txt
+      cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="control_pumps_demean") {print $1, $2, "1"}}' > control_run3.txt
+
+      cat ${subj}_task-balloonanalogrisktask_run-01_events.tsv | awk '{if ($3=="explode_demean") {print $1, $2, "1"}}' > explode_run1.txt
+      cat ${subj}_task-balloonanalogrisktask_run-02_events.tsv | awk '{if ($3=="explode_demean") {print $1, $2, "1"}}' > explode_run2.txt
+      cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="explode_demean") {print $1, $2, "1"}}' > explode_run3.txt
+
+      cat ${subj}_task-balloonanalogrisktask_run-01_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run1.txt
+      cat ${subj}_task-balloonanalogrisktask_run-02_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run2.txt
+      cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run3.txt
+
+
+      cd ../..
+done
+
+Copy this block of code, write them into a script file save as timing.sh. Then, place it in the directory that containing the all subjects, type ``bash timing.sh``. This will create all the timing files 
+for each run for each subject and store them in func directory accordingly. we can type more sub-02/func/cash_run1.txt) to check the data. You are suppsoed to see the figure below:
+
+..image:: timing_file_result.PNG
+
+Once we have created the timing files,  we are now ready to use them to fit a model to the fMRI data. 
 
