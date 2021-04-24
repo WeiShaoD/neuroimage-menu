@@ -148,14 +148,14 @@ The code::
 
   #!/bin/bash
 
-#Check whether the file subjList.txt exists; if not, create it
-if [ ! -f subjList.txt ]; then
-      ls -d sub-?? > subjList.txt
-fi
+  #Check whether the file subjList.txt exists; if not, create it
+  if [ ! -f subjList.txt ]; then
+        ls -d sub-?? > subjList.txt
+  fi
 
-#Loop over all subjects and format timing files into a format that FSL can understand
-for subj in `cat subjList.txt` ; do
-      cd $subj/func #Navigate to the subject's func directory, which contains the event files
+  #Loop over all subjects and format timing files into a format that FSL can understand
+  for subj in `cat subjList.txt` ; do
+        cd $subj/func #Navigate to the subject's func directory, which contains the event files
 
       #Extract the onset and duration for the pump,control,explode, and cash out trials for each run.
       cat ${subj}_task-balloonanalogrisktask_run-01_events.tsv | awk '{if ($3=="pumps_demean") {print $1, $2, "1"}}' > pump_run1.txt
@@ -175,8 +175,8 @@ for subj in `cat subjList.txt` ; do
       cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run3.txt
 
 
-      cd ../..
-done
+        cd ../..
+  done
 
 Copy this block of code, write them into a script file save as timing.sh. Then, place it in the directory that containing the all subjects, type ``bash timing.sh``. This will create all the timing files 
 for each run for each subject and store them in func directory accordingly. we can type more sub-02/func/cash_run1.txt) to check the data. You are suppsoed to see the figure below:
