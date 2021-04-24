@@ -181,7 +181,7 @@ done
 Copy this block of code, write them into a script file save as timing.sh. Then, place it in the directory that containing the all subjects, type ``bash timing.sh``. This will create all the timing files 
 for each run for each subject and store them in func directory accordingly. we can type more sub-02/func/cash_run1.txt) to check the data. You are suppsoed to see the figure below:
 
-..image:: timing_file_result.PNG
+.. figure:: timing_file_result.PNG
 
 Once we have created the timing files,  we are now ready to use them to fit a model to the fMRI data. 
 
