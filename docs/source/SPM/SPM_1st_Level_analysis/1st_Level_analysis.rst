@@ -4,6 +4,16 @@ First level analysis in SPM
 Specifying the Model
 ^^^^^^^^^^^^^^^^^^^^
 
+.. image:: estimate.PNG
+
+.. image:: model_design.PNG
+
+.. image:: Specifying_model.PNG 
+
+.. image:: Contrast.PNG
+
+.. image:: contrast_2.PNG
+
 Having created the timing files in the previous chapter, we can use them in conjunction with our imaging data to create statistical parametric maps. These maps indicate the strength of the correlation 
 between our ideal time-series (which consists of our onset times convolved with the HRF) and the time-series that we collected during the experiment. The amount of modulation of the HRF is represented by 
 a beta weight, and this in turn is converted into a t-statistic when we create contrasts using the SPM contrast manager.
