@@ -6,54 +6,58 @@ Specifying the Model
 
 .. image:: estimate.PNG
 
-.. image:: model_design.PNG
-
-.. image:: Specifying_model.PNG 
-
 .. image:: Contrast.PNG
 
 .. image:: contrast_2.PNG
 
-Having created the timing files in the previous chapter, we can use them in conjunction with our imaging data to create statistical parametric maps. These maps indicate the strength of the correlation 
-between our ideal time-series (which consists of our onset times convolved with the HRF) and the time-series that we collected during the experiment. The amount of modulation of the HRF is represented by 
-a beta weight, and this in turn is converted into a t-statistic when we create contrasts using the SPM contrast manager.
+Since we have created the timing files previously, it is time for us to use them in conjunction with our imaging data to create statistical parametric maps. These maps could indicate that the correlation 
+between the ideal time-series (the onset times convolved with the HRF in our model) and the time-series collected in this experiment. When we use the SPM to construct contrasts, beta weight represents 
+the amount of modulation of the HRF, which is then transformed into a t-statistic.
 
-To begin, from the SPM GUI click on Specify 1st-Level. Note that the first field that needs to be filled in is the Directory field. To keep our results organized, go to the Matlab terminal, navigate to 
-the sub-08 directory, and type mkdir 1stLevel. Then double-click on Directory and select the 1stLevel directory you just created. All of the output of the 1st-level analysis will go into this folder.
+To get started, create a sub-directory in sub-02 called 1stlevel so we can organize the data. Then, Open SPM GUI from Matlab terminal and select ``1st-Level``, select the 1stLevel directory we just 
+created. All of the output of the 1st-level analysis will be keeped in this folder. After that, we'll fill out the section on Timing parameters. Select ``Seconds`` for the design unit, and enter a value 
+of ``2`` for Interscan Interval. Then go to ``Data & Design``. and build three new sessions by clicking three times on ``New: Subject/Session``. Go to the func directory and use the "Filter and Frames 
+fields" we used before to to pick all 300 volumes of the warped usable data(file start with swar) for the first session's Scans. And do the same for the othjer two session.
 
-Next, we will fill in the Timing parameters section. Under Units for design, select Seconds, and enter a value of 2 for Interscan Interval. Then click on Data & Design, and click twice on New: 
-Subject/Session to create two new sessions. For the Scans of the first session, go to the func directory and use the Filter and Frames fields to select all 146 volumes of the warped functional data 
-(i.e., those files beginning with swar). Do the same for the volumes in the second session.
+Return to the field for the first time. In the experiment, there are two conditions, and both conditions occur in each run. To construct two new condition fields, go to conditions and then New: Condition 
+twice. Double-click on Name and type cash and explode. for the first condition.
 
-Go back to the field for the first session. There are two conditions in the experiment, and both conditions occur in each run. Click on Conditions and then New: Condition twice to create two new 
-Condition fields. For the first condition, double-click on Name and type Inc.
+In order to find out the onset times for each occurrence of the cash condition. From the Matlab terminal, navigate to the func directory and type:
 
-We will now need the onset times for each occurrence of the Incongruent condition. From the Matlab terminal, navigate to the func directory and type:
-
-IncRun1 = importdata('incongruent_run1.txt');
+cashRun1 = importdata('cash_run1.txt');
 IncRun1(:,1)
 
-Which will return the onset times for the Incongruent condition of run 1. Double-click on the Onsets field, and copy and paste the onset times into the window. Click Done.
+Which will give you the onset times for cash condition in run_1, copy and paste the onset times onto the Onsets sector. Then we can therefore enter the number 0.772 in the ``Durations field``, (you can 
+check the duration time by less sub-02_task-balloonanalogrisktask_run-01_events.tsv) and SPM will assume that it is the same duration for every trial.
 
-In this experiment each trial lasted for 2 seconds. We can therefore enter the number 2 in the Durations field, and SPM will assume that it is the same duration for every trial.
+Repeat the process for the explode condition in run 01, as well as the cash and explode conditions in run 02 and run 03, remembering to set the duration time to 2. Here's the code for displaying the 
+onset times for the remaining onset times::
 
-Now do the same procedure for the Congruent condition for run 1, and the Incongruent and Congruent conditions for run 2, remembering to enter a duration value of 2 for all of them. Here is the code to 
-display the onset times for each of the remaining onset times that you will need:
+  explodeRun1 = importdata('explode_run1.txt');
+  explodeRun1(:,1)
 
-ConRun1 = importdata('congruent_run1.txt');
-ConRun1(:,1)
-IncRun2 = importdata('incongruent_run2.txt');
-IncRun2(:,1)
-ConRun2 = importdata('congruent_run2.txt');
-ConRun2(:,1)
+  cashRun2 = importdata('cash_run2.txt');
+  explodeRun2(:,1)
+  
+  explodeRun2 = importdata('explode_run2.txt');
+  explodeRun2(:,1)
 
-You can use the names “Inc” and “Con” for both runs if you want; the names will be stored in a file called SPM.mat which we will look at later in more detail.
+  cashRun3 = importdata('cash_run3.txt');
+  explodeRun3(:,1)
 
-When you are done, click the green Go button. The model estimation should only take a few moments. When it is finished, you should see something like this:
+  explodeRun3 = importdata('explode_run3.txt');
+  explodeRun3(:,1)
 
-The General Linear Model for a single subject. The first two columns shows the ideal time-series for the Incongruent and Congruent conditions for the first session, while the next two show the ideal 
-time-series for the conditions of run 2. The last two columns are basline regressors capturing the mean signal for each run. In this representation, time runs from top to bottom, and lighter colors 
-represent more activity.
+.. image:: Specifying_model.PNG 
+
+The names will be stored in a file called SPM.mat in the 1stLevel directory which we will look at later in more detail. Now, click the green ``Go button`` when you're done. It should only take a few moments 
+to estimate the model. When it's all said and done, it should look like this:
+
+.. image:: model_design.PNG 
+
+The General Linear Model for For a single subject. The ideal time-series for the cash and explode conditions for the first session are shown in the first two columns, while the ideal time-series for the 
+conditions of run 02 are shown in the next two columns, the next two columns indicate the ideal time-series for the conditions of run 03. The last three columns are basline regressors that capture the 
+mean signal of each run. In this figure, time runs from top to bottom, and lighter colors represent more activity.
 
 Estimating the Model
 ^^^^^^^^^^^^^^^^^^^^
