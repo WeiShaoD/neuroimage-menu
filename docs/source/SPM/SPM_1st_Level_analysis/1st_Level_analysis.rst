@@ -62,15 +62,45 @@ mean signal of each run. In this figure, time runs from top to bottom, and light
 Estimating the Model
 ^^^^^^^^^^^^^^^^^^^^
 
-Now that we have created our GLM, we will need to estimate the beta weights for each condition. From the SPM GUI click Estimate, and then double-click on the field Select SPM.mat. Change the Write 
-residuals option to Yes. Navigate to the 1stLevel directory and select the SPM.mat file, and then click the green Go button. This will take a few minutes to run.
+We have created our GLM, the next step is to estimate the beta weights for each condition. Click ``Estimate`` from the SPM GUI, and select the SPM.mat from ``select SPM.mat`` tab from sub-02/1stLevel. 
+Change the "Write residuals option" to Yes. and then click the green ``Go button``. This will take a few minutes to run.
 
 The Contrast Manager
 ^^^^^^^^^^^^^^^^^^^^
 
-When you have finished estimating the model, you are ready to create contrasts. If we estimate a beta weight for the Incongruent condition and a beta weight for the Congruent condition, for example, we 
-can take the difference between them to calculate a contrast estimate at each voxel in the brain. Doing so for each voxel will create a contrast map.
+When you've done estimating the model, it's time to start making contrasts. what we need to do is estimate a beta weight for the cash condition and a beta weight for the explode condition. To be more 
+specific, we can determine a contrast estimate at each voxel in the brain by take the difference betwween these two conditions. A contrast map will be generated if by doing this way.
 
-To create these contrasts, click on the Results button of the SPM GUI, and select the SPM.mat file that was generated after estimating the model. You will see the design matrix on the right side of the 
-panel. Click on Define New Contrast, and in the Name field type Inc-Con. In the contrast vector window, type 0.5 -0.5 0.5 -0.5, and then click submit. If the contrast is valid, you should see green text 
-at the bottom of the window saying “name defined, contrast defined”. Make sure that you contrast manager looks like the figure below, and then click OK to create the contrast.
+To make these contrasts, go to the ``Result button`` from SPM GUI and select the SPM.mat file that was created when the model was estimated. The design matrix is located on the right side of the screen. 
+Select ``Define New Contrast`` and put cash-explode in the Name field.
+
+type 1 -1 1 -1 1 -1 in the contrast vector window, then press submit. If the contrast is right, you will see “name identified, contrast defined” at the bottom of the window. Make sure your contrast 
+manager looks like the image below, and then click OK.
+
+.. image:: Contrast.PNG
+
+Examining the Output
+^^^^^^^^^^^^^^^^^^^^
+
+Double-click on the contrast Inc-Con to open the Results window. You will first need to set a few options:
+
+1 apply masking: Set this to “none”, as we want to examine all of the voxels in the brain, and we do not want to restrict our analysis to a mask.
+2 p value adjustment to control: Click on “none”, and set the uncorrected p-value to 0.01. This will test each voxel individually at a p-threshold of 0.01. 
+3 extent threshold {voxels}: Set this to 10 for now, which will only show clusters of 10 or more contiguous voxels. Right now we’re doing this to eliminate specks of voxels most likely found in noisy 
+regions, such as the ventricles; later on we will learn how to do cluster correction at the group level to appropriately control for the number of individual statistical tests.
+
+When you have finished specifying the options, you will see your results displayed on a glass brain. This shows your results in standardized space in three orthogonal planes, with the dark spots 
+representing clusters of voxels that passed our statistical threshold. In the top-right corner is a copy of your design matrix and the contrast that you are currently looking at, and at the bottom is a 
+table listing the coordinates and statistical significance of each cluster. The first column, set-level, indicates the probability of seeing the current number of clusters, c. The cluster-level column 
+shows the significance for each cluster (measured in number of voxels, or kE) using different correction methods. The peak-level column shows the t- and z-statistics of the peak voxel within each 
+cluster, with the main clusters marked in bold and any sub-clusters listed below the main cluster marked in lighter font. Lastly, the MNI coordinates of the peak for each cluster and sub-cluster is 
+listed in the rightmost column.
+
+If you left-click on the coordinates for a cluster, the coordinates will be highlighted in red and the cursor in the glass brain view will jump to those coordinates. You can click and drag the red arrow 
+header in the glass brain if you like, and then right-click on the brain and select any of the options for jumping to the nearest suprathreshold voxel or the nearest local maximum.
+
+To view the results on an image other than the glass brain, in the results window in the lower left (which contains the fields “p-values”, “Multivariate”, and “Display”), click on overlays and then 
+select sections. Navigate to the spm12/canonical directory, and choose any of the T1 brains that you like. In this case, I will select the avg152 brain.
+
+You will now see the results displayed as a heatmap on the template, and you can click and drag the crosshairs as you do in the Display window. If you place the crosshairs over a particular cluster and 
+click the “current cluster” button in the Results window, the statistical table will reappear, highlighting the coordinates of the cluster you have selected.
