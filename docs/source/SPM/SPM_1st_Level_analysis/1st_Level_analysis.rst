@@ -8,8 +8,6 @@ Specifying the Model
 
 .. image:: Contrast.PNG
 
-.. image:: contrast_2.PNG
-
 Since we have created the timing files previously, it is time for us to use them in conjunction with our imaging data to create statistical parametric maps. These maps could indicate that the correlation 
 between the ideal time-series (the onset times convolved with the HRF in our model) and the time-series collected in this experiment. When we use the SPM to construct contrasts, beta weight represents 
 the amount of modulation of the HRF, which is then transformed into a t-statistic.
@@ -75,26 +73,33 @@ To make these contrasts, go to the ``Result button`` from SPM GUI and select the
 Select ``Define New Contrast`` and put cash-explode in the Name field.
 
 type 1 -1 1 -1 1 -1 in the contrast vector window, then press submit. If the contrast is right, you will see “name identified, contrast defined” at the bottom of the window. Make sure your contrast 
-manager looks like the image below, and then click OK.
+manager looks like the image below, and then click ``OK``
 
 .. image:: Contrast.PNG
 
 Examining the Output
 ^^^^^^^^^^^^^^^^^^^^
 
-Double-click on the contrast Inc-Con to open the Results window. You will first need to set a few options:
+Now, since we have set the contrast manager, click ``done``, you will see a few options:
 
-1 apply masking: Set this to “none”, as we want to examine all of the voxels in the brain, and we do not want to restrict our analysis to a mask.
-2 p value adjustment to control: Click on “none”, and set the uncorrected p-value to 0.01. This will test each voxel individually at a p-threshold of 0.01. 
-3 extent threshold {voxels}: Set this to 10 for now, which will only show clusters of 10 or more contiguous voxels. Right now we’re doing this to eliminate specks of voxels most likely found in noisy 
-regions, such as the ventricles; later on we will learn how to do cluster correction at the group level to appropriately control for the number of individual statistical tests.
+1 apply masking: set this to “none” becuase we want to examine all of the voxels and don't want to restrict our analysis.
+2 p value adjustment to control: Click on “none”, and set the uncorrected p-value to 0.001. This will test each voxel individually at a p-threshold of 0.01. 
+3 extent threshold {voxels}: Set this to 10 for now, which will only show clusters of 10 or more contiguous voxels. 
 
-When you have finished specifying the options, you will see your results displayed on a glass brain. This shows your results in standardized space in three orthogonal planes, with the dark spots 
-representing clusters of voxels that passed our statistical threshold. In the top-right corner is a copy of your design matrix and the contrast that you are currently looking at, and at the bottom is a 
-table listing the coordinates and statistical significance of each cluster. The first column, set-level, indicates the probability of seeing the current number of clusters, c. The cluster-level column 
-shows the significance for each cluster (measured in number of voxels, or kE) using different correction methods. The peak-level column shows the t- and z-statistics of the peak voxel within each 
-cluster, with the main clusters marked in bold and any sub-clusters listed below the main cluster marked in lighter font. Lastly, the MNI coordinates of the peak for each cluster and sub-cluster is 
-listed in the rightmost column.
+.. image:: contrast_2.PNG
+
+We will see our results in a standardlized space in three orthogonal planes, which reflected on a glass brain once you've finished defining the options. The dark spots reflect clusters of voxels that 
+passed our statistical threshold. The top-right side is a copy of our design matrix and the contrast that we are currently looking at. 
+
+The coordinates and statistical significance of each cluster are mentioned in a table at the bottom. Set-level is the first column, and it shows the likelihood of seeing the current number of clusters, 
+c. Next, the cluster-level column shows the significance for each cluster (measured in number of voxels, or kE) using different correction methods 
+
+The "t- and z-statistics" of the peak voxel within each cluster are shown in the peak-level column, with the main clusters in bold and any sub-clusters marked in lighter front below the main cluster.
+Finally, in the rightmost column, the MNI coordinates of the peak for each cluster and sub-cluster are shown.
+
+
+
+
 
 If you left-click on the coordinates for a cluster, the coordinates will be highlighted in red and the cursor in the glass brain view will jump to those coordinates. You can click and drag the red arrow 
 header in the glass brain if you like, and then right-click on the brain and select any of the options for jumping to the nearest suprathreshold voxel or the nearest local maximum.
@@ -104,3 +109,4 @@ select sections. Navigate to the spm12/canonical directory, and choose any of th
 
 You will now see the results displayed as a heatmap on the template, and you can click and drag the crosshairs as you do in the Display window. If you place the crosshairs over a particular cluster and 
 click the “current cluster” button in the Results window, the statistical table will reappear, highlighting the coordinates of the cluster you have selected.
+
