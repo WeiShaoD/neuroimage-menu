@@ -4,10 +4,6 @@ First level analysis in SPM
 Specifying the Model
 ^^^^^^^^^^^^^^^^^^^^
 
-.. image:: estimate.PNG
-
-.. image:: Contrast.PNG
-
 Since we have created the timing files previously, it is time for us to use them in conjunction with our imaging data to create statistical parametric maps. These maps could indicate that the correlation 
 between the ideal time-series (the onset times convolved with the HRF in our model) and the time-series collected in this experiment. When we use the SPM to construct contrasts, beta weight represents 
 the amount of modulation of the HRF, which is then transformed into a t-statistic.
@@ -63,6 +59,8 @@ Estimating the Model
 We have created our GLM, the next step is to estimate the beta weights for each condition. Click ``Estimate`` from the SPM GUI, and select the SPM.mat from ``select SPM.mat`` tab from sub-02/1stLevel. 
 Change the "Write residuals option" to Yes. and then click the green ``Go button``. This will take a few minutes to run.
 
+.. image:: estimate.PNG 
+
 The Contrast Manager
 ^^^^^^^^^^^^^^^^^^^^
 
@@ -92,21 +90,17 @@ We will see our results in a standardlized space in three orthogonal planes, whi
 passed our statistical threshold. The top-right side is a copy of our design matrix and the contrast that we are currently looking at. 
 
 The coordinates and statistical significance of each cluster are mentioned in a table at the bottom. Set-level is the first column, and it shows the likelihood of seeing the current number of clusters, 
-c. Next, the cluster-level column shows the significance for each cluster (measured in number of voxels, or kE) using different correction methods 
+c. Next, the cluster-level column shows the significance for each cluster (measured in number of voxels, or kE) using different correction methods. The "t- and z-statistics" of the peak voxel within each 
+cluster are shown in the peak-level column, with the main clusters in bold and any sub-clusters marked in lighter front below the main cluster. Finally, in the rightmost column, the MNI coordinates of 
+the peak for each cluster and sub-cluster are shown.The coordinates for a cluster will be highlighted in red and the cursor in the glass brain view will switch to those coordinates if you left-click on 
+them. You can click and drag the red arrow header in the glass brain, then right-click on it and choose one of the options for jumping to the nearest suprathreshold voxel or the nearest local maximum.
 
-The "t- and z-statistics" of the peak voxel within each cluster are shown in the peak-level column, with the main clusters in bold and any sub-clusters marked in lighter front below the main cluster.
-Finally, in the rightmost column, the MNI coordinates of the peak for each cluster and sub-cluster are shown.
+From the left-button window, click on overlays/sections and then pick a standard space other than the glass brain. Go to the spm12/canonical directory and choose a brain scan such as "avg152T2".
+
+.. image:: 1st_result_2.PNG
+
+The results will now be shown on the template as a heatmap, The statistical table will reappear after you position the crosshairs over a specific cluster and press the “current cluster” button in the 
+Results window, highlighting the coordinates of the cluster you picked.
 
 
-
-
-
-If you left-click on the coordinates for a cluster, the coordinates will be highlighted in red and the cursor in the glass brain view will jump to those coordinates. You can click and drag the red arrow 
-header in the glass brain if you like, and then right-click on the brain and select any of the options for jumping to the nearest suprathreshold voxel or the nearest local maximum.
-
-To view the results on an image other than the glass brain, in the results window in the lower left (which contains the fields “p-values”, “Multivariate”, and “Display”), click on overlays and then 
-select sections. Navigate to the spm12/canonical directory, and choose any of the T1 brains that you like. In this case, I will select the avg152 brain.
-
-You will now see the results displayed as a heatmap on the template, and you can click and drag the crosshairs as you do in the Display window. If you place the crosshairs over a particular cluster and 
-click the “current cluster” button in the Results window, the statistical table will reappear, highlighting the coordinates of the cluster you have selected.
 
