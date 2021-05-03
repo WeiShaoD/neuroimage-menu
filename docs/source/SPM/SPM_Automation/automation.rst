@@ -1,30 +1,19 @@
-scripting
+Scripting
 =========
 
-After you’ve preprocessed and set up a model for a single run for a single subject, you will need to do the same steps for all of the runs for all of the subjects in your dataset. This may seem tedious 
-but doable - we only have twenty-six subjects, and two runs per subject. You may think that it can be done over the course of a week or so; and you can always assign the task to a couple of Research 
-Assistants.
+Since we have 16 subjects and each subject has 3 runs. In total, we need to repeat all the preprocessing and 1st level analysis in AFNI_GUI 48 times! it is not hard but it is a really tedious job and you 
+could make errors easily. As Joey from **Friends** said, there’s gotta be a better way, and there is.
 
-This attitude is admirable, and if you take this approach you will be able to analyze all of the data eventually. But at some point you will run into two problems:
-
-1 You will find that manually analyzing each run is not only tedious but prone to error, and the probability of making a mistake increases significantly as the number of runs to analyze also increases; 
-
-2 For larger datasets - for example, eighty subjects with five runs each - this approach quickly becomes impractical.
-
-An alternative is to script your analysis. Just as an actor has a script which tells him what to say and where to stand and where to move, so can you write a script that tells your computer how to 
-analyze your datasets. This has the double benefit of automating your analyses and being able to analyze datasets of any size - the code for analyzing two subjects or two hundred is virtually identical.
-
-First we will create a template that contains the code needed to analyze a single run, and then we will use a for-loop to automate the analysis for all of the runs. The idea is simple; and although the 
-code can be difficult to understand at first, once you become more comfortable with it you will see how you can apply it to any dataset.
+Here is the script that makes your life easier!
 
 Creating the Template
 ^^^^^^^^^^^^^^^^^^^^^
 
-When we analyzed the data for sub-08, clicking on each preprocessing button of the SPM GUI opened up a Batch Editor window. To create our script template, we will begin with the Batch Editor and add each 
-of the preprocessing modules to our batch. We will then fill in the required inputs for each preprocessing and statistical modeling section, just like we did in the previous tutorials, and convert what 
-we see in the GUI into Matlab code.
+To begin with, let's create a script template for our data. As you have done all the preprocessing of sub-02 from SPM GUI, what we need to do in here is clicking on each preprocessing button of the SPM 
+GUI and add each of the preprocessing modules to our template. Then, just as in the previous tutorials, we'll fill in the inputs for each preprocessing and statistical modelling portion, and translate 
+what we see from the SPM GUI into Matlab code.
 
-To begin, open up the SPM GUI and click on the Batch button. From the top of the Batch Editor window, click on the SPM menu and select the following modules in this order::
+Now, Open the SPM GUI and select Batch from the menu. Select the following modules in this order from the SPM4554 at the top of the Batch Editor window: 
 
   BasicIO -> File/Dir Operations -> File Operations -> Named File Selector
   SPM -> Spatial -> Realign -> Estimate & Reslice
@@ -44,7 +33,7 @@ When you are done the “Module List” panel should look like this:
 File Selection and File Splitting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-You may have noticed two additional modules that don’t appear to have anything to do with analyzing the data directly. These are the Named File Selector and File Set Split modules.
+First thing first, we will deal with two additional modules that don’t appear in here. These are the ``Named File Selector`` and ``File Set Split`` modules.
 
 The first one, Named File Selector, requires an input name and sets of files. We will create two file sets, and enter the run-1_bold.nii and run-2_bold.nii files for each set. When we come to the first 
 preprocessing module, Realignment, we create two sessions and enter the respective files for each session.
