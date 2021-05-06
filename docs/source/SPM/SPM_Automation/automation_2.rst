@@ -13,7 +13,11 @@ To begin with, let's create a script template for our data. As you have done all
 GUI and add each of the preprocessing modules to our template. Then, just as in the previous tutorials, we'll fill in the inputs for each preprocessing and statistical modelling portion, and translate 
 what we see from the SPM GUI into Matlab code.
 
-Now, Open the SPM GUI and select Batch from the menu. Select the following modules in this order from the SPM4554 at the top of the Batch Editor window: 
+Now, Open the SPM GUI and select Batch from the menu.
+
+.. image:: Batch.PNG
+
+Select the following modules in the order from the SPM at the top menu of the Batch Editor window::
 
   BasicIO -> File/Dir Operations -> File Operations -> Named File Selector
   SPM -> Spatial -> Realign -> Estimate & Reslice
@@ -27,13 +31,12 @@ Now, Open the SPM GUI and select Batch from the menu. Select the following modul
   SPM -> Stats -> Model Estimation
   SPM -> Stats -> Contrast Manager
 
-When you are done the “Module List” panel should look like this:
-
+.. image:: module_list.PNG
 
 File Selection and File Splitting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-First thing first, we will deal with two additional modules that don’t appear in here. These are the ``Named File Selector`` and ``File Set Split`` modules.
+First and foremost, we'll address two additional modules that aren't listed above. These are the ``Named File Selector`` and ``File Set Split`` modules. 
 
 The first one, Named File Selector, requires an input name and sets of files. We will create two file sets, and enter the run-1_bold.nii and run-2_bold.nii files for each set. When we come to the first 
 preprocessing module, Realignment, we create two sessions and enter the respective files for each session.
