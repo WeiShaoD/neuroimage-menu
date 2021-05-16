@@ -36,3 +36,12 @@ transfer the data among different server
 use scp -r to transfer the data 
  
 Or ``sftp`` to build the connection and ``put`` to upload the file or ``get`` to download the file  
+
+use ``tar -czvf new.file original.file`` to compress a file and use ``tar -xzvf new_file`` to decompress the file accordingly
+
+``-c`` :create a new archive
+``-z`` :filter the archive through gzip
+``-v`` :verbose output
+``-f`` :use archive file
+``-x`` :extract file
+  
