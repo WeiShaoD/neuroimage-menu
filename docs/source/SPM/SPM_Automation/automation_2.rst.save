@@ -1,4 +1,4 @@
-Scripting
+cripting
 =========
 
 Since we have 16 subjects and each subject has 3 runs. In total, we need to repeat all the preprocessing and 1st level analysis in AFNI_GUI 48 times! it is not hard but it is a really tedious job and you 
