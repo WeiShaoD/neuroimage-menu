@@ -33,6 +33,48 @@ Select the following modules in the order from the SPM at the top menu of the Ba
 
 .. image:: module_list.PNG
 
+Realign module 
+
+.. image:: Realign.PNG
+
+Slice Timing module
+
+.. image:: Slice_Timing.PNG
+
+Coregister module
+
+.. image:: Coregister.PNG
+
+Segment module 
+
+.. image:: SPM_segment.PNG
+
+Normalise module
+
+.. image:: Normalise.PNG
+
+Smooth module
+
+.. image:: smooth.PNG
+
+File Set Split module
+
+.. image:: Flie_Set_Split.PNG
+
+fMRI model specification
+
+.. image:: fMRI_model.PNG
+
+Model estimation
+
+.. image:: Model_estimation.PNG
+
+Contrast Manager
+
+.. image:: Contrast_Manager.PNG
+
+
+
 File Selection and File Splitting
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
