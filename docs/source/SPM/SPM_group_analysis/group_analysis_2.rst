@@ -1,21 +1,19 @@
 Group analysis
 ==============
 
-Our goal in analyzing this dataset is to generalize the results to the population that the sample was drawn from. In other words, if we see changes in brain activity in our sample, can we say that these 
-changes would likely be seen in the population as well?
+Our aim in interpreting this dataset is to extrapolate the findings to the entire population from which the sample was taken. To put it another way, if we see the changes of brain activities in our 
+study, can we assume that these changes will be observed in the general population as well?
 
-To test this, we will run a group-level analysis (also known as a second-level analysis). In SPM, this means that we calculate the standard error and the mean for a contrast estimate, and then test 
-whether the average estimate is statistically significant. We will be doing this group-level analysis using a summary statistic approach which ignores the variability in the parameter estimates, and 
-performs a t-test over the mean parameter estimates from each subject.
+We'll run a group-level analysis to see if this is true (second-level analysis). In SPM, we compute the standard error and mean for a contrast estimate before determining if the average estimate is 
+statistically important or not. This group-level study will be conducted using a summary statistic method that ignores parameter estimate uncertainty and conducts a t-test on the mean parameter estimates 
+from each subject.
 
 Specifying the 2nd-Level Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Once all of the 1st-level analyses have finished, create a new directory in which to store your 2nd-level results. From the Matlab terminal, navigate to the Flanker directory containing all of your 
-subjects, and type mkdir 2ndLevel_Inc-Con.
-
-From the SPM GUI, click on the button Specify 2nd-level. The default test that will be conducted is a one-sample t-test, and there are only two fields that need to be filled in: The output directory for 
-the results, and the scans that you will conduct the test on - in other words, the contrast images that were created during each 1st-level analysis.
+We need to create a new directory to store the 2nd-level result after we have completed all of the 1st-level analyses. From terminal, navigate to the BART directory containing all of subjects and type 
+mkdir 2ndLevel to create the directory. From the SPM GUI, click on the button Specify 2nd-level. The default test that will be conducted is a one-sample t-test, and there are only two fields that need to 
+be filled in: The output directory for the results, and the scans that you will conduct the test on - in other words, the contrast images that were created during each 1st-level analysis.
 
 Double-click on the Directory field, and select the 2ndLevel_Inc-Con folder you just created. For the Scans field, navigate to sub-01’s 1stLevel directory, and select the Incongruent-Congruent contrast 
 image, con_0001.nii. Navigate into all of the other subject’s 1stLevel directories, and select the con_0001.nii image for each subject. The animation below shows a couple of ways to make this process 

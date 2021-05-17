@@ -178,11 +178,11 @@ Change format in step 3. "Finish". And save as csv file
 
 Then, You will get a file like this 
 
-##.. image:: volume_martix_Excel.PNG
+.. image:: BART_volume.PNG
 
 and have fun by play it around like PCA analysis.
 
-##.. image:: hipp_vol.png
+.. image:: hipp_vol.png
 
 Longitudinal segmentation of T1 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
