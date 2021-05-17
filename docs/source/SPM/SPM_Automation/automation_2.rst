@@ -241,4 +241,4 @@ Next Steps
 
 The script will take a while(depends on the performance of the machine) to run for all the 16 subjects, When you are finished, we will examine the output.
 
-A copy of this full script can be found on github page located here. .
+you can find a copy of this full script from github page `here <https://github.com/WeiShaoD/SPM_script/blob/main/SPM_script.m>`__.  

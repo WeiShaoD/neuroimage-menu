@@ -104,7 +104,7 @@ Menu
     SPM/SPM_Statistics_Modeling/statistics_Medeling.rst
     SPM/SPM_1st_Level_analysis/1st_Level_analysis.rst 
     SPM/SPM_Automation/automation_2.rst
-    SPM/SPM_Automation/SPM_script.m
+
   
 
 #SPM/SPM_group_analysis/group_analysis.rst
