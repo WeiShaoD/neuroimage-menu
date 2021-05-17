@@ -52,7 +52,6 @@ the first Session, for example, you can pick the option "Named File Selector: ru
 
 .. image:: Realign.PNG
 
-
 And the same with Slice Timing module,
 
 .. image:: Slice_Timing.PNG
@@ -102,30 +101,29 @@ Contrast Manager
 
 .. image:: Contrast_Manager.PNG
 
-
 Editing the Matlab file
 ^^^^^^^^^^^^^^^^^^^^^^^
 
-The Batch module we have just created is specific to sub-08: We have used sub-08’s images and timing files, and the results will only apply to sub-08. If you clicked on the green Go button, it would run 
-all of the preprocessing and model estimation steps in one go. With a few adjustments, however, we can adapt this module to all of the other subjects in our study.
+The Batch module we have just created is specific to sub-03 so that we have used sub-03’s images and timing files, and the results will only apply to sub-03. we can click the gree ``Go`` button to run 
+and test the script. More importantly, after a few adjustments, we can adapt this script to all of the rest subjects in this study.
 
-
-First, we need to save the modules into a Matlab script. Click on File -> Save Batch and Script, and label the file RunPreproc_1stLevel. Save it to the Flanker directory that contains all of your 
+First of all, we need to save the modules into a Matlab script. Click on File -> Save Batch and Script, and label the file BART_runprproc. Save it to the BART directory that contains all of your 
 subjects. This will create a Matlab script file that you can open in the Matlab window.
 
-From the Matlab terminal, navigate to the Flanker directory which contains the RunPreproc_1stLevel.m script, and type
+Open the Matlab terminal, navigate to the BART directory which contains the BART_runprproc.m script, Open it by type open BART_runproc.m from the matlab terminal. We will need to make the following 
+edits:
 
-To adapt this file so that it can analyze any subject, we will need to make the following edits:
+1 Replace the subject number “03” with a variable containing a different subject number on each instance of a for-loop; 
 
-1 Replace the number “08” with a variable containing a different subject number on each instance of a for-loop; 
+2 Replace the username (“wshao”) with a variable pointing to the username of whichever machine name is currently being used by you.
 
-2 Replace the username (in this case, “ajahn”) with a variable pointing to the username of whichever machine is currently being used.
+3 change the input directory accordingly to fit in your machine 
 
-These two changes will allow us to place the existing code in a for-loop which will run over a set of numbers indicating each subject in the study.
+These three changes will allow us to place the existing code in a for-loop which will run over a set of numbers indicating each subject in the study.
 
 At the beginning of the script, type the following code::
 
-  subjects = [01 02]; % Replace with a list of all of the subjects you wish to analyze
+  subjects = [01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16]; % Replace with a list of all of the subjects you wish to analyze
 
   user = getenv('USER'); % Will return the username for OSX operating systems
 
@@ -133,60 +131,61 @@ At the beginning of the script, type the following code::
 
   subject = num2str(subject, '%02d');
 
-  if exist(['/Users/' user '/Desktop/Flanker/sub-' subject '/func/sub-' subject '_task-flanker_run-1_bold.nii']) == 0
-      display('Run 1 has not been unzipped; unzipping now')
-      gunzip(['/Users/' user '/Desktop/Flanker/sub-' subject '/func/sub-' subject '_task-flanker_run-1_bold.nii.gz'])
-  else
-      display('Run 1 is already unzipped; doing nothing')
-  end
+  if exist(['/home/wshao//BART_spm/sub-' subject '/func/sub-' subject '_task-balloonanalogrisktask_run-01_bold.nii']) == 0
+    display('Run 1 has not been unzipped; unzipping now')
+    gunzip(['/home/wshao/BART_spm/sub-' subject '/func/sub-' subject '_task-balloonanalogrisktask_run-01_bold.nii.gz'])
+else
+    display('Run 1 is already unzipped; doing nothing')
+end
 
-  if exist(['/Users/' user '/Desktop/Flanker/sub-' subject '/func/sub-' subject '_task-flanker_run-2_bold.nii']) == 0
-      display('Run 2 has not been unzipped; unzipping now')
-      gunzip(['/Users/' user '/Desktop/Flanker/sub-' subject '/func/sub-' subject '_task-flanker_run-2_bold.nii.gz'])
-  else
-      display('Run 2 is already unzipped; doing nothing')
-  end
+if exist(['/home/wshao/BART_spm/sub-' subject '/func/sub-' subject '_task-balloonanalogrisktask_run-02_bold.nii']) == 0
+    display('Run 2 has not been unzipped; unzipping now')
+    gunzip(['/home/wshao/BART_spm/sub-' subject '/func/sub-' subject '_task-balloonanalogrisktask_run-02_bold.nii.gz'])
+else
+    display('Run 2 is already unzipped; doing nothing')
+end
 
-  if exist(['/Users/' user '/Desktop/Flanker/sub-' subject '/anat/sub-' subject '_T1w.nii']) == 0
-      display('Anatomical image has not been unzipped; unzipping now')
-      gunzip(['/Users/' user '/Desktop/Flanker/sub-' subject '/anat/sub-' subject '_T1w.nii.gz'])
-  else
-      display('Anatomical image is already unzipped; doing nothing')
-  end
+if exist(['/home/wshao/BART_spm/sub-' subject '/func/sub-' subject '_task-balloonanalogrisktask_run-03_bold.nii']) == 0
+    display('Run 3 has not been unzipped; unzipping now')
+    gunzip(['/home/wshao/BART_spm/sub-' subject '/func/sub-' subject '_task-balloonanalogrisktask_run-03_bold.nii.gz'])
+else
+    display('Run 3 is already unzipped; doing nothing')
+end
 
-You should also type the word end at the last line of the script to indicate that all of the code that comes before is part of the for-loop.
+if exist(['/home/wshao/BART_spm/sub-' subject '/anat/sub-' subject '_T1w.nii']) == 0
+    display('Anatomical image has not been unzipped; unzipping now')
+    gunzip(['/home/wshao/BART_spm/sub-' subject '/anat/sub-' subject '_T1w.nii.gz'])
+else
+    display('Anatomical image is already unzipped; doing nothing')
+end
 
+you need to change the directory ``/home/wshao/BART_spm`` to your subject directory, you can ``cd`` to the subject directory and type ``pwd`` to know the working directory
+   
 The above code does the following:
 
-First, an array of numbers is created and stored in the variable subjects. The values are 01 and 02; later on, we will expand this array to include all of the subject identification numbers in our 
-experiment.
-
-Next, the variable user takes the value returned from the command getenv('USER'). This should return the username of the current user of the computer - in the current example, “ajahn”.
+the variable user takes the value returned from the command getenv('USER'). This should return the username of the current user of the computer - in the current example, “ajahn”.
 
 We then begin a for-loop that is initialized with the code for subject=subjects. This means that a new variable, “subject”, will assume the value of each consecutive entry in the array “subjects”. In 
 other words, the first instance of the loop will assign the value “01” to subject; on the second instance, it will assign the value “02”, and so on, until the loop reaches the end of the array.
 
 Since an array will strip any leading zeros, and since we need to convert the numbers in our array to a string, the “subject” variable is converted using the num2str command. The text '%02d' is 
-string-formatting code indicating that the current value being converted from a number to a string should be zero-paddded with as many zeros as needed until the number is two characters long. (Details 
-about string formatting can be found here.)
+string-formatting code indicating that the current value being converted from a number to a string should be zero-paddded with as many zeros as needed until the number is two characters long. 
 
 The conditional statements look for whether the unzipped functional and anatomical files exist, and if they don’t, the files are unzipped using Matlab’s gunzip command.
 
 Concatenating strings
 ^^^^^^^^^^^^^^^^^^^^^
 
-Throughout the rest of the code that was generated when we saved the Batch module as a Matlab script, we will need to replace each instance of 08 with the string subject, and each instance of ajahn (or 
-whatever your username is) with the variable user that was defined above. This can be done using search and replace, but be careful that there aren’t other instances of the string “08” that aren’t 
-attached to the string “sub-“.
+Throughout the rest of the code that was generated when we saved the Batch module as a Matlab script, we will need to replace each instance of 03 with the string subject, and each instance of wshao (or 
+whatever your username is) with the variable user that was defined above. This can be done using search and replace.
 
 In the example code above, we used brackets to horizontally concatenate strings with variables. A line of code like the following:
 
-['/Users/' user '/Desktop/Flanker/sub-' subject '/anat/sub-' subject '_T1w.nii']
+['/home/wshao/BART_spm/sub-' subject '/anat/sub-' subject '_T1w.nii']
 
-will concatenate the strings surrounded by single apostrophes with the variables. If the variable “user” contains the value “ajahn” and the variable “subject” contains the value “08”, then the above code 
-would expand to the following:
+will concatenate the strings surrounded by single apostrophes with the variables. If the variable “subject” contains the value “03”, then the above code would expand to the following:
 
-'/Users/ajahn/Desktop/Flanker/sub-08/anat/sub-08_T1w.nii'
+'/home/wshao/BART_spm/sub-03/anat/sub-03_T1w.nii'
 
 You will need to perform these substitutions for the rest of the script, taking care to use single apostrophes to set off the strings from the variables. Brackets will be required for this concatenation, 
 even within the cells denoted by curly braces. (Cells are arrays that can contain several different data types, such as strings and numbers.)
@@ -195,43 +194,51 @@ Loading the Onset Files
 ^^^^^^^^^^^^^^^^^^^^^^^
 
 The last part of the script we have to edit is the onset times. In this experiment, each subject had different onset times for each condition. If the timing files have already been converted to a 
-different format, then you can create a variable that contains the timing information and insert it into the “onset” field for the stats module. For example, the following code found around line 107 of 
-the Matlab script can be changed from this, which contains onset times specific to sub-08::
+different format, then you can create a variable that contains the timing information and insert it into the “onset” field for the stats module. For example, the following code found around line 134 of 
+the Matlab script can be changed from this, which contains onset times specific to sub-03::
 
-  matlabbatch{9}.spm.stats.fmri_spec.sess(1).cond(1).onset = [0
-                                                            10
-                                                            20
-                                                            52
-                                                            88
-                                                            130
-                                                            144
-                                                            174
-                                                            248
-                                                            260
-                                                            274];
+  matlabbatch{9}.spm.stats.fmri_spec.sess(1).cond(1).onset = [55.013 
+                                                              78.631 
+                                                              96.264 
+                                                              109.377 
+                                                              209.904 
+                                                              247.183 
+                                                              253.506 
+                                                              272.949 
+                                                              289.177 
+                                                              296.349 
+                                                              305.967 
+                                                              325.969 
+                                                              429.214 
+                                                              476.099 
+                                                              525.129 
+                                                              535.041 
+                                                              556.235 
+                                                              572.240];
 
-To this::
+To change like this::
 
-  data_incongruent_run1 = load(['/Users/' user '/Desktop/Flanker/sub-' subject '/func/incongruent_run1.txt']);
+  data_cash_run1 = load(['/home/wshao/BART_spm/sub-' subject '/func/cash_run1.txt']);
 
-  matlabbatch{9}.spm.stats.fmri_spec.sess(1).cond(1).onset = data_incongruent_run1(:,1);
+  matlabbatch{9}.spm.stats.fmri_spec.sess(1).cond(1).onset = data_cash_run1(:,1);
 
-In which the variable data_incongruent_run1 stores the onset times for the subject in the current loop, and then enters those numbers into the onset field. Note that the code (:,1) indicates that only 
-the first column of the variable should be read, which contains the onset times.
+In which the variable data_cash_run1 stores the onset times for the subject in the current loop, and then enters those numbers into the onset field. Note that the code (:,1) indicates that only the first 
+column of the variable should be read, which contains the onset times. What's more, you need to do this 6 times, the cash and explode 3 times each. 
 
 Running the Script
 ^^^^^^^^^^^^^^^^^^
 
 When you have finished editing the script, save it and return to the Matlab terminal. You can then execute the script by typing::
 
-  RunPreproc_1stLevel_job
+  BART_runprproc
 
 You will then see windows pop up as each preprocessing and statistical module is run, similar to what you would see if you executed each module manually through the GUI.
+
+.. image:: Running_script.PNG
 
 Next Steps
 ^^^^^^^^^^
 
-The script should only take a few minutes to run for both sub-01 and sub-02. When you are finished, we will examine the output; and as you will see, there are still some issues that need to be resolved. 
-To see what the problems are, and how to fix them, click the Next button.
+The script will take a while(depends on the performance of the machine) to run for all the 16 subjects, When you are finished, we will examine the output.
 
-A copy of this script can be found on Andy’s github page located here. Note that the script is set up to analyze all 26 subjects in the dataset.
+A copy of this full script can be found on github page located here. .
