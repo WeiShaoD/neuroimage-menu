@@ -59,7 +59,7 @@ The image will be thresholded to only display clusters made up of individual vox
 
 When you are finished, you should see output like this, showing a significant cluster:
 
-.. image 2nd_result_4.PNG
+.. image:: 2nd_result_4.PNG
  
 2nd-Level Results for cash and explode 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
