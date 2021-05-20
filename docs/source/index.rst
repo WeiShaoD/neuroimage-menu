@@ -55,7 +55,7 @@ Menu
    FreeSurfer/FreeSurfer_menu                                                                                           
    FreeSurfer/FastSurfer
    FreeSurfer/Parallel_computing
-
+   FreeSurfer/FreeSurfer_volume
 
 .. toctree::
    :maxdepth: 1
