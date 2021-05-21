@@ -48,6 +48,12 @@ Menu
    GitHub/Gitcommand_menu
 
 
+.. toctree::                                                                                                                                                                                                          :maxdepth: 1
+   :maxdepth: 1
+   :caption: Drinks Preprocessing   
+                                                                                                                                                                               
+   Preprocessing/Preprocessing_menu 
+
 .. toctree::
    :maxdepth: 1
    :caption: Main course 1 FreeSurfer
@@ -56,13 +62,6 @@ Menu
    FreeSurfer/FastSurfer
    FreeSurfer/Parallel_computing
    FreeSurfer/FreeSurfer_volume
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Drinks Preprocessing
-
-   Preprocessing/Preprocessing_menu
-
 
 .. toctree::
    :maxdepth: 1
