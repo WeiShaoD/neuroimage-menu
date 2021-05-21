@@ -48,9 +48,9 @@ Menu
    GitHub/Gitcommand_menu
 
 
-.. toctree::                                                                                                                                                                                                          :maxdepth: 1
-   :maxdepth: 1
-   :caption: Drinks Preprocessing   
+.. toctree::
+   :maxdepth: 1  
+   :caption: Drinks Preprocessing
                                                                                                                                                                                
    Preprocessing/Preprocessing_menu 
 
