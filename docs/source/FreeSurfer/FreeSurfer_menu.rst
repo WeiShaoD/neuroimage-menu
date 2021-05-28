@@ -98,16 +98,22 @@ aseg.mgz : subcortical segmentation loaded with its corresponding color table an
 
 .. image:: Freesufer_freeviewbert.PNG
 
-Freeview window will appear and load the data, you can play around with different functions. For example, you can use .. image:: sliceoptions.PNG buttons at the top to change which orthogonal view 
-appears in the main viewing window. Let's go with coronal for now. You can also use the viewingoptions.jpeg buttons to change the organization of the viewing panes. To change which brain slice you are 
-viewing, use the 'Page Up' or 'Page Down' keys on your keyboard or the up and down arrows. (Mac users: press the fn key while using the up and down arrows.) While Freeview can load many volumes at once, 
-you cannot necessarily see them all at once. You are able to see whichever volume is at the top of the list in the menu on the left. An exception to this are volumes such as the wm.mgz and aseg.mz which 
-can be made translucent, allowing you to view the information they contain simultaneously with the volume directly below it on the list. For example, you are currently seeing information from both the 
-aseg (labeled structures) and the brainmask (voxel intensities).
+Freeview window will appear and load the data, you can play around with different functions. For example, you can use 
 
-You can hide or turn off a layer by unchecking the check box next to the layer name. Try this out - uncheck the box next to 'aseg'. Now you can see just the brainmask. You can also use the up and down 
-arrows (located below the menu on the left) to move the aseg down on the list, below the brainmask (try it!). Let's now move the wm volume to the top of the list but instead of using the arrows, try this 
-shortcut: double click on where it says 'wm'. It should automatically move to the top. The menu should now look like this:
+.. image:: sliceoptions.PNG 
+
+buttons at the top to change which orthogonal view appears in the main viewing window. We can also use the 
+
+..image:: viewingoptions.PNG buttons to change the organization of the viewing panes. 
+
+To change which brain slice you are viewing, use the 'Page Up' or 'Page Down' keys on your keyboard or the up and down arrows. (Mac users: press the fn key while using the up and down arrows.) While 
+Freeview can load many volumes at once, we cannot necessarily see them all at once. we are able to see whichever volume is at the top of the list in the menu on the left. An exception to this are volumes 
+such as the wm.mgz and aseg.mz which can be made translucent, allowing you to view the information they contain simultaneously with the volume directly below it on the list. For example, you are 
+currently seeing information from both the aseg (labeled structures) and the brainmask (voxel intensities).
+
+You can hide or turn off a layer by unchecking the check box next to the layer name.  You can also use the up and down arrows (located below the menu on the left) to move the aseg down on the list, below 
+the brainmask (try it!). Let's now move the wm volume to the top of the list but instead of using the arrows, try this shortcut: double click on where it says 'wm'. It should automatically move to the 
+top. The menu should now look like this:
 
 
  it is important to ensure that you have install the Xming if you use WSL. You are able to see there is new directory has been created with the name you gave 
