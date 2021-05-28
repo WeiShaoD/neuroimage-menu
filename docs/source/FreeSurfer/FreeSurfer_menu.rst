@@ -77,6 +77,9 @@ There are 3 directories you need to pay attention to, **mri** has all the volume
 
 Freeview
 ^^^^^^^^
+
+volume freeview
+***************
                                                                                                                                                                                                            
 Freeview is a visualization tool comes with Freesufer, you could test the freeview as well. ``cd $SUBJECTS_DIR``, and type::
   
@@ -86,19 +89,39 @@ Freeview is a visualization tool comes with Freesufer, you could test the freevi
     bert/mri/aseg.mgz:colormap=lut:opacity=0.2
                                                                       
 
-freeview will invoke the freeview 
+freeview will invoke the freeview of freesurfer
 
-The flag -v is used to indicated that we are open volumes, T1.mgz: T1 anatomical image, brainmask.mgz: skull-stripped volume primarily used for troubleshooting, aseg.mgz : subcortical segmentation loaded 
-with its corresponding color table and at a opacity=0.2 
+The flag -v is used to indicated that we are open volumes, 
+T1.mgz: T1 anatomical image 
+brainmask.mgz: skull-stripped volume primarily used for troubleshooting 
+aseg.mgz : subcortical segmentation loaded with its corresponding color table and at a opacity=0.2 
 
 .. image:: Freesufer_freeviewbert.PNG
 
-Freeview window will appear and load the data, it is important to ensure that you have install the Xming if you use WSL. You are able to see there is new directory has been created with the name you gave 
+Freeview window will appear and load the data, you can play around with different functions. For example, you can use .. image:: sliceoptions.PNG buttons at the top to change which orthogonal view 
+appears in the main viewing window. Let's go with coronal for now. You can also use the viewingoptions.jpeg buttons to change the organization of the viewing panes. To change which brain slice you are 
+viewing, use the 'Page Up' or 'Page Down' keys on your keyboard or the up and down arrows. (Mac users: press the fn key while using the up and down arrows.) While Freeview can load many volumes at once, 
+you cannot necessarily see them all at once. You are able to see whichever volume is at the top of the list in the menu on the left. An exception to this are volumes such as the wm.mgz and aseg.mz which 
+can be made translucent, allowing you to view the information they contain simultaneously with the volume directly below it on the list. For example, you are currently seeing information from both the 
+aseg (labeled structures) and the brainmask (voxel intensities).
+
+You can hide or turn off a layer by unchecking the check box next to the layer name. Try this out - uncheck the box next to 'aseg'. Now you can see just the brainmask. You can also use the up and down 
+arrows (located below the menu on the left) to move the aseg down on the list, below the brainmask (try it!). Let's now move the wm volume to the top of the list but instead of using the arrows, try this 
+shortcut: double click on where it says 'wm'. It should automatically move to the top. The menu should now look like this:
+
+
+ it is important to ensure that you have install the Xming if you use WSL. You are able to see there is new directory has been created with the name you gave 
 before, go the mri directory.
 
 .. image:: Freesuefer_mri.PNG 
 
 More details from `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
+
+
+surface freeview
+****************
+
+From $SUBJECTS_DI
 
 
 Segmentation of hippocampal subfields
