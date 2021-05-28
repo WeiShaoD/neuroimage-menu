@@ -104,28 +104,65 @@ Freeview window will appear and load the data, you can play around with differen
 
 buttons at the top to change which orthogonal view appears in the main viewing window. We can also use the 
 
-..image:: viewingoptions.PNG buttons to change the organization of the viewing panes. 
+..image:: viewingoptions.PNG 
+
+buttons to change the organization of the viewing panes. 
 
 To change which brain slice you are viewing, use the 'Page Up' or 'Page Down' keys on your keyboard or the up and down arrows. (Mac users: press the fn key while using the up and down arrows.) While 
 Freeview can load many volumes at once, we cannot necessarily see them all at once. we are able to see whichever volume is at the top of the list in the menu on the left. An exception to this are volumes 
 such as the wm.mgz and aseg.mz which can be made translucent, allowing you to view the information they contain simultaneously with the volume directly below it on the list. For example, you are 
 currently seeing information from both the aseg (labeled structures) and the brainmask (voxel intensities).
 
-You can hide or turn off a layer by unchecking the check box next to the layer name.  You can also use the up and down arrows (located below the menu on the left) to move the aseg down on the list, below 
-the brainmask (try it!). Let's now move the wm volume to the top of the list but instead of using the arrows, try this shortcut: double click on where it says 'wm'. It should automatically move to the 
-top. The menu should now look like this:
+We can hide or turn off a layer by unchecking the check box next to the layer name. You can also use the up and down arrows (located below the menu on the left) to move the aseg down on the list, below 
+the brainmask (try it!). 
 
+.. note::
 
- it is important to ensure that you have install the Xming if you use WSL. You are able to see there is new directory has been created with the name you gave 
-before, go the mri directory.
+   It is important to ensure that you have install the Xming if you use WSL. 
+
+You also can seel the volume files located in the mri directory. 
 
 .. image:: Freesuefer_mri.PNG 
-
-More details from `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
 
 
 surface freeview
 ****************
+
+Now, we have know the basics of volume, let verify the surface, which means we need check two things:
+
+1 whether the surface accurately follow the gray matter and white matter boundaries
+2 whether the aseg accurately follows the subcortical intensity boundaries 
+
+In order to do that, let's start with "brainmask". Double click on 'brainmask' in the left menu to bring it to the top of the volume list. The white surface (blue line) is used to calculate total white 
+matter volume and should accurately follow the boundary between white matter and gray matter. The pial surface (red line) is used to calculate cortical gray matter volume and should accurately follow the 
+boundary between the gray matter and the CSF.
+
+.. image:: surface_check.PNG
+
+.. note::
+
+  There are regions where the surfaces are not intended to be accurate that we should be aware of:Areas around the hippocampus and amygdala. The surfaces will not completely include or exclude certain 
+subcortical regions. These inaccuracies can be ignored as subcortical regions are excluded from the cortical measures and subcortical volume is measured by the aseg, not the surfaces. 
+
+
+Subcortical Segmentation
+^^^^^^^^^^^^^^^^^^^^^^^^
+
+Uncheck all of the surfaces. Then check the box next to the aseg volume and double click it. The aseg volume will jump to the top of the left menu, above the brainmask volume. This will show the complete 
+segmentation of the subcortical structures.
+
+.. image:: Subcortical_Segmentation.PNG
+
+Each structure is labeled with a unique color/number distinction. If you click on a voxel the structure's name and number label will be shown in the 'Cursor' section under the viewing window next to the 
+word.
+
+3D Freeview in FreeSurfer
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As we have view the volumes and surface above, there is 3D usage from freeview, we are only use the left hemisphere for simplicity
+
+More details from `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
+
 
 From $SUBJECTS_DI
 
