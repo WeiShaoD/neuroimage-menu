@@ -58,7 +58,8 @@ Menu
    :maxdepth: 1
    :caption: Main course 1 FreeSurfer
 
-   FreeSurfer/FreeSurfer_menu                                                                                           
+   FreeSurfer/FreeSurfer_menu
+   FreeSurfer/FS_Longitudinal/Longitudinal.rst                                                                                           
    FreeSurfer/FastSurfer
    FreeSurfer/Parallel_computing
    FreeSurfer/FreeSurfer_volume
