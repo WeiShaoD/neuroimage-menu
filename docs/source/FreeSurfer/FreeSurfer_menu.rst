@@ -14,7 +14,6 @@ folding, and for computing inter-subject registration based on the pattern of co
 
 Installation
 ^^^^^^^^^^^^
-
 You can download and install FreeSufer from `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ and follow the `Video 
 <https://www.youtube.com/watch?v=BSQUVktXTzo&list=PLIQIswOrUH6_DWy5mJlSfj6AWY0y9iUce&index=2/>`__ to set up FreeSurfer
 
@@ -124,7 +123,7 @@ You also can seel the volume files located in the mri directory.
 
 .. image:: Freesuefer_mri.PNG 
 
-surface freeview
+Surface freeview
 ****************
 
 Now, we have know the basics of volume, let verify the surface, which means we need check two things: 
@@ -149,9 +148,8 @@ boundary between the gray matter and the CSF.
   There are regions where the surfaces are not intended to be accurate that we should be aware of:Areas around the hippocampus and amygdala. The surfaces will not completely include or exclude certain 
 subcortical regions. These inaccuracies can be ignored as subcortical regions are excluded from the cortical measures and subcortical volume is measured by the aseg, not the surfaces. 
 
-
 Subcortical Segmentation
-^^^^^^^^^^^^^^^^^^^^^^^^
+************************
 
 Uncheck all of the surfaces. Then check the box next to the aseg volume and double click it. The aseg volume will jump to the top of the left menu, above the brainmask volume. This will show the complete 
 segmentation of the subcortical structures.
@@ -238,7 +236,6 @@ SUBJECTS_DIR is optional, and overrides the FreeSurfer subject directory when pr
 For MacOC user, please follow this `video <https://www.youtube.com/watch?v=0R6SJI9MvYM&t=429s/>`__
 
 Go `HippocampalSubfieldsAndNucleiOfAmygdala  <https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala/>`__ to see all the instructions
-
 
 Extract the volume matrix from FreeSurfer  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
