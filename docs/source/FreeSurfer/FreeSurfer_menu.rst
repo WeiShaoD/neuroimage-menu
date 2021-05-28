@@ -104,7 +104,7 @@ Freeview window will appear and load the data, you can play around with differen
 
 buttons at the top to change which orthogonal view appears in the main viewing window. We can also use the 
 
-..image:: viewingoptions.PNG 
+.. image:: viewingoptions.PNG 
 
 buttons to change the organization of the viewing panes. 
 
@@ -128,12 +128,18 @@ You also can seel the volume files located in the mri directory.
 surface freeview
 ****************
 
-Now, we have know the basics of volume, let verify the surface, which means we need check two things:
+Now, we have know the basics of volume, let verify the surface, which means we need check two things: 
 
 1 whether the surface accurately follow the gray matter and white matter boundaries
+
 2 whether the aseg accurately follows the subcortical intensity boundaries 
 
-In order to do that, let's start with "brainmask". Double click on 'brainmask' in the left menu to bring it to the top of the volume list. The white surface (blue line) is used to calculate total white 
+In order to do that, let's start with "brainmask". From $SUBJECTS_DIR, put the code::
+
+freeview -v bert/mri/T1.mgz bert/mri/wm.mgz bert/mri/brainmask.mgz bert/mri/aseg.mgz:colormap=lut:opacity=0.2 -f bert/surf/lh.white:edgecolor=blue bert/surf/lh.pial:edgecolor=red 
+bert/surf/rh.white:edgecolor=blue bert/surf/rh.pial:edgecolor=red
+
+Double click on 'brainmask' in the left menu to bring it to the top of the volume list. The white surface (blue line) is used to calculate total white 
 matter volume and should accurately follow the boundary between white matter and gray matter. The pial surface (red line) is used to calculate cortical gray matter volume and should accurately follow the 
 boundary between the gray matter and the CSF.
 
@@ -159,12 +165,33 @@ word.
 3D Freeview in FreeSurfer
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-As we have view the volumes and surface above, there is 3D usage from freeview, we are only use the left hemisphere for simplicity
+As we have view the volumes and surface above, there is 3D usage from freeview, we are only use the left hemisphere for simplicity. 
+
+1 Open up any surface from the data as did above. Type the following commands from ``$SUBJECTS_DIR``::
+
+freeview -f bert/surf/lh.pial:annot=aparc.a2009s.annot:name=pial_aparc_des:visible=0  
+
+2 Set the viewport to 3d view, right click in the viewport and select Hide All Slices
+
+3 In the File menu, select Save Movie Frames
+
+4 Set up the options as in the following picture to save the output - as we create a new directory named 3D in our home directory already..
+
+.. image:: 3D.PNG
+
+5 From terminal, navigate to the new directory our output located -3D, Run this command:: 
+
+  convert -delay .1 *.png brainanim.gif 
+
+.. Note:: 
+
+  ``convert`` is from the ImageMagick library, you can find the files from `here <https://imagemagick.org/index.php>`__
+
+To view your GIF, open it with firefox browser by type ``firefox brainanim.gif`` from your terminal 
+
+.. image:: brainanim.gif
 
 More details from `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
-
-
-From $SUBJECTS_DI
 
 
 Segmentation of hippocampal subfields
