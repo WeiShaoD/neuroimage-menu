@@ -1,7 +1,7 @@
-FSL tricks
-==========
+FSL oreintation
+===============
 
-One of the useful function from FSL is fslswapdim, it can change the orientation of the image. Therefore, you can have the same orentation between T1 and T2 to run the further process.
+One of the useful function from FSL is ``fslswapdim``, it can change the orientation of the image. Therefore, you can have the same orentation between T1 and T2 to run the further process.
 
 let’s say you have a T2 image looks like this:
 
@@ -18,3 +18,6 @@ So, you can want to change the orientation so that the T1 and T2 can match, type
 Now, you get the new orientated T2
 
 .. image:: FSL_orientation_after.PNG
+
+Melodic in FSL
+^^^^^^^^^^^^^^
