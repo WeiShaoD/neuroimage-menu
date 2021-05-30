@@ -31,5 +31,5 @@ for subj in `cat subjList.txt` ; do
         cat ${subj}_task-balloonanalogrisktask_run-03_events.tsv | awk '{if ($3=="cash_demean") {print $1, $2, "1"}}' > cash_run3.txt
 
 
-        cd ../..
+       cd ../..
 done

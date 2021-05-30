@@ -76,6 +76,7 @@ Menu
    FSL/FSL_automation.rst
    FSL/FSL_2nd_analysis
    FSL/FSL_3rd_analysis
+   FSL/ROI/ROI_analysis.rst
    FSL/FSL_Tricks
 
 
