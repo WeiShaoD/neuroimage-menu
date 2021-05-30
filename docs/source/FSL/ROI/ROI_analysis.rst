@@ -20,3 +20,8 @@ only way to determine what is driving the effect is with ROI analysis, and this 
 designs.
 
 
+Atlases
+^^^^^^^
+
+One way to create a region for our ROI analysis is to use an atlas, or a map that partitions the brain into anatomically distinct regions.
+
