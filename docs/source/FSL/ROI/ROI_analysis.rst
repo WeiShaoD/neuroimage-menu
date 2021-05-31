@@ -32,3 +32,6 @@ in the viewing window.
 
 What we need do NEXT 
 
+
+extract the data
+^^^^^^^^^^^^^^^^
