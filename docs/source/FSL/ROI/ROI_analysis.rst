@@ -36,8 +36,4 @@ What we need do
 Extract the data
 ^^^^^^^^^^^^^^^^
 
-<<<<<<< HEAD
 Now, we need to extract the data from the mask we just created.
-=======
-
->>>>>>> cb6a5da44d6c8467886e5f82a5bb0eaea2daec2d
