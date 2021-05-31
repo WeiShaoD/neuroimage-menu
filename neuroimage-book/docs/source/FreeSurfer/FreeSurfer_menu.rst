@@ -1,78 +1,201 @@
 Freesurfer
 ==========
 
-Welcome to FreeSurfer menu
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Now, it is time for our first main course, FreeSurfer.
 
 What is FreeSurfer?
 
-FreeSurfer is a brain imaging software package. It focuses on analyzing magnetic resonance imaging (MRI) scans of brain tissue, functional brain mapping and contains tools to conduct both volume-based and surface-based analysis.
-
-FreeSurfer includes tools for the reconstruction of topologically correct and geometrically accurate models of both the gray/white and pial surfaces, for measuring cortical thickness, surface area and folding, and for computing inter-subject registration based on the pattern of cortical folds
+FreeSurfer is a brain imaging software package that focuses on analyzing magnetic resonance imaging (MRI) and functional scans of brain tissue from cross-sectional or longitudinal research, it can help 
+researchers to conduct both volume-based and surface-based analyses. It is developed by the Laboratory for Computational Neuroimaging at the Athinoula A. Martinos Center for Biomedical Imaging. 
+FreeSurfer includes tools for the reconstruction of topologically correct and geometrically accurate models of both the gray/white and pial surfaces, for measuring cortical thickness, surface area and 
+folding, and for computing inter-subject registration based on the pattern of cortical folds
 
 .. image:: FreeSurfer1.png 
 
-You can download and install FreeSufer from  `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__  or follow the `Video <https://www.youtube.com/watch?v=BSQUVktXTzo&list=PLIQIswOrUH6_DWy5mJlSfj6AWY0y9iUce&index=2/>`__ to set up FreeSufer 
+Installation
+^^^^^^^^^^^^
+You can download and install FreeSufer from `Here <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ and follow the `Video 
+<https://www.youtube.com/watch?v=BSQUVktXTzo&list=PLIQIswOrUH6_DWy5mJlSfj6AWY0y9iUce&index=2/>`__ to set up FreeSurfer
 
-After the installation, type::
+There are different versions of Freesurfer, it is recommended to use the latest one but Freesufer6.0.0 and above would be appropriate. After the installation, type::
 
   source $FREESURFER_HOME/SetUpFreeSurfer.sh
 
-then, you are supposed to see this 
+Then, you are supposed to see this 
 
 .. image:: FreeSurfer_ready.png 
 
-From here, We can check the Freesufer that has been installed, FREESURFER_HOME is the home directory for FreeSufer, SUBJECTS_DIR is the subject dirtory for the FreesSufer program process.
+We can check whether Freesufer has been installed, there are two important messages for FreeSurfer, 1 FREESURFER_HOME is the home directory where your FreeSufer has been installed, 2 SUBJECTS_DIR is the 
+subject directory where you point for the FreesSufer output results.
 
+Test your FreeSurfer
+********************
+
+You also want to test the freesurfer performance before it run the actual data.
+
+Go to freesurfer subject directory::
+
+  cd $FREESURFER_HOME/subjects/
+
+put ``mri_convert sample-001.mgz sample-001.nii.gz`` to test Freesurfer. Due to different requirements of different versions of Freesurfer, you might meet a license problem. 
+
+..  image:: Freesurfer_test.PNG 
 
 Recon-all
 ^^^^^^^^^
-The most useful function of FreesSufer is the recon-all command, after you set up the FreeSurfer subject directory and active FreeSrufer, you can use it by typing::
+
+The most useful function of FreesSufer is the recon-all command, it will tell Freesufer to performs all, or any part of if you specifiy, the FreeSurfer cortical reconstruction process. the basic format::
 
   recon-all -all -i subjname_T1w.nii.gz -s subjname
 
-input could be either DICOM(T1) or NIFTI T1 files where you can find from the anat folder normally. Here is a detailed instruction and a list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ will do. Recon usually will cost 6-8 hours, depends on the computing power you you have.
+-all tells Freesurfer to do everything, including subcortical segmentation
+ 
+-i stands for input
+
+-s subjet id
+
+Normally, the input file would be T1 file, you also can improve the quality of surfaces by feed the T2 such as ``recon-all -subject subjectname -i /path/to/input_volume -T2 /path/to/T2_volume -T2pial 
+-all`` FreeSurfer provided a tutorial `dataset <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Data>`__ for you to play around it. You can follow this `link 
+<http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/Practice>`__ to play with recon-all command.
+
+Tutorial data practice
+**********************
+
+Once you have download the tutorial dataset, ``cd`` to ``tutorial_data_20190918_1558/practice_with_data`` and put ``export SUBJECTS_DIR=$PWD`` to specify the subject output directory to the current 
+directory , then, go to ``dicoms`` and input ``recon-all -all -i I50 -s Subj001`` to take the I50 and create the Subj001 output. Of course, make sure you have activated the Freesurfer by ``srouce 
+$FREESURFER_HOME/SetUpFreeSurfer.sh`` before you run the command. Here is a detailed instruction and a function list for `recon-all <https://surfer.nmr.mgh.harvard.edu/fswiki/recon-all/>`__ . 
+``recon-all`` usually will cost 6-8 hours, depends on the computing power you have. Fortunately, there is a way to speed up this process.
+ 
+.. image:: Freesurfer_reconall.PNG
+
+This will cost a few hours but we will come up with a solution to save our time in the next chapter. you will see a new directory has been created in the freesufer subject directory
+
+.. image:: Freesurfer_reconoutput.PNG
+
+There are 3 directories you need to pay attention to, **mri** has all the volume file, **surf** contains all the surface outcome and scripts keep all the log information.
 
 Freeview
 ^^^^^^^^
-Once the recon-all finished, you are able to see there is new directory has been created with the name you gave before, go the mri directory 
 
-..  image:: mri_files.PNG
+volume freeview
+***************
+                                                                                                                                                                                                           
+Freeview is a visualization tool comes with Freesufer, you could test the freeview as well. ``cd $SUBJECTS_DIR``, and type::
+  
+  freeview -v \
+    bert/mri/T1.mgz \
+    bert/mri/brainmask.mgz \
+    bert/mri/aseg.mgz:colormap=lut:opacity=0.2
+                                                                      
 
-Now, you can the view the volumes such as brainmask.mgz and wm.mgz; the surfaces, rh.white and lh.white; and the subcortical segmentation, aseg.mgz::
+freeview will invoke the freeview of freesurfer
 
-  freeivew -v T1.mgz -v wm.mgz -v brainmask.mgz aseg.mgz:colormap=lut:opacity=0.2
+The flag -v is used to indicated that we are open volumes, 
+T1.mgz: T1 anatomical image 
+brainmask.mgz: skull-stripped volume primarily used for troubleshooting 
+aseg.mgz : subcortical segmentation loaded with its corresponding color table and at a opacity=0.2 
 
-The flag -v is used to open some of the most commonly used volumes including
-brainmask.mgz : skull-stripped volume primarily used for troubleshooting
-wm.mgz : white matter mask also used for troubleshooting
-aseg.mgz : subcortical segmentation loaded with its corresponding color table and at a low opacity
+.. image:: Freesufer_freeviewbert.PNG
 
-or go to the surf directory::
- 
-  freeview -f lh.pial:edgecolor=red rh.white:edgecolor=blue rh.pial:edgecolor=red
+Freeview window will appear and load the data, you can play around with different functions. For example, you can use 
 
-The flag -f is used to load surfaces
-white & pial surfaces are loaded for each hemisphere & with color indicated by 'edgecolor'
+.. image:: sliceoptions.PNG 
 
-for more details about `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
+buttons at the top to change which orthogonal view appears in the main viewing window. We can also use the 
 
-Parallel computing for recon-all
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+.. image:: viewingoptions.PNG 
 
-A physical core is an actual physical processor core in your CPU. Each physical core has its own circuitry and its own L1 (and usually L2) cache can read and execute instructions separately (for the most part) $
+buttons to change the organization of the viewing panes. 
 
-Freesufer support the OpenMP code,recon-all can be processed by multiple-cores,ths means that you can either recon-all one subjects with multiple cores or run recon-all multiple subjecets with many cores$
+To change which brain slice you are viewing, use the 'Page Up' or 'Page Down' keys on your keyboard or the up and down arrows. (Mac users: press the fn key while using the up and down arrows.) While 
+Freeview can load many volumes at once, we cannot necessarily see them all at once. we are able to see whichever volume is at the top of the list in the menu on the left. An exception to this are volumes 
+such as the wm.mgz and aseg.mz which can be made translucent, allowing you to view the information they contain simultaneously with the volume directly below it on the list. For example, you are 
+currently seeing information from both the aseg (labeled structures) and the brainmask (voxel intensities).
 
-the command to tell recon-all run multiple cores is -openmp X, X means how many cores you want to run
+We can hide or turn off a layer by unchecking the check box next to the layer name. You can also use the up and down arrows (located below the menu on the left) to move the aseg down on the list, below 
+the brainmask (try it!). 
 
+.. note::
+
+   It is important to ensure that you have install the Xming if you use WSL. 
+
+You also can seel the volume files located in the mri directory. 
+
+.. image:: Freesuefer_mri.PNG 
+
+Surface freeview
+****************
+
+Now, we have know the basics of volume, let verify the surface, which means we need check two things: 
+
+1 whether the surface accurately follow the gray matter and white matter boundaries
+
+2 whether the aseg accurately follows the subcortical intensity boundaries 
+
+In order to do that, let's start with "brainmask". From $SUBJECTS_DIR, put the code::
+
+freeview -v bert/mri/T1.mgz bert/mri/wm.mgz bert/mri/brainmask.mgz bert/mri/aseg.mgz:colormap=lut:opacity=0.2 -f bert/surf/lh.white:edgecolor=blue bert/surf/lh.pial:edgecolor=red 
+bert/surf/rh.white:edgecolor=blue bert/surf/rh.pial:edgecolor=red
+
+Double click on 'brainmask' in the left menu to bring it to the top of the volume list. The white surface (blue line) is used to calculate total white 
+matter volume and should accurately follow the boundary between white matter and gray matter. The pial surface (red line) is used to calculate cortical gray matter volume and should accurately follow the 
+boundary between the gray matter and the CSF.
+
+.. image:: surface_check.PNG
+
+.. note::
+
+  There are regions where the surfaces are not intended to be accurate that we should be aware of:Areas around the hippocampus and amygdala. The surfaces will not completely include or exclude certain 
+subcortical regions. These inaccuracies can be ignored as subcortical regions are excluded from the cortical measures and subcortical volume is measured by the aseg, not the surfaces. 
+
+Subcortical Segmentation
+************************
+
+Uncheck all of the surfaces. Then check the box next to the aseg volume and double click it. The aseg volume will jump to the top of the left menu, above the brainmask volume. This will show the complete 
+segmentation of the subcortical structures.
+
+.. image:: Subcortical_Segmentation.PNG
+
+Each structure is labeled with a unique color/number distinction. If you click on a voxel the structure's name and number label will be shown in the 'Cursor' section under the viewing window next to the 
+word.
+
+3D Freeview in FreeSurfer
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+As we have view the volumes and surface above, there is 3D usage from freeview, we are only use the left hemisphere for simplicity. 
+
+1 Open up any surface from the data as did above. Type the following commands from ``$SUBJECTS_DIR``::
+
+freeview -f bert/surf/lh.pial:annot=aparc.a2009s.annot:name=pial_aparc_des:visible=0  
+
+2 Set the viewport to 3d view, right click in the viewport and select Hide All Slices
+
+3 In the File menu, select Save Movie Frames
+
+4 Set up the options as in the following picture to save the output - as we create a new directory named 3D in our home directory already..
+
+.. image:: 3D.PNG
+
+5 From terminal, navigate to the new directory our output located -3D, Run this command:: 
+
+  convert -delay .1 *.png brainanim.gif 
+
+.. Note:: 
+
+  ``convert`` is from the ImageMagick library, you can find the files from `here <https://imagemagick.org/index.php>`__
+
+To view your GIF, open it with firefox browser by type ``firefox brainanim.gif`` from your terminal 
+
+.. image:: brainanim.gif
+
+More details from `freeview <http://surfer.nmr.mgh.harvard.edu/fswiki/FsTutorial/OutputData_freeview/>`__
 
 Segmentation of hippocampal subfields
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Subfields segmentation in Hippocampus
+One of important function of FreeSurfer is the subfield segmentation of Hippocampus and amygdala
 
-After ``recon-all`` has been completed, you can use T1 scan from ``recon-all`` and the pipline::
+After ``recon-all`` has been completed, you can take the output from ``recon-all`` and the pipline::
 
   segmentHA_T1.sh subject_name [SUBJECTS_DIR]
 
@@ -91,7 +214,8 @@ You can check the outfiles with freeview::
 
 [lr]h.hippoAmygLabels-T1.v21.mgz: they store the discrete segmentation volumes at subvoxel resolution (0.333 mm).
 
-[lr]h.hippoAmygLabels-T1.v21.FSvoxelSpace.mgz: they store the discrete segmentation volume in the FreeSurfer voxel space (normally 1mm isotropic, unless higher resolution data was used in recon-all with the flag -cm). 
+[lr]h.hippoAmygLabels-T1.v21.FSvoxelSpace.mgz: they store the discrete segmentation volume in the FreeSurfer voxel space (normally 1mm isotropic, unless higher resolution data was used in recon-all with 
+the flag -cm).
 
 [lr]h.hippoAmygLabels-T1.v21.[hierarchy].mgz: they store the segmentations with the different hierarchy levels.
 
@@ -113,53 +237,63 @@ For MacOC user, please follow this `video <https://www.youtube.com/watch?v=0R6SJ
 
 Go `HippocampalSubfieldsAndNucleiOfAmygdala  <https://surfer.nmr.mgh.harvard.edu/fswiki/HippocampalSubfieldsAndNucleiOfAmygdala/>`__ to see all the instructions
 
-Extract the volume matrix from FreeSurfer
+Extract the volume matrix from FreeSurfer  
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Open the CSV file with Excel 2016.
-Look for "Data" tab and "Text in column" button.
-In the step 1, select "Delimited".
-In the step 2, select first "space", and then choose "string classifier" as ". Then Excel will recognise the string quoted in " " and separate in columns the data with space.
-Change format in step 3. "Finish".
+Once we use the freesurfer automated segmentation, we can also collect the volumes of the subregions of the hippocampus / amygdala of all subjects and write them to a single file, ectracting the volume 
+matrix::
 
-FastSurfer
-^^^^^^^^^^
+  quantifyHAsubregions.sh hippoSf <T1> <output_file> <Output_file_directory> 
+ 
+The first argument ``quantifyHAsubregions.sh`` specifies that we want to collect the volumes of the hippocampus (hippoSf). The second argument is the name of the analysis: for the first mode of operation 
+(only main T1 scans), it is simply type T1, and don't forget to name the output_file.
 
-`FastSurfer <https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall/>`__ is a fast and deep-learning pipeline for the fully automated processing of structural human brain MRIs. It provides conform outputs like FreeSurfer did, enables big-data analysis and time-critical clinical applications. A `video <https://www.youtube.com/watch?v=V78jKcqVg7k&feature=emb_logo>`__ might help you understand better. 
+After a few seconds, you will see the output files in the current directory, open it with ``less`` 
 
-.. image:: FasteSurfer.png
+.. image:: volume_matrix.PNG
 
-FastSurfer consists of two main parts:
+What a mess! Fortunately, there is a solution.
+ 
+1 Open the file with Excel 2016.
 
-``FastSurferCNN`` Volumetric Segmentation 
+2 Look for "Data" tab and "Text in/to column" button.
 
-FastSurferCNN is an  advanced deep learning pipline for whole brain segmentation into 95 classes in under 1 minute, mimicking FreeSurfer’s anatomical segmentation and cortical parcellation. 
+3 In the step 1, select "Delimited".
 
-``recon-surf`` Surface reconstruction
+4 In the step 2, select first "space", and then choose "string classifier" as "." 
 
-recon-suirf is a full FreeSurfer alternative for cortical surface reconstruction, mapping of cortical labels and traditional point-wise and ROI thickness analysis in approximately 60 minutes.
+Change format in step 3. "Finish". And save as csv file
 
-go to `Here <https://github.com/deep-mi/FastSurfer>`__ either use ``git clone`` from you home directory to ge the file or download the file and put it in your home directory 
+Then, You will get a file like this 
 
-# set up 
-Set the path ``export FREESURFER_HOME=/usr(usrname)/local/freesurfer/7.1.1-1``
-Use ``source $FREESURFER_HOME/SetUpFreeSurfer.sh`` to activate the Freesurfer
+.. image:: BART_volume.PNG
 
-datadir=/home/user/mri_data_directory
-fastsurferdir=/home/user/fastsurfer_analysis_directory 
+and have fun by play it around like PCA analysis.
 
-# Run FastSurfer
-./run_fastsurfer.sh --t1 $datadir/subject1/orig.mgz \
-                    --sid subject1 --sd $fastsurferdir \
-                    --parallel --threads 4
+.. image:: hipp_vol.png
 
-``--sd``  Output directory $SUBJECTS_DIR 
+Longitudinal processing  
+^^^^^^^^^^^^^^^^^^^^^^^
 
-``--sid`` Subject ID for directory inside $SUBJECTS_DIR to be created 
+All data for this tutorial has already been processed for you since processing can take up to 24h. However, to continue you need to understand the three processing steps (cross, base, long) and 
+associated directory names.
 
-``--t1``  T1 full head input. The network was trained with conformed images (UCHAR, 256x256x256, 1 mm voxels and standard slice orientation). These specifications are checked in the eval.py script and the image is automatically conformed if it does not comply.
+assume you have a subject with two time points: time_point_1 and time_point_2
 
-Before you run the script, just ensure you check all the required packages 
-``sed -i "s/==/>=/g" requirements.txt`` and ``pip install --no-index -r requirements.txt`` might help
+[CROSS]: You would process these two images independently first (we call that cross as in crossectional analysis/processing) using the regular FreeSurfer processing stream (recon-all). You end up with 
+two directories with the names OAS2_0001_MR1 and OAS2_0001_MR2
 
-This is a fast alternative way to do the Freesurfer job
+[BASE]: Then you would run the second step to create the within subject template (also called base) and end up with a new directory. There is only one base directory per subject. We decide to name the 
+base: OAS2_0001. Inside this directory are the results for the average anatomy of your subject across time. You don't use this data in any analysis, and only look at it for quality checking or editing.
+
+[LONG]: Finally you would create the two longitudinal runs (the ones you are actually interested in). You end up with two more directories (these names get automatically assigned): 
+OAS2_0001_MR1.long.OAS2_0001 and OAS2_0001_MR2.long.OAS2_0001. They contain the final, most reliable and accurate processing results..
+
+FreeSurfer commands 
+^^^^^^^^^^^^^^^^^^^
+
+There are commands that could be quite useful.
+
+1 ``mri_info`` this command can help you find the basic information from the NIFTI files 
+
+

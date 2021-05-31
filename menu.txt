@@ -1,5 +1,0 @@
-This is menu for your dinner
-
-appetizer:caviar
-
-first course:Sushi 

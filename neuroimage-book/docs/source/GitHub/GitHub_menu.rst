@@ -1,7 +1,7 @@
 GitHub
 ======
 
-What is most to a chef, collboration, collboration and collboration
+What is most important to produce a cuisine? collboration, collboration and collboration
 
 So, What is GitHub?
 
@@ -11,11 +11,14 @@ First thing first
 
 go to `GitHub <https://github.com/>`__ create a account and sign in 
 
-Here I just want to introduce 4 major commands for GitHub::
+Here I just want to introduce 4 major commands for GitHub:
 
   repositories 
+
   branches
+
   commits
+
   Pull Requests
 
 Step 1 Creat a repository 
@@ -23,7 +26,7 @@ Step 1 Creat a repository
 
 A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything your project needs
 
-Go the left right corner where you can see Repositories click new
+Go to the left-right corner where you can see Repositories click new
 
 Name your repository ``Hello-World``
 
@@ -38,9 +41,11 @@ click Create repository
 Step 2 Creat a Branch
 ^^^^^^^^^^^^^^^^^^^^^
 
-Branching is the way to work on different versions of a repository at one time, By default your repository has one branch named ``main`` which is considered to be the definitive branch. We use branches to experiment and make edits before committing them to ``main``
+Branching is the way to work on different versions of a repository at one time, By default your repository has one branch named ``main`` which is considered to be the definitive branch. We use branches 
+to experiment and make edits before committing them to ``main``
 
-When you create a branch off the ``main`` branch, you’re making a copy, or snapshot, of ``main`` as it was at that point in time. If someone else made changes to the ``main`` branch while you were working on your branch, you could pull in those updates
+When you create a branch off the ``main`` branch, you’re making a copy, or snapshot, of ``main`` as it was at that point in time. If someone else made changes to the ``main`` branch while you were 
+working on your branch, you could pull in those updates
 
 the ``main`` branch
 
@@ -62,7 +67,6 @@ Select the Create branch text box
 
 Now you have two branches, ``main`` and ``readme-edits``
 
-
 Step 3 Make and commit changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -83,7 +87,8 @@ Step 4 Open a Pull Request
 
 Now that you have changes in a branch off of main, you can open a pull request
 
-Pull Requests are the heart of collaboration on GitHub. When you open a pull request, you’re proposing your changes and requesting that someone review and pull in your contribution and merge them into their branch. Pull requests show diffs, or differences, of the content from both branches. The changes, additions, and subtractions are shown in green and red.
+Pull Requests are the heart of collaboration on GitHub. When you open a pull request, you’re proposing your changes and requesting that someone review and pull in your contribution and merge them into 
+their branch. Pull requests show diffs, or differences, of the content from both branches. The changes, additions, and subtractions are shown in green and red.
 
 Open a Pull Request for changes to the README
 
@@ -112,5 +117,4 @@ Click Confirm merge
 
 Go ahead and delete the branch, since its changes have been incorporated, with the Delete branch button in the purple box.
 
-You might also want to know and try ``git add``, ``git commit`` and ``git push`` form  `here <https://docs.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line/>`__ 
  
