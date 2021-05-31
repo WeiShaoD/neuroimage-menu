@@ -30,10 +30,14 @@ Ortho View 1 -> Atlas Panel. The Harvard-Oxford Cortical and Subcortical Atlases
 name, you can see how the atlas divides the brain. A chance of belonging to a brain structure will be assigned to the voxel at the centre of the crosshairs 
 in the viewing window.
 
-What we need do NEXT 
+What we need do 
 
 
 Extract the data
 ^^^^^^^^^^^^^^^^
 
+<<<<<<< HEAD
 Now, we need to extract the data from the mask we just created.
+=======
+
+>>>>>>> cb6a5da44d6c8467886e5f82a5bb0eaea2daec2d
