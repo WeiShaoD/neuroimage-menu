@@ -33,5 +33,7 @@ in the viewing window.
 What we need do NEXT 
 
 
-extract the data
+Extract the data
 ^^^^^^^^^^^^^^^^
+
+Now, we need to extract the data from the mask we just created.
