@@ -36,4 +36,4 @@ What we need do
 Extract the data
 ^^^^^^^^^^^^^^^^
 
-Now, we need to extract the data from the mask we just created.
+Now, we need to extract the data from the mask we just created. First thing first.
