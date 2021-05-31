@@ -25,3 +25,10 @@ Atlases
 
 One way to create a region for our ROI analysis is to use an atlas, or a map that partitions the brain into anatomically distinct regions.
 
+Many atlases are already installed on FSL, and we can access them by using the FSL viewer. Open FSL view from FSL_gui and click file -> Open standard -> choose MNI standard space such as MNI152_T1_2mm_brain.nii.gz A new window, right click  named ``Atlases`` will open if you click on Settings -> 
+Ortho View 1 -> Atlas Panel. The Harvard-Oxford Cortical and Subcortical Atlases are loaded by default. By clicking the Show/Hide option next to the atlas 
+name, you can see how the atlas divides the brain. A chance of belonging to a brain structure will be assigned to the voxel at the centre of the crosshairs 
+in the viewing window.
+
+What we need do 
+
