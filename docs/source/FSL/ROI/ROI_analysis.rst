@@ -10,7 +10,7 @@ While A large number of studies have been run about a specific topic, we can beg
 the brain images. For instance, memory has been studied for many years, and many fMRI studies have been published about it using different paradigms that 
 compare differenmt memory tasks. Often, significant increases in the BOLD signal during various memories conditions are seen in a region of the brain known 
 as the Hippocampus and medial temporal lobe. For this BART study, then, we could restrict our analysis to this region and only extract data from voxels 
-within that region. This is known as a RwO analysis. A general name for an analysis in which we choose to analyze a region selected before look at 
+within that region. This is known as a ROI analysis. A general name for an analysis in which we choose to analyze a region selected before look at 
 whole-brain results is called a confirmatory analysis.
 
 Whole-brain maps can hide important details about the effects that we’re studying. We may find a significant effect of BART conditions, but the reason the 
