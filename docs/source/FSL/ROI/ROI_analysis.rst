@@ -26,10 +26,20 @@ One way to do an ROI analysis is to use an atlas, a map that partitions the brai
 
 As you may know, Many atlases are already installed on FSL, and we can access them by using the FSL viewer. Open FSL view from FSL_gui and click file -> Open 
 standard -> choose MNI standard space such as MNI152_T1_2mm_brain.nii.gz. you will see the Standard space, then, click the ``Atlas tools`` from the bottom 
-box, a new window will appear on the left side, click ``Atlases`` to make sure the defult Atases Harvard-Oxford Cortical and Subcortical Atlases are 
-loaded.Then, Click the ``Structures`` and use Harvard-Oxford Subcortical Atlas, find the left hippocampus and click the + button to add the right 
-hippocampus, click OK and you will see the two regions (left and right hippocampus) are highlighted, click file to save as ``lh_hippo.mask`` and 
-``rh_hippo.mask`` respectively.
+box, a new window will appear on the left side, click ``Atlases`` to make sure the defult Atases Harvard-Oxford Cortical and Subcortical Atlases are loaded. 
+Then, click the ``Structures`` and use Harvard-Oxford Subcortical Atlas, find the left hippocampus and click the ``+`` button to add the right hippocampus, 
+click OK and you will see the two regions (left and right hippocampus) are highlighted, click file to save as ``lh_hippo.mask`` and ``rh_hippo.mask`` 
+respectively.
+
+.. image:: stand_space.PNG
+
+.. image:: Atlas.PNG 
+
+.. image:: atlas_structure.PNG
+
+.. image:: left_right_mask.PNG
+
+.. image:: save_as.PNG
 
 .. note::
 
@@ -38,6 +48,7 @@ of 2x2x2mm. When you create a mask, it will have the same resolution as the temp
 the mask need to have the same resolution. To avoid any errors due to different image resolutions, use the same template to create the mask that you used to 
 normalize your data.
 
+
 Extract the data from anatomical mask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -45,7 +56,7 @@ After generated the mask, we can use it to extract the contrast estimates for ea
 3rd-level analysis since the 3rd-level analysis is a image with a single number at each voxel. Our purpose in a ROI analysis is to extract the contrast 
 estimate for each subject separately.
 
-From the directorty BART_fsl/BART_2ndLevel.gfeat/cope3.feat/stats``, we can find tge subject's data maps for the cash-explode contrast condition such as 
+From the directorty ``BART_fsl/BART_2ndLevel.gfeat/cope3.feat/stats``, we can find tge subject's data maps for the cash-explode contrast condition such as 
 T-statistic maps, cope pictures, and variance pictures, the data maps are calculated base from these methods. let's extract data from z-statistic maps since 
 this data have been transformed into a normally distributed format and it is quit easier to plot and read.
 
@@ -67,3 +78,7 @@ lh_hippo.mask, use the ``fslmeants`` command::
 This will print 16 numbers, one per subject. Each number is the contrast estimate for that subject averaged across all of the voxels in the mask.To be more 
 specific, the fitst number that corresponds to the average contrast estimate for cash-explode in sub-01. The second number, for sub-02, and so on. These 
 numbers can be copied and pasted into your preferred statistical software tool (such as R), where you can then perform a t-test on them.
+
+.. image:: fslmeants.PNG
+
+Now, you can use the right hippocampus mask and repeat the steps above to do an ROI analysis for right hippocampus on cash-explode condition. 
