@@ -72,7 +72,7 @@ them numerically from smallest to largest with the -V option.
 Type ``mv allZstats.nii.gz ../../..`` to move the allZstats.nii.gz file up three levels to the main BART_fsl directory. Then, to extract the data from the 
 lh_hippo.mask, use the ``fslmeants`` command::
 
-  fslmeants -i allZstats.nii.gz -m PCG.nii.gz
+  fslmeants -i allZstats.nii.gz -m lh_hippo.mask.nii.gz
 
 This will print 16 numbers, one per subject. Each number is the contrast estimate for that subject averaged across all of the voxels in the mask.To be more 
 specific, the fitst number that corresponds to the average contrast estimate for cash-explode in sub-01. The second number, for sub-02, and so on. These 
