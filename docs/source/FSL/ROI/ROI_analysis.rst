@@ -33,10 +33,10 @@ hippocampus, click OK and you will see the two regions (left and right hippocamp
 
 .. note::
 
-  our results will have the same resolution as the template we used for normalization. The default in FSL is the MNI_152_T1_2mm_brain, which has a 
-resolution of 2x2x2mm. When you create a mask, it will have the same resolution as the template that it is overlaid on. When we extract data from the mask, 
-the data and the mask need to have the same resolution. To avoid any errors due to different image resolutions, use the same template to create the mask that 
-you used to normalize your data.
+  our results will have the same resolution as the template we used for normalization. The default in FSL is the MNI_152_T1_2mm_brain, which has a resolution 
+of 2x2x2mm. When you create a mask, it will have the same resolution as the template that it is overlaid on. When we extract data from the mask, the data and 
+the mask need to have the same resolution. To avoid any errors due to different image resolutions, use the same template to create the mask that you used to 
+normalize your data.
 
 Extract the data from anatomical mask
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
