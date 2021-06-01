@@ -18,7 +18,6 @@ effect is significant could be because cash is greater than explode, or because 
 only way to determine what is driving the effect is with ROI analysis, and this is especially important when dealing with interactions and more sophisticated 
 designs.
 
-
 Atlases
 ^^^^^^^
 
