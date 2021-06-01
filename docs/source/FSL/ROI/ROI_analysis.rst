@@ -1,7 +1,6 @@
 ROI analysis
 ============
 
-
 As we just completed a group-level analysis, and identified some regions of the brain show a significant difference under the condition of the experiment. 
 Now, we are going to continue our learning with region of analysis(ROI). This is called a whole-brain or exploratory analysis. When we doesn't have a 
 hypothesis to test, these types of studies are beneficial.
@@ -23,17 +22,48 @@ designs.
 Atlases
 ^^^^^^^
 
-One way to create a region for our ROI analysis is to use an atlas, or a map that partitions the brain into anatomically distinct regions.
+One way to do an ROI analysis is to use an atlas, a map that partitions the brain into anatomically distinct regions.
 
-Many atlases are already installed on FSL, and we can access them by using the FSL viewer. Open FSL view from FSL_gui and click file -> Open standard -> choose MNI standard space such as MNI152_T1_2mm_brain.nii.gz A new window, right click  named ``Atlases`` will open if you click on Settings -> 
-Ortho View 1 -> Atlas Panel. The Harvard-Oxford Cortical and Subcortical Atlases are loaded by default. By clicking the Show/Hide option next to the atlas 
-name, you can see how the atlas divides the brain. A chance of belonging to a brain structure will be assigned to the voxel at the centre of the crosshairs 
-in the viewing window.
+As you may know, Many atlases are already installed on FSL, and we can access them by using the FSL viewer. Open FSL view from FSL_gui and click file -> Open 
+standard -> choose MNI standard space such as MNI152_T1_2mm_brain.nii.gz. you will see the Standard space, then, click the ``Atlas tools`` from the bottom 
+box, a new window will appear on the left side, click ``Atlases`` to make sure the defult Atases Harvard-Oxford Cortical and Subcortical Atlases are 
+loaded.Then, Click the ``Structures`` and use Harvard-Oxford Subcortical Atlas, find the left hippocampus and click the + button to add the right 
+hippocampus, click OK and you will see the two regions (left and right hippocampus) are highlighted, click file to save as ``lh_hippo.mask`` and 
+``rh_hippo.mask`` respectively.
 
-What we need do 
+.. note::
+
+  our results will have the same resolution as the template we used for normalization. The default in FSL is the MNI_152_T1_2mm_brain, which has a 
+resolution of 2x2x2mm. When you create a mask, it will have the same resolution as the template that it is overlaid on. When we extract data from the mask, 
+the data and the mask need to have the same resolution. To avoid any errors due to different image resolutions, use the same template to create the mask that 
+you used to normalize your data.
+
+Extract the data from anatomical mask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After generated the mask, we can use it to extract the contrast estimates for each participant. We want extract result from the 2nd-level analysis, not the 
+3rd-level analysis since the 3rd-level analysis is a image with a single number at each voxel. Our purpose in a ROI analysis is to extract the contrast 
+estimate for each subject separately.
+
+From the directorty BART_fsl/BART_2ndLevel.gfeat/cope3.feat/stats``, we can find tge subject's data maps for the cash-explode contrast condition such as 
+T-statistic maps, cope pictures, and variance pictures, the data maps are calculated base from these methods. let's extract data from z-statistic maps since 
+this data have been transformed into a normally distributed format and it is quit easier to plot and read.
 
 
-Extract the data
-^^^^^^^^^^^^^^^^
+We'll combine all of the z-statistic maps into a single dataset in order to make ROI analysis easier. It requires a combination of FSL and Unix commands to 
+do this. cd to BART_fsl/BART_2ndLevel.gfeat/cope3.feat/stats, and type::
 
-Now, we need to extract the data from the mask we just created. First thing first.
+  fslmerge -t allZstats.nii.gz `ls zstat* | sort -V`
+
+This command will combine all of the z-statistic images into a single dataset along the time series (flag -t option). The first argument specifies the name 
+of the output dataset (allZstats.nii.gz), and the code in backticks use asterisk wildcard function to find all files begin with "zstat," and then arranges 
+them numerically from smallest to largest with the -V option.
+
+Type ``mv allZstats.nii.gz ../../..`` to move the allZstats.nii.gz file up three levels to the main BART_fsl directory. Then, to extract the data from the 
+lh_hippo.mask, use the ``fslmeants`` command::
+
+  fslmeants -i allZstats.nii.gz -m PCG.nii.gz
+
+This will print 16 numbers, one per subject. Each number is the contrast estimate for that subject averaged across all of the voxels in the mask.To be more 
+specific, the fitst number that corresponds to the average contrast estimate for cash-explode in sub-01. The second number, for sub-02, and so on. These 
+numbers can be copied and pasted into your preferred statistical software tool (such as R), where you can then perform a t-test on them.
