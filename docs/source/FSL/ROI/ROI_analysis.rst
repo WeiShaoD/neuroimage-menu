@@ -80,4 +80,4 @@ numbers can be copied and pasted into your preferred statistical software tool (
 
 .. image:: fslmeants.PNG
 
-Now, you can use the right hippocampus mask and repeat the steps above to do an ROI analysis for right hippocampus on cash-explode condition. 
+Now, you can use the right hippocampus mask and repeat the steps above to do an ROI analysis for right hippocampus on cash-explode condition. Have fun! 
