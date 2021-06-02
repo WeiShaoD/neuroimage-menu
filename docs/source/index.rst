@@ -51,8 +51,8 @@ Menu
 .. toctree::
    :maxdepth: 1  
    :caption: Drinks Preprocessing
-                                                                                                                                                                               
-   Preprocessing/Preprocessing_menu 
+                                                                                                                                                                 
+   Preprocessing/Preprocessing_menu               
 
 .. toctree::
    :maxdepth: 1
