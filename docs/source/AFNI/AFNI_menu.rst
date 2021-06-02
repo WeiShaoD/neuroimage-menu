@@ -35,9 +35,9 @@ AFNI installation and set up
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For Linux system user, you can find the instruction in `here 
-<https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/steps_linux_ubuntu.html>`__,
+<https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/steps_linux_ubuntu.html>`__.
 
-For MacOS user, here is the `instruction <https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/steps_mac.html>`
+For MacOS user, here is the `instruction <https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/steps_mac.html>`__.
 
 
 
