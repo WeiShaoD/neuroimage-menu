@@ -48,8 +48,8 @@ the mask need to have the same resolution. To avoid any errors due to different 
 normalize your data.
 
 
-Extract the data from anatomical mask
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Extracting the data from mask
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After generated the mask, we can use it to extract the contrast estimates for each participant. We want extract result from the 2nd-level analysis, not the 
 3rd-level analysis since the 3rd-level analysis is a image with a single number at each voxel. Our purpose in a ROI analysis is to extract the contrast 
