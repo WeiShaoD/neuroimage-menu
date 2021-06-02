@@ -46,10 +46,8 @@ everywhere else; this is referred to as a mask. Click ``Done`` once you've compl
 All the step:
 
 Define Datamode➡ Plugins➡ Draw Dataset➡ Choose dataset for copying➡ Choose Atlas➡ SaveAs
- 
-.. note::
-  
-  The mask dataset in AFNI has a different resolution than the normalised anatomical image and the template used for normalisation by default. AFNI template 
+   
+The mask dataset in AFNI has a different resolution than the normalised anatomical image and the template used for normalisation by default. AFNI template 
 was the MNI avg152T1+tlrc file, which has a resolution of 2x2x2mm, whereas our statistics dataset has a resolution of 3x3x3mm. To use a mask for a ROI 
 analysis, it must have the same resolution as the dataset from which it is being extracted.
 
