@@ -16,3 +16,6 @@ In term of BART study, Whole-brain maps can hide important details about the eff
 conditions, but the reason the effect is significant could come from a greater change of cash than explode, or because explode is much more negative than 
 cash, or some combination of the two. The only way to determine what is driving the effect is with ROI analysis, and this is especially important when 
 dealing with interactions and more sophisticated designs.
+
+Atlas
+^^^^^
