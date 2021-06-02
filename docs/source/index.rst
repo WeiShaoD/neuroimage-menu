@@ -76,7 +76,7 @@ Menu
    FSL/FSL_automation.rst
    FSL/FSL_2nd_analysis
    FSL/FSL_3rd_analysis
-   FSL/ROI_FSL/ROI_analysis.rst
+   FSL/FSL_ROI/ROI_analysis.rst
    FSL/FSL_Tricks
 
 
@@ -93,7 +93,7 @@ Menu
    AFNI/AFNI_1st/AFNI_1st_level.rst
    AFNI/AFNI_automation/Aumomation_menu.rst
    AFNI/AFNI_group/group_analysis.rst
-   AFNI/ROI_AFNI/ROI_analysis.rst
+   AFNI/AFNI_ROI/ROI_analysis.rst
 
 
 .. toctree::
