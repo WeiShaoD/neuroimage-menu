@@ -1,4 +1,5 @@
-AFNI introduction ========
+AFNI introduction 
+=================
  
 .. image:: AFNI_logo.PNG
 
@@ -30,7 +31,8 @@ We will start with the dataset downloading, preprocessing, 1st level, and end wi
 
 5 group analysis
 
-AFNI installation and set up ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AFNI installation and set up 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 For Linux system user, you can find the instruction in `here 
 <https://afni.nimh.nih.gov/pub/dist/doc/htmldoc/background_install/install_instructs/steps_linux_ubuntu.html>`__,
