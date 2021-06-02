@@ -30,7 +30,7 @@ the atlases; first, Open the AFNI_GUI from the ``sub-01/sub-01.results`` directo
 Then, you must first click on ``Define Datamode``, then ``Plugins``, and then ``Draw Dataset`` from the dropdown menu. the procedure is depicated in the 
 picture below.
 
-.. image:: Selection
+.. image:: Selection.PNG
  
 Like painter need to drawing on a whiteboard. The The goal of copying that dataset is to generate a "clean" dataset with the same dimensions as the other 
 images, but one that we can write on by designating which voxels correspond to our ROI. In this case, continue the Draw Dataset from the directory 
@@ -49,9 +49,9 @@ Define Datamode➡ Plugins➡ Draw Dataset➡ Choose dataset for copying➡ Choo
  
 .. note::
   
-  The results dataset in AFNI has a different resolution than the normalised anatomical image and the template used for normalisation by default. Our AFNI 
-template was the MNI avg152T1+tlrc file, which has a resolution of 2x2x2mm, whereas our statistics dataset has a resolution of 3x3x3mm. To use a mask for a 
-ROI analysis, it must have the same resolution as the dataset from which it is being extracted.
+  The mask dataset in AFNI has a different resolution than the normalised anatomical image and the template used for normalisation by default. AFNI template 
+was the MNI avg152T1+tlrc file, which has a resolution of 2x2x2mm, whereas our statistics dataset has a resolution of 3x3x3mm. To use a mask for a ROI 
+analysis, it must have the same resolution as the dataset from which it is being extracted.
 
 We can match the resolutions of our mask dataset and our statistics dataset by using AFNI’s ``3dresample`` command. This command requires both a “master” 
 dataset, which we will be resampling to, and an “input” dataset, which will have its dimensions and resolution changed to match the master datset::
