@@ -73,7 +73,7 @@ From the subjects directory type::
 
   3dinfo -verb sub-01/sub-01.results/stats.sub-01+tlrc.
 
-.. image:: 3dinfo.PNG
+.. image:: 3dinfo_2.PNG
 
 The sub-briks indicate which volume in the dataset has which beta weight. In this example, the cash condition's beta weight is sub-brik 1, the explode 
 condition's beta weight is sub-brik 4, and the contrast weight for cash-explode is sub-brik 7. Sub-briks 1 and 4 will be extracted and saved in separate 
