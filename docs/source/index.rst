@@ -77,6 +77,7 @@ Menu
    FSL/FSL_2nd_analysis
    FSL/FSL_3rd_analysis
    FSL/FSL_ROI/ROI_analysis.rst
+   FSL/FSL_Resting-state/Resting-state.rst
    FSL/FSL_Tricks
 
 
@@ -94,6 +95,7 @@ Menu
    AFNI/AFNI_automation/Aumomation_menu.rst
    AFNI/AFNI_group/group_analysis.rst
    AFNI/AFNI_ROI/ROI_analysis.rst
+   AFNI/AFNI_Resting-state/Resting-state.rst
 
 
 .. toctree::
@@ -108,6 +110,7 @@ Menu
     SPM/SPM_Automation/automation_2.rst
     SPM/SPM_group_analysis/group_analysis.rst
     SPM/SPM_ROI/ROI_analysis.rst
+    SPM/SPM_Resting-state/Resting-state.rst
 
 .. toctree::
     :maxdepth: 1
