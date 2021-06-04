@@ -16,7 +16,7 @@ We have::
 
 3 appetizers; Linux system, OpenNeuro and GitHub 
 
-4 main courses; FreeSurfer, FSL, AFNI, and SPM  
+5 main courses; FreeSurfer, FSL, AFNI, SPM and CONN  
 
 1 dessert, running analysis on SuperComputer 
 
@@ -132,3 +132,4 @@ Menu
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
+if you have any questions/suggestions about this menu, please contact me by reclusedavid@gmail.com.
