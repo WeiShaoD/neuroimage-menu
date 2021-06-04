@@ -19,10 +19,4 @@ Now, you get the new orientated T2
 
 .. image:: FSL_orientation_after.PNG
 
-Melodic in FSL
-^^^^^^^^^^^^^^
-
-ICA analysis
-
-What is the (independent component analysis)ICA analysis? , board speaking, ICA analysis is an signal processing, independent component analysis (ICA) is a computational method for separating a multivariate signal into additive subcomponents. This is done by assuming that the subcomponents are non-Gaussian signals and that they are statistically independent from each other. ICA is a special case of blind source separation. A common example application is the "cocktail party problem" of listening in on one person's speech in a noisy roo
  

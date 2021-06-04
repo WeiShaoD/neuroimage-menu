@@ -78,7 +78,7 @@ Menu
    FSL/FSL_3rd_analysis
    FSL/FSL_ROI/ROI_analysis.rst
    FSL/FSL_Resting-state/Resting-state.rst
-   FSL/FSL_Tricks
+   FSL/FSL_Tricks.rst
 
 
 .. toctree::
@@ -111,6 +111,14 @@ Menu
     SPM/SPM_group_analysis/group_analysis.rst
     SPM/SPM_ROI/ROI_analysis.rst
     SPM/SPM_Resting-state/Resting-state.rst
+
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Main course 5 CONN
+
+    CONN/CONN_menu.rst
+
 
 .. toctree::
     :maxdepth: 1
