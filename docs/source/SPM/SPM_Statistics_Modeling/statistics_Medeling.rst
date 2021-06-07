@@ -124,7 +124,7 @@ are:
 2 the onset time of trial for each condtion, relative to the onset of the scan
 3 The duration of each trial
 
-..image:: event.PNG 
+.. image:: event.PNG 
 
 This information needs to be extracted from the events.tsv files and be transformed into a format that the AFNI can read. our job is to create a timing file for explode and cash experimental condition, 
 and then split the file based on which run the condition was in. We will have 6 timing files:
