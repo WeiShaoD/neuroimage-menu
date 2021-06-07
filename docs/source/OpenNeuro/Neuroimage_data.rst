@@ -111,3 +111,25 @@ FLARI images
 
 Fluid-attenuated inversion recovery (FLAIR) is an MRI sequence with an inversion recovery set to null fluids. It can be used in brain imaging to suppress cerebrospinal fluid (CSF) effects on the image, 
 so as to bring out the periventricular hyperintense lesions, such as multiple sclerosis (MS) plaques. FLAIR can be used with both three-dimensional imaging (3D FLAIR) or two dimensional imaging.
+
+Quantitative MRI(qMRI)
+*********************
+
+Quantitative MRI (qMRI) is a collection of methods aiming at generating parametric maps that can characterize underlying tissue properties. Unlike those of 
+conventional MR images (such as T1w or T2w), intensity values of quantitative maps are not represented in an arbitrary range. Instead, these maps are 
+represented either in absolute physical units (seconds for T1map), or within an application dependent range of arbitrary units (myelin water 
+fraction MWFmap in brain)
+
+Resting-state fMRI
+******************
+
+Resting-State Functional Connectivity (RSC) is a kind of study that indicated the significant correlation of signal between functionally related brain 
+regions in the absence of any stimulus or task stimulus or task. This correlated signal arises from spontaneous low-frequency signal fluctuations (SLFs). A 
+lot of the time series of voxels correlated significantly (after filtering the fundamental and harmonics of respiration and heart rates) while only a few 
+voxel time courses (< 3%) correlated with those in regions outside of the motor cortex. Subsequently, there are some evidence indicated that the presence of 
+RSC in sensory cortices, specifically auditory and visual cortices. In a study, signal from visual cortex voxels during rest was used as a reference and 
+correlated with every other voxel in the brain. A significant number of voxels from the visual cortex passed a threshold of 0.35, while only a few voxels 
+from outside the visual cortex passed the threshold. some similar results also appear in the auditory cortex.
+
+
+
