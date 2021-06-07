@@ -39,7 +39,7 @@ Next, we will need to replace the relative path. As you can see in the script, t
 $PWD or the whatever current working directory path you have, This will ensure that the script will be adapted to the your work environment. For example, you can change the **/home/wshao/BART_afni/** to 
 ``$PWD``
 
-You can download the script from here `<https://github.com/WeiShaoD/neuroimage-book/blob/main/docs/source/AFNI/AFNI_automation/proc.BART.sh>`__ can make the some changes for you dataset if necessary.   
+You can download the script from `here <https://github.com/WeiShaoD/neuroimage-book/blob/main/docs/source/AFNI/AFNI_automation/proc.BART.sh>`__ can make the some changes for you dataset if necessary.   
 
 Automating the Analysis
 ^^^^^^^^^^^^^^^^^^^^^^^
