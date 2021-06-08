@@ -12,16 +12,14 @@ This module will focus on the functional connectivity with the SPM-depend tool n
 regions of the brain. This correlation can be analyzed when the subject is doing a task (i.e., task-based connectivity), or when the subject is at rest - 
 relaxed and alert, but not doing any particular task (i.e., resting-state connectivity).
 
-In the following tutorials, you will learn how to perform resting-state connectivity analyses on a sample dataset. We will use the CONN toolbox to run the 
-analyses, which includes both creating correlation maps for each voxel of the brain, and generating connectomes that visualize the strength of the 
-connectivity between different regions.
+In the following tutorials, you will learn how to perform resting-state connectivity analyses on a dataset. We will use the CONN toolbox to run the analyses, 
+which includes both creating correlation maps for each voxel of the brain, and generating connectomes that visualize the strength of the connectivity between 
+different regions.
 
-Previous tutorial
-^^^^^^^^^^^^^^^^^
+Previous tutorial 
+^^^^^^^^^^^^^^^^^ 
+
 Before going on, you may want to work through the SPM tutorials. These will introduce you to Matlab and SPM, which you will need to run the CONN toolbox. 
-That course will also cover what toolboxes are, and how to install some of the most widely used ones, including Marsbar and the WFU PickAtlas toolboxes. When 
-you have finished doing the SPM tutorials, come back to this page to being the CONN walkthrough.
-
 Note that SPM is a prerequisite for the CONN toolbox, meaning that you will need to download and install SPM before you can use CONN. The rest of the 
 tutorials in the SPM module aren’t required, although a better understanding of how SPM preprocesses fMRI data will prepare you to use the CONN toolbox.
 
