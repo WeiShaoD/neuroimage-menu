@@ -122,7 +122,7 @@ Menu
     :maxdepth: 1
     :caption: Main course 5 CONN
 
-    CONN/CONN_menu.rst
+    CONN/
 
 
 .. toctree::
