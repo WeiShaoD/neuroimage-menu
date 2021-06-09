@@ -67,19 +67,14 @@ So far, we have successfully made some changes in a branch off of the main branc
 and pull in your contribution and merge them into their branch. Pull requests show diffs, or differences, of the content from both branches. The changes, 
 additions, and subtractions are shown in green and red by GitHub.
 
-Open a Pull Request for changes to the README
+After you commit you changes in the README file, go back to the **readme-edits** branch, you will see a new textbox. By click the ``Compare&pull request``, 
+jump to the **Open a pull request** page. Leave a comment in the main textbox, scroll down to look over your changes in the diffs on the Compare page, make 
+sure they’re what you want to submit. Clike the green button ``Create pull request``
+ 
+.. image:: GitHub_pull_request.PNG
 
-Click the Pull Request tab, then from the Pull Request page, click the green New pull reqqest
+.. image:: GitHub_compare.PNG
 
-..  image:: GitHub_pull_request.PNG
-
-select the branch you made, readme-edits, to compare with main (the original)
-
-..  image:: GitHub_compare.PNG
-
-Look over your changes in the diffs on the Compare page, make sure they’re what you want to submit
-
-Give your pull request a title and write a brief description of your changes
 
 Step 5 Merge your Pull Request
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
