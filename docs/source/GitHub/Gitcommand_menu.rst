@@ -28,16 +28,17 @@ set up the GitHub configuration::
 
 Then, use ``git clone`` to get the remote directory content from your GitHub repository
 
+git clone
+^^^^^^^^^
+
+``git clone`` is a Git command line that targets an existing repository and creates a clone in your directory. it is primarily used to point to an existing 
+repo and make a clone or copy of that repository in a new directory.
+
 .. image:: git_ssh.PNG
- 
-  you can choose HTPS or SSH for your first time to clone the content, I recommend the SSH option since it will save a lot of time because GitHub won't 
+
+  you can choose HTPS or SSH for your first time to clone the content, I recommend the SSH option since it will save a lot of time because GitHub won't
   ask you the password every time when you upload the content to the existing repository.
 
-git clone
-*********
-
-git clone is a Git command line that targets an existing repository and creates a clone in your directory. it is primarily used to point to an existing repo 
-and make a clone or copy of that repo in a new directory.
 
 Type  ``git clone git@github.com:WeiShaoD/dinner_menu.git`` from your work directory.
    
