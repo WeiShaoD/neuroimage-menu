@@ -73,20 +73,18 @@ sure they’re what you want to submit. Clike the green button ``Create pull req
  
 .. image:: GitHub_pull_request.PNG
 
-.. image:: GitHub_compare.PNG
+we 
 
+.. image:: GitHub_compare.PNG
 
 Step 5 Merge your Pull Request
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In this final step, it’s time to bring your changes together – merging your ``readme-edits`` branch into the ``main`` branch
-
-Click the green Merge pull request button to merge the changes into ``main``
+In this final step, let's bring all the changes together – merging the branchs. From the Comparing changes page, you can see that direction of the merge, we 
+are going to merge ``readme-edits`` branch into the ``main`` branch. Click the ``View pull request``, ``Merge pull request`` and ``Confirm merge`` 
 
 ..  image:: GitHub_Merge.PNG
 
-Click Confirm merge
-
-Go ahead and delete the branch, since its changes have been incorporated, with the Delete branch button in the purple box.
+Now, go ahead and delete the readme-edits branch since its changes have been incorporated.
 
  
