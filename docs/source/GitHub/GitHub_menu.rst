@@ -9,7 +9,7 @@ In Short, GitHub is a code hosting platform for version control and collaboratio
 
 You can go to `here GitHub <https://github.com/>`__ create an account and sign in 
 
-Here we will learn the 5 basic commands for GitHub:
+Here we will learn the 5 basic ideas for GitHub:
 
 1.repositories 
 
@@ -21,7 +21,7 @@ Here we will learn the 5 basic commands for GitHub:
 
 5.merge branches
  
-Step 1 Creat a repository 
+Step 1 Create a repository 
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
 A repository is usually used to organize a single project. Repositories can contain folders and files, images, videos, spreadsheets, and data sets – anything 
@@ -33,7 +33,7 @@ this repository with a README file. Lastly, click ``Create repository``
 
 .. image:: GitHub_new_repository.PNG 
 
-Step 2 Creat a Branch
+Step 2 Create a Branch
 ^^^^^^^^^^^^^^^^^^^^^
 
 Branching is the way to work on different versions of a repository at one time, By default, your repository has one branch named ``main`` which is considered 
