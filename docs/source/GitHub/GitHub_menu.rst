@@ -1,7 +1,7 @@
 GitHub introduction 
 ===================
 
-What is the most 3 important steps to produce a cuisine? the answer is collboration, collboration and collboration!
+What are the most 3 important steps to produce a cuisine? the answer is collboration, collboration and collboration!
 
 So, What is GitHub?
 
@@ -47,11 +47,8 @@ changes to the ``main`` branch while you were working on your branch, you could 
 There is a ``main`` branch and another branch called ``feature``. a journey that ``feature`` takes before it’s merged into ``main`` has shown 
 in the figure below.
 
-let's creat a new branch!
-
-Go to our repository ``hello-world`` , choose branch: main tab, type a branch name such as **readme-edits**, and click the Create branch text box
-
-Now you have two branches, ``main`` and ``readme-edits``
+let's create a new branch! Go to our repository ``hello-world`` , choose branch: main tab, type a branch name such as **readme-edits**, and click the Create 
+branch textbox.Now you have two branches, ``main`` and ``readme-edits``
 
 Step 3 Make and commit changes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
