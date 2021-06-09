@@ -1,11 +1,11 @@
-GitHub
-======
+GitHub introduction 
+===================
 
-What is most important to produce a cuisine? collboration, collboration and collboration
+What is the most 3 important steps to produce a cuisine? the answer is collboration, collboration and collboration!
 
 So, What is GitHub?
 
-GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+In Short, GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on a project from anywhere.
 
 You can go to `here GitHub <https://github.com/>`__ create an account and sign in 
 
