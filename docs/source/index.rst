@@ -120,9 +120,10 @@ Menu
     :caption: Functional Connectivity
 
     functional_connectivity/FS_menu.rst
-    FSL/FSL_Resting-state/Resting-state.rst
-    AFNI/AFNI_Resting-state/Resting-state.rst
-    SPM/SPM_Resting-state/Resting-state.rst
+    FSL/FSL_Resting-state/RS.rst
+    AFNI/AFNI_Resting-state/RS.rst
+    SPM/SPM_Resting-state/RS.rst
+    Freesurfer/FreeSurfer_Resting-state/RS.rst    
 
 .. toctree::
     :maxdepth: 1

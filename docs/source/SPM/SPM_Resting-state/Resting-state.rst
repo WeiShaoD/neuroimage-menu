@@ -1,2 +1,0 @@
-Resting-state analysis
-======================

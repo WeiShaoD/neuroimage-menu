@@ -1,5 +1,5 @@
-Resting-state analysis
-======================
+Resting-state analysis with FSL
+===============================
 
 MELODIC ( Multivariate Exploratory Linear Optimized Decomposition into Independent Components ) is a 3 Independent Component Analysis to decompose a single 
 or multiple 4D data sets into different spatial and temporal components. In Fsl, MELODIC uses either Tensorial Independent Component Analysis (TICA, where 
