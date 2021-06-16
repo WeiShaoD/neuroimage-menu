@@ -1,2 +1,2 @@
-statistics for neuroimage
+Statistics for neuroimage
 =========================
