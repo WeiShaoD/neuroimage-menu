@@ -14,7 +14,7 @@ running image analysis**
 
 We have::
 
-3 appetizers; Linux system, OpenNeuro and GitHub 
+4 appetizers; Linux system, OpenNeuro, GitHub and basic statistics for neuroimage 
 
 5 main courses; FreeSurfer, FSL, AFNI, SPM and CONN  
 
@@ -46,6 +46,12 @@ Menu
 
    GitHub/GitHub_menu
    GitHub/Gitcommand_menu
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Appetizer 4 Statistics
+
+   statistics/statistics_menu.rst
 
 
 .. toctree::
