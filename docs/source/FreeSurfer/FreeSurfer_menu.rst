@@ -294,6 +294,19 @@ FreeSurfer commands
 
 There are commands that could be quite useful.
 
-1 ``mri_info`` this command can help you find the basic information from the NIFTI files 
+Like ``3dinfo`` from AFNI, there is a userful command that can help we know the basic information of the image, for example, we can ``mri_info`` to find the 
+basic information from the NIFTI files
 
 
+.. image:: mri_info.PNG
+
+.. note::
+
+  It is worth to note that there are 4 aspects that need to know such as ``dimensions`` tells you the voxel, ``voxel sizes``,``TR``, ``Orientation``
+
+
+Dimension can tell you how many slices from each dimension of voxels.  The size of the voxel gives some indication as to the spatial resolution of the data, 
+with smaller voxels giving a higher spatial resolution. A typical voxel size for a structural MRI is 1 mm x 1mm x 1mm; for fMRI, 3 mm x 3 mm x 3 mm. However, 
+these can vary substantially from study to study, The time between repeated volumes (i.e., between collecting a slice in one volume, and that same slice in 
+the next) is the TR, which we will need know to the time of TR in order to do further fMRI analysis. Orientation can tell you the slice orientation, which is 
+needed in FSL anf FreeSurfer.
