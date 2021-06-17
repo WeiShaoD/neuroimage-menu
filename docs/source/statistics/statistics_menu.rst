@@ -1,8 +1,8 @@
 Statistics for neuroimage
 =========================
 
-Power staatistics 
-^^^^^^^^^^^^^^^^^
+Power statistics 
+^^^^^^^^^^^^^^^^
 
 Power analysis is directly related to tests of hypotheses. While we conducting tests based on different hypotheses, there are two types of errors researchers 
 can make: Type I error and Type II error. Statistical power mainly deals with Type II errors.In general, it is worth to note that the higher the sample size, 
@@ -21,11 +21,11 @@ There are certain factors that affect power in power analysis
 The ideal power level for power analysis has a significant is normally 0.80, but when you conducting the power analysis, we can specify a higher level, such 
 as 0.90, which means the researcher has a 90% chance of not making a type II error.
 
-The degree of significance is one of the most important elements in power analysis. Assume that we specifies a level of significance of 0.001. The power of 
+The degree of significance is one of the most important elements in power analysis. Assume that we specify a level of significance of 0.001. The power of 
 power analysis will be reduced in this instance. As a result, an alpha level of 0.001 is only appropriate in cases when the researcher is primarily concerned 
 with avoiding a Type I error.
 
-The strength of association between the two variables is another aspect that influences the power of an analysis. To be more specific, the stronger the 
+The strength of association between the two variables is another aspect that influences the power of analysis. To be more specific, the stronger the 
 relationship, the bigger the power in the power analysis. This indicates that in power analysis, a stronger correlation leads to a higher power number.
 
 In power analysis, a factor called sensitivity can impact the power. For example, the number of genuine positives out of the total number of true positives 
