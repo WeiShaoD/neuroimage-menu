@@ -286,7 +286,7 @@ basic information from the NIFTI files
 
 .. note::
 
-  It is worth to note that there are 4 aspects that need to know such as ``dimensions`` , ``voxel sizes`` , ``TR`` ,``Orientation``
+  It is worth to note that there are 4 aspects that need to know such as ``dimensions`` , ``voxel sizes`` , ``TR`` , ``Orientation`` .
 
 
 Dimension can tell you how many slices from each dimension of voxels.  The size of the voxel gives some indication as to the spatial resolution of the data, 
