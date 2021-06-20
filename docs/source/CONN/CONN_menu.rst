@@ -16,10 +16,11 @@ In the following tutorials, you will learn how to perform resting-state connecti
 which includes both creating correlation maps for each voxel of the brain, and generating connectomes that visualize the strength of the connectivity between 
 different regions.
 
-Previous tutorial 
-^^^^^^^^^^^^^^^^^ 
+CONN with SPM  
+^^^^^^^^^^^^^
 
-Before going on, you may want to work through the SPM tutorials. These will introduce you to Matlab and SPM, which you will need to run the CONN toolbox. 
-Note that SPM is a prerequisite for the CONN toolbox, meaning that you will need to download and install SPM before you can use CONN. The rest of the 
-tutorials in the SPM module aren’t required, although a better understanding of how SPM preprocesses fMRI data will prepare you to use the CONN toolbox.
+Before going on, you may want to work through the SPM if you are not familier with SPM. You can check the previous main course SPM, it will introduce you to Matlab and SPM, which you 
+will need to run the CONN toolbox. Note that SPM is a prerequisite for the CONN toolbox, meaning that you will need to download and install SPM before you can use CONN. And the rest of 
+content in the SPM module aren’t required, although a better understanding of how SPM preprocesses fMRI data will prepare you to use the CONN toolbox.
+
 
