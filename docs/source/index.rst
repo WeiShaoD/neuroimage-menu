@@ -131,6 +131,7 @@ Menu
 
     CONN/CONN_menu.rst
     CONN/dataset/data_menu.rst
+    CONN/CONN_GUI/CONN_GUI.rst
 
 .. toctree::
     :maxdepth: 1
