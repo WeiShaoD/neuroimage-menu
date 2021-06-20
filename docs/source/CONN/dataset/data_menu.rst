@@ -1,8 +1,8 @@
 Language dataset
 ================
 
-Exploring the Resting State Neural Activity of Monolinguals and Late and Early Bilinguals
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exploring the Resting State Neural Activity in language
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
  
 Individuals who speak more than one language have been found to enjoy a number of benefits not directly associated with the use of the languages themselves. 
 One of these benefits is that bilingual individuals appear to develop symptoms of dementia 4-5 years later than comparable individuals who speak just one 

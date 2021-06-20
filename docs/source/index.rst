@@ -125,7 +125,7 @@ Menu
     :maxdepth: 1
     :caption: Functional Connectivity
 
-    functional_connectivity/FS_menu.rst
+    functional_connectivity/FC_menu.rst
     FSL/FSL_Resting-state/RS.rst
     AFNI/AFNI_Resting-state/RS.rst
     SPM/SPM_Resting-state/RS.rst
