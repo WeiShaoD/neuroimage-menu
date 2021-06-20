@@ -135,7 +135,8 @@ Menu
     :maxdepth: 1
     :caption: Main course 5 CONN
 
-    CONN/
+    CONN/CONN_menu.rst
+    CONN/dataset/data_menu.rst
 
 
 .. toctree::
