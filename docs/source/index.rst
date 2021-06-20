@@ -117,12 +117,6 @@ Menu
 
 .. toctree::
     :maxdepth: 1
-    :caption: Main course 5 CONN
-
-    CONN/CONN_menu.rst
-
-.. toctree::
-    :maxdepth: 1
     :caption: Functional Connectivity
 
     functional_connectivity/FC_menu.rst
@@ -137,7 +131,6 @@ Menu
 
     CONN/CONN_menu.rst
     CONN/dataset/data_menu.rst
-
 
 .. toctree::
     :maxdepth: 1
