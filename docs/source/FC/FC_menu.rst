@@ -78,8 +78,11 @@ Those studies found that in order to do a task effectively, there required to be
 amount of correlation between the nodes - as well as a coordinated drop in activity in the task-negative nodes. Different mental diseases, such as 
 schizophrenia and bipolar disorder, could be connected to disruptions in this synchronisation.
 
-Artifacts and Global Signal Regression
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. image:: Time_series.png
+
+
+Artifacts 
+^^^^^^^^^
 
 Motion Artifacts
 ****************
@@ -98,9 +101,14 @@ Despite the fact that these studies either accounted for motion as a covariate o
 there were variations even across groups with mean motions of 0.044 and 0.048. Very modest changes in motion can become the primary source of variance when 
 averaged over large groups of subjects.
 
+.. image:: Group.png
+  
+  Van Dijk et al. (2011) published this figure in their paper. The difference in average motion between the two groups on the right is only a few thousandths 
+of a millimetre - an exceedingly small change that can lead to considerable disparities between the groups.
+
+
 Physiological Noise
 *******************
-
 
 The subject's voluntary motions, such as adjusting the head or scratching an itch, are generally assumed to be the source of motion artefacts. While those 
 are the most obvious, other involuntary actions can have just as much of an impact and are typically more subtle. The two main causes of tiny, involuntary 
