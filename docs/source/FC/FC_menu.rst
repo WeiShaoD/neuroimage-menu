@@ -37,13 +37,12 @@ Because the motor cortices appeared to be highly associated, it was expected tha
 also be highly connected. And if these functionally comparable regions were associated during a cognitively demanding task, it was claimed, then other 
 functionally similar regions should be correlated during rest as well.
 
-
 .. note::
 
   Biswal employed the left motor cortex as a seed region in this example, which was then linked with all of the other voxels in the brain - commonly known as 
   a **whole-brain analysis**. 
 
-.. image:: FC_first.jpg
+.. image:: FC_first.png
 
 The original Biswal et al. 1995 paper yielded this result. Panel (a) depicts task-related activity in the motor cortices, whereas panel (b) depicts 
 functional connectivity during a resting-state scan, with the left motor cortex serving as a seed region. The task and resting-state images have a lot of 
@@ -79,7 +78,6 @@ amount of correlation between the nodes - as well as a coordinated drop in activ
 schizophrenia and bipolar disorder, could be connected to disruptions in this synchronisation.
 
 .. image:: Time_series.png
-
 
 Artifacts 
 ^^^^^^^^^
