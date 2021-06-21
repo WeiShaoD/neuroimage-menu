@@ -99,13 +99,13 @@ Despite the fact that these studies either accounted for motion as a covariate o
 there were variations even across groups with mean motions of 0.044 and 0.048. Very modest changes in motion can become the primary source of variance when 
 averaged over large groups of subjects.
 
-.. image:: Group.png
-  
+.. figure:: Group.png
+
   Van Dijk et al. (2011) published this figure in their paper. The difference in average motion between the two groups on the right is only a few thousandths 
 of a millimetre - an exceedingly small change that can lead to considerable disparities between the groups.
 
 
-Physiological Noise
+Physiological Noise 
 *******************
 
 The subject's voluntary motions, such as adjusting the head or scratching an itch, are generally assumed to be the source of motion artefacts. While those 
@@ -113,7 +113,7 @@ are the most obvious, other involuntary actions can have just as much of an impa
 motions that can affect between-group differences are respiration and heart rate. Measuring and regressing these physiological signals helps account for 
 spurious correlations that occur near the arteries or at the brain's borders, where these artifacts are most visible.
 
-Global Signal Regression
+Global Signal Regression 
 ************************
 
 Although movement artefacts have long been regarded a source of noise that must be accounted for, one approach of data analysis, Global Signal Regression, or 
