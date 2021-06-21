@@ -102,7 +102,7 @@ averaged over large groups of subjects.
 .. figure:: Group.png
 
   Van Dijk et al. (2011) published this figure in their paper. The difference in average motion between the two groups on the right is only a few thousandths 
-of a millimetre - an exceedingly small change that can lead to considerable disparities between the groups.
+of a millimetre.
 
 
 Physiological Noise 
