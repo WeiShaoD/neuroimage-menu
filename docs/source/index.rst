@@ -14,7 +14,7 @@ running image analysis**
 
 We have::
 
-4 appetizers; Linux system, OpenNeuro, GitHub and basic statistics for neuroimage 
+4 appetizers; Linux system, Neurodata, GitHub and basic statistics for neuroimage 
 
 5 main courses; FreeSurfer, FSL, AFNI, SPM and CONN  
 
