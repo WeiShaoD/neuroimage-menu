@@ -41,5 +41,6 @@ Surface-based analysis
 Simulataneous fMRI-EEG
 
 
+What is the FC?
 
 
