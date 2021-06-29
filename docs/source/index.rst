@@ -127,6 +127,12 @@ Menu
 
 .. toctree::
     :maxdepth: 1
+    :caption: Parcellation
+   
+    Parcellation/Parcellation_menu.rst
+
+.. toctree::
+    :maxdepth: 1
     :caption: Main course 5 CONN
 
     CONN/CONN_menu.rst
