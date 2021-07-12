@@ -11,6 +11,6 @@ later in life, or their language proficiency. In an attempt to more carefully ex
 functional MRI scans of the default mode network, English and Spanish (where applicable) proficiency, language background, and demographics of young healthy 
 adults who fall into one of three groups: early bilinguals, late bilinguals, and monolinguals.
 
-Now, let;s go `there <https://openneuro.org/datasets/ds001747/versions/1.0.0>`__ to download the data and save it as language in our home directory.
+Now, let's go `there <https://openneuro.org/datasets/ds001747/versions/1.0.0>`__ to download the data and save it as language in our home directory.
 
 

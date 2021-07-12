@@ -113,7 +113,15 @@ Menu
     SPM/SPM_1st_Level_analysis/1st_Level_analysis.rst 
     SPM/SPM_Automation/automation_2.rst
     SPM/SPM_group_analysis/group_analysis.rst
-    SPM/SPM_ROI/ROI_analysis.rst
+    SPM/SPM_ROI/ROI_analysis.rst 
+
+.. toctree::
+    :maxdepth: 1
+    :caption: Main course 5 CONN
+
+    CONN/CONN_menu.rst
+    CONN/dataset/data_menu.rst
+    CONN/CONN_GUI/CONN_GUI.rst
 
 .. toctree::
     :maxdepth: 1
@@ -123,15 +131,14 @@ Menu
     FSL/FSL_Resting-state/RS.rst
     AFNI/AFNI_Resting-state/RS.rst
     SPM/SPM_Resting-state/RS.rst
-    Freesurfer/FreeSurfer_Resting-state/RS.rst    
+    Freesurfer/FreeSurfer_Resting-state/RS.rst
 
 .. toctree::
     :maxdepth: 1
-    :caption: Main course 5 CONN
+    :caption: Parcellation
 
-    CONN/CONN_menu.rst
-    CONN/dataset/data_menu.rst
-    CONN/CONN_GUI/CONN_GUI.rst
+    Parcellation/Parcellation_menu.rst
+
 
 .. toctree::
     :maxdepth: 1
