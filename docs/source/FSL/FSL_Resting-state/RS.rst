@@ -13,6 +13,7 @@ In order to open the MELODIC GUI, either type Melodic in a terminal, or Open fsl
 analysis, you need to prepare the data as a 4D NIFTI or Analyze format image; you can use the fslmerge or fslsplit to convert between multiple 3D images and 
 a single 4D (3D+time) image.
 
+.. image:: MELODIC-GUI.PNG 
 
 Data box
 ********
@@ -26,6 +27,9 @@ based on the input data's filename unless you enter an Output directory name.
 ``TR`` controls the time (in seconds) between scanning successive FMRI volumes.
 
 ``High pass filter cutoff`` controls the longest temporal period that you will allow.
+
+.. image:: MELODIC.PNG
+
 
 Pre-Stats
 *********
@@ -67,4 +71,4 @@ should change this value to 0.66...
 MELODIC result
 **************
 
-this chapter is in construction, please wait.
+This content is in construction, please wait.
