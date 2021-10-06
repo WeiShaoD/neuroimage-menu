@@ -45,3 +45,11 @@ use ``tar -czvf new.file original.file`` to compress a file and use ``tar -xzvf 
 ``-f`` :use archive file
 ``-x`` :extract file
   
+SGE 
+^^^
+
+In the SGE server, you can use:: 
+
+  qsub -V -cwd -q parallel.q -pe mcore 8  script.sh
+
+to submit a job with 8 cores in parallel computing 
