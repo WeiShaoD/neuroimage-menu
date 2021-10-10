@@ -137,7 +137,7 @@ Menu
     :maxdepth: 1
     :caption: Computation Neuroscience
 
-    Computation_image
+    Computation_image/computation_menu.rst
 
 
 
