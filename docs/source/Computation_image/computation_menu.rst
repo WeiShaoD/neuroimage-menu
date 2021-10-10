@@ -58,7 +58,7 @@ Next, let setting the figure::
   
  plt.style.use("https://raw.githubusercontent.com/NeuromatchAcademy/course-content/master/nma.mplstyle")
 
-Once we set up the figure, downloading the data would be the next::
+Once we set up the figure, set up with data and environment would be the next::
 
   # The download cells will store the data in nested directories starting here:
   HCP_DIR = "./hcp"
@@ -86,6 +86,27 @@ Once we set up the figure, downloading the data would be the next::
       'GAMBLING'   : {'runs': [11,12], 'cond':['loss','win','neut']}
   }
 
-  # You may want to limit the subjects used during code development.
-  # This will use all subjects:
+  # Load all subjects all subjects:
   subjects = range(N_SUBJECTS)
+
+For more information about the files in the gambling project, go 45-47 page of `HCP Reference Manual 
+<https://www.humanconnectome.org/storage/app/media/documentation/s1200/HCP_S1200_Release_Reference_Manual.pdf>`__.
+
+Download the data, the task data are shared in different files, but we will unpack them into the same directory structure::
+
+  fname = "hcp_task.tgz"
+  if not os.path.exists(fname):
+  !wget -qO $fname https://osf.io/s4h8j/download/
+  !tar -xzf $fname -C $HCP_DIR --strip-components=1
+
+Loading region information.Downloading this dataset will create the ``regions.npy`` file, which contains the region name and network assignment for each 
+parcel::
+
+  regions = np.load(f"{HCP_DIR}/regions.npy").T
+  region_info = dict(
+     name=regions[0].tolist(),
+     network=regions[1],
+     hemi=['Right']*int(N_PARCELS/2) + ['Left']*int(N_PARCELS/2),
+  )
+
+
