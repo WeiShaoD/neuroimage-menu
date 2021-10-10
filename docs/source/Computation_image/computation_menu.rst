@@ -43,10 +43,13 @@ Running the analysis
 Once you are faniliar with the dataset, we can start with loading the libraries::
 
   import os
-  
   import numpy as np
-  
   import matplotlib.pyplot as plt
+  import nibabel as nib
+  import pandas as pd
+  import seaborn as sns
+  from sklearn.linear_model import LogisticRegression
+  from sklearn.model_selection import cross_val_score
 
 Next, let setting the figure::
 
@@ -159,3 +162,171 @@ the task experiment in terms of stimulus onset, duration, and amplitude. These c
     frames_list.append(frames)
 
   return frames_list
+
+OK, let's load the timeseries data for the GAMBLING experiment from a single subject and a single run::
+
+  my_exp  = 'GAMBLING'
+  my_subj = 0
+  my_run  = 1
+  data = load_single_timeseries(subject=my_subj,experiment=my_exp,run=my_run,remove_mean=True)
+  #print the data shape
+  print(data.shape)
+
+As you can see the time series data contains 284 time points in 360 regions of interest (ROIs).Now in order to understand how to model these data, we need 
+to relate the time series to the experimental manipulation. This is described by the EV files. Let us load the EVs for this experiment::
+
+  evs = load_evs(subject=my_subj, experiment=my_exp,run=my_run)
+  # lets visualzie the loss regressor
+  los_reg = np.zeros(253)
+  win_reg = np.zeros(253)
+  net_reg = np.zeros(253)
+  res_reg = np.ones(253)
+
+  for id in range(0,len(evs[0])):
+      los_reg[evs[0][id]] = 1
+  # lets visualize the win regressor
+  for id in range(0,len(evs[1])):
+      win_reg[evs[1][id]] = 1
+  # lets visualize the neut regressor
+  for id in range(0,len(evs[2])):
+      net_reg[evs[2][id]] = 1
+  #let screate the resting phase regressor
+  for id in range(0,len(evs[0])):
+      res_reg[evs[0][id]] = 0
+  for id in range(0,len(evs[1])):
+      res_reg[evs[1][id]] = 0  
+  for id in range(0,len(evs[2])):
+      res_reg[evs[2][id]] = 0 
+
+Let's take a look at the regressor::
+ 
+  fig, axs = plt.subplots(2,2, figsize=[15, 6])
+  axs[0,0].plot(los_reg, 'k')
+  axs[0, 0].set_title('Loss Regressor')
+  axs[0,1].plot(win_reg, 'g')
+  axs[0, 1].set_title('Win Regressor')
+  axs[1,0].plot(net_reg, 'r')
+  axs[1, 0].set_title('Neutral Regressor')
+  axs[1,1].plot(res_reg, 'b')
+  axs[1, 1].set_title('Resting Regressor')
+
+Next, one of the most important functions in fMRI, general linear model:: 
+
+  def glm(data,reg):
+      constant = np.ones(253)
+      X = np.vstack((reg, constant)).T
+      y = data
+  
+      # Calculate the dot product of the transposed design matrix and the design matrix
+      # and invert the resulting matrix.
+      tmp   = np.linalg.inv(X.transpose().dot(X))
+    
+      # Now calculate the dot product of the above result and the transposed design matrix
+      tmp   = tmp.dot(X.transpose())
+
+      # Pre-allocate variables
+      beta  = np.zeros((y.shape[0], X.shape[1]))
+      e     = np.zeros(y.shape)
+      model = np.zeros(y.shape)
+      r     = np.zeros(y.shape[0])
+    
+  # Find beta values for each voxel and calculate the model, error and the correlation coefficients 
+      for i in range(y.shape[0]):
+          beta[i]  = tmp.dot(y[i,:].transpose())
+          model[i] = X.dot(beta[i])
+          e[i]     = (y[i,:] - model[i])
+          r[i]     = np.sqrt(model[i].var()/y[i,:].var())
+    
+   
+      return beta, model, e, r
+
+
+OK, now, let's apply the function into our data for one example::
+
+  X = np.vstack((los_reg, win_reg, net_reg, res_reg)).T
+  y = data
+  constant = np.ones(253)
+  c = np.vstack(constant)
+  
+  # Calculate the dot product of the transposed design matrix and the design matrix
+  # and invert the resulting matrix.
+
+  tmp   = np.linalg.inv(X.transpose().dot(X))
+
+  # Now calculate the dot product of the above result and the transposed design matrix
+
+  tmp   = tmp.dot(X.transpose())
+
+  # Pre-allocate variables
+  beta  = np.zeros((y.shape[0], X.shape[1]))
+  e     = np.zeros(y.shape)
+  model = np.zeros(y.shape)
+  r     = np.zeros(y.shape[0])
+
+
+So far so good, let's apply the model for all the subjects,  all runs and all condition::
+ 
+  # Lets bring together the previous steps all in one for running through all subjects, all runs
+  # Create the beta for 4 conditions
+  betas_los = np.zeros((2, 360, 2, 339))
+  betas_win = np.zeros((2, 360, 2, 339))
+  betas_net = np.zeros((2, 360, 2, 339))
+  betas_res = np.zeros((2, 360, 2, 339))
+
+  # Create R for 4 conditions
+  r_los = np.zeros((1,360,2,339))
+  r_win = np.zeros((1,360,2,339))
+  r_net = np.zeros((1,360,2,339))
+  r_res = np.zeros((1,360,2,339))
+  for sub_id in subjects:                     
+      my_exp  = 'GAMBLING'
+      my_subj = sub_id
+      for run in [0,1]:
+          my_run  = run
+          #load data
+          data = load_single_timeseries(subject=my_subj,experiment=my_exp,run=my_run,remove_mean=True)
+          # load the evs and create regressors
+          evs = load_evs(subject=my_subj, experiment=my_exp,run=my_run)
+          los_reg = np.zeros(253)
+          win_reg = np.zeros(253)
+          net_reg = np.zeros(253)
+          res_reg = np.ones(253)
+          #visualzie the loss regressor
+          for id in range(0,len(evs[0])): los_reg[evs[0][id]] = 1
+          # lets visualize the win regressor
+          for id in range(0,len(evs[1])): win_reg[evs[1][id]] = 1
+          # lets visualize the neutral regressor
+          for id in range(0,len(evs[2])): net_reg[evs[2][id]] = 1
+          #let create the resting phase regressor
+          for id in range(0,len(evs[0])): res_reg[evs[0][id]] = 0
+          for id in range(0,len(evs[1])): res_reg[evs[1][id]] = 0  
+          for id in range(0,len(evs[2])): res_reg[evs[2][id]] = 0
+          #let create the model structure for all 
+          betas_los_tmp, model_los_tmp, e_los_tmp, r_los_tmp = glm(data, los_reg)
+          betas_win_tmp, model_win_tmp, e_win_tmp, r_win_tmp = glm(data, win_reg)
+          betas_net_tmp, model_net_tmp, e_net_tmp, r_net_tmp = glm(data, net_reg)
+          betas_res_tmp, model_res_tmp, e_res_tmp, r_res_tmp = glm(data, res_reg)
+
+  # transfer the r data strucrture
+          r_los[:, :, run, sub_id] = r_los_tmp
+          r_win[:, :, run, sub_id] = r_win_tmp
+          r_net[:, :, run, sub_id] = r_net_tmp
+          r_res[:, :, run, sub_id] = r_res_tmp
+
+  # transfer the beta data strucrture
+          betas_los[:, :, run, sub_id] = betas_los_tmp.T
+          betas_win[:, :, run, sub_id] = betas_win_tmp.T
+          betas_net[:, :, run, sub_id] = betas_net_tmp.T
+          betas_res[:, :, run, sub_id] = betas_res_tmp.T
+
+  # mean value of beta
+  betas_avg_sub_run_los = betas_los.mean(axis = 2).mean(axis = 2)
+  betas_avg_sub_run_win = betas_win.mean(axis = 2).mean(axis = 2)
+  betas_avg_sub_run_net = betas_net.mean(axis = 2).mean(axis = 2)
+  betas_avg_sub_run_res = betas_res.mean(axis = 2).mean(axis = 2)
+
+  # mean value of r
+  r_avg_sub_run_los = r_los.mean(axis = 2).mean(axis = 2)
+  r_avg_sub_run_win = r_win.mean(axis = 2).mean(axis = 2)
+  r_avg_sub_run_net = r_net.mean(axis = 2).mean(axis = 2)
+  r_avg_sub_run_res = r_res.mean(axis = 2).mean(axis = 2)
