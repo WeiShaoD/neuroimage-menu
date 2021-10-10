@@ -135,9 +135,18 @@ Menu
 
 .. toctree::
     :maxdepth: 1
+    :caption: Computation Neuroscience
+
+    Computation_image
+
+
+
+.. toctree::
+    :maxdepth: 1
     :caption: Parcellation
 
     Parcellation/Parcellation_menu.rst
+
 
 
 .. toctree::
