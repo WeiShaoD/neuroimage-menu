@@ -330,3 +330,148 @@ So far so good, let's apply the model for all the subjects,  all runs and all co
   r_avg_sub_run_win = r_win.mean(axis = 2).mean(axis = 2)
   r_avg_sub_run_net = r_net.mean(axis = 2).mean(axis = 2)
   r_avg_sub_run_res = r_res.mean(axis = 2).mean(axis = 2)
+
+Now, let's plot all the output! Start with the mean beta value::
+
+  # plot the mean beta
+  fig, axs = plt.subplots(4)
+  axs[0].plot(betas_avg_sub_run_los[0,:], 'k')
+  axs[0].set_title('Loss Regressor')
+  axs[1].plot(betas_avg_sub_run_win[0,:], 'g')
+  axs[1].set_title('Win Regressor')
+  axs[2].plot(betas_avg_sub_run_net[0,:], 'r')
+  axs[2].set_title('Neutral Regressor')
+  axs[3].plot(betas_avg_sub_run_res[0,:], 'b')
+  axs[3].set_title('Resting Regressor')
+
+Then, mean value of R::
+
+  # plot the mean r 
+  fig, axs = plt.subplots(4)
+  axs[0].plot(r_avg_sub_run_los[0,:], 'k')
+  axs[0].set_title('Loss R')
+  axs[1].plot(r_avg_sub_run_win[0,:], 'g')
+  axs[1].set_title('Win R')
+  axs[2].plot(r_avg_sub_run_net[0,:], 'r')
+  axs[2].set_title('Neutral R')
+  axs[3].plot(r_avg_sub_run_res[0,:], 'b')
+  axs[3].set_title('Resting R')
+
+Remember that we have 360 ROI and these ROIs become 12 networks, let's add the network component::
+
+  # plot the mean beta based on the network and compare with 4 conditions 
+  df_beta_2  = pd.DataFrame({'betas'  : np.hstack((betas_avg_sub_run_los[0,:], betas_avg_sub_run_win[0,:], betas_avg_sub_run_net[0,:], betas_avg_sub_run_res[0,:])),
+                     'cond'   : np.hstack((['loss']*360, ['win']*360, ['net']*360, ['rest']*360)),
+                     'network': np.hstack((region_info['network'], region_info['network'], region_info['network'], region_info['network'])),
+                     'name'   : np.hstack((region_info['name'], region_info['name'], region_info['name'], region_info['name'])),
+                     'hemi'   : np.hstack((region_info['hemi'], region_info['hemi'], region_info['hemi'], region_info['hemi']))
+                    })
+
+  fig, (ax1)= plt.subplots(1,1, figsize = (20,10))
+  sns.barplot(x='network', y='betas', data=df_beta_2 , hue='cond',ax=ax1)
+  #sns.barplot(x='network', y='betas', data=df_beta_2 , hue='hemi',ax=ax2)
+
+R value with network
+
+  # plot the mean r based on the network and compare with 4 conditions 
+  df_r = pd.DataFrame({'r'  : np.hstack((r_avg_sub_run_los[0,:], r_avg_sub_run_win[0,:], r_avg_sub_run_net[0,:], r_avg_sub_run_res[0,:])),
+                     'cond'   : np.hstack((['loss']*360, ['win']*360, ['net']*360, ['rest']*360)),
+                     'network': np.hstack((region_info['network'], region_info['network'], region_info['network'], region_info['network'])),
+                     'name'   : np.hstack((region_info['name'], region_info['name'], region_info['name'], region_info['name'])),
+                     'hemi'   : np.hstack((region_info['hemi'], region_info['hemi'], region_info['hemi'], region_info['hemi']))
+                    })
+
+  fig, (ax1)= plt.subplots(1,1, figsize = (20,10))
+  sns.barplot(x='network', y='r', data=df_r, hue='cond',ax=ax1)
+  #sns.barplot(x='network', y='r', data=df_r, hue='hemi',ax=ax2)
+
+Now, let's make a group contrast with beta and r value so we can really know the brain activity on different condition::
+
+  def average_frames(be, evs, experiment, cond):    
+      idx = EXPERIMENTS[experiment]['cond'].index(cond)
+      return np.mean(np.concatenate([np.mean(data[:,evs[idx][i]],axis=1,keepdims=True) for i in range(len(evs[idx]))],axis=-1),axis=1)
+
+  loss_activity = average_frames(data, evs, my_exp, 'loss')
+  win_activity = average_frames(data, evs, my_exp, 'win')
+
+
+  #change the data structure and calculate the contrast map to fit in the brain image 
+  loss_beta = betas_avg_sub_run_los[0,:]
+  win_beta = betas_avg_sub_run_win[0,:]
+
+  contrast_beta    = loss_beta -  win_beta  # difference between loss and win in avewrage beta 
+
+  los_r = r_avg_sub_run_los.T
+  win_r = r_avg_sub_run_win.T
+
+  # contrast_r    = los_r - win_r  # difference between left and right hand movement
+  contrast_r    = win_r - los_r
+
+Create group contrast map::
+
+  group_contrast = 0
+  for s in subjects:
+    for r in [0,1]:
+      data = load_single_timeseries(subject=s,experiment=my_exp,run=r,remove_mean=True)
+      evs = load_evs(subject=s, experiment=my_exp,run=r)
+
+      loss_activity = average_frames(data, evs, my_exp, 'loss')
+      win_activity = average_frames(data, evs, my_exp, 'win')
+
+      contrast    = loss_activity-win_activity
+      group_contrast        += contrast
+
+  group_contrast /= (len(subjects)*2)  # remember: 2 sessions per subject
+
+Finally, let's plot the brain::
+
+
+  # This uses the nilearn package
+  !pip install nilearn --quiet
+  from nilearn import plotting, datasets
+
+  # loading the atlas 
+  fname = f"{HCP_DIR}/atlas.npz"
+  if not os.path.exists(fname):
+    !wget -qO $fname https://osf.io/j5kuc/download
+  with np.load(fname) as dobj:
+    atlas = dict(**dobj)
+
+los_beta::
+
+  fsaverage = datasets.fetch_surf_fsaverage()
+  surf_contrast = betas_avg_sub_run_los[0,:][atlas["labels_L"]]
+  plotting.view_surf(fsaverage['infl_left'],
+                     surf_contrast,
+                     vmax=30,title='loss_beta')
+
+win_beta::
+  
+  fsaverage = datasets.fetch_surf_fsaverage()
+  surf_contrast = betas_avg_sub_run_win[0,:][atlas["labels_L"]]
+  plotting.view_surf(fsaverage['infl_left'],
+                     surf_contrast,
+                     vmax=30,title='win_beta')
+
+net_beta::
+
+  fsaverage = datasets.fetch_surf_fsaverage()
+  surf_contrast = betas_avg_sub_run_net[0,:][atlas["labels_L"]]
+  plotting.view_surf(fsaverage['infl_left'],
+                     surf_contrast,
+                     vmax=30,title='neutral_beta')
+
+res_beta::
+  fsaverage = datasets.fetch_surf_fsaverage()
+  surf_contrast = betas_avg_sub_run_res[0,:][atlas["labels_L"]]
+  plotting.view_surf(fsaverage['infl_left'],
+                     surf_contrast,
+                     vmax=30,title='resting_beta')
+
+let's see the group contast,beta_contrast::
+
+  fsaverage = datasets.fetch_surf_fsaverage()
+  surf_contrast = contrast_beta[atlas["labels_L"]]
+  plotting.view_surf(fsaverage['infl_left'],
+                     surf_contrast,
+                     vmax=20,title='beta_contrast for loss-win')
