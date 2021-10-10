@@ -139,8 +139,6 @@ Menu
 
     Computation_image/computation_menu.rst
 
-
-
 .. toctree::
     :maxdepth: 1
     :caption: Parcellation
