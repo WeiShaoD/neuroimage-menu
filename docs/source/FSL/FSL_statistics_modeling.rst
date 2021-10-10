@@ -121,3 +121,6 @@ the volume tab at the buttom. The right plot here indicates the voxel you point 
 
 
 .. image:: FSL_timeseries.PNG
+
+
+There is another material from FSL that can be very useful when it comes to the regression model and B design. Click `Here <https://fsl.fmrib.ox.ac.uk/fslcourse/lectures/Fmri1_P2E1.pdf>`__.
