@@ -7,7 +7,7 @@ Inspection of source images. Individual slices in an fMRI acquisition commonly s
 data glitches. These may result from physiological sources (patient motion, respiration, cardiac pulsations, anxiety, drowsiness, drugs) or from the scanner itself (field 
 inhomogeneities, eddy currents, gradient heating, electronics). If unrecognized and included in the data analysis, these may spoil the entire experiment. A quick visual review of all 
 source images together in montage mode is highly recommended to search for and exclude ("scrub") aberrant slices that appear too bright, too dark, or contain artifacts. More 
-sophisticated graphical and semi-automated methods to identify outlier data are also available.
+sophisticated graphical and semi-automated methods to identify outlier data are also available 3.
 
 Distortion correction
 ^^^^^^^^^^^^^^^^^^^^^
