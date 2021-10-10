@@ -48,3 +48,44 @@ Once you are faniliar with the dataset, we can start with loading the libraries:
   
   import matplotlib.pyplot as plt
 
+Next, let setting the figure::
+
+ #title Figure settings
+ 
+ %matplotlib inline
+
+ %config InlineBackend.figure_format = 'retina'
+  
+ plt.style.use("https://raw.githubusercontent.com/NeuromatchAcademy/course-content/master/nma.mplstyle")
+
+Once we set up the figure, downloading the data would be the next::
+
+  # The download cells will store the data in nested directories starting here:
+  HCP_DIR = "./hcp"
+  if not os.path.isdir(HCP_DIR):
+  os.mkdir(HCP_DIR)
+
+  # The data shared for NMA projects is a subset of the full HCP dataset
+  N_SUBJECTS = 339
+
+  # The data have already been aggregated into ROIs from the Glasser parcellation
+  N_PARCELS = 360
+
+  # The acquisition parameters for all tasks were identical
+  TR = 0.72  # Time resolution, in seconds
+
+  # The parcels are matched across hemispheres with the same order
+  HEMIS = ["Right", "Left"]
+
+  # Each experiment was repeated twice in each subject
+  N_RUNS = 2
+
+  # There are 7 tasks in the dataset. Each has a number of 'conditions'. and we are only use the gambling data
+
+  EXPERIMENTS = {
+      'GAMBLING'   : {'runs': [11,12], 'cond':['loss','win','neut']}
+  }
+
+  # You may want to limit the subjects used during code development.
+  # This will use all subjects:
+  subjects = range(N_SUBJECTS)
