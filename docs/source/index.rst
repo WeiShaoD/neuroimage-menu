@@ -31,14 +31,12 @@ Menu
     Linux_system/for_loop
     Linux_system/useful_command
 
-
 .. toctree::
    :maxdepth: 1
    :caption: Appetizer 2 Neuroimage data
 
    OpenNeuro/Neuroimage_data
    OpenNeuro/OpenNeuro_menu
-
 
 .. toctree::
    :maxdepth: 1
@@ -52,7 +50,6 @@ Menu
    :caption: Appetizer 4 Statistics
 
    statistics/statistics_menu.rst
-
 
 .. toctree::
    :maxdepth: 1  
@@ -133,18 +130,12 @@ Menu
     SPM/SPM_Resting-state/RS.rst
     Freesurfer/FreeSurfer_Resting-state/RS.rst
 
+
 .. toctree::
     :maxdepth: 1
     :caption: Computation Neuroscience
 
     Computation_image/computation_menu.rst
-
-.. toctree::
-    :maxdepth: 1
-    :caption: Parcellation
-
-    Parcellation/Parcellation_menu.rst
-
 
 
 .. toctree::
