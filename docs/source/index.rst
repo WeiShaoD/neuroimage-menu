@@ -59,13 +59,14 @@ Menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: Main course 1 FreeSurfer
+   :caption: Main course 1 FreeSurfer and ASHS
 
    FreeSurfer/FreeSurfer_menu
    FreeSurfer/FS_Longitudinal/Longitudinal.rst                                                                                           
    FreeSurfer/FastSurfer
    FreeSurfer/Parallel_computing
    FreeSurfer/FreeSurfer_volume
+   ASHS/ASHS_menu.rst
 
 .. toctree::
    :maxdepth: 1
