@@ -11,12 +11,12 @@ please check `here <https://sites.google.com/view/ashs-dox/home?authuser=0/>`__.
 ASHS Installation
 *****************
 
-ASHS installation is very user friendly. All you need to do is go `here<https://www.nitrc.org/frs/?group_id=370>`__ and download the most recent version of 
-fast-ashs(v2.0.0 (July 2018)) and put the file into your ASHS directory. Next, unzip the file *ashs-fastashs_2.0.0_07202018.zip* by type:
+ASHS installation is very user friendly. All you need to do is go `here <https://www.nitrc.org/frs/?group_id=370>`__ and download the most recent version 
+of fast-ashs(v2.0.0 (July 2018)) and put the file into your ASHS directory. Next, unzip the file *ashs-fastashs_2.0.0_07202018.zip* by type::
 
   unzip ashs-fastashs_2.0.0_07202018.zip
 
-Now, you need to set up the environment, let's start with the ASHS_ROOT:
+Now, you need to set up the environment, let's start with the ASHS_ROOT::
 
   export ASHS_ROOT=/home/ASHS/ashs-fastashs
 
