@@ -66,3 +66,24 @@ You also can run ASHS with multiple cores with add one more argument::
 Building the Atlas
 ******************
 
+One of the advantages of ASHS is the customized atlas. You can build the unique segmentation protocol with ASHS. Normally, it will need 20-40 subjects to 
+build the atlas. the files are:
+
+``Data manifest file`` (required)
+``Label description file`` (required)
+``Configuration file`` (optional)
+``Slice heuristics file`` (optional)
+``Cross-validation file`` (optional)
+
+Let's start from the simplest one,assume you have all the required files in your ASHS directory and put the file in the right place. All you need to do is 
+create a bash script::
+
+  #!/bin/bash
+ export ASHS_ROOT=/home/ASHS/fastashs
+
+  $ASHS_ROOT/bin/ashs_train.sh \
+  -D $HOME/ASHS/filedata.txt \
+  -L #HOME/ASHS/snaplabels.txt \
+  -w #HOME/ASHS/output 
+
+  
