@@ -1,3 +1,4 @@
+======================================
 Comprehensive MTL Segmentation Protocol
 =======================================
 
@@ -9,4 +10,9 @@ MEDIAL TEMPORAL LOBE SEGMENTATION GUIDE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
-
+.. toctree::
+   :maxdepth: 1
+   :caption: Content
+   
+   Hippo_seg_manual/Getting_Started.rst
+  
