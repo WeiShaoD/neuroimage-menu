@@ -1,6 +1,12 @@
-Olsen-Amaral-Palombo Protocol
-=============================
+Comprehensive MTL Segmentation Protocol
+=======================================
 
-Rotman Research Institute, Baycrest Health Sciences
+In addtion to segmentated hippocampus with softwares, there is bettet way-- human protocol. In this chapter, we will see one of them. **Olsen-Amaral-Palombo 
+Protocol**, created by Dr.Rosanna olsen, her colleagues and students.
+
+
+MEDIAL TEMPORAL LOBE SEGMENTATION GUIDE
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 
 
