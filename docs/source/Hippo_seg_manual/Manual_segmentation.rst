@@ -1,3 +1,5 @@
+.. _Manual_segmentation:
+
 ======================================
 Comprehensive MTL Segmentation Protocol
 =======================================

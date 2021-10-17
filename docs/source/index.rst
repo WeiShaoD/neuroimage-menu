@@ -67,7 +67,7 @@ Menu
    FreeSurfer/Parallel_computing
    FreeSurfer/FreeSurfer_volume
    ASHS/ASHS_menu.rst
-   Hippo_seg_manual/manual.rst
+   Hippo_seg_manual/Manual_segmentation.rst
 
 .. toctree::
    :maxdepth: 1
