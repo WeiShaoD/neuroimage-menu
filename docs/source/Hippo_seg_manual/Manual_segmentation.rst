@@ -20,6 +20,6 @@ Here.
    :maxdepth: 1
    :caption: Content
    
-   Getting_Started/Start
+   Getting_Started/Start_Segmentation
 
   
