@@ -8,7 +8,7 @@ In addtion to segmentated hippocampus with softwares, there is bettet way-- huma
 Protocol**, created by Dr.Rosanna olsen, her colleagues and students.
 
 
-MEDIAL TEMPORAL LOBE SEGMENTATION GUIDE
+medial temporal lobe segmentation guide 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
@@ -16,5 +16,5 @@ MEDIAL TEMPORAL LOBE SEGMENTATION GUIDE
    :maxdepth: 1
    :caption: Content
    
-   Hippo_seg_manual/Getting_Started.rst
+   Hippo_seg_manual/Getting_Started
   
