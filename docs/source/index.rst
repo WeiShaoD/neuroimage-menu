@@ -59,7 +59,7 @@ Menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: Main course 1 FreeSurfer, ASHS and more
+   :caption: Main course 1 FreeSurfer, ASHS 
 
    FreeSurfer/FreeSurfer_menu
    FreeSurfer/FS_Longitudinal/Longitudinal.rst                                                                                           
@@ -67,13 +67,7 @@ Menu
    FreeSurfer/Parallel_computing
    FreeSurfer/FreeSurfer_volume
    ASHS/ASHS_menu.rst
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Manual
-
    Hippo_seg_manual/Manual_segmentation.rst
-
 
 .. toctree::
    :maxdepth: 1
