@@ -21,5 +21,6 @@ Here.
    :caption: Content
    
    Getting_Started/Start_Segmentation
+   ITK_SNAP/ITK_SNAP.rst
 
   
