@@ -20,5 +20,6 @@ Here.
    :maxdepth: 1
    :caption: Content
    
-   Hippo_seg_manual/Getting_Started
+   Hippo_seg_manual/Getting_Started/Start.rst
+
   
