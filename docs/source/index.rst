@@ -72,7 +72,7 @@ Menu
    :maxdepth: 1
    :caption: Manual
 
-   Hippo_seg_manual/Manual_segmentation
+   Hippo_seg_manual/Manual_segmentation.rst
 
 
 .. toctree::
