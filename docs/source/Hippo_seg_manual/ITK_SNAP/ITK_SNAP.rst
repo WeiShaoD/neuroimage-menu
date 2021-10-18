@@ -17,8 +17,7 @@ pop-up window will open. Select Next and then Finish to open the T2. You should 
 panel for 3D rendering.
 
 .. image:: figure1.png
-
-  Opening main T2-weighted image in ITK-SNAP.
+   Opening main T2-weighted image in ITK-SNAP.
 
 STEP 3: OPENING T1 IMAGES FOR STRUCTURAL REFERENCE
 **************************************************

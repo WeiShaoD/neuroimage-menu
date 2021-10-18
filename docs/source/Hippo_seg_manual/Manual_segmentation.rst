@@ -14,8 +14,6 @@ Protocol**, created by Dr.Rosanna olsen with her colleagues and students.
 Medial temporal lobe segmentation guide 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Here.
-
 .. toctree::
    :maxdepth: 1
    :caption: Content

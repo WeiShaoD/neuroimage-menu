@@ -59,7 +59,7 @@ Menu
 
 .. toctree::
    :maxdepth: 1
-   :caption: Main course 1 FreeSurfer, ASHS 
+   :caption: Main course 1 FreeSurfer, ASHS and more 
 
    FreeSurfer/FreeSurfer_menu
    FreeSurfer/FS_Longitudinal/Longitudinal.rst                                                                                           
