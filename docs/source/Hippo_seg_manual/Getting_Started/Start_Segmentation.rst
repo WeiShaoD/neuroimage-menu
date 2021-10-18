@@ -37,4 +37,9 @@ segmentation. To learn more about high-resolution co-registration, we recommend 
 <https://layerfmri.com/2019/02/11/high-quality-registration/>`__, which uses ANTs registration (Advanced Normalization Tools; to learn more see `here 
 <https://github.com/ANTsX/ANTs/wiki/Anatomy-of-an-antsRegistration-call/>`__)
 
+Other tools needed for segmentation
+***********************************
+
+You will also need a spreadsheet file for segmentation notes. This will include all your ROIs for each subject along with helpful notes about landmarks in 
+the brain.
 
