@@ -1,6 +1,8 @@
 ASHS
 ====
 
+.. image:: ASHS_figure.png
+
 What is ASHS?
 ^^^^^^^^^^^^^
 
