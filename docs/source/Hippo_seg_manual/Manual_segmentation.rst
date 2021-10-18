@@ -22,7 +22,7 @@ Here.
    
    Getting_Started/Start_Segmentation
    ITK_SNAP/ITK_SNAP
-   Conventions_and_Contrasts/Conventions_and_Contrasts
+   Conventions_and_Contrasts/Conventions_and_Contrasts.rst
    Medial_Temporal_Lobes_Landmarks/landmarks
    Segmenting_the_Medial_Temporal_Lobes/segmenting_MTL
    Segmenting_Hippocampal_Subfields/egmenting_Hippocampal_Subfields
