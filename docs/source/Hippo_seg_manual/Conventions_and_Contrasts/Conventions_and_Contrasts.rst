@@ -121,9 +121,6 @@ Next, you will need to look for the hippocampal head. To find this landmark::
  B The amygdala is located superior and the ventricle is lateral to the hippocampal head
  C Ambient gyrus appears in the same slice as the appearance of the hippocampal head
 
-LANDMARK 4: THE FIRST SLICE CONTAINING DENTATE GYRUS 
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 After identifying the hippocampal head on 2-3 slices (depending on the brain you are segmenting and the quality of the T2 scan) you will start to see 
 subfields of the hippocampus. At this point, the hippocampus will look thicker than previous slices and the superior digitations of the hippocampus will 
 have smoothed out. This is the first slice of the dentate gyrus (DG) and, by extension, other subfields of the hippocampus. Finally, a darker C-shaped band 
@@ -132,6 +129,27 @@ ammonis area 3 (CA3).
 
 .. image:: figure9.png
 
+**Figure 4.6**: This image depicts the first appearance of the hippocampal head (shown in orange). Notice the ventricle laterally, and the ambient gyrus 
+medially.
+
+.. image:: figure10.png
+
+**Figure 4.7**: This image will help you determine the shape of the hippocampal head in the brain you are segmenting. The example shown is adapted from 
+Ding et al. (2015). Notice how the head shape can resemble a “bean” (A1, A2, B1, B2) or more like the hippocampal body (C1, C2).
+
+LANDMARK 4: THE FIRST SLICE CONTAINING DENTATE GYRUS
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+After identifying the hippocampal head on 2-3 slices (depending on the brain you are segmenting and the quality of the T2 scan) you will start to see 
+subfields of the hippocampus. At this point, the hippocampus will look thicker than previous slices and the superior digitations of the hippocampus will 
+have smoothed out. This is the first slice of the dentate gyrus (DG) and, by extension, other subfields of the hippocampus. Finally, a darker C-shaped band 
+should be visible, separating hippocampal cornu ammonis area 1 (CA1) from DG. Note that in the OAP protocol, we do not distinguish between DG and cornu 
+ammonis area 3 (CA3).
+
+.. image:: figure11.png
+
+**Figure 4.8**: The image above, adapted from Ding et al. (2015), will help you with identifying dentate gyrus (highlighted in blue). 
+
 LANDMARK 5: THE LAST SLICE CONTAINING THE UNCUS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -139,7 +157,11 @@ The last slice of the uncus in the image below would be the second box from the 
 2-3mm thick slices. For thinner slices, there will be more slices in between the uncal apex and the start of the PHC (Pruessner et al. (2000) suggests it 
 starts 5mm posterior to the uncal apex).
 
-.. image:: figure10.png
+.. image:: figure13.png
+
+**Figure 4.9**: Anterior to posterior cortical transition showing the final slice containing the uncus. After one slice where the uncus is absent, you can 
+start tracing the PHC, and the ERC/PRC disappears. Image adapted from: Carr, V.A. (2013), Variability in collateral sulcus anatomy: The challenge of 
+reliably segmenting medial temporal lobe cortices. Hippocampal Subfield Segmentation Summit, Davis: Oral presentation.
 
 LANDMARK 6: THE LAST APPEARANCE OF THE COLLICULI 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -147,9 +169,10 @@ LANDMARK 6: THE LAST APPEARANCE OF THE COLLICULI
 The last clear appearance of the colliculi is the final slice where we segment the hippocampal subfields. After this slice, the hippocampus transitions to 
 the tail segment.
 
-.. image:: figure11.png
+.. image:: figure13.png
 
-.. image:: figure12.png
+**Figure 4.10**: The final appearance of the colliculi, which resemble a “butterfly” shape in the centre of the brain. 
+
 
 LANDMARK 7: THE LAST SLICE WHERE THE HIPPOCAMPAL TAIL IS VISIBLE 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -157,4 +180,3 @@ LANDMARK 7: THE LAST SLICE WHERE THE HIPPOCAMPAL TAIL IS VISIBLE
 The last slice of the MTL is the slice in your image set where you can clearly see the grey matter portion of the hippocampus tail. After the last slice of 
 the MTL the bright CSF laterally to the hippocampus will clearly sweep up and meet up with the more superior ventricle.
 
-.. image:: figure13.png
