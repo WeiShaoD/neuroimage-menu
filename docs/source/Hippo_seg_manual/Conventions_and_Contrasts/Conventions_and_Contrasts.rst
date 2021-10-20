@@ -30,7 +30,7 @@ labels and colour values are consistent. See the table below for our recommended
   Parahippocampal Cortex            PHC      Yellow    #fff900
   Posteromedial Entorhinal Cortex  pmERC     Purple    #994cd3
 
-Table 3: Labelling and colour conventions for the OAP protocol.
+**Table 3**: Labelling and colour conventions for the OAP protocol.
 
 CONTRASTS
 ^^^^^^^^^
@@ -42,7 +42,7 @@ notes spreadsheet.
 
 .. image:: figure2.png
 
-Figure 3.2: (A) Structures are harder to see in a T2-weighted image with default contrast. (B) Structures are clearer in a T2-weighted image when the 
+**Figure 3.2**: (A) Structures are harder to see in a T2-weighted image with default contrast. (B) Structures are clearer in a T2-weighted image when the 
 minimum and maximum contrasts have been adjusted to 200 and 900, respectively.
 
 VOXEL RULES
@@ -73,16 +73,15 @@ example below.
 
 .. image:: figure3.png
 
-Figure 4.1: The first appearance of the collateral sulcus (CS) in a T2-weighted MR image. 
-
+**Figure 4.1**: The first appearance of the collateral sulcus (CS) in a T2-weighted MR image.
 
 Be careful - in some brains it is easy to confuse a prominent rhinal sulcus (RS) with the CS in early anterior slices. To learn more, see the **Collateral 
 Sulcus in Segmenting Regions of Interest in the Medial Temporal Lobes**
 
 .. image:: figure4.png
 
-Figure 4.2: According to Insausti et al. (1998), the first appearance of the CS marks the transition between the temporopolar cortex (not included in the 
-OAP protocol) and the perirhinal cortex (shown here in pink). Image adapted from Insausti et al. (1998). CS = collateral sulcus
+**Figure 4.2**: According to Insausti et al. (1998), the first appearance of the CS marks the transition between the temporopolar cortex (not included in 
+the OAP protocol) and the perirhinal cortex (shown here in pink). Image adapted from Insausti et al. (1998). CS = collateral sulcus
 
 LANDMARK 2: THE FRONTAL-TEMPORAL JUNCTION/LIMEN INSULAE.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -93,12 +92,23 @@ FTJ/limen insulae is indicated. It is sometimes easier to visualize this landmar
 
 .. image:: figure5.png
 
-.. image:: figure6.png
-
-Figure 4.3: The two examples here compare a slice (T2-weighted) in which the limen insulae grey matter is visible in the left image; however, there is no 
+**Figure 4.3**: The two examples here compare a slice (T2-weighted) in which the limen insulae grey matter is visible in the left image; however, there is no 
 clear white matter connection between the temporal and frontal lobe yet, versus in right image there is a clear connection between the white matter of the 
 frontal and temporal lobe. This is a clear indication of the presence of the FTJ/limen insula, which will determine the delineation of the entorhinal 
 cortex. See the next image below for another example.
+
+.. image:: figure6.png
+
+**Figure 4.4**: Adapted from Insausti et al. (1998). (A) The emergence of CS and gyrus of Schwalbe (with PRC depicted in pink), (B) Moving posteriorly, the 
+limen insula is now present but the white matter connection between the frontal and temporal lobe is not clear, so we only continue to trace the PRC. (C) 
+There is a clear connection between the white matter of the frontal lobe and temporal lobe. This is the slice in which you draw the ERC (depicted in blue) 
+from the PRC up to the uncal notch (un). This is also the slice in which you make a note in your spreadsheet for the presence of the FTJ/limen insula. 
+Boundaries based on Kivisaari et al. (2013), see **Helpful Additional Resources for Further Reading**.
+
+.. image:: figure7.png
+
+**Figure 4.5**: This image brings together the first two landmarks (CS and FTJ/limen insulae) as described above. As you move from anterior to posterior, the
+CS may change from a single to double CS.
 
 LANDMARK 3: THE FIRST SLICE CONTAINING VISIBLE HIPPOCAMPAL HEAD
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -108,8 +118,6 @@ Next, you will need to look for the hippocampal head. To find this landmark::
  A In its first appearance, the hippocampal head will probably look like a “bean” shape
  B The amygdala is located superior and the ventricle is lateral to the hippocampal head
  C Ambient gyrus appears in the same slice as the appearance of the hippocampal head
-
-.. image:: figure7.png
 
 .. image:: figure8.png
 
