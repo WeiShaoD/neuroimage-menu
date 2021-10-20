@@ -9,6 +9,9 @@ to the other hemisphere only after you have completed all ROIs in the first side
 PRC and ERC steps to proceed right to the hippocampal head. Otherwise, for the whole MTL, we recommend the following order per hemisphere.
 
 .. image:: label1.png  
+   
+   label1
+
 
 NAMING CONVENTIONS AND LABELS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
