@@ -22,7 +22,7 @@ depth of the CS determines $ important to identify the CS first. In your spreads
 Be careful - in some brains it is easy to confuse a prominent rhinal sulcus (RS) with the $ Sulcus in Segmenting Regions of Interest in the Medial Temporal 
 Lobes**
 
-.. image:: figure4.png
+.. image:: mark4.png
 
 **Figure 4.2**: According to Insausti et al. (1998), the first appearance of the CS marks $ the OAP protocol) and the perirhinal cortex (shown here in 
 pink). Image adapted from Insau$
@@ -33,21 +33,21 @@ LANDMARK 2: THE FRONTAL-TEMPORAL JUNCTION/LIMEN INSULAE.
 This key landmark will determine where you start drawing the entorhinal cortex (ERC). To f$ (FTJ)/limen insulae. The slice in which there is a clear band 
 of white matter that joins t$ FTJ/limen insulae is indicated. It is sometimes easier to visualize this landmark on a T1-$
 
-.. image:: figure5.png
+.. image:: mark5.png
 
 **Figure 4.3**: The two examples here compare a slice (T2-weighted) in which the limen ins$ clear white matter connection between the temporal and frontal 
 lobe yet, versus in right i$ frontal and temporal lobe. This is a clear indication of the presence of the FTJ/limen ins$ cortex. See the next image below 
 for another example.
 
-.. image:: figure6.png
+.. image:: mark6.png
 
 **Figure 4.4**: Adapted from Insausti et al. (1998). (A) The emergence of CS and gyrus of $ limen insula is now present but the white matter connection 
 between the frontal and tempor$ There is a clear connection between the white matter of the frontal lobe and temporal lobe$ from the PRC up to the uncal 
 notch (un). This is also the slice in which you make a note i$ Boundaries based on Kivisaari et al. (2013), see **Helpful Additional Resources for Furthe$
 
-.. image:: figure7.png
+.. image:: mark7.png
 
-.. image:: figure8.png
+.. image:: mark8.png
 
 **Figure 4.5**: This image brings together the first two landmarks (CS and FTJ/limen insul$ CS may change from a single to double CS.
 
@@ -64,12 +64,12 @@ After identifying the hippocampal head on 2-3 slices (depending on the brain you
 will look thicker than previo$ have smoothed out. This is the first slice of the dentate gyrus (DG) and, by extension, ot$ should be visible, separating 
 hippocampal cornu ammonis area 1 (CA1) from DG. Note that in$ ammonis area 3 (CA3).
 
-.. image:: figure9.png
+.. image:: mark9.png
 
 **Figure 4.6**: This image depicts the first appearance of the hippocampal head (shown in $
 medially.
 
-.. image:: figure10.png
+.. image:: mark10.png
 
 **Figure 4.7**: This image will help you determine the shape of the hippocampal head in th$
 Ding et al. (2015). Notice how the head shape can resemble a “bean” (A1, A2, B1, B2) or mo$
@@ -81,7 +81,7 @@ After identifying the hippocampal head on 2-3 slices (depending on the brain you
 will look thicker than previo$ have smoothed out. This is the first slice of the dentate gyrus (DG) and, by extension, ot$ should be visible, separating 
 hippocampal cornu ammonis area 1 (CA1) from DG. Note that in$ ammonis area 3 (CA3).
 
-.. image:: figure11.png
+.. image:: mark11.png
 
 **Figure 4.8**: The image above, adapted from Ding et al. (2015), will help you with ident$
 
@@ -91,7 +91,7 @@ LANDMARK 5: THE LAST SLICE CONTAINING THE UNCUS
 The last slice of the uncus in the image below would be the second box from the left. You $ 2-3mm thick slices. For thinner slices, there will be more 
 slices in between the uncal ape$ starts 5mm posterior to the uncal apex).
 
-.. image:: figure12.png
+.. image:: mark12.png
 
 **Figure 4.9**: Anterior to posterior cortical transition showing the final slice containi$ start tracing the PHC, and the ERC/PRC disappears. Image 
 adapted from: Carr, V.A. (2013), $ reliably segmenting medial temporal lobe cortices. Hippocampal Subfield Segmentation Summi$
@@ -101,11 +101,11 @@ LANDMARK 6: THE LAST APPEARANCE OF THE COLLICULI
 
 The last clear appearance of the colliculi is the final slice where we segment the hippoca$ the tail segment.
 
-.. image:: figure13.png
+.. image:: mark13.png
 
 **Figure 4.10**: The final appearance of the colliculi, which resemble a “butterfly” shape$
 
-.. image:: figure14.png
+.. image:: mark14.png
 
 **Figure 4.11**: On the left, the final posterior slice of the hippocampal body, containin$ hippocampal body. On the right, the colliculi are no longer 
 visible, making the first slic$
@@ -113,7 +113,7 @@ visible, making the first slic$
 LANDMARK 7: THE LAST SLICE WHERE THE HIPPOCAMPAL TAIL IS VISIBLE
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: figure15.png
+.. image:: mark15.png
 
 **Figure 4.12**: The “sweeping” of CSF towards the superior ventricle means that the hippo$
 
