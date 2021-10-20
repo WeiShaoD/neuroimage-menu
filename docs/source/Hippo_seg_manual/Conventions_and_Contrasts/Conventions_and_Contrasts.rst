@@ -107,6 +107,8 @@ Boundaries based on Kivisaari et al. (2013), see **Helpful Additional Resources 
 
 .. image:: figure7.png
 
+.. image:: figure8.png
+
 **Figure 4.5**: This image brings together the first two landmarks (CS and FTJ/limen insulae) as described above. As you move from anterior to posterior, the
 CS may change from a single to double CS.
 
@@ -119,9 +121,7 @@ Next, you will need to look for the hippocampal head. To find this landmark::
  B The amygdala is located superior and the ventricle is lateral to the hippocampal head
  C Ambient gyrus appears in the same slice as the appearance of the hippocampal head
 
-.. image:: figure8.png
-
-LANDMARK 4: THE FIRST SLICE CONTAINING DENTATE GYRUS
+LANDMARK 4: THE FIRST SLICE CONTAINING DENTATE GYRUS 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 After identifying the hippocampal head on 2-3 slices (depending on the brain you are segmenting and the quality of the T2 scan) you will start to see 
