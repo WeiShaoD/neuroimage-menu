@@ -1,4 +1,4 @@
-2 USING ITK-SNAP FOR SEGMENTATION
+2 Using ITK-SNAP for segmentation 
 =================================
 
 In this section, we review how to open images for segmentation and set up your workspace

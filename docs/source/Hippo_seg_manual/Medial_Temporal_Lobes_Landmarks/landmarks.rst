@@ -1,5 +1,5 @@
 
-4 LAY OF THE LAND: MEDIAL TEMPORAL LOBES LANDMARKS
+4 Lay of the land: medial temporal lobes landmarks 
 ==================================================
 
 With your segmentation notes spreadsheet open in a separate window, start by identifying the landmarks outlined in the following section. This process will 
