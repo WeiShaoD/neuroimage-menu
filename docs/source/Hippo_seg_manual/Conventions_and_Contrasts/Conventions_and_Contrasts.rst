@@ -10,7 +10,7 @@ PRC and ERC steps to proceed right to the hippocampal head. Otherwise, for the w
 
 .. image:: label1.png  
    
-Order of segmentation in the medial temporal lobes.
+Figure 3.1:Order of segmentation in the medial temporal lobes.
 
 
 NAMING CONVENTIONS AND LABELS
@@ -30,6 +30,7 @@ labels and colour values are consistent. See the table below for our recommended
   Parahippocampal Cortex            PHC      Yellow    #fff900
   Posteromedial Entorhinal Cortex  pmERC     Purple    #994cd3
 
+Table 3: Labelling and colour conventions for the OAP protocol.
 
 CONTRASTS
 ^^^^^^^^^
@@ -40,6 +41,9 @@ though you may adjust to better see a structure. For all structures segmented, m
 notes spreadsheet.
 
 .. image:: figure2.png
+
+Figure 3.2: (A) Structures are harder to see in a T2-weighted image with default contrast. (B) Structures are clearer in a T2-weighted image when the 
+minimum and maximum contrasts have been adjusted to 200 and 900, respectively.
 
 VOXEL RULES
 ^^^^^^^^^^^
@@ -69,11 +73,16 @@ example below.
 
 .. image:: figure3.png
 
+Figure 4.1: The first appearance of the collateral sulcus (CS) in a T2-weighted MR image. 
 
-Careful - in some brains it is easy to confuse a prominent rhinal sulcus (RS) with the CS in early anterior slices. To learn more, see the **Collateral 
+
+Be careful - in some brains it is easy to confuse a prominent rhinal sulcus (RS) with the CS in early anterior slices. To learn more, see the **Collateral 
 Sulcus in Segmenting Regions of Interest in the Medial Temporal Lobes**
 
 .. image:: figure4.png
+
+Figure 4.2:: According to Insausti et al. (1998), the first appearance of the CS marks the transition between the temporopolar cortex (not included in the 
+OAP protocol) and the perirhinal cortex (shown here in pink). Image adapted from Insausti et al. (1998). CS = collateral sulcus
 
 LANDMARK 2: THE FRONTAL-TEMPORAL JUNCTION/LIMEN INSULAE.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
