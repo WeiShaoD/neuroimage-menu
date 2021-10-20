@@ -36,6 +36,7 @@ on the T2-weighted image. The contrast should be consistent across raters. Gener
 though you may adjust to better see a structure. For all structures segmented, make sure you record the minimum and maximum contrast in the segmentation 
 notes spreadsheet.
 
+.. image:: figure2.png
 
 VOXEL RULES
 ^^^^^^^^^^^
@@ -61,11 +62,15 @@ LANDMARK 1: FIRST SLICE CONTAINING THE COLLATERAL SULCUS
 The first slice of the MTL is the first slice in your image set where you can clearly see the collateral sulcus (CS). This is the most anterior slice. The 
 grey matter ribbon only consists of the perirhinal cortex. The depth of the CS determines the medial and lateral borders of the perirhinal cortex. It is 
 important to identify the CS first. In your spreadsheet, note down the first and most anterior slice that you can identify the CS. Take a look at the 
-example below:
+example below.
+
+.. image:: figure3.png
 
 
 Careful - in some brains it is easy to confuse a prominent rhinal sulcus (RS) with the CS in early anterior slices. To learn more, see the **Collateral 
 Sulcus in Segmenting Regions of Interest in the Medial Temporal Lobes**
+
+.. image:: figure4.png
 
 LANDMARK 2: THE FRONTAL-TEMPORAL JUNCTION/LIMEN INSULAE.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -74,6 +79,9 @@ This key landmark will determine where you start drawing the entorhinal cortex (
 (FTJ)/limen insulae. The slice in which there is a clear band of white matter that joins the frontal lobe to the temporal lobe is the slice in which the 
 FTJ/limen insulae is indicated. It is sometimes easier to visualize this landmark on a T1-weighted scan.
 
+.. image:: figure5.png
+
+.. image:: figure6.png
 
 LANDMARK 3: THE FIRST SLICE CONTAINING VISIBLE HIPPOCAMPAL HEAD
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,6 +92,10 @@ Next, you will need to look for the hippocampal head. To find this landmark::
  B The amygdala is located superior and the ventricle is lateral to the hippocampal head
  C Ambient gyrus appears in the same slice as the appearance of the hippocampal head
 
+.. image:: figure7.png
+
+.. image:: figure8.png
+
 LANDMARK 4: THE FIRST SLICE CONTAINING DENTATE GYRUS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -93,6 +105,8 @@ have smoothed out. This is the first slice of the dentate gyrus (DG) and, by ext
 should be visible, separating hippocampal cornu ammonis area 1 (CA1) from DG. Note that in the OAP protocol, we do not distinguish between DG and cornu 
 ammonis area 3 (CA3).
 
+.. image:: figure9.png
+
 LANDMARK 5: THE LAST SLICE CONTAINING THE UNCUS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -100,6 +114,7 @@ The last slice of the uncus in the image below would be the second box from the 
 2-3mm thick slices. For thinner slices, there will be more slices in between the uncal apex and the start of the PHC (Pruessner et al. (2000) suggests it 
 starts 5mm posterior to the uncal apex).
 
+.. image:: figure10.png
 
 LANDMARK 6: THE LAST APPEARANCE OF THE COLLICULI 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -107,8 +122,14 @@ LANDMARK 6: THE LAST APPEARANCE OF THE COLLICULI
 The last clear appearance of the colliculi is the final slice where we segment the hippocampal subfields. After this slice, the hippocampus transitions to 
 the tail segment.
 
+.. image:: figure11.png
+
+.. image:: figure12.png
+
 LANDMARK 7: THE LAST SLICE WHERE THE HIPPOCAMPAL TAIL IS VISIBLE 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The last slice of the MTL is the slice in your image set where you can clearly see the grey matter portion of the hippocampus tail. After the last slice of 
 the MTL the bright CSF laterally to the hippocampus will clearly sweep up and meet up with the more superior ventricle.
+
+.. image:: figure13.png
