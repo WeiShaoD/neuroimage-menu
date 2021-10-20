@@ -10,6 +10,8 @@ PRC and ERC steps to proceed right to the hippocampal head. Otherwise, for the w
 
 .. image:: label1.png  
 
+   new label  
+
 NAMING CONVENTIONS AND LABELS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
