@@ -1,5 +1,5 @@
-Getting Started
-===============
+1 Getting Started
+=================
 
 GETTING STARTED WITH SEGMENTATION
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
