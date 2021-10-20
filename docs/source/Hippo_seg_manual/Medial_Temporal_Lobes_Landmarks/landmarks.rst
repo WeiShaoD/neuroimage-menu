@@ -12,10 +12,10 @@ greatly (see **Variability in Landmarks** for more information).
 LANDMARK 1: FIRST SLICE CONTAINING THE COLLATERAL SULCUS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The first slice of the MTL is the first slice in your image set where you can clearly see $ grey matter ribbon only consists of the perirhinal cortex. The 
+The first slice of the MTL is the first slice in your image set where you can clearly see grey matter ribbon only consists of the perirhinal cortex. The 
 depth of the CS determines $ important to identify the CS first. In your spreadsheet, note down the first and most ante$ example below.
 
-.. image:: figure3.png
+.. image:: mark3.png
 
 **Figure 4.1**: The first appearance of the collateral sulcus (CS) in a T2-weighted MR ima$
 
