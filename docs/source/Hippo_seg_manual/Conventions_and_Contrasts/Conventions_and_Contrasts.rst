@@ -10,7 +10,7 @@ PRC and ERC steps to proceed right to the hippocampal head. Otherwise, for the w
 
 .. image:: label1.png  
    
-  label1
+Order of segmentation in the medial temporal lobes.
 
 
 NAMING CONVENTIONS AND LABELS
