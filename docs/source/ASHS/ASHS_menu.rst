@@ -81,7 +81,7 @@ Let's start from the simplest one,assume you have all the required files in your
 create a bash script::
 
   #!/bin/bash
- export ASHS_ROOT=/home/ASHS/fastashs
+  export ASHS_ROOT=/home/ASHS/fastashs
 
   $ASHS_ROOT/bin/ashs_train.sh \
   -D $HOME/ASHS/filedata.txt \
