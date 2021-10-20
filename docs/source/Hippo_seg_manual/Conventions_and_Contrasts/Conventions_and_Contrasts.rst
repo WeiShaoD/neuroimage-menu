@@ -181,6 +181,10 @@ hippocampal body. On the right, the colliculi are no longer visible, making the 
 LANDMARK 7: THE LAST SLICE WHERE THE HIPPOCAMPAL TAIL IS VISIBLE 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+..image:: figure15.png
+
+**Figure 4.12**: The “sweeping” of CSF towards the superior ventricle means that the hippocampal tail is no longer present in posterior slices.
+
 The last slice of the MTL is the slice in your image set where you can clearly see the grey matter portion of the hippocampus tail. After the last slice of 
 the MTL the bright CSF laterally to the hippocampus will clearly sweep up and meet up with the more superior ventricle.
 
