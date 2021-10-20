@@ -8,9 +8,7 @@ Draw one ROI in all slices at a time for one hemisphere of the MTL, after you un
 to the other hemisphere only after you have completed all ROIs in the first side. If you are only segmenting hippocampal subfields, then you can skip the 
 PRC and ERC steps to proceed right to the hippocampal head. Otherwise, for the whole MTL, we recommend the following order per hemisphere.
 
-.. image:: figure1.png  
-
-   here
+.. image:: label1.png  
 
 NAMING CONVENTIONS AND LABELS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
