@@ -40,7 +40,7 @@ on the T2-weighted image. The contrast should be consistent across raters. Gener
 though you may adjust to better see a structure. For all structures segmented, make sure you record the minimum and maximum contrast in the segmentation 
 notes spreadsheet.
 
-.. image:: figure2.png
+.. image:: lable2.png
 
 **Figure 3.2**: (A) Structures are harder to see in a T2-weighted image with default contrast. (B) Structures are clearer in a T2-weighted image when the 
 minimum and maximum contrasts have been adjusted to 200 and 900, respectively.
