@@ -157,7 +157,7 @@ The last slice of the uncus in the image below would be the second box from the 
 2-3mm thick slices. For thinner slices, there will be more slices in between the uncal apex and the start of the PHC (Pruessner et al. (2000) suggests it 
 starts 5mm posterior to the uncal apex).
 
-.. image:: figure13.png
+.. image:: figure12.png
 
 **Figure 4.9**: Anterior to posterior cortical transition showing the final slice containing the uncus. After one slice where the uncus is absent, you can 
 start tracing the PHC, and the ERC/PRC disappears. Image adapted from: Carr, V.A. (2013), Variability in collateral sulcus anatomy: The challenge of 
@@ -173,6 +173,10 @@ the tail segment.
 
 **Figure 4.10**: The final appearance of the colliculi, which resemble a “butterfly” shape in the centre of the brain. 
 
+.. image:: figure14.png
+
+**Figure 4.11**: On the left, the final posterior slice of the hippocampal body, containing the colliculi, crus fornix, and the “tear drop” shape of the 
+hippocampal body. On the right, the colliculi are no longer visible, making the first slice of the hippocampal tail.
 
 LANDMARK 7: THE LAST SLICE WHERE THE HIPPOCAMPAL TAIL IS VISIBLE 
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
