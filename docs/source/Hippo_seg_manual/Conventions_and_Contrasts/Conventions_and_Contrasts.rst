@@ -10,7 +10,7 @@ PRC and ERC steps to proceed right to the hippocampal head. Otherwise, for the w
 
 .. image:: label1.png  
    
-Figure 3.1:Order of segmentation in the medial temporal lobes.
+**Figure 3.1**:Order of segmentation in the medial temporal lobes.
 
 
 NAMING CONVENTIONS AND LABELS
@@ -81,7 +81,7 @@ Sulcus in Segmenting Regions of Interest in the Medial Temporal Lobes**
 
 .. image:: figure4.png
 
-Figure 4.2:: According to Insausti et al. (1998), the first appearance of the CS marks the transition between the temporopolar cortex (not included in the 
+Figure 4.2: According to Insausti et al. (1998), the first appearance of the CS marks the transition between the temporopolar cortex (not included in the 
 OAP protocol) and the perirhinal cortex (shown here in pink). Image adapted from Insausti et al. (1998). CS = collateral sulcus
 
 LANDMARK 2: THE FRONTAL-TEMPORAL JUNCTION/LIMEN INSULAE.
@@ -94,6 +94,11 @@ FTJ/limen insulae is indicated. It is sometimes easier to visualize this landmar
 .. image:: figure5.png
 
 .. image:: figure6.png
+
+Figure 4.3: The two examples here compare a slice (T2-weighted) in which the limen insulae grey matter is visible in the left image; however, there is no 
+clear white matter connection between the temporal and frontal lobe yet, versus in right image there is a clear connection between the white matter of the 
+frontal and temporal lobe. This is a clear indication of the presence of the FTJ/limen insula, which will determine the delineation of the entorhinal 
+cortex. See the next image below for another example.
 
 LANDMARK 3: THE FIRST SLICE CONTAINING VISIBLE HIPPOCAMPAL HEAD
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
