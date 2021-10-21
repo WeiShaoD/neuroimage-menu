@@ -9,6 +9,14 @@ The perirhinal cortex (PRC) is drawn in pink on all anterior slices. The first s
 is present. This is the most anterior slice of the MTL. In slices prior to the limen insulae/FTJ, the superior border is determined by the gyrus of 
 Schwalbe (Figure 5.1). In slices after the limen insulae, the lateral border is determined by the depth of the CS (Figure 5.2).
 
+.. image:: MTL2.png
+
+**Figure 5.1**: Image adapted from Kivisaari et al. (2013) showing the superior-lateral border of the PRC, based on the presence of the gyrus of Schwalbe. 
+(a) Two gyri of Schwalbe are visible (red arrows) so the superior-lateral PRC borer is drawn to the most lateral fundus. Do not include a bump that goes 
+beyond the midpoint of the MTL as a gyrus of Schwalbe. (b) One gyrus of Schwalbe is visible, so the superior border is drawn to the fundus of the gyrus. 
+(c) No gyri are visible, and the superior aspect of the temporal pole appears flat, so the superior-lateral border is drawn to the midpoint of the entire 
+superior portion of the MTL.
+
 
 If you are having trouble determining the midpoint of the MTL (i.e., the superior-lateral PRC border prior to the limen insulae/FTJ), you can flip forward 
 through the slices until you find the FTJ/limen insulae. On slices before that one (i.e., more posteriorly), the superior-lateral border of the PRC should 
