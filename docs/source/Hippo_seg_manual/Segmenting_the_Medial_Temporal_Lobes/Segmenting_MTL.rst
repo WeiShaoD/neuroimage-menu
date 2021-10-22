@@ -1,3 +1,4 @@
+
 5 Segmenting the Medial Temporal Lobes
 ======================================
 
@@ -25,20 +26,38 @@ not extend past where the FTJ appears in more anterior slices.
 After the limen insulae/FTJ appears, the medial border of the PRC is determined by the depth of the CS. See Figure 5.2 and Table 5A below for a visual of 
 the CS depth rules.
 
+.. image:: MTL3.png
+
+**Figure 5.2**: These examples of the collateral sulcus are adapted from Insausti et al. (1998): CS = collateral sulcus, OTS = occipitotemporal sulcus, 
+blue = entorhinal cortex, pink = perirhinal cortex
+
 Collateral Sulcus
 ^^^^^^^^^^^^^^^^^
 
 The depth of the collateral sulcus (CS) determines where the medial and lateral border of your PRC. The depth rule only applies to PRC, as shown in Table 
-5A below (but does not apply to PHC). However, the double CS rule does apply to the PHC as well.
+5A below (but does not apply to PHC). However, the double CS rule **does** apply to the PHC as well.
+
+.. image:: MTL4.png
+
+**Table 5A**: The following table will help you determine the depth of the collateral sulcus in the brain you are segmenting. Note that the images above 
+depict the left hemisphere of the brain. However, the same rules apply for the right hemisphere. Examples are adapted from Insausti et al. (1998; see 
+**Helpful Additional Resources for Further Reading**).
+
 
 In the case that there is a double CS, draw the medial edge to the fundus of the more medial CS and draw the lateral to the fundus of the more lateral CS. 
 An estimated 25% to 35% of subjects will have a double CS (Insausti et al., 1998; Pruessner et al., 2002). Not all slices in one subject may be a double 
 CS. In the figure below, B and C demonstrate an interrupted and a branched CS.
 
+.. image:: MTL4.png
+
+**Figure 5.3**: The variation seen in the collateral sulcus. The collateral sulcus can be uninterrupted, non-side-branched as in the first image, 
+interrupted as in the second image and side branched as in the third image. (Perirhinal cortex = pink, Entorhinal cortex = blue).
+
 Note that PRC bifurcation rules still apply before the limen insulae/FTJ - so if the CS bifurcates, draw to the fundus of the more lateral sulcus. However, 
 the medial boundary rule (depth rule) would not apply for the medial sulcus at this point. So, if you are drawing the CS as a double before the limen 
-insulae/FTJ, include the PRC all the way to the superior lateral extent of the gyrus of Schwalbe (but, see Variability in Landmarks for examples where the 
-PRC may be interrupted by an irregular CS or deep rhinal sulcus before the limen insulae/FTJ).
+insulae/FTJ, include the PRC all the way to the superior lateral extent of the gyrus of Schwalbe (but, see **Variability in Landmarks** for examples where 
+the PRC may be interrupted by an irregular CS or deep rhinal sulcus before the limen insulae/FTJ).
+
 
 Entorhinal Cortex
 ^^^^^^^^^^^^^^^^^
