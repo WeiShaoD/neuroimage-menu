@@ -76,8 +76,8 @@ gyrus (see **Glossary of Key Terms**). The lateral edge is drawn to the edge of 
 **Figure 5.4**: Segmentation of the entorhinal cortex (blue) in slices before the anterior head of the HPC, with the lateral edge drawn to the edge of the 
 PRC (pink).
 
-In the slices after the start of the hippocampus:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+In the slices after the start of the hippocampus
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The medial extent is drawn along the grey matter ribbon to the bisection of the hippocampal fissure. In more posterior slices, this will meet up with the 
 subiculum. The lateral edge is drawn to the edge of PRC (see image below).

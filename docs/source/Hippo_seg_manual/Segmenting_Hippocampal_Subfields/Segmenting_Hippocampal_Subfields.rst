@@ -1,2 +1,2 @@
-Segmenting Hippocampal Subfields
-================================
+6 Segmenting Hippocampal Subfields
+==================================

@@ -20,7 +20,7 @@ Protocol**, created by Dr.Rosanna olsen with her colleagues and students.
    Conventions_and_Contrasts/Conventions_and_Contrasts.rst
    Medial_Temporal_Lobes_Landmarks/landmarks
    Segmenting_the_Medial_Temporal_Lobes/Segmenting_MTL.rst
-   Segmenting_Hippocampal_Subfields/egmenting_Hippocampal_Subfields
+   Segmenting_Hippocampal_Subfields/Segmenting_Hippocampal_Subfields
    Rules_for_Segmenting_Subregions_of_the_Entorhinal_Cortex/Rules_for_Segmenting_Subregions_of_the_Entorhinal_Cortex
    Variability_in_Landmarks/Variability_in_Landmarks
    Computing_Volumes_and_Statistics/Computing_Volumes_and_Statistics
