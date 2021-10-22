@@ -48,7 +48,7 @@ In the case that there is a double CS, draw the medial edge to the fundus of the
 An estimated 25% to 35% of subjects will have a double CS (Insausti et al., 1998; Pruessner et al., 2002). Not all slices in one subject may be a double 
 CS. In the figure below, B and C demonstrate an interrupted and a branched CS.
 
-.. image:: MTL4.png
+.. image:: MTL5.png
 
 **Figure 5.3**: The variation seen in the collateral sulcus. The collateral sulcus can be uninterrupted, non-side-branched as in the first image, 
 interrupted as in the second image and side branched as in the third image. (Perirhinal cortex = pink, Entorhinal cortex = blue).
@@ -62,14 +62,19 @@ the PRC may be interrupted by an irregular CS or deep rhinal sulcus before the l
 Entorhinal Cortex
 ^^^^^^^^^^^^^^^^^
 
-The entorhinal cortex (ERC) is drawn in light blue on all anterior slices. The first slice containing the ERC will be the first slice where the limen 
+The entorhinal cortex (ERC) is drawn in **light blue** on all anterior slices. The first slice containing the ERC will be the first slice where the limen 
 insulae/FTJ is present. There are two distinct ways to draw the ERC: in slices before the HPC anterior head, and in slices after the start of the HPC.
 
 In the slices before the anterior head:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The medial extent is drawn along the grey matter ribbon to the natural taper point in the bisection of the apex of the most medial point of parahippocampal 
-gyrus (see Glossary of Key Terms). The lateral edge is drawn to the edge of the PRC (see image below).
+gyrus (see **Glossary of Key Terms**). The lateral edge is drawn to the edge of the PRC (see image below).
+
+.. image:: MTL6.png
+
+**Figure 5.4**: Segmentation of the entorhinal cortex (blue) in slices before the anterior head of the HPC, with the lateral edge drawn to the edge of the 
+PRC (pink).
 
 In the slices after the start of the hippocampus:
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -77,13 +82,22 @@ In the slices after the start of the hippocampus:
 The medial extent is drawn along the grey matter ribbon to the bisection of the hippocampal fissure. In more posterior slices, this will meet up with the 
 subiculum. The lateral edge is drawn to the edge of PRC (see image below).
 
+.. image:: MTL7.png
+
+**Figure 5.5**: Segmentation of the entorhinal cortex (blue) in slices after the start of the hippocampus, with the lateral edge drawn to the edge of the 
+PRC (pink)
+
 Parahippocampal Cortex
 ^^^^^^^^^^^^^^^^^^^^^^
 
-The parahippocampal cortex (PHC) is drawn in yellow, on the posterior slices only. The PRC follows the grey matter ribbon connecting the subiculum to the 
+The parahippocampal cortex (PHC) is drawn in **yellow**, on the posterior slices only. The PRC follows the grey matter ribbon connecting the subiculum to the 
 collateral sulcus. Start drawing PHC on the second slice the uncus is absent (on the same slice where you start drawing CA1 phase 3). The medial extent is 
 therefore the edge of the subiculum, and the lateral edge is drawn to the elbow of the collateral sulcus (collateral sulcus depth rules do not apply in the 
 posterior hippocampus).
+
+.. image:: MTL8.png
+
+**Figure 5.6**: Segmentation of the parahippocampal cortex (yellow) in posterior slices of the MTL cortex.
 
 If there is a double sulcus and the medial sulci and the lateral sulci originate from the same collateral sulcus, then follow the bifurcation rules. If the 
 medial and lateral sulci do not come from the same collateral sulcus or do not merge in subsequent slices, then only draw the lateral sulci and do not 
