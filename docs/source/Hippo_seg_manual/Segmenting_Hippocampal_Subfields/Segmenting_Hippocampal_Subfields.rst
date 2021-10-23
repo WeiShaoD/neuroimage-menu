@@ -4,6 +4,12 @@
 In the OAP protocol, the hippocampus (HPC) is segmented into the anterior (head), the body (with subfields), and the posterior (tail) regions. The figure 
 below should help you with visualizing the way that subfields (i.e., subiculum, CA1, and DG+CA3) are arranged along the horizontal long axis of the HPC.
 
+.. image:: subfield1.png
+
+**Figure 6.1**: Illustration of the curvature of the tail in three hippocampi. In the top row (a, b) the tail shows a strong curve in the medial direction. In 
+the middle row (c, d) the tail shows very little curving in either direction. In the third row (e, f) the tail shows limited curving in the medial 
+direction, and stronger curving in the superior direction visible in the lateral view. Image adapted from de Flores et al. (2020).
+
 Anterior Head
 ^^^^^^^^^^^^^
 
@@ -13,6 +19,9 @@ Figure 23.15.C in Insausti & Amaral’s (2004) book, chapter 23, which we have r
 “digitations” on the superior portion of the HPC without a very clear stratum radiatum lacunosum moleculare (SRLM). It is important to note that the 
 digitations are not always completely visible.
 
+.. image:: subfield2.png
+
+**Figure 6.2**: Reproduced image from Insausti & Amaral (2004; chapter 23) of the anterior head progressing to the body. 
 
 Keep in mind that in images with 2-3mm slice thickness the anterior head usually spans 3 coronal slices, sometimes 2 and rarely 1. In higher resolution 
 images, there can be more than 3 slices of anterior head. The anterior head will fall in the predetermined lateral, superior, and inferior borders. If it 
@@ -20,6 +29,10 @@ is touching the amygdala, however, the medial extent will be drawn half way up t
 morphology of the HPC includes evidence of the DG in the center of the HPC, and a visible C-shape on the lateral edge, at which point you can start 
 segmenting subfields. It is highly recommended that you look at the Ding et al. (2015) paper (see **Helpful Additional Resources for Further Reading**) when 
 learning how to draw the HPC head.
+
+.. image:: subfield3.png
+
+**Figure 6.3**: Detailed images of the hippocampal head (anterior head).
 
 Posterior Hippocampus
 ^^^^^^^^^^^^^^^^^^^^^
@@ -34,7 +47,14 @@ On 3mm thick slices, the posterior HPC usually spans 2 slices, sometimes 1 and r
 with the posterior HPC present. The posterior slice will have a clear difference of the grey matter region between it and the slice one posterior to it 
 (**see Landmark 7 in Lay of the Land: Medial Temporal Lobes Landmarks above**). This will also be the last slice of the MTL, where the bright CSF laterally 
 to the HPC will “sweep up” to meet up with the more superior ventricle. This image below will help you find the final slice of the hippocampal body before 
-you start segmenting the posterior HPC:
+you start segmenting the posterior HPC
+
+.. image:: subfield4.png
+
+**Figure 6.4**: Left: Final posterior slice of the hippocampal body displaying the colliculi, crus fornix, and “tear drop” shape of the hippocampal body. 
+Right: The colliculi are no longer visible, and therefore the image is considered to be the first slice of the hippocampal tail (or posterior hippocampus).
+
+The posterior HPC is drawn in **copper** (see **Labels, Naming Conventions, and Contrasts** above for more information). 
 
 Hippocampal CA1
 ^^^^^^^^^^^^^^^
@@ -48,9 +68,27 @@ phases below:
 
 **CA1 Phase 1**: The HPC is “open” and in anterior MTL (i.e., uncus is present):
 
+.. image:: subfield5.png
+
+**Figure 6.5**: CA1 Phase 1, where the superior-medial extent of the CA1 is defined by going half way up the 1st bump, when there are 2 or fewer 
+“bumps”/digitations. If there are 3+ digitations, use the “one third rule” for the superior-medial boundary (one third refers to the width of the HPC, so 
+from the most medial part to the most lateral along the horizontal plane following the angle of the body). The inferior-medial extent is defined by the 
+imaginary line drawn straight down from the superior border of CA1. This will give a resulting “C” shape.
+
 **CA1 Phase 2**: The uncus is starting to disappear/disappeared and in anterior MTL:
 
+.. image:: subfield6.png
+
+**Figure 6.6**: CA1 Phase 2, where the superior-medial extent of the CA1 is ¾ up the “C” shape. The inferior-medial extent is the bisection of the hippocampal 
+body including the CA1 along with CA3+DG.
+
 **CA1 Phase 3**: When the uncus has disappeared and the MTL is in the posterior slices:
+
+.. image:: subfield7.png
+
+**Figure 6.7**: CA1 Phase 3, beginning on the second slice the uncus is absent. The superior-medial extent is ¾ up the C shape. The inferior medial-extent 
+is drawn to the very medial tip of CA3+DG. It is a “teardrop” shape and the most medial potion might be easy to miss.  At this phase, you should get a 
+“3-point intersection” between the CA1, Sub, and CA3+DG at the medial edge of CA1.
 
 Subiculum
 ^^^^^^^^^
@@ -70,6 +108,10 @@ Posterior (second slice the uncus is absent, CA1 is in phase 2-3)
 The inferior-medial portion will always be drawn ½ way down the isthmus (see below for helpful tips on how to find the halfway point). The isthmus is 
 measured from the end of CA1 to the beginning of the collateral sulcus (CS).
 
+.. image:: subfield8.png
+
+**Figure 6.8**: How to find the halfway point of the isthmus.
+
 DG+CA3
 ^^^^^^
 
@@ -84,3 +126,11 @@ body of the HPC.
 
 The medial portion is defined as the closing of the tear-drop share of the HPC. In anterior slices where the HPC is “open” white matter will surround the 
 medial portion.
+
+.. image:: subfield9.png
+
+**Figure 6.9**: Do not include the white matter (alveus and fimbria) on the superior edge of DG and CA1.
+
+.. image:: subfield10.png
+
+**Figure 6.10**: In the case where the uncal apex is present, trace out both the uncal apex and the lateral body of the HPC (depicted in navy blue).
