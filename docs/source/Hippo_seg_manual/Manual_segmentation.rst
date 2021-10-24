@@ -21,7 +21,7 @@ Protocol**, created by Dr.Rosanna olsen with her colleagues and students.
    Medial_Temporal_Lobes_Landmarks/landmarks
    Segmenting_the_Medial_Temporal_Lobes/Segmenting_MTL.rst
    Segmenting_Hippocampal_Subfields/Segmenting_Hippocampal_Subfields
-   Rules_for_Segmenting_Subregions_of_the_Entorhinal_Cortex/Rules_for_Segmenting_Subregions_of_the_Entorhinal_Cortex
+   Segmenting_Subregions_of_the_Entorhinal_Cortex/Segmenting_Subregions_of_the_Entorhinal_Cortex
    Variability_in_Landmarks/Variability_in_Landmarks
    Computing_Volumes_and_Statistics/Computing_Volumes_and_Statistics
    Glossary_of_Key_Terms/Glossary_of_Key_Terms
