@@ -45,3 +45,6 @@ in blue, and the OTS is shown in green (Kim et al., 2008).
  
  D) Type 4: three-branch CS with no connection between the sulci
 
+.. image:: Variability3.png 
+
+**Fig**. This is an example of a younger adult brain where the hippocampal head appears before the limen insulae.

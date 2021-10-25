@@ -24,6 +24,8 @@ Here, you will see information about:
  
  Standard deviation of the image intensity in the structure
 
+.. image:: computing1.png
+
 STEP 3
 ^^^^^^
 
@@ -38,3 +40,6 @@ models. This is because you need to account for total estimated intracranial vol
 To do this, refer to the methodology section of Raz et al. (2015). You may correct for ICV via a linear equation: Volumeadj = Volumerawi - b(ICVi - Mean 
 ICV), where Volumeadj is the adjusted regional volume, Volumerawi is the original volume for an individual, b is the slope of the ROI volume regressed on 
 ICV, and Mean ICV is the sample mean of ICV (Raz et al., 2015).
+
+
+
