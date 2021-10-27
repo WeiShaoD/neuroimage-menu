@@ -1,7 +1,11 @@
 10 Glossary of Key Terms
 ========================
 
-Term                          Definition
+.. image Glossary1.png
 
+.. image Glossary2.png
 
-Alveus                        A thin layer of medullary nerve fibers on the ventricular surface of the hippocampus. OAP protocol does not include this region in any ROI.
+.. image Glossary3.png
+
+.. image Glossary4.png
+
