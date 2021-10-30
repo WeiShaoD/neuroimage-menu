@@ -25,4 +25,4 @@ Protocol**, created by Dr.Rosanna olsen with her colleagues and students.
    Variability_in_Landmarks/Variability_in_Landmarks
    Computing_Volumes_and_Statistics/Computing_Volumes_and_Statistics
    Glossary_of_Key_Terms/Glossary_of_Key_Terms
-   Helpful_Additional_Resources_for_Further_Reading/Helpful_Additional_Resources_for_Further_Reading
+   Helpful_Resources/Helpful_Resources 
