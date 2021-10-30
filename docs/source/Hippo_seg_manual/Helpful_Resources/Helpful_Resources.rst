@@ -48,7 +48,7 @@ discrepancies between laboratories. Cerebral Cortex, 10(4), 433-442::
 T1 and T2-weighted images to make a decision on boundaries. *Click on citation for full PDF.
 
 G :Pruessner et al. (2002). Volumetry of temporopolar, perirhinal, entorhinal and parahippocampal cortex from high-resolution MRI images: comparing the 
-variability of the collateral sulcus. Cerebral Cortex, 12(12), 1342-1352.
+variability of the collateral sulcus. Cerebral Cortex, 12(12), 1342-1352::
 
   This paper is a follow-up to the one listed above, with details on dividing the MTL on a T1 image. *Click on citation for full PDF.
 
