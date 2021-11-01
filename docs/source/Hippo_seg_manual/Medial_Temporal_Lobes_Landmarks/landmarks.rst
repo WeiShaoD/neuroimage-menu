@@ -105,7 +105,8 @@ reliably segmenting medial temporal lobe cortices. Hippocampal Subfield Segmenta
 LANDMARK 6: THE LAST APPEARANCE OF THE COLLICULI
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The last clear appearance of the colliculi is the final slice where we segment the hippoca$ the tail segment.
+The last clear appearance of the colliculi is the final slice where we segment the hippocampal subfields. After this slice, the hippocampus transitions to 
+the tail segment.
 
 .. image:: mark13.png
 
@@ -123,7 +124,6 @@ LANDMARK 7: THE LAST SLICE WHERE THE HIPPOCAMPAL TAIL IS VISIBLE
 
 **Figure 4.12**: The “sweeping” of CSF towards the superior ventricle means that the hippocampal tail is no longer present in posterior slices.
 
-The last slice of the MTL is the slice in your image set where you can clearly see the gre$ the MTL the bright CSF laterally to the hippocampus will 
-clearly sweep up and meet up with$
-
+The last slice of the MTL is the slice in your image set where you can clearly see the grey matter portion of the hippocampus tail. After the last slice of 
+the MTL the bright CSF laterally to the hippocampus will clearly sweep up and meet up with the more superior ventricle.
 
