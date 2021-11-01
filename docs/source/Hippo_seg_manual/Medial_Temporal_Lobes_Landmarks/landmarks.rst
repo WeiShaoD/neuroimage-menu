@@ -13,7 +13,7 @@ LANDMARK 1: FIRST SLICE CONTAINING THE COLLATERAL SULCUS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first slice of the MTL is the first slice in your image set where you can clearly see grey matter ribbon only consists of the perirhinal cortex. The 
-depth of the CS determines $ important to identify the CS first. In your spreadsheet, note down the first and most ante$ example below.
+depth of the CS determines is important to identify the CS first. In your spreadsheet, note down the first and most anter example below.
 
 .. image:: mark3.png
 
@@ -30,8 +30,9 @@ the OAP protocol) and the perirhinal cortex (shown here in pink). Image adapted 
 LANDMARK 2: THE FRONTAL-TEMPORAL JUNCTION/LIMEN INSULAE.
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-This key landmark will determine where you start drawing the entorhinal cortex (ERC). To f (FTJ)/limen insulae. The slice in which there is a clear band 
-of white matter that joins t$ FTJ/limen insulae is indicated. It is sometimes easier to visualize this landmark on a T1-$
+This key landmark will determine where you start drawing the entorhinal cortex (ERC). To find this landmark, look for the frontal-temporal junction 
+(FTJ)/limen insulae. The slice in which there is a clear band of white matter that joins the frontal lobe to the temporal lobe is the slice in which the 
+FTJ/limen insulae is indicated. It is sometimes easier to visualize this landmark on a T1-weighted scan.
 
 .. image:: mark5.png
 
@@ -64,10 +65,6 @@ Next, you will need to look for the hippocampal head. To find this landmark::
  B The amygdala is located superior and the ventricle is lateral to the hippocampal head
  C Ambient gyrus appears in the same slice as the appearance of the hippocampal head
 
-After identifying the hippocampal head on 2-3 slices (depending on the brain you are segment subfields of the hippocampus. At this point, the hippocampus 
-will look thicker than previo$ have smoothed out. This is the first slice of the dentate gyrus (DG) and, by extension, ot$ should be visible, separating 
-hippocampal cornu ammonis area 1 (CA1) from DG. Note that in$ ammonis area 3 (CA3).
-
 .. image:: mark9.png
 
 **Figure 4.6**: This image depicts the first appearance of the hippocampal head (shown in orange). Notice the ventricle laterally, and the ambient gyrus 
@@ -81,9 +78,11 @@ Ding et al. (2015). Notice how the head shape can resemble a “bean” (A1, A2,
 LANDMARK 4: THE FIRST SLICE CONTAINING DENTATE GYRUS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-After identifying the hippocampal head on 2-3 slices (depending on the brain you are segme$ subfields of the hippocampus. At this point, the hippocampus 
-will look thicker than previo$ have smoothed out. This is the first slice of the dentate gyrus (DG) and, by extension, ot$ should be visible, separating 
-hippocampal cornu ammonis area 1 (CA1) from DG. Note that in$ ammonis area 3 (CA3).
+After identifying the hippocampal head on 2-3 slices (depending on the brain you are segmenting and the quality of the T2 scan) you will start to see 
+subfields of the hippocampus. At this point, the hippocampus will look thicker than previous slices and the superior digitations of the hippocampus will 
+have smoothed out. This is the first slice of the dentate gyrus (DG) and, by extension, other subfields of the hippocampus. Finally, a darker C-shaped band 
+should be visible, separating hippocampal cornu ammonis area 1 (CA1) from DG. Note that in the OAP protocol, we do not distinguish between DG and cornu 
+ammonis area 3 (CA3).
 
 .. image:: mark11.png
 
@@ -92,8 +91,10 @@ hippocampal cornu ammonis area 1 (CA1) from DG. Note that in$ ammonis area 3 (CA
 LANDMARK 5: THE LAST SLICE CONTAINING THE UNCUS
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The last slice of the uncus in the image below would be the second box from the left. You $ 2-3mm thick slices. For thinner slices, there will be more 
-slices in between the uncal ape$ starts 5mm posterior to the uncal apex).
+
+The last slice of the uncus in the image below would be the second box from the left. You should note here that this EC/PRC to PHC transition is valid for 
+2-3mm thick slices. For thinner slices, there will be more slices in between the uncal apex and the start of the PHC (Pruessner et al. (2000) suggests it 
+starts 5mm posterior to the uncal apex).
 
 .. image:: mark12.png
 
