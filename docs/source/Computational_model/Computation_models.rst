@@ -1,4 +1,4 @@
-.. _Manual_Computational_models:
+.. _Computational_models:
 
 ====================
 Models for Neuroimag
