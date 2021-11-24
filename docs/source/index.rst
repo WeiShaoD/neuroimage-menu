@@ -135,9 +135,9 @@ Menu
 
 .. toctree::
     :maxdepth: 1
-    :caption: Computation Neuroscience
+    :caption: Computational Neuroscience
 
-    Computation_image/computation_menu.rst
+    Computational_model/Computation_models.rst
 
 
 .. toctree::
