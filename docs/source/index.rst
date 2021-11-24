@@ -128,9 +128,10 @@ Menu
 
     FC/FC_menu.rst
     FSL/FSL_Resting-state/RS.rst
-    AFNI/AFNI_Resting-state/RS.rst
-    SPM/SPM_Resting-state/RS.rst
-    Freesurfer/FreeSurfer_Resting-state/RS.rst
+    Computational_model/Computation_models.rst
+    #AFNI/AFNI_Resting-state/RS.rst
+    #SPM/SPM_Resting-state/RS.rst
+    #Freesurfer/FreeSurfer_Resting-state/RS.rst
 
 .. toctree::
     :maxdepth: 1
