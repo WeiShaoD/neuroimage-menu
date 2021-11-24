@@ -32,4 +32,10 @@ We will start with the dataset downloading, preprocessing, 1st level, and end wi
    
    AFNI_Ballon/AFNI_Ballon.rst
    AFNI_preprocess/AFNI_preprocessing_1.rst
-
+   AFNI_preprocess/AFNI_preprocessing_2.rst
+   AFNI_preprocess/Preprocessed_check.rst
+   AFNI_statistics/AFNI_statistics_modeling.rst
+   AFNI_1st/AFNI_1st_level.rst
+   AFNI_automation/Aumomation_menu.rst
+   AFNI_group/group_analysis.rst
+   AFNI_ROI/ROI_analysis.rst

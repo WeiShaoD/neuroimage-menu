@@ -93,13 +93,13 @@ Menu
    #AFNI_menu  
    #AFNI/AFNI_Ballon/AFNI_Ballon.rst
    #AFNI/AFNI_preprocess/AFNI_preprocessing_1.rst
-   AFNI/AFNI_preprocess/AFNI_preprocessing_2.rst
-   AFNI/AFNI_preprocess/Preprocessed_check.rst
-   AFNI/AFNI_statistics/AFNI_statistics_modeling.rst
-   AFNI/AFNI_1st/AFNI_1st_level.rst
-   AFNI/AFNI_automation/Aumomation_menu.rst
-   AFNI/AFNI_group/group_analysis.rst
-   AFNI/AFNI_ROI/ROI_analysis.rst
+   #AFNI/AFNI_preprocess/AFNI_preprocessing_2.rst
+   #AFNI/AFNI_preprocess/Preprocessed_check.rst
+   #AFNI/AFNI_statistics/AFNI_statistics_modeling.rst
+   #AFNI/AFNI_1st/AFNI_1st_level.rst
+   #AFNI/AFNI_automation/Aumomation_menu.rst
+   #AFNI/AFNI_group/group_analysis.rst
+   #AFNI/AFNI_ROI/ROI_analysis.rst
 
 
 .. toctree::
