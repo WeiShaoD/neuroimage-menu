@@ -126,20 +126,19 @@ Menu
 
 .. toctree::
     :maxdepth: 1
-    :caption: Functional Connectivity
+    :caption: Computational Neuroscience 
 
-    FC/FC_index.rst
-    #FC/FC_menu.rst
+    Computational_models/Computational_index.rst
+  
+.. toctree::
+   :maxdepth: 1
+   :caption: Functional Connectivity 
+
+    FC/FC_menu.rst
     #FSL/FSL_Resting-state/RS.rst
     #AFNI/AFNI_Resting-state/RS.rst
     #SPM/SPM_Resting-state/RS.rst
     #Freesurfer/FreeSurfer_Resting-state/RS.rst
-
-.. toctree::
-   :maxdepth: 1
-   :caption: Computational Neuroscience
-
-   Computational_model/Computation_models.rst
 
 .. toctree::
     :maxdepth: 1
