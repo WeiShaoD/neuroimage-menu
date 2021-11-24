@@ -134,10 +134,10 @@ Menu
     #Freesurfer/FreeSurfer_Resting-state/RS.rst
 
 .. toctree::
-    :maxdepth: 1
-    :caption: Computational Neuroscience
+   :maxdepth: 1
+   :caption: Computational Neuroscience
 
-    Computational_model/Computation_models.rst
+   Computational_model/Computation_models.rst
 
 .. toctree::
     :maxdepth: 1
