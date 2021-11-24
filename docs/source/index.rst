@@ -128,8 +128,9 @@ Menu
     :maxdepth: 1
     :caption: Functional Connectivity
 
-    FC/FC_menu.rst
-    FSL/FSL_Resting-state/RS.rst
+    FC/FC_index.rst
+    #FC/FC_menu.rst
+    #FSL/FSL_Resting-state/RS.rst
     #AFNI/AFNI_Resting-state/RS.rst
     #SPM/SPM_Resting-state/RS.rst
     #Freesurfer/FreeSurfer_Resting-state/RS.rst

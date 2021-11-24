@@ -1,5 +1,5 @@
-SPM introduction 
-================
+SPM 
+===
 
 .. image:: spm_logo.png 
 
