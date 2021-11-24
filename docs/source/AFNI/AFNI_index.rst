@@ -31,4 +31,5 @@ We will start with the dataset downloading, preprocessing, 1st level, and end wi
    :caption: Content
    
    AFNI_Ballon/AFNI_Ballon.rst
+   AFNI_preprocess/AFNI_preprocessing_1.rst
 

@@ -90,9 +90,9 @@ Menu
    :caption: Main course 3 AFNI
 
    AFNI/AFNI_index.rst
-   AFNI_menu  
-   AFNI/AFNI_Ballon/AFNI_Ballon.rst
-   AFNI/AFNI_preprocess/AFNI_preprocessing_1.rst
+   #AFNI_menu  
+   #AFNI/AFNI_Ballon/AFNI_Ballon.rst
+   #AFNI/AFNI_preprocess/AFNI_preprocessing_1.rst
    AFNI/AFNI_preprocess/AFNI_preprocessing_2.rst
    AFNI/AFNI_preprocess/Preprocessed_check.rst
    AFNI/AFNI_statistics/AFNI_statistics_modeling.rst
