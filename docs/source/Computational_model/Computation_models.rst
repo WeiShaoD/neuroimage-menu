@@ -14,7 +14,7 @@ In this chapter, In this chapter, I'm going to introduce some statistical models
    :maxdepth: 1
    :caption: Content
    
-   Computational_model/running_python/running_with_python.rst 
+   Computational_model/running_python/running_with_python
    Computational_model/Random_forest
    Computational_model/MLP 
 
