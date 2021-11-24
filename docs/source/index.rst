@@ -106,6 +106,7 @@ Menu
     :maxdepth: 1
     :caption: Main course 4 SPM
 
+    SPM/SPM_index.rst
     SPM/SPM_menu
     SPM/SPM_Ballon/SPM_Ballon.rst
     SPM/SPM_preprocessing/preprocessing.rst
