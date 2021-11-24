@@ -107,14 +107,14 @@ Menu
     :caption: Main course 4 SPM
 
     SPM/SPM_index.rst
-    SPM/SPM_menu
-    SPM/SPM_Ballon/SPM_Ballon.rst
-    SPM/SPM_preprocessing/preprocessing.rst
-    SPM/SPM_Statistics_Modeling/statistics_Medeling.rst
-    SPM/SPM_1st_Level_analysis/1st_Level_analysis.rst 
-    SPM/SPM_Automation/automation_2.rst
-    SPM/SPM_group_analysis/group_analysis.rst
-    SPM/SPM_ROI/ROI_analysis.rst 
+    #SPM/SPM_menu
+    #SPM/SPM_Ballon/SPM_Ballon.rst
+    #SPM/SPM_preprocessing/preprocessing.rst
+    #SPM/SPM_Statistics_Modeling/statistics_Medeling.rst
+    #SPM/SPM_1st_Level_analysis/1st_Level_analysis.rst 
+    #SPM/SPM_Automation/automation_2.rst
+    #SPM/SPM_group_analysis/group_analysis.rst
+    #SPM/SPM_ROI/ROI_analysis.rst 
 
 .. toctree::
     :maxdepth: 1
