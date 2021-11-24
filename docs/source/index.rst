@@ -89,7 +89,8 @@ Menu
    :maxdepth: 1
    :caption: Main course 3 AFNI
 
-   AFNI/AFNI_menu  
+   AFNI/AFNI_index.rst
+   AFNI_menu  
    AFNI/AFNI_Ballon/AFNI_Ballon.rst
    AFNI/AFNI_preprocess/AFNI_preprocessing_1.rst
    AFNI/AFNI_preprocess/AFNI_preprocessing_2.rst
