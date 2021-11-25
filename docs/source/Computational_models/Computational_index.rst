@@ -9,4 +9,6 @@ In this chapter, I’m going to introduce some statistical models that have been
    :caption: Content
 
    running_python/running_with_python.rst
-
+   Random_forest/Random_forest.rst
+   MLP/MLP.rst
+  
