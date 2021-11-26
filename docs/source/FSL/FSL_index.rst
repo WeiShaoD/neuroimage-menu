@@ -35,11 +35,12 @@ We will start with the dataset downloading, preprocessing and end with 3rd level
 
    FSL_1st/FSL_1st_analysis.rst
 
-   5 Automated the data process
+   FSL_automation/FSL_automation.rst 
 
-   6 2nd level analysis
+   FSL_2nd/FSL_2nd_analysis.rst 
 
-   7 3rd level analysis
+   FSL_3rd/FSL_3rd_analysis.rst 
+
 
 
 
