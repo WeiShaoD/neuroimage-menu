@@ -77,12 +77,12 @@ Menu
    #FSL/FSL_menu
    #FSL/FSL_Ballon
    #FSL/FSL_preprocessing
-   FSL/FSL_statistics_modeling
-   FSL/FSL_1st_analysis
-   FSL/FSL_automation.rst
-   FSL/FSL_2nd_analysis
-   FSL/FSL_3rd_analysis
-   FSL/FSL_ROI/ROI_analysis.rst
+   #FSL/FSL_statistics_modeling
+   #FSL/FSL_1st_analysis
+   #FSL/FSL_automation.rst
+   #FSL/FSL_2nd_analysis
+   #FSL/FSL_3rd_analysis
+   #FSL/FSL_ROI/ROI_analysis.rst
    FSL/FSL_Tricks.rst
 
 
