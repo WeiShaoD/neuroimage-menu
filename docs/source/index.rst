@@ -74,7 +74,7 @@ Menu
    :caption: Main course 2 FSL
 
    FSL/FSL_index.rst
-   FSL/FSL_menu
+   #FSL/FSL_menu
    FSL/FSL_Ballon
    FSL/FSL_preprocessing
    FSL/FSL_statistics_modeling
