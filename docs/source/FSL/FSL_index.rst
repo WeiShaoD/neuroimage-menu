@@ -31,7 +31,7 @@ We will start with the dataset downloading, preprocessing and end with 3rd level
 
    FSL_preprocessing/FSL_preprocessing.rst
 
-   3 Statistics and modeling
+   FSL_FSL_statistics/FSL_statistics_modeling.rst
 
    4 1st level analysis
 
