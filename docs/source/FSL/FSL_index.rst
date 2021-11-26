@@ -41,6 +41,8 @@ We will start with the dataset downloading, preprocessing and end with 3rd level
 
    FSL_3rd/FSL_3rd_analysis.rst 
 
+   FSL_ROI/ROI_analysis.rst
+
 
 
 

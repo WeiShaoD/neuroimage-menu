@@ -71,3 +71,4 @@ When you complete the GLM and contrasts setting, click ``Done``, a design matrix
 .. image:: FSL_2nd_result3.PNG
 
 
+Congratulations! You made it. Now, let's take a break and go to the 3rd level analysis.
