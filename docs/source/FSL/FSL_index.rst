@@ -29,7 +29,7 @@ We will start with the dataset downloading, preprocessing and end with 3rd level
 
    FSL_Ballon/FSL_Ballon.rst 
 
-   FSL/FSL_preprocessing.rst
+   FSL_preprocessing/FSL_preprocessing.rst
 
    3 Statistics and modeling
 
