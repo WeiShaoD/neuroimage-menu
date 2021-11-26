@@ -73,6 +73,7 @@ Menu
    :maxdepth: 1
    :caption: Main course 2 FSL
 
+   FSL/FSL_index.rst
    FSL/FSL_menu
    FSL/FSL_Ballon
    FSL/FSL_preprocessing
