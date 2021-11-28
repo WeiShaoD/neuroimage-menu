@@ -2,7 +2,8 @@
 Running fMRI with python
 ========================
 
-This chapter we are going to have more fun as we can get rid of the neuroimage tool and use python to run the fMRI analysis
+Since we have the basic knowledge of the tool. Let's start the fun with running fMRI analysis code on python.
+ 
 
 HCP dataset and Gamblining project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
