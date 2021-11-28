@@ -4,7 +4,6 @@ Running fMRI with python
 
 Since we have the basic knowledge of the tool. Let's start the fun with running fMRI analysis code on python.
  
-
 HCP dataset and Gamblining project
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 

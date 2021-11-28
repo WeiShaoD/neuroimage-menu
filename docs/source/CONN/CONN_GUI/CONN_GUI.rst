@@ -1,4 +1,5 @@
 CONN_GUI
+========
 
 Now we have set up the software and the dataset, it is time for us to analyze the data!
 
