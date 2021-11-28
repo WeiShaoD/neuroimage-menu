@@ -8,5 +8,6 @@ extensions that allow addtional function. VSC Visual Studio Code was ranked the 
 You cna go to `HERE <https://code.visualstudio.com/>'__ to download the right version and `HERE 
 <https://code.visualstudio.com/docs/setup/setup-overview>`__ for **set up** and **get started** as you follow the instructions
 
- 
+After everything is set up, you are supposed to see this when you click the VSC icon on your laptop.
 
+.. image:: Beginning.png
