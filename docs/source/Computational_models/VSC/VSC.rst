@@ -16,9 +16,15 @@ After everything is set up, you are supposed to see this when you click the VSC 
 Now, let's do some prework before we actually use VSC to analyze the data. One of the best functions of VSC is that you can connect VSC with you GitHub, 
 therefore, you can get rid of what you have learned from **Appetizer 3** and combine git add/commit/push into simpler operation
 
+Sync VSC with your GitHub
+*************************
+
 Click the left bottom corner sign in to your Github account in order to Sync the information.
 
 .. image:: github_account.png
+
+Add the extensions on VSC
+*************************
 
 You might want to add some extensions such as Python, R and jupyter notebook in your VSC so that we can implement the code undee these languages.
 
