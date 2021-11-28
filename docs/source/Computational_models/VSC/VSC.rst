@@ -13,9 +13,8 @@ After everything is set up, you are supposed to see this when you click the VSC 
 
 .. image:: Beginning.png
 
-
-One of the best function of VSC is that you can connect VSC with you GitHub, therefore, you can get rid of what you have learned from Appetizer 3 and 
-combien git add/commit/push into more simpler operation
+Now, let's do some prework before we actually use VSC to analyze the data. One of the best functions of VSC is that you can connect VSC with you GitHub, 
+therefore, you can get rid of what you have learned from **Appetizer 3** and combine git add/commit/push into simpler operation
 
 Click the left bottom corner sign in to your Github account in order to Sync the information.
 
