@@ -42,10 +42,10 @@ fixation blocks (15 seconds each).
 Running the analysis
 ^^^^^^^^^^^^^^^^^^^^
 
-You can see and run all the code from `here 
+Now, let's open the VSC and and the jupyter book. You also can see and run all the code from `here 
 <https://colab.research.google.com/github/WeiShaoD/Scripts/blob/main/new_Gambling_project_of_hcp_task.ipynb#scrollTo=Lda-sT711qZC>`__.
 
-Once you are familiar with the dataset, we can start with loading the libraries::
+Once you are familiar with the dataset, we can start by loading the libraries::
 
   import os
   import numpy as np
