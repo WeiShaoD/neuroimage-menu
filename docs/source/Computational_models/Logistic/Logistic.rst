@@ -1,8 +1,13 @@
 Logistic regression
 ===================
 
-Now, as we can see the brain activation under different condition as a group, we also can use the Logistic regression for decoding the data. In other
-words, we can predict the activation of different conditions based on the GLM we practiced before::
+After you have familiar with the idea that running GLM on python, let's try more models on the HCP dataset. If you already forget the dataset, plesae go to the 
+Dataset instructions on pp. 24-25,36 and 50-51 of the `HcP Reference Manual 
+<https://www.humanconnectome.org/storage/app/media/documentation/s1200/HCP_S1200_Release_Reference_Manual.pdf>`__. In order to use this dataset, please 
+electronically sign the HCP data use terms at `ConnectomeDB <https://db.humanconnectome.org/app/template/Login.vm>`__.
+
+Now, as we can see the brain activation under different conditions as a group, we can use the **Logistic regression** for decoding the data. In the context of 
+HCP dataset and gambling project, It means that we can predict the brain activation of different conditions based on the output of GLM we analyzed before::
 
   X = data
   X_1 = data.T
