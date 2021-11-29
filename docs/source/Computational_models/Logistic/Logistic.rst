@@ -6,6 +6,12 @@ Dataset instructions on pp. 24-25,36 and 50-51 of the `HcP Reference Manual
 <https://www.humanconnectome.org/storage/app/media/documentation/s1200/HCP_S1200_Release_Reference_Manual.pdf>`__. In order to use this dataset, please 
 electronically sign the HCP data use terms at `ConnectomeDB <https://db.humanconnectome.org/app/template/Login.vm>`__.
 
+First question first, what is the logistics model? In general, the logistic model has been applied for the probability of binary classes or event existing such 
+as pass/fail, win/lose, alive/dead or healthy/sick. This can be extended to model several classes of events such as determining whether an image contains a cat, 
+dog, lion, etc. Each object would be assigned a probability between 0 and 1.In regression analysis, logistic regression is estimating the parameters of a 
+logistic model. If you want to know more, here is a good video for `logistic regression <https://www.youtube.com/watch?v=yIYKR4sgzI8&t=7s>`__.
+
+
 Now, as we can see the brain activation under different conditions as a group, we can use the **Logistic regression** for decoding the data. In the context of 
 HCP dataset and gambling project, It means that we can predict the brain activation of different conditions based on the output of GLM we analyzed before::
 
