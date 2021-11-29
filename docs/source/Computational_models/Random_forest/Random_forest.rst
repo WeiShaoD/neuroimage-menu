@@ -48,7 +48,7 @@ Since the task is a binary classification. Thus, we need to use the RandomForest
 
   y_pred=clf.predict(X_test)
 
-Next, let's evaluate the the accuracy of this RF model.
+Next, let's evaluate the the accuracy of this RF model::
 
   #Import scikit-learn metrics module for accuracy calculation
   from sklearn import metrics
