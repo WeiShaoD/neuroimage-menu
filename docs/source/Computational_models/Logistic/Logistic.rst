@@ -1,4 +1,3 @@
-
 Logistic regression
 ===================
 
@@ -11,7 +10,6 @@ First question first, what is the logistics model? In general, the logistic mode
 as pass/fail, win/lose, alive/dead or healthy/sick. This can be extended to model several classes of events such as determining whether an image contains a cat, 
 dog, lion, etc. Each object would be assigned a probability between 0 and 1.In regression analysis, logistic regression is estimating the parameters of a 
 logistic model. If you want to know more, here is a good video for `logistic regression <https://www.youtube.com/watch?v=yIYKR4sgzI8&t=7s>`__.
-
 
 Now, as we can see the brain activation under different conditions as a group, we can use the **Logistic regression** for decoding the data. In the context of 
 HCP dataset and gambling project, It means that we can predict the brain activation of different conditions based on the output of GLM we analyzed before::
@@ -49,11 +47,14 @@ predicted label matches the true label::
   train_accuracy = compute_accuracy(X_1, Y_1, log_reg)
   print(f"Accuracy on the training data: {train_accuracy:.2%}")
 
-Classification accuracy on the training data is 100%! That might sound impressive, but there is a concept called overfitting: the classifier may have
-learned something idiosyncratic about the training data. If that’s the case, it won’t have really learned the underlying data->decision function, and thus
-won’t generalize well to new data. To check this, we can evaluate the cross-validated accuracy::
+It seems like that the Classification accuracy on the training data is 100%! That might sound impressive, but there is a concept called overfitting: the 
+classifier may have learned something idiosyncratic about the training data. If that’s the case, it won’t have really learned the underlying data->decision 
+function, and thus won’t generalize well to new data. To check this, we can evaluate the cross-validated accuracy::
 
   accuracies = cross_val_score(LogisticRegression(max_iter=5000,penalty='none'), X_1, Y_1, cv=50) # k=50 crossvalidation
+
+
+.. image:: Accur.png
 
 
 Let's plot the accuracy on the test data::

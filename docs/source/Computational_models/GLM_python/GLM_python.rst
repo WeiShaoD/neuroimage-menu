@@ -1,5 +1,5 @@
-Running fMRI GLM on python
-========================== 
+Running GLM on python
+=====================
 
 Since we have the basic knowledge of the tool. Let's start the fun with running fMRI analysis code on python.
  
