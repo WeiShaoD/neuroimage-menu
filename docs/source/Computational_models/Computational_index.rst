@@ -1,7 +1,7 @@
-\Models for Neuroimage 
+Models for Neuroimage 
 =====================
 
-In this chapter, I’m going to introduce some statistical(machine) models that have been developed decades ago and have been applied in neuroimag
+In this chapter, I’m going to introduce some statistical(machine) models that have been developed decades ago and have been applied in neuroimage.
 
 
 
@@ -14,5 +14,6 @@ In this chapter, I’m going to introduce some statistical(machine) models that 
    Logistic/Logistic.rst   
    Random_forest/Random_forest.rst
    MLP/MLP.rst
-   Naive_Bayes/Naive_Bayes.rst  
+   Naive_Bayes/Naive_Bayes.rst
+   CNN/CNN.rst  
  
