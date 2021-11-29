@@ -53,10 +53,6 @@ function, and thus won’t generalize well to new data. To check this, we can ev
 
   accuracies = cross_val_score(LogisticRegression(max_iter=5000,penalty='none'), X_1, Y_1, cv=50) # k=50 crossvalidation
 
-
-.. image:: Accur.png
-
-
 Let's plot the accuracy on the test data::
 
   #markdown Run to plot out these `k=50` accuracy scores.
@@ -70,4 +66,6 @@ Let's plot the accuracy on the test data::
   )
   ax.spines["left"].set_visible(False)
 
+
+.. image:: Accur.png
 
