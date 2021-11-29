@@ -10,10 +10,16 @@ In this chapter, I’m going to introduce some statistical(machine) models that 
    :caption: Content
 
    VSC/VSC.rst
-   Running_python/Running_with_python.rst  
-   Logistic/Logistic.rst   
-   Random_forest/Random_forest.rst
-   MLP/MLP.rst
-   Naive_Bayes/Naive_Bayes.rst
-   CNN/CNN.rst  
+
+   GLM_python/GLM_python.rst
  
+   Logistic/Logistic.rst 
+   
+   Random_forest/Random_forest.rst
+
+   MLP/MLP.rst
+
+   Naive_Bayes/Naive_Bayes.rst 
+
+ 
+
