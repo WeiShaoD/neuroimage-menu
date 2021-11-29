@@ -42,8 +42,9 @@ fixation blocks (15 seconds each).
 Running the analysis
 ^^^^^^^^^^^^^^^^^^^^
 
-Now, let's open the VSC and and the jupyter book. You also can see and run all the code from `here 
-<https://colab.research.google.com/github/WeiShaoD/Scripts/blob/main/new_Gambling_project_of_hcp_task.ipynb#scrollTo=Lda-sT711qZC>`__.
+Now, let's open the VSC and the jupyter book. You also can see and run all the code from Colaboratory `here 
+<https://colab.research.google.com/github/WeiShaoD/Scripts/blob/main/new_Gambling_project_of_hcp_task.ipynb#scrollTo=Lda-sT711qZC>`__. each of them has its 
+own advantage, depending on your preference.
 
 Once you are familiar with the dataset, we can start by loading the libraries::
 
@@ -349,6 +350,8 @@ Now, let's plot all the output! Start with the mean beta value::
   axs[3].plot(betas_avg_sub_run_res[0,:], 'b')
   axs[3].set_title('Resting Regressor')
 
+.. image:: beta.png
+
 Then, mean value of R::
 
   # plot the mean r 
@@ -361,6 +364,8 @@ Then, mean value of R::
   axs[2].set_title('Neutral R')
   axs[3].plot(r_avg_sub_run_res[0,:], 'b')
   axs[3].set_title('Resting R')
+
+.. image:: R_mean.png
 
 Remember that we have 360 ROI and these ROIs become 12 networks, let's add the network component::
 
@@ -376,6 +381,8 @@ Remember that we have 360 ROI and these ROIs become 12 networks, let's add the n
   sns.barplot(x='network', y='betas', data=df_beta_2 , hue='cond',ax=ax1)
   #sns.barplot(x='network', y='betas', data=df_beta_2 , hue='hemi',ax=ax2)
 
+.. image:: beta_network.png
+
 R value with network::
 
   # plot the mean r based on the network and compare with 4 conditions 
@@ -389,6 +396,8 @@ R value with network::
   fig, (ax1)= plt.subplots(1,1, figsize = (20,10))
   sns.barplot(x='network', y='r', data=df_r, hue='cond',ax=ax1)
   #sns.barplot(x='network', y='r', data=df_r, hue='hemi',ax=ax2)
+
+.. image:: r_network.png
 
 Now, let's make a group contrast with beta and r value so we can really know the brain activity on different condition::
 
@@ -450,6 +459,8 @@ los_beta::
                      surf_contrast,
                      vmax=30,title='loss_beta')
 
+.. image:: los_beta.png
+
 win_beta::
   
   fsaverage = datasets.fetch_surf_fsaverage()
@@ -457,6 +468,8 @@ win_beta::
   plotting.view_surf(fsaverage['infl_left'],
                      surf_contrast,
                      vmax=30,title='win_beta')
+
+.. image:: win.png
 
 net_beta::
 
@@ -466,12 +479,18 @@ net_beta::
                      surf_contrast,
                      vmax=30,title='neutral_beta')
 
+.. image:: neutral.png
+
+
 res_beta::
+
   fsaverage = datasets.fetch_surf_fsaverage()
   surf_contrast = betas_avg_sub_run_res[0,:][atlas["labels_L"]]
   plotting.view_surf(fsaverage['infl_left'],
                      surf_contrast,
                      vmax=30,title='resting_beta')
+
+.. image:: Rest.png
 
 let's see the group contast,beta_contrast::
 
@@ -480,6 +499,8 @@ let's see the group contast,beta_contrast::
   plotting.view_surf(fsaverage['infl_left'],
                      surf_contrast,
                      vmax=20,title='beta_contrast for loss-win')
+
+.. image:: beta_contrast_loss-win.png
 
 Now, as we can see the brain activation under different condition as a group, we also can use the Logistic regression for decoding the data. In other 
 words, we can predict the activation of different conditions based on the GLM we practiced before::
