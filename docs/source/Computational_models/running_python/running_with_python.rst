@@ -38,7 +38,7 @@ with either 1 neutral and 1 loss trial, 2 neutral trials, or 2 loss trials) or m
 and 1 reward trial, 2 neutral trials, or 2 reward trials). In each of the two runs, there are 2 mostly reward and 2 mostly loss blocks, interleaved with 4 
 fixation blocks (15 seconds each).
 
-The Credit of this chapter goes to `Neuromatch Academy <https://academy.neuromatch.io/>`__.
+Some Credits of this chapter go to `Neuromatch Academy <https://academy.neuromatch.io/>`__.
 
 Running the analysis
 ^^^^^^^^^^^^^^^^^^^^
