@@ -22,5 +22,4 @@ However, I strongly encourage you to read this article for a brief historical vi
 
    Naive_Bayes/Naive_Bayes.rst 
 
- 
-
+   CNN/CNN.rst
