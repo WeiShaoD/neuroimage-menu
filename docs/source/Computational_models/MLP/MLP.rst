@@ -1,5 +1,5 @@
-MLP
-===
+Multilayer perceptron
+=====================
 
 Supervised learning
 *******************
