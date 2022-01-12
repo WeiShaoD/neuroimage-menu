@@ -10,7 +10,7 @@ importantly, I strongly encourage you to read this article for a brief historica
    :maxdepth: 1
    :caption: Content
 
-   Computational_Models.rst
+   Overview/Computational_Models.rst
 
    VSC/VSC.rst
 
